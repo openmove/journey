@@ -6,7 +6,7 @@ OpenTripPlanner Responsive Web Interface
 
 ## Preamble
 
-This project is an Openmove customization of the library [otp-react-redux](https://github.com/opentripplanner/otp-react-redux)
+This project is an Openmove customization of the library [otp-react-redux](https://github.com/opentripplanner/otp-react-redux) and [otp-ui](https://github.com/opentripplanner/otp-ui)
 
 initially forked from: [trimet-mod-otp](https://github.com/ibi-group/trimet-mod-otp) development continued on the [Mentor project](https://github.com/noi-techpark/odh-mentor-otp).
 
