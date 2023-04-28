@@ -14,6 +14,7 @@ initially forked from: [trimet-mod-otp](https://github.com/ibi-group/trimet-mod-
 
 Development continued on the [Mentor project](https://github.com/noi-techpark/odh-mentor-otp).
 
+cloned from V3.3.0 in [branch](https://github.com/openmove/odh-mentor-otp/tree/journey)
 
 ## Development Setup and Configurations
 
