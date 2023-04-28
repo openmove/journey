@@ -3,6 +3,8 @@
 
 OpenTripPlanner Responsive Web Interface
 
+![journey web app](docs/images/multi_modal_bike_ride.png)
+
 
 ## Preamble
 
