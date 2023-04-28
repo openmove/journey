@@ -1,0 +1,119 @@
+.otp-ui-locationFilter {
+    position: fixed;
+    width: $location-filter-width;
+    top: $location-filter-top;
+    right: 20px;
+    bottom: 20px;
+
+    /* full height minus the sum of the space taken up by the footer, the layers controls and the navbar*/
+    max-height: calc( 100vh - ( #{$footer-height} + 60px + 60px + #{$navbar-height} ));
+
+    padding: 24px 0;
+    z-index: 9999;
+    background-color: $body-bg;
+    border-radius: $border-radius-large;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    box-sizing: border-box !important;
+    display: none;
+    color:black;
+
+    &.is-visible {
+        display: flex;
+    }
+
+    &__header {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: .5rem;
+        padding: 0 $grid-gutter-width;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+        color:black;
+    }
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        display: block;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+        font-family: inherit;
+        background-color: transparent;
+        position: relative;
+        margin-right: -16px;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: calc(50% + 2px); /* 2px needed to adjust for rotation*/
+            transform: translate(-50%,-50%) rotate(45deg);
+            content: "+";
+            font-size: 24px;
+            line-height: 0;
+        }
+    }
+
+    &__activeAll {
+        border: 0;
+        padding: 0;
+        margin: 0 auto;
+        outline: 0;
+        font-family: inherit;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    &__container {
+        flex: 1;
+        overflow-y: auto;
+        margin-top: 1rem;
+        padding: 0 $grid-gutter-width;
+    }
+
+    &__group {
+        margin-bottom: 1rem;
+    }
+
+    &__label {
+        font-size: $font-size-small;
+        font-weight: 600;
+        font-family: inherit;
+        margin-bottom: .25rem;
+    }
+
+    &__panel {
+        background-color: white;
+        padding: $grid-gutter-width / 2;
+        border-radius: 8px;
+
+        .otp-ui-toggleSwitch {
+            font-size: $font-size-small;
+
+            span {
+                line-height: 23px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__loader {
+      height: 100%;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      color: $brand-primary;
+    }
+}

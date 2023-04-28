@@ -1,0 +1,61 @@
+.otp.mobile {
+  .welcome-location,
+  .welcome-map {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  .welcome-location {
+    z-index: 3;
+    top: $mobile-welcome-location-top;
+    height: $mobile-welcome-location-height;
+  }
+
+  .welcome-map {
+    top: $mobile-welcome-map-top;
+    bottom: 0;
+    /* temporary solution to put search settings below filter settings*/
+    z-index: 2;
+  }
+
+  .mobile-footer {
+    width: 100%;
+    height: $mobile-footer-height;
+    background-color: $brand-primary;
+    position: fixed;
+    bottom:0;
+    padding: 0 20px;
+
+  }
+  .footer-left-container-mobile{
+    display: block;
+    padding:0 ;
+    div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    }
+  }
+
+  .footer-right-container-mobile{
+    ul{
+      list-style: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      margin-top: 15px;
+      padding: 0;
+      li{
+        margin: 0 10px;
+        font-size: $font-size-xsmall;
+        a{
+          color:white;
+         }
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@import '../otp-ui/settings_selector_panel';
+
+.otp:not(.mobile) {
+
+      .otp-ui-modeSelector {
+        .btn-group {
+          display: flex;
+          gap: 5px;
+
+          .btn {
+            color: $gray;
+            float: none;
+            flex: 1;
+            flex-grow: 1;
+            flex-basis: 0;
+            width: 0;
+            display: block;
+            white-space: normal;
+            font-size: $font-size-xxsmall;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 12px 6px;
+            text-transform: uppercase;
+            word-break: break-word;
+            background-color: $input-bg;
+            box-shadow: none;
+            border: 0;
+            border-radius: $border-radius-large;
+
+            svg {
+              height: 33px;
+              fill: currentColor;
+            }
+
+            &.active {
+              background-color: $brand-primary;
+              color: #fff;
+
+              svg path,
+              svg circle {
+                fill: currentColor;
+              }
+            }
+
+            span {
+              display: none;
+            }
+          }
+        }
+
+        &__plusIconWrapper {
+          position: relative;
+          float: none;
+          flex: 1;
+          flex-grow: 1;
+          flex-basis: 0;
+          width: 0;
+          text-align: center;
+
+          .btn {
+            width: 100% !important;
+          }
+        }
+
+        &__plusIcon {
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          position: absolute;
+          bottom: -34px;
+          z-index: 2;
+          width: 100%;
+          transition: transform .3s ease-in-out;
+
+          .circle{
+            position: relative;
+            box-sizing: border-box;
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            border-radius: 100%;
+            border:none;
+            vertical-align: middle;
+
+            background-color: $brand-primary-light;
+            cursor: pointer;
+        }
+       /*  .circle:hover{
+            background: darken($brand-primary-light,0.8);
+        }
+        .circle:active{
+            // background: radial-gradient($brand-primary-light, darken($brand-primary-light,0.8));
+        } */
+        .circle:before,
+        .circle:after{
+            content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+        }
+          .circle.plus:before,
+          .circle.plus:after {
+              background-color: $gray;
+              border-radius: 15px;
+              display: inline-block;
+          }
+          .circle.plus:before{
+              width: 2.3px;
+              margin: 7px auto;
+            }
+            .circle.plus:after{
+              margin: auto 7px;
+              height: 2.3px;
+            }
+
+          &.is-open {
+            transform: translateY(13px) rotate(135deg);
+          }
+        }
+
+        &__transitCombo {
+          margin-top: 6px;
+          border: 0 !important;
+          box-shadow: none;
+
+          .panel-body {
+            padding: 0;
+            padding-left: 80px;
+            margin-right: -4px;
+          }
+        }
+      }
+
+      .otp-ui-settingsSelectorPanel {
+        @include settings_selector_panel;
+        position: fixed;
+        top: $navbar-height + $grid-gutter-width + 130px;
+        left: $grid-gutter-width + $sidebar-width;
+        padding: $grid-gutter-width / 2 $grid-gutter-width;
+        width: $option-panel-width;
+        background-color: $settings-selector-panel-bg;
+        color: $settings-selector-panel-color;
+        z-index: 1;
+        border-top-right-radius: $border-radius-large;
+        border-bottom-right-radius: $border-radius-large;
+        box-shadow: 9px 0 10px rgba(0, 0, 0, 0.15);
+        overflow-y: auto;
+        min-height: 30vh;
+        max-height: 60vh;
+
+        .btn-link {
+          color: #fff;
+        }
+
+        .btn-group .btn {
+          color: #fff;
+          background-color: $brand-primary-transp;
+          font-size: $font-size-xsmall;
+          &.active {
+            background-color: $brand-primary-dark;
+          }
+        }
+
+      }
+
+  .tabbed-form-panel {
+    .store-settings {
+      text-align: center;
+    }
+  }
+}

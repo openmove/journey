@@ -1,0 +1,5079 @@
+[
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-451-23a-1",
+        "mode": "BUS",
+        "shortName": "451",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-945-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N245",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-1-22a-1",
+        "mode": "BUS",
+        "shortName": "135.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-312-22a-5",
+        "mode": "BUS",
+        "shortName": "312",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-250-S-23a-3",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "250",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-960-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N460",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-130-22a-2",
+        "mode": "BUS",
+        "shortName": "130",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-271-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N271",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-100-T-22a-1",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B01-N-22a-4",
+        "mode": "BUS",
+        "shortName": "N1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:20-811-23a-2",
+        "mode": "BUS",
+        "shortName": "811",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-441-23a-1",
+        "mode": "BUS",
+        "shortName": "441",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B01-22a-6",
+        "mode": "BUS",
+        "shortName": "1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-168-22a-1",
+        "mode": "BUS",
+        "shortName": "168",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-250-B-23a-1",
+        "mode": "BUS",
+        "shortName": "B250",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-902-N-22a-2",
+        "mode": "BUS",
+        "shortName": "N402",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-931-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N131",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-267-22a-1",
+        "mode": "BUS",
+        "shortName": "267",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-910-N-23a-2",
+        "mode": "BUS",
+        "shortName": "N310",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-273-23a-1",
+        "mode": "BUS",
+        "shortName": "273",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-801-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N301",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-122-22a-2",
+        "mode": "BUS",
+        "shortName": "122",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-142-23a-1",
+        "mode": "BUS",
+        "shortName": "142",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-345-23a-2",
+        "mode": "BUS",
+        "shortName": "345",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-6-23a-1",
+        "mode": "BUS",
+        "shortName": "135.6",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-233-22a-1",
+        "mode": "BUS",
+        "shortName": "233",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B06-22a-5",
+        "mode": "BUS",
+        "shortName": "6",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-352-22a-4",
+        "mode": "BUS",
+        "shortName": "352",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-202-23a-1",
+        "mode": "BUS",
+        "shortName": "N202",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-448-22a-1",
+        "mode": "BUS",
+        "shortName": "448",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-435-2-23a-1",
+        "mode": "BUS",
+        "shortName": "435.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-127-23a-1",
+        "mode": "BUS",
+        "shortName": "127",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-420-3-23a-1",
+        "mode": "BUS",
+        "shortName": "420.3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B10-A-23a-1",
+        "mode": "BUS",
+        "shortName": "10A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B10-A-23a-2",
+        "mode": "BUS",
+        "shortName": "10A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M05-23a-1",
+        "mode": "BUS",
+        "shortName": "5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-221-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N221",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-182-23a-1",
+        "mode": "BUS",
+        "shortName": "182",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-432-22a-3",
+        "mode": "BUS",
+        "shortName": "432",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-212-23a-1",
+        "mode": "BUS",
+        "shortName": "212",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-357-23a-6",
+        "mode": "BUS",
+        "shortName": "357",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-357-23a-3",
+        "mode": "BUS",
+        "shortName": "357",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-422-22a-15",
+        "mode": "BUS",
+        "shortName": "422",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-357-23a-4",
+        "mode": "BUS",
+        "shortName": "357",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-203-22a-1",
+        "longName": "203",
+        "mode": "FUNICULAR",
+        "shortName": "203",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-357-23a-2",
+        "mode": "BUS",
+        "shortName": "357",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-182-22a-3",
+        "mode": "BUS",
+        "shortName": "182",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-142-22a-3",
+        "mode": "BUS",
+        "shortName": "142",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-350-23a-3",
+        "mode": "BUS",
+        "shortName": "350",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-451-23a-1",
+        "mode": "BUS",
+        "shortName": "N451",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-329-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N329",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-214-22a-2",
+        "mode": "BUS",
+        "shortName": "214",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B01-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B05-22a-13",
+        "mode": "BUS",
+        "shortName": "5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-460-22a-9",
+        "mode": "BUS",
+        "shortName": "460",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B05-22a-12",
+        "mode": "BUS",
+        "shortName": "5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-262-22a-1",
+        "mode": "BUS",
+        "shortName": "262",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-351-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N351",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-187-23a-2",
+        "mode": "BUS",
+        "shortName": "187",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-187-23a-1",
+        "mode": "BUS",
+        "shortName": "187",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-351-23a-2",
+        "mode": "BUS",
+        "shortName": "351",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-278-23a-1",
+        "mode": "BUS",
+        "shortName": "278",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-432-23a-1",
+        "mode": "BUS",
+        "shortName": "432",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-217-23a-1",
+        "mode": "BUS",
+        "shortName": "217",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-320-2-23a-1",
+        "mode": "BUS",
+        "shortName": "320.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-945-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N245",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-400-S-22a-19",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-1-23a-1",
+        "mode": "BUS",
+        "shortName": "135.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-246-22a-11",
+        "mode": "BUS",
+        "shortName": "246",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-320-4-22a-2",
+        "mode": "BUS",
+        "shortName": "320.4",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-110-22a-7",
+        "mode": "BUS",
+        "shortName": "110",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-150-22a-3",
+        "mode": "BUS",
+        "shortName": "150",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B10-A-22a-11",
+        "mode": "BUS",
+        "shortName": "10A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-411-23a-1",
+        "mode": "BUS",
+        "shortName": "411",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-166-23a-1",
+        "mode": "BUS",
+        "shortName": "166",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-200-S-23a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:20-811-22a-1",
+        "mode": "BUS",
+        "shortName": "811",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-166-23a-2",
+        "mode": "BUS",
+        "shortName": "166",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-225-22a-2",
+        "mode": "BUS",
+        "shortName": "225",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-166-23a-3",
+        "mode": "BUS",
+        "shortName": "166",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-464-23a-1",
+        "mode": "BUS",
+        "shortName": "N464",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-267-23a-1",
+        "mode": "BUS",
+        "shortName": "267",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-170-23a-2",
+        "mode": "BUS",
+        "shortName": "170",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-122-23a-1",
+        "mode": "BUS",
+        "shortName": "122",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-221-23a-1",
+        "mode": "BUS",
+        "shortName": "N221",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-310-23a-2",
+        "mode": "BUS",
+        "shortName": "310",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M03-23a-1",
+        "mode": "BUS",
+        "shortName": "3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-233-23a-1",
+        "mode": "BUS",
+        "shortName": "233",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-352-23a-4",
+        "mode": "BUS",
+        "shortName": "352",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-352-23a-5",
+        "mode": "BUS",
+        "shortName": "352",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-352-23a-2",
+        "mode": "BUS",
+        "shortName": "352",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-460-23a-2",
+        "mode": "BUS",
+        "shortName": "460",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-210-23a-1",
+        "mode": "BUS",
+        "shortName": "210",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-352-23a-3",
+        "mode": "BUS",
+        "shortName": "352",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-134-B-23a-1",
+        "mode": "BUS",
+        "shortName": "B134",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-355-23a-1",
+        "mode": "BUS",
+        "shortName": "355",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-320-4-23a-1",
+        "mode": "BUS",
+        "shortName": "320.4",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-131-22a-4",
+        "mode": "BUS",
+        "shortName": "131",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-213-23a-1",
+        "mode": "BUS",
+        "shortName": "N213",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-435-2-22a-3",
+        "mode": "BUS",
+        "shortName": "435.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-241-22a-1",
+        "mode": "BUS",
+        "shortName": "241",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-184-22a-7",
+        "mode": "BUS",
+        "shortName": "184",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B07-B-23a-1",
+        "mode": "BUS",
+        "shortName": "7B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-321-23a-1",
+        "mode": "BUS",
+        "shortName": "321",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-250-S-22a-5",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "250",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-203-23a-1",
+        "longName": "203",
+        "mode": "FUNICULAR",
+        "shortName": "203",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-451-22a-2",
+        "mode": "BUS",
+        "shortName": "451",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-A-22a-1",
+        "mode": "BUS",
+        "shortName": "A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-172-22a-2",
+        "mode": "BUS",
+        "shortName": "172",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-318-22a-3",
+        "mode": "BUS",
+        "shortName": "318",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-100-V-22a-1",
+        "longName": "RV",
+        "mode": "RAIL",
+        "shortName": "RV",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-172-22a-3",
+        "mode": "BUS",
+        "shortName": "172",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-130-23a-1",
+        "mode": "BUS",
+        "shortName": "130",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-124-22a-2",
+        "mode": "BUS",
+        "shortName": "124",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-314-22a-4",
+        "mode": "BUS",
+        "shortName": "314",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-124-T-22a-6",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-465-23a-3",
+        "mode": "BUS",
+        "shortName": "465",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-124-T-22a-7",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-124-T-22a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-339-23a-2",
+        "mode": "BUS",
+        "shortName": "339",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-111-22a-15",
+        "mode": "BUS",
+        "shortName": "111",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-252-23a-1",
+        "mode": "BUS",
+        "shortName": "252",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-339-23a-3",
+        "mode": "BUS",
+        "shortName": "339",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-329-23a-1",
+        "mode": "BUS",
+        "shortName": "329",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-339-23a-1",
+        "mode": "BUS",
+        "shortName": "339",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-952-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N252",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-111-22a-12",
+        "mode": "BUS",
+        "shortName": "111",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-441-22a-9",
+        "mode": "BUS",
+        "shortName": "441",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-111-22a-13",
+        "mode": "BUS",
+        "shortName": "111",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-111-22a-14",
+        "mode": "BUS",
+        "shortName": "111",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-163-23a-1",
+        "mode": "BUS",
+        "shortName": "163",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-931-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N131",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-345-22a-2",
+        "mode": "BUS",
+        "shortName": "345",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-124-23a-1",
+        "mode": "BUS",
+        "shortName": "124",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-420-1-23a-2",
+        "mode": "BUS",
+        "shortName": "420.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-204-22a-14",
+        "mode": "BUS",
+        "shortName": "204",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-318-23a-1",
+        "mode": "BUS",
+        "shortName": "318",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B01-23a-1",
+        "mode": "BUS",
+        "shortName": "1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-348-22a-1",
+        "mode": "BUS",
+        "shortName": "348",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-339-22a-4",
+        "mode": "BUS",
+        "shortName": "339",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-163-22a-2",
+        "mode": "BUS",
+        "shortName": "163",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-127-22a-2",
+        "mode": "BUS",
+        "shortName": "127",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-150-23a-1",
+        "mode": "BUS",
+        "shortName": "150",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-180-22a-11",
+        "mode": "BUS",
+        "shortName": "180",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-124-T-23a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-411-22a-2",
+        "mode": "BUS",
+        "shortName": "411",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-420-3-22a-2",
+        "mode": "BUS",
+        "shortName": "420.3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-420-3-22a-3",
+        "mode": "BUS",
+        "shortName": "420.3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-312-23a-2",
+        "mode": "BUS",
+        "shortName": "312",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-170-22a-2",
+        "mode": "BUS",
+        "shortName": "170",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-357-22a-3",
+        "mode": "BUS",
+        "shortName": "357",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-200-B-23a-1",
+        "mode": "BUS",
+        "shortName": "B200",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-357-22a-2",
+        "mode": "BUS",
+        "shortName": "357",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-184-23a-2",
+        "mode": "BUS",
+        "shortName": "184",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-235-22a-3",
+        "mode": "BUS",
+        "shortName": "235",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-235-22a-4",
+        "mode": "BUS",
+        "shortName": "235",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-343-23a-2",
+        "mode": "BUS",
+        "shortName": "343",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-184-23a-3",
+        "mode": "BUS",
+        "shortName": "184",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-125-23a-1",
+        "mode": "BUS",
+        "shortName": "125",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-204-23a-1",
+        "mode": "BUS",
+        "shortName": "204",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-465-22a-3",
+        "mode": "BUS",
+        "shortName": "465",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-245-22a-15",
+        "mode": "BUS",
+        "shortName": "245",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-443-22a-5",
+        "mode": "BUS",
+        "shortName": "443",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-184-23a-6",
+        "mode": "BUS",
+        "shortName": "184",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-184-23a-5",
+        "mode": "BUS",
+        "shortName": "184",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-231-23a-2",
+        "mode": "BUS",
+        "shortName": "231",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-443-22a-6",
+        "mode": "BUS",
+        "shortName": "443",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-231-23a-1",
+        "mode": "BUS",
+        "shortName": "231",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-184-23a-4",
+        "mode": "BUS",
+        "shortName": "184",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-454-23a-1",
+        "mode": "BUS",
+        "shortName": "N454",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-463-23a-1",
+        "mode": "BUS",
+        "shortName": "463",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-321-22a-1",
+        "mode": "BUS",
+        "shortName": "321",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-278-22a-4",
+        "mode": "BUS",
+        "shortName": "278",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-100-T-23a-1",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-801-N-22a-3",
+        "mode": "BUS",
+        "shortName": "N301",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-351-22a-1",
+        "mode": "BUS",
+        "shortName": "351",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B07-B-22a-6",
+        "mode": "BUS",
+        "shortName": "7B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-421-23a-1",
+        "mode": "BUS",
+        "shortName": "N421",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-125-22a-2",
+        "mode": "BUS",
+        "shortName": "125",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-252-22a-1",
+        "mode": "BUS",
+        "shortName": "252",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-172-23a-1",
+        "mode": "BUS",
+        "shortName": "172",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-461-23a-1",
+        "mode": "BUS",
+        "shortName": "N461",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-276-23a-1",
+        "mode": "BUS",
+        "shortName": "276",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-328-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N328",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-4-22a-2",
+        "mode": "BUS",
+        "shortName": "135.4",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-216-22a-6",
+        "mode": "BUS",
+        "shortName": "216",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-263-2-22a-1",
+        "mode": "BUS",
+        "shortName": "263.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-165-22a-6",
+        "mode": "BUS",
+        "shortName": "165",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-134-B-22a-1",
+        "mode": "BUS",
+        "shortName": "134B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-310-22a-5",
+        "mode": "BUS",
+        "shortName": "310",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-111-23a-4",
+        "mode": "BUS",
+        "shortName": "111",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-223-22a-2",
+        "mode": "BUS",
+        "shortName": "223",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-111-23a-3",
+        "mode": "BUS",
+        "shortName": "111",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-355-22a-2",
+        "mode": "BUS",
+        "shortName": "355",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-111-23a-2",
+        "mode": "BUS",
+        "shortName": "111",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-413-23a-1",
+        "longName": "413",
+        "mode": "FUNICULAR",
+        "shortName": "413",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-355-22a-1",
+        "mode": "BUS",
+        "shortName": "355",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B15-23a-1",
+        "mode": "BUS",
+        "shortName": "15",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B09-22a-2",
+        "mode": "BUS",
+        "shortName": "9",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-421-22a-7",
+        "mode": "BUS",
+        "shortName": "421",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B10-B-22a-10",
+        "mode": "BUS",
+        "shortName": "10B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-3-23a-1",
+        "mode": "BUS",
+        "shortName": "135.3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B08-23a-1",
+        "mode": "BUS",
+        "shortName": "8",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-179-22a-4",
+        "mode": "BUS",
+        "shortName": "179",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-411-23a-1",
+        "mode": "BUS",
+        "shortName": "411",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B08-23a-2",
+        "mode": "BUS",
+        "shortName": "8",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-179-22a-3",
+        "mode": "BUS",
+        "shortName": "179",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-222-23a-1",
+        "mode": "BUS",
+        "shortName": "222",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-311-22a-3",
+        "mode": "BUS",
+        "shortName": "311",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-100-V-23a-1",
+        "longName": "RV",
+        "mode": "RAIL",
+        "shortName": "RV",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-346-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N346",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-452-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N452",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-180-23a-1",
+        "mode": "BUS",
+        "shortName": "180",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-431-23a-2",
+        "mode": "BUS",
+        "shortName": "431",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-950-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N450",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-431-23a-1",
+        "mode": "BUS",
+        "shortName": "431",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-165-23a-1",
+        "mode": "BUS",
+        "shortName": "165",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-177-23a-1",
+        "mode": "BUS",
+        "shortName": "177",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-231-22a-3",
+        "mode": "BUS",
+        "shortName": "231",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-231-22a-2",
+        "mode": "BUS",
+        "shortName": "231",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-3-22a-3",
+        "mode": "BUS",
+        "shortName": "135.3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-223-23a-1",
+        "mode": "BUS",
+        "shortName": "223",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-467-22a-1",
+        "mode": "BUS",
+        "shortName": "467",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-418-23a-1",
+        "mode": "BUS",
+        "shortName": "N418",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-134-22a-3",
+        "longName": "134",
+        "mode": "FUNICULAR",
+        "shortName": "134",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-263-1-22a-2",
+        "mode": "BUS",
+        "shortName": "263.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-466-23a-1",
+        "mode": "BUS",
+        "shortName": "466",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-129-23a-1",
+        "mode": "BUS",
+        "shortName": "129",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-120-22a-4",
+        "mode": "BUS",
+        "shortName": "120",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-418-23a-1",
+        "mode": "BUS",
+        "shortName": "418",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-215-22a-3",
+        "mode": "BUS",
+        "shortName": "215",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-277-23a-1",
+        "mode": "BUS",
+        "shortName": "277",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B03-23a-5",
+        "mode": "BUS",
+        "shortName": "3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-435-1-22a-1",
+        "mode": "BUS",
+        "shortName": "435.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-200-S-22a-11",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-117-22a-4",
+        "mode": "BUS",
+        "shortName": "117",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-157-22a-5",
+        "mode": "BUS",
+        "shortName": "157",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B03-23a-3",
+        "mode": "BUS",
+        "shortName": "3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-464-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N464",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B03-23a-4",
+        "mode": "BUS",
+        "shortName": "3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-112-23a-1",
+        "mode": "BUS",
+        "shortName": "112",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-221-22a-3",
+        "mode": "BUS",
+        "shortName": "221",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B14-23a-1",
+        "mode": "BUS",
+        "shortName": "14",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-413-22a-1",
+        "longName": "413",
+        "mode": "FUNICULAR",
+        "shortName": "413",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B09-23a-1",
+        "mode": "BUS",
+        "shortName": "9",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-472-23a-1",
+        "mode": "BUS",
+        "shortName": "472",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-415-22a-1",
+        "mode": "BUS",
+        "shortName": "415",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-239-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N239",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-5-23a-1",
+        "mode": "BUS",
+        "shortName": "135.5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-213-22a-12",
+        "mode": "BUS",
+        "shortName": "213",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-213-22a-13",
+        "mode": "BUS",
+        "shortName": "213",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B06-23a-1",
+        "mode": "BUS",
+        "shortName": "6",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-224-22a-2",
+        "mode": "BUS",
+        "shortName": "224",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-981-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N181",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M06-23a-1",
+        "mode": "BUS",
+        "shortName": "6",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-345-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N345",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-B00-22a-2",
+        "mode": "BUS",
+        "shortName": "A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-B00-22a-1",
+        "mode": "BUS",
+        "shortName": "A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-B00-22a-4",
+        "mode": "BUS",
+        "shortName": "A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-418-22a-1",
+        "mode": "BUS",
+        "shortName": "418",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-B00-22a-3",
+        "mode": "BUS",
+        "shortName": "A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-166-22a-4",
+        "mode": "BUS",
+        "shortName": "166",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-166-22a-3",
+        "mode": "BUS",
+        "shortName": "166",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-2-23a-2",
+        "mode": "BUS",
+        "shortName": "135.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-422-23a-2",
+        "mode": "BUS",
+        "shortName": "422",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-181-22a-5",
+        "mode": "BUS",
+        "shortName": "181",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-431-22a-9",
+        "mode": "BUS",
+        "shortName": "431",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-431-22a-7",
+        "mode": "BUS",
+        "shortName": "431",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-965-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N165",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-412-23a-2",
+        "mode": "BUS",
+        "shortName": "412",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-950-N-23a-2",
+        "mode": "BUS",
+        "shortName": "N450",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-308-22a-1",
+        "mode": "BUS",
+        "shortName": "308",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B12-22a-8",
+        "mode": "BUS",
+        "shortName": "12",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-108-23a-1",
+        "mode": "BUS",
+        "shortName": "108",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-118-22a-12",
+        "longName": "118",
+        "mode": "FUNICULAR",
+        "shortName": "118",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-121-22a-2",
+        "mode": "BUS",
+        "shortName": "121",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-118-22a-11",
+        "longName": "118",
+        "mode": "FUNICULAR",
+        "shortName": "118",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-216-23a-1",
+        "mode": "BUS",
+        "shortName": "216",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-217-22a-2",
+        "mode": "BUS",
+        "shortName": "217",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-263-2-23a-1",
+        "mode": "BUS",
+        "shortName": "263.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-421-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N421",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-134-23a-2",
+        "longName": "134",
+        "mode": "FUNICULAR",
+        "shortName": "134",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M05-22a-11",
+        "mode": "BUS",
+        "shortName": "5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-134-23a-1",
+        "longName": "134",
+        "mode": "FUNICULAR",
+        "shortName": "134",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-263-1-23a-1",
+        "mode": "BUS",
+        "shortName": "263.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-176-22a-3",
+        "mode": "BUS",
+        "shortName": "176",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B15-22a-2",
+        "mode": "BUS",
+        "shortName": "15",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-110-23a-1",
+        "mode": "BUS",
+        "shortName": "110",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-960-N-22a-4",
+        "mode": "BUS",
+        "shortName": "N460",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-215-23a-1",
+        "mode": "BUS",
+        "shortName": "215",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-108-22a-1",
+        "mode": "BUS",
+        "shortName": "108",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-5-22a-2",
+        "mode": "BUS",
+        "shortName": "135.5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-420-23a-2",
+        "mode": "BUS",
+        "shortName": "N420",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-222-22a-2",
+        "mode": "BUS",
+        "shortName": "222",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-981-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N181",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-350-22a-4",
+        "mode": "BUS",
+        "shortName": "350",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-415-23a-1",
+        "mode": "BUS",
+        "shortName": "415",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-415-23a-2",
+        "mode": "BUS",
+        "shortName": "415",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B14-22a-2",
+        "mode": "BUS",
+        "shortName": "14",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B12-23a-1",
+        "mode": "BUS",
+        "shortName": "12",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-145-22a-1",
+        "mode": "BUS",
+        "shortName": "145",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-214-23a-1",
+        "mode": "BUS",
+        "shortName": "214",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-423-22a-1",
+        "mode": "BUS",
+        "shortName": "423",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-4-23a-1",
+        "mode": "BUS",
+        "shortName": "135.4",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-177-22a-1",
+        "mode": "BUS",
+        "shortName": "177",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-246-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N246",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-421-23a-2",
+        "mode": "BUS",
+        "shortName": "421",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-156-23a-1",
+        "mode": "BUS",
+        "shortName": "156",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-970-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N170",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-6-22a-1",
+        "mode": "BUS",
+        "shortName": "135.6",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-467-23a-2",
+        "mode": "BUS",
+        "shortName": "467",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-473-23a-2",
+        "mode": "BUS",
+        "shortName": "473",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-473-23a-1",
+        "mode": "BUS",
+        "shortName": "473",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-320-3-22a-3",
+        "mode": "BUS",
+        "shortName": "320.3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-701-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N201",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-451-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N451",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B07-A-22a-5",
+        "mode": "BUS",
+        "shortName": "7A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-261-23a-1",
+        "mode": "BUS",
+        "shortName": "261",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-239-22a-1",
+        "mode": "BUS",
+        "shortName": "239",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-338-23a-1",
+        "mode": "BUS",
+        "shortName": "338",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-237-23a-2",
+        "mode": "BUS",
+        "shortName": "237",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-237-23a-1",
+        "mode": "BUS",
+        "shortName": "237",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-464-23a-1",
+        "mode": "BUS",
+        "shortName": "464",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-464-23a-2",
+        "mode": "BUS",
+        "shortName": "464",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-313-22a-2",
+        "mode": "BUS",
+        "shortName": "313",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-358-22a-2",
+        "mode": "BUS",
+        "shortName": "358",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-200-T-23a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-167-23a-1",
+        "mode": "BUS",
+        "shortName": "167",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-402-22a-9",
+        "mode": "BUS",
+        "shortName": "402",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-325-23a-2",
+        "mode": "BUS",
+        "shortName": "325",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-262-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N262",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B05-23a-3",
+        "mode": "BUS",
+        "shortName": "5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-240-22a-2",
+        "mode": "BUS",
+        "shortName": "240",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B05-23a-4",
+        "mode": "BUS",
+        "shortName": "5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B05-23a-5",
+        "mode": "BUS",
+        "shortName": "5",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M06-22a-5",
+        "mode": "BUS",
+        "shortName": "6",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-418-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N418",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-279-23a-1",
+        "mode": "BUS",
+        "shortName": "279",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-128-22a-1",
+        "mode": "BUS",
+        "shortName": "128",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-400-O-23a-2",
+        "mode": "BUS",
+        "shortName": "B400",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-B00-23a-1",
+        "mode": "BUS",
+        "shortName": "A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-400-O-23a-1",
+        "mode": "BUS",
+        "shortName": "B400",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-901-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N401",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-465-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N465",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-400-O-23a-3",
+        "mode": "BUS",
+        "shortName": "B400",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-346-22a-1",
+        "mode": "BUS",
+        "shortName": "346",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-447-23a-1",
+        "mode": "BUS",
+        "shortName": "447",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B35-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N35",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-325-22a-1",
+        "mode": "BUS",
+        "shortName": "325",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-266-23a-1",
+        "mode": "BUS",
+        "shortName": "266",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-965-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N165",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-139-23a-2",
+        "mode": "BUS",
+        "shortName": "139",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-139-23a-1",
+        "mode": "BUS",
+        "shortName": "139",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-121-23a-1",
+        "mode": "BUS",
+        "shortName": "121",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-128-23a-1",
+        "mode": "BUS",
+        "shortName": "128",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-450-S-23a-1",
+        "mode": "BUS",
+        "shortName": "450",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M04-23a-1",
+        "mode": "BUS",
+        "shortName": "4",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-274-22a-1",
+        "mode": "BUS",
+        "shortName": "274",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-346-23a-2",
+        "mode": "BUS",
+        "shortName": "346",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-116-22a-7",
+        "mode": "BUS",
+        "shortName": "116",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B35-N-22a-2",
+        "mode": "BUS",
+        "shortName": "N35",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-212-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N212",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-452-22a-3",
+        "mode": "BUS",
+        "shortName": "452",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-124-S-22a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-356-23a-1",
+        "mode": "BUS",
+        "shortName": "356",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-181-23a-2",
+        "mode": "BUS",
+        "shortName": "181",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-701-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N201",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-321-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N321",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-320-3-23a-2",
+        "mode": "BUS",
+        "shortName": "320.3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-211-23a-1",
+        "mode": "BUS",
+        "shortName": "211",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-280-22a-1",
+        "mode": "BUS",
+        "shortName": "280",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-261-22a-2",
+        "mode": "BUS",
+        "shortName": "261",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M01-22a-5",
+        "mode": "BUS",
+        "shortName": "1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-951-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N251",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-156-22a-11",
+        "mode": "BUS",
+        "shortName": "156",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-167-22a-4",
+        "mode": "BUS",
+        "shortName": "167",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-200-T-22a-9",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-183-22a-2",
+        "mode": "BUS",
+        "shortName": "183",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-412-22a-2",
+        "mode": "BUS",
+        "shortName": "412",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-442-23a-1",
+        "mode": "BUS",
+        "shortName": "442",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-200-T-22a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-123-22a-3",
+        "mode": "BUS",
+        "shortName": "123",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-135-2-22a-2",
+        "mode": "BUS",
+        "shortName": "135.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-402-23a-2",
+        "mode": "BUS",
+        "shortName": "402",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-124-S-22a-19",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-342-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N342",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-447-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N447",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-232-22a-1",
+        "mode": "BUS",
+        "shortName": "232",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-124-S-22a-18",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-400-B-22a-13",
+        "mode": "BUS",
+        "shortName": "400B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-344-23a-2",
+        "mode": "BUS",
+        "shortName": "344",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-120-23a-1",
+        "mode": "BUS",
+        "shortName": "120",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-420-2-22a-5",
+        "mode": "BUS",
+        "shortName": "420.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-940-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N240",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-279-22a-3",
+        "mode": "BUS",
+        "shortName": "279",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-226-23a-1",
+        "longName": "226",
+        "mode": "FUNICULAR",
+        "shortName": "226",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-926-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N126",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-152-23a-1",
+        "mode": "BUS",
+        "shortName": "152",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-126-23a-1",
+        "mode": "BUS",
+        "shortName": "126",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-212-B-22a-5",
+        "mode": "BUS",
+        "shortName": "212B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-161-B-23a-3",
+        "mode": "BUS",
+        "shortName": "B161",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-179-23a-1",
+        "mode": "BUS",
+        "shortName": "179",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-161-B-23a-2",
+        "mode": "BUS",
+        "shortName": "B161",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-268-23a-1",
+        "mode": "BUS",
+        "shortName": "268",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-179-23a-2",
+        "mode": "BUS",
+        "shortName": "179",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-441-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N441",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-226-23a-2",
+        "longName": "226",
+        "mode": "FUNICULAR",
+        "shortName": "226",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-161-B-23a-1",
+        "mode": "BUS",
+        "shortName": "B161",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-179-23a-3",
+        "mode": "BUS",
+        "shortName": "179",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-226-23a-3",
+        "longName": "226",
+        "mode": "FUNICULAR",
+        "shortName": "226",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-276-22a-1",
+        "mode": "BUS",
+        "shortName": "276",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-123-23a-2",
+        "mode": "BUS",
+        "shortName": "123",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-980-N-22a-3",
+        "mode": "BUS",
+        "shortName": "N180",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-452-23a-1",
+        "mode": "BUS",
+        "shortName": "N452",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-272-23a-1",
+        "mode": "BUS",
+        "shortName": "272",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-124-S-23a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-222-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N222",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-237-22a-3",
+        "mode": "BUS",
+        "shortName": "237",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-237-22a-7",
+        "mode": "BUS",
+        "shortName": "237",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-133-S-22a-5",
+        "mode": "BUS",
+        "shortName": "133",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-186-23a-3",
+        "mode": "BUS",
+        "shortName": "186",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-186-23a-2",
+        "mode": "BUS",
+        "shortName": "186",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-186-23a-1",
+        "mode": "BUS",
+        "shortName": "186",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-462-23a-3",
+        "mode": "BUS",
+        "shortName": "462",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-980-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N180",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-356-22a-1",
+        "mode": "BUS",
+        "shortName": "356",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-160-23a-3",
+        "longName": "160",
+        "mode": "RAIL",
+        "shortName": "160",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-221-22a-1",
+        "mode": "BUS",
+        "shortName": "221",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-160-23a-1",
+        "longName": "160",
+        "mode": "RAIL",
+        "shortName": "160",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-462-23a-1",
+        "mode": "BUS",
+        "shortName": "462",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-160-23a-2",
+        "longName": "160",
+        "mode": "RAIL",
+        "shortName": "160",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-129-22a-1",
+        "mode": "BUS",
+        "shortName": "129",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-464-22a-4",
+        "mode": "BUS",
+        "shortName": "464",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M01-23a-1",
+        "mode": "BUS",
+        "shortName": "1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-212-22a-12",
+        "mode": "BUS",
+        "shortName": "212",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-212-22a-11",
+        "mode": "BUS",
+        "shortName": "212",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B03-22a-11",
+        "mode": "BUS",
+        "shortName": "3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-268-22a-1",
+        "mode": "BUS",
+        "shortName": "268",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B03-22a-10",
+        "mode": "BUS",
+        "shortName": "3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-442-22a-1",
+        "mode": "BUS",
+        "shortName": "442",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-354-23a-2",
+        "mode": "BUS",
+        "shortName": "354",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-118-23a-1",
+        "longName": "118",
+        "mode": "FUNICULAR",
+        "shortName": "118",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-322-22a-1",
+        "mode": "BUS",
+        "shortName": "322",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-117-23a-1",
+        "mode": "BUS",
+        "shortName": "117",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-211-22a-5",
+        "mode": "BUS",
+        "shortName": "211",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-232-23a-1",
+        "mode": "BUS",
+        "shortName": "232",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-850-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N150",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-435-1-23a-1",
+        "mode": "BUS",
+        "shortName": "435.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B07-A-23a-1",
+        "mode": "BUS",
+        "shortName": "7A",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M04-22a-5",
+        "mode": "BUS",
+        "shortName": "4",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-411-22a-3",
+        "mode": "BUS",
+        "shortName": "411",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-311-23a-2",
+        "mode": "BUS",
+        "shortName": "311",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-344-22a-1",
+        "mode": "BUS",
+        "shortName": "344",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-420-2-23a-2",
+        "mode": "BUS",
+        "shortName": "420.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-940-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N240",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-338-22a-1",
+        "mode": "BUS",
+        "shortName": "338",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-353-23a-2",
+        "mode": "BUS",
+        "shortName": "353",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-185-22a-6",
+        "mode": "BUS",
+        "shortName": "185",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-116-23a-1",
+        "mode": "BUS",
+        "shortName": "116",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-161-B-22a-3",
+        "mode": "BUS",
+        "shortName": "161B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-274-23a-1",
+        "mode": "BUS",
+        "shortName": "274",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-811-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N811",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-126-22a-4",
+        "mode": "BUS",
+        "shortName": "126",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-161-23a-1",
+        "longName": "161",
+        "mode": "FUNICULAR",
+        "shortName": "161",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-161-23a-3",
+        "longName": "161",
+        "mode": "FUNICULAR",
+        "shortName": "161",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-161-23a-2",
+        "longName": "161",
+        "mode": "FUNICULAR",
+        "shortName": "161",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-444-23a-1",
+        "mode": "BUS",
+        "shortName": "444",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-225-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N225",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-343-22a-1",
+        "mode": "BUS",
+        "shortName": "343",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-441-23a-1",
+        "mode": "BUS",
+        "shortName": "N441",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-450-22a-4",
+        "mode": "BUS",
+        "shortName": "450",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-457-22a-1",
+        "mode": "BUS",
+        "shortName": "457",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B08-22a-15",
+        "mode": "BUS",
+        "shortName": "8",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-329-22a-3",
+        "mode": "BUS",
+        "shortName": "329",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-225-23a-1",
+        "mode": "BUS",
+        "shortName": "N225",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-315-22a-3",
+        "mode": "BUS",
+        "shortName": "315",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-272-22a-1",
+        "mode": "BUS",
+        "shortName": "272",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-236-22a-3",
+        "mode": "BUS",
+        "shortName": "236",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M13-N-22a-2",
+        "mode": "BUS",
+        "shortName": "N13",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-236-22a-2",
+        "mode": "BUS",
+        "shortName": "236",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-952-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N252",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-400-T-22a-11",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:82-185-23a-3",
+        "mode": "BUS",
+        "shortName": "185",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-133-S-23a-1",
+        "mode": "BUS",
+        "shortName": "133",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-242-23a-1",
+        "mode": "BUS",
+        "shortName": "242",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M03-22a-2",
+        "mode": "BUS",
+        "shortName": "3",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-160-22a-3",
+        "longName": "160",
+        "mode": "RAIL",
+        "shortName": "160",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-212-23a-1",
+        "mode": "BUS",
+        "shortName": "N212",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-202-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N202",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-160-22a-1",
+        "longName": "160",
+        "mode": "RAIL",
+        "shortName": "160",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-401-22a-9",
+        "mode": "BUS",
+        "shortName": "401",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-461-23a-2",
+        "mode": "BUS",
+        "shortName": "461",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-401-22a-8",
+        "mode": "BUS",
+        "shortName": "401",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-461-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N461",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-401-22a-7",
+        "mode": "BUS",
+        "shortName": "401",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-401-22a-6",
+        "mode": "BUS",
+        "shortName": "401",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-269-23a-2",
+        "mode": "BUS",
+        "shortName": "269",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-131-23a-1",
+        "mode": "BUS",
+        "shortName": "131",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-322-23a-1",
+        "mode": "BUS",
+        "shortName": "322",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-926-N-22a-2",
+        "mode": "BUS",
+        "shortName": "N126",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-454-23a-2",
+        "mode": "BUS",
+        "shortName": "454",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-455-22a-1",
+        "mode": "BUS",
+        "shortName": "455",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-132-22a-1",
+        "mode": "BUS",
+        "shortName": "132",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-328-23a-2",
+        "mode": "BUS",
+        "shortName": "328",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-210-22a-7",
+        "mode": "BUS",
+        "shortName": "210",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-269-23a-1",
+        "mode": "BUS",
+        "shortName": "269",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-438-22a-2",
+        "mode": "BUS",
+        "shortName": "438",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-342-23a-2",
+        "mode": "BUS",
+        "shortName": "342",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-152-22a-1",
+        "mode": "BUS",
+        "shortName": "152",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-202-23a-1",
+        "mode": "BUS",
+        "shortName": "202",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-235-23a-3",
+        "mode": "BUS",
+        "shortName": "235",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-330-22a-3",
+        "mode": "BUS",
+        "shortName": "330",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:88-461-22a-6",
+        "mode": "BUS",
+        "shortName": "461",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-315-23a-2",
+        "mode": "BUS",
+        "shortName": "315",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-449-23a-1",
+        "mode": "BUS",
+        "shortName": "449",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-235-23a-1",
+        "mode": "BUS",
+        "shortName": "235",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-235-23a-2",
+        "mode": "BUS",
+        "shortName": "235",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-140-22a-2",
+        "mode": "BUS",
+        "shortName": "140",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-144-23a-1",
+        "mode": "BUS",
+        "shortName": "144",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-445-22a-1",
+        "mode": "BUS",
+        "shortName": "445",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-271-23a-2",
+        "mode": "BUS",
+        "shortName": "271",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-271-23a-1",
+        "mode": "BUS",
+        "shortName": "271",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-438-23a-1",
+        "mode": "BUS",
+        "shortName": "438",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-342-22a-3",
+        "mode": "BUS",
+        "shortName": "342",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-137-23a-1",
+        "mode": "BUS",
+        "shortName": "137",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-269-22a-3",
+        "mode": "BUS",
+        "shortName": "269",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B07-B-22a-15",
+        "mode": "BUS",
+        "shortName": "7B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-443-23a-5",
+        "mode": "BUS",
+        "shortName": "443",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B07-B-22a-14",
+        "mode": "BUS",
+        "shortName": "7B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B07-B-22a-13",
+        "mode": "BUS",
+        "shortName": "7B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-420-1-22a-11",
+        "mode": "BUS",
+        "shortName": "420.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-400-S-22a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-443-23a-2",
+        "mode": "BUS",
+        "shortName": "443",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-443-23a-4",
+        "mode": "BUS",
+        "shortName": "443",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-443-23a-3",
+        "mode": "BUS",
+        "shortName": "443",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-261-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N261",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-446-22a-3",
+        "mode": "BUS",
+        "shortName": "446",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-447-23a-1",
+        "mode": "BUS",
+        "shortName": "N447",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-270-23a-1",
+        "mode": "BUS",
+        "shortName": "270",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-161-22a-2",
+        "longName": "161",
+        "mode": "FUNICULAR",
+        "shortName": "161",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-201-23a-1",
+        "mode": "BUS",
+        "shortName": "201",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-138-23a-1",
+        "mode": "BUS",
+        "shortName": "138",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-136-23a-1",
+        "mode": "BUS",
+        "shortName": "136",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-102-T-22a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-455-23a-1",
+        "mode": "BUS",
+        "shortName": "455",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-314-23a-2",
+        "mode": "BUS",
+        "shortName": "314",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-471-23a-1",
+        "mode": "BUS",
+        "shortName": "471",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-401-23a-2",
+        "mode": "BUS",
+        "shortName": "401",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-277-22a-2",
+        "mode": "BUS",
+        "shortName": "277",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-471-23a-2",
+        "mode": "BUS",
+        "shortName": "471",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-325-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N325",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-161-22a-3",
+        "longName": "161",
+        "mode": "FUNICULAR",
+        "shortName": "161",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-850-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N150",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-202-22a-3",
+        "mode": "BUS",
+        "shortName": "202",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:7-226-22a-4",
+        "longName": "226",
+        "mode": "FUNICULAR",
+        "shortName": "226",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-M13-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N13",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-331-22a-1",
+        "mode": "BUS",
+        "shortName": "331",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-316-22a-3",
+        "mode": "BUS",
+        "shortName": "316",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-453-22a-3",
+        "mode": "BUS",
+        "shortName": "453",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-102-T-23a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-319-22a-5",
+        "mode": "BUS",
+        "shortName": "319",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-320-1-23a-1",
+        "mode": "BUS",
+        "shortName": "320.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-244-22a-1",
+        "mode": "BUS",
+        "shortName": "244",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-400-T-22a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-331-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N331",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-200-S-22a-2",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-454-22a-1",
+        "mode": "BUS",
+        "shortName": "454",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-319-23a-2",
+        "mode": "BUS",
+        "shortName": "319",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-328-22a-5",
+        "mode": "BUS",
+        "shortName": "328",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-901-N-22a-5",
+        "mode": "BUS",
+        "shortName": "N401",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-213-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N213",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-448-23a-2",
+        "mode": "BUS",
+        "shortName": "448",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B10-B-23a-2",
+        "mode": "BUS",
+        "shortName": "10B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-B10-B-23a-1",
+        "mode": "BUS",
+        "shortName": "10B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-328-22a-7",
+        "mode": "BUS",
+        "shortName": "328",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-316-23a-2",
+        "mode": "BUS",
+        "shortName": "316",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-447-22a-1",
+        "mode": "BUS",
+        "shortName": "447",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-201-22a-7",
+        "mode": "BUS",
+        "shortName": "201",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-183-23a-1",
+        "mode": "BUS",
+        "shortName": "183",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:87-328-22a-6",
+        "mode": "BUS",
+        "shortName": "328",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-266-22a-1",
+        "mode": "BUS",
+        "shortName": "266",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-265-23a-1",
+        "mode": "BUS",
+        "shortName": "265",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-412-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N412",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-239-23a-1",
+        "mode": "BUS",
+        "shortName": "239",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-450-23a-2",
+        "mode": "BUS",
+        "shortName": "450",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-144-22a-3",
+        "mode": "BUS",
+        "shortName": "144",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-920-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N120",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-140-23a-1",
+        "mode": "BUS",
+        "shortName": "140",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:6-250-B-22a-5",
+        "mode": "BUS",
+        "shortName": "250B",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-450-S-22a-7",
+        "mode": "BUS",
+        "shortName": "450",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-902-N-23a-2",
+        "mode": "BUS",
+        "shortName": "N402",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-262-23a-2",
+        "mode": "BUS",
+        "shortName": "262",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-236-23a-1",
+        "mode": "BUS",
+        "shortName": "236",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:83-358-23a-2",
+        "mode": "BUS",
+        "shortName": "358",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-236-23a-2",
+        "mode": "BUS",
+        "shortName": "236",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-236-23a-3",
+        "mode": "BUS",
+        "shortName": "236",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-273-22a-1",
+        "mode": "BUS",
+        "shortName": "273",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:1-112-22a-11",
+        "mode": "BUS",
+        "shortName": "112",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-282-22a-1",
+        "mode": "BUS",
+        "shortName": "282",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-320-2-22a-5",
+        "mode": "BUS",
+        "shortName": "320.2",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-243-23a-1",
+        "mode": "BUS",
+        "shortName": "243",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-446-23a-4",
+        "mode": "BUS",
+        "shortName": "446",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-400-S-23a-1",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-446-23a-3",
+        "mode": "BUS",
+        "shortName": "446",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-136-22a-1",
+        "mode": "BUS",
+        "shortName": "136",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-265-22a-2",
+        "mode": "BUS",
+        "shortName": "265",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-951-N-23a-1",
+        "mode": "BUS",
+        "shortName": "N251",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-277-23a-1",
+        "mode": "BUS",
+        "shortName": "277",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-320-1-22a-8",
+        "mode": "BUS",
+        "shortName": "320.1",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-277-23a-2",
+        "mode": "BUS",
+        "shortName": "277",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-251-22a-3",
+        "mode": "BUS",
+        "shortName": "251",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-454-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N454",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-453-23a-1",
+        "mode": "BUS",
+        "shortName": "453",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-282-23a-2",
+        "mode": "BUS",
+        "shortName": "282",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-331-23a-2",
+        "mode": "BUS",
+        "shortName": "331",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:21-282-23a-1",
+        "mode": "BUS",
+        "shortName": "282",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-271-22a-7",
+        "mode": "BUS",
+        "shortName": "271",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:8-231-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N231",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:86-330-23a-1",
+        "mode": "BUS",
+        "shortName": "330",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:81-139-22a-4",
+        "mode": "BUS",
+        "shortName": "139",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-244-23a-1",
+        "mode": "BUS",
+        "shortName": "244",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:90-445-23a-1",
+        "mode": "BUS",
+        "shortName": "445",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-400-T-23a-1",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:84-264-23a-1",
+        "mode": "BUS",
+        "shortName": "264",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:85-910-N-22a-1",
+        "mode": "BUS",
+        "shortName": "N310",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:80-137-22a-1",
+        "mode": "BUS",
+        "shortName": "137",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:89-452-23a-1",
+        "mode": "BUS",
+        "shortName": "452",
+        "sortOrder": -999
+    },
+    {
+        "agencyId": "südtirolmobil - altoadigemobilità",
+        "agencyName": "südtirolmobil - altoadigemobilità",
+        "id": "1:3-102-T-22a-15",
+        "longName": "REG",
+        "mode": "RAIL",
+        "shortName": "REG",
+        "sortOrder": -999
+    }
+]

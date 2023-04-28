@@ -1,0 +1,22 @@
+.otp.mobile {
+  .welcome-location,
+  .welcome-map {
+    position: fixed;
+    left: 0;
+    right: 0;
+
+  }
+
+  .welcome-location {
+    z-index: 3;
+    top: $mobile-welcome-location-top;
+    height: $mobile-welcome-location-height;
+  }
+
+  .welcome-map {
+    /* temporary solution to put search settings below filter settings*/
+    z-index: 2;
+    top: $mobile-welcome-map-top;
+    bottom: 0;
+  }
+}

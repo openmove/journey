@@ -1,0 +1,2548 @@
+{
+    "errorsByNetwork": {
+        "BZ": [],
+        "ME": [],
+        "PAPIN": []
+    },
+    "stations": [
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"104\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Ambassador Palace Hotel Udine",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.24055,
+            "y": 46.058981
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"39\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "TVB Klagenfurt",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 14.307679,
+            "y": 46.624314
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"794\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Bahnhof Brixen",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.6502,
+            "y": 46.71208
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1804321953\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"78\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Bruneck Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.92886,
+            "y": 46.794721
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"70\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Toblach Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.226446,
+            "y": 46.724655
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1524760848\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.151295,
+            "y": 46.677869
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1620182844\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.150385,
+            "y": 46.672564
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"743374378\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.151295,
+            "y": 46.677869
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 6,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzQxNj9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--b8e1095924315dc7089c54cc36abf07595b1a123\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Don Bosco",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 6,
+            "x": 11.324709,
+            "y": 46.488428
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 0,
+            "id": "\"1269278439\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Kornplatz/Piazza del Grano",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1000,
+            "x": 11.1591598904964,
+            "y": 46.6725259496189
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 0,
+            "id": "\"304968321\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Meran Bahnhof/Stazione Merano",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1000,
+            "x": 11.1504930651344,
+            "y": 46.6724091363668
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"2090974598\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"627756204\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"361\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Latsch Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 10.860385,
+            "y": 46.619247
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"2056667079\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.151295,
+            "y": 46.677869
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"212\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "INTERSPORT Sport Folie",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 10.51601,
+            "y": 46.829814
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1631287731\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1516382296\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"274511459\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1112277873\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.151295,
+            "y": 46.677869
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1891943972\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.165031,
+            "y": 46.669996
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"183\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Tourismusinformation Faak am See",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.907876,
+            "y": 46.565931
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"68\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Innichen Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.272869,
+            "y": 46.732841
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"67\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Innichen Zentrum",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.284852,
+            "y": 46.73326
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"919816254\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.151295,
+            "y": 46.677869
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1063205539\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"305755006\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.150385,
+            "y": 46.672564
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 4,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzQ2ND9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--ddc69afa031263d58526f56a5d60574abb2b8c70\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Piazza Ziller",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 4,
+            "x": 11.33976,
+            "y": 46.492712
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"83\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Bikerental Leitner Mühlbach",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.669784,
+            "y": 46.79726
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"71\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Winnebach Camping",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.365535,
+            "y": 46.73924
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"248\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Tourismusinformation Sattendorf",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.915971,
+            "y": 46.663312
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 0,
+            "id": "\"1034990009\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Bahnhof Meran Ausgang Unterführung/Stazione di Merano uscita sottopassaggio",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1000,
+            "x": 11.1492250523844,
+            "y": 46.6736799668088
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"519\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Lener Wirtshaus Freienfeld",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.48349,
+            "y": 46.87163
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1711801370\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.148548,
+            "y": 46.656155
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1610831303\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 3,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzQ2Nj9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--b905857549d86e30377f204a5fd744c144e0eb31\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Casanova",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 9,
+            "x": 11.312433,
+            "y": 46.480901
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 20,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzE5Mz9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--3008cf824e352d9854585d3731568fe6e0a042d2\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Claudia Augusta",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.343183,
+            "y": 46.483579
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"102\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Albergo da Michele Venzone",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.132769,
+            "y": 46.325068
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 11,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzE5OT9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--1bd9304bdb17a53ff75a7080179f84c9d2776825\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Piazza Gries - Grieserplatz",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1,
+            "x": 11.335204,
+            "y": 46.502365
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1048632756\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"29\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "TVB St.Veit",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 14.360858,
+            "y": 46.769844
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"17\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Tourismusinformation Bodensdorf",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.973668,
+            "y": 46.685389
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"69\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Pension Haunold",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.277592,
+            "y": 46.730807
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"360\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Schlanders Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 10.766218,
+            "y": 46.625623
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1859289626\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.150385,
+            "y": 46.672564
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"56\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Intersport Rent Kaiserburg Bahn Talstation",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.798195,
+            "y": 46.8135
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"44\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Ski & Sportschule Katschberg",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.614539,
+            "y": 47.05762
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"639\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Haller Sport Ridnaun",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.30515,
+            "y": 46.90982
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"2069269466\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"72\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Sillian Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.424967,
+            "y": 46.745569
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"2053521138\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 5,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzQ2Mj9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--2f7728b855652d2f1d57e07c5524a0742097aff3\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Funivia del Colle",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1,
+            "x": 11.366321,
+            "y": 46.490933
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"655\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Sonnenresort Ossiach",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.99698,
+            "y": 46.68213
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1683478213\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1549688608\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.148548,
+            "y": 46.656155
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 8,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzM0ND9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--c21564daa3fde7db6ac067e1f567a4847ed9c060\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "NOI Techpark Alto Adige",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 4,
+            "x": 11.333139,
+            "y": 46.479306
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"449\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Welsberg Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.107926,
+            "y": 46.753329
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 17,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzE5Nz9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--c4e26e1fd97da55bd1a1fe7ccf67f1b70c69453a\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Palasport - Stadthalle",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.316234,
+            "y": 46.491091
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"518\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Bernmeister Bar",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.50489,
+            "y": 47.00417
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"194765756\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.150385,
+            "y": 46.672564
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"898683578\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1886942532\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.150385,
+            "y": 46.672564
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"355\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Zona Trenta",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.312428,
+            "y": 45.906805
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"2043505637\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1128009659\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1359037427\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.148548,
+            "y": 46.656155
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"18\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Tourismusinformation Drobollach",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.917459,
+            "y": 46.587722
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"638\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Bar Buffet Sterzing",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.43991,
+            "y": 46.89574
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"85\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Cortina",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.140586,
+            "y": 46.537886
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"73\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Lienz Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.770913,
+            "y": 46.828551
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 0,
+            "id": "\"135754129\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Sandplatz/Piazza Rena",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1000,
+            "x": 11.1651819301242,
+            "y": 46.6701322102183
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"339\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Haunold E-Bike",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.278284,
+            "y": 46.73079
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"413504599\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.148548,
+            "y": 46.656155
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 8,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzE5ND9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--3242fbb9d66046deac446c8b89768cd1b6fc9c9f\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Via Maso della Pieve - Pfarrhofstrasse",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 4,
+            "x": 11.333071,
+            "y": 46.46461
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"517\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Sterzing – Outdoor Center – Valley Station Rosskopf",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.429795,
+            "y": 46.90415
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"43814071\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"864868739\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1302357886\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.148548,
+            "y": 46.656155
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"378\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Wolligger Sports KG",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.168759,
+            "y": 46.989196
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"423\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Allo Spiedo",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.135219,
+            "y": 46.32885
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"19\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Tourismusinformation Ossiach",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.98345,
+            "y": 46.676288
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1041071595\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"59\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Hotel Royal X",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.510227,
+            "y": 46.813842
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"393520761\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"751956172\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.151295,
+            "y": 46.677869
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"10\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Charly's Seelounge",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.645799,
+            "y": 46.766479
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 11,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzE5NT9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--845248b808d1bf6c6115e471e41ccdca99f09743\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Fiera - Messe",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1,
+            "x": 11.325996,
+            "y": 46.473876
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"50\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Penkerwirt",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.260177,
+            "y": 46.897368
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 0,
+            "id": "\"770559437\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Bahnhof Untermais/Stazione Maia Bassa",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1000,
+            "x": 11.1484266999202,
+            "y": 46.6563591168723
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"385407687\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.148548,
+            "y": 46.656155
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"341\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "E-Bike Center Gasthof Tuscherhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.139188,
+            "y": 46.720767
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"251752694\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.150385,
+            "y": 46.672564
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"153499966\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.150385,
+            "y": 46.672564
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 4,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzQ2Mz9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--b8901538dd95a269182c83802f18772f9e4fe6eb\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Ponte Talvera",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 4,
+            "x": 11.345923,
+            "y": 46.500313
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"752372352\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"1\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Villach",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.849964,
+            "y": 46.612229
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"825813160\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.151295,
+            "y": 46.677869
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"721\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Café Central",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.70918,
+            "y": 46.54974
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1406153788\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.148548,
+            "y": 46.656155
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"107\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Halle Innichen",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.270419,
+            "y": 46.730885
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 13,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzE5Mj9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--33150e8ef8c952030277c63eec20b5e9ea6c76d3\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Viale della Stazione - Bahnhofsallee",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.355516,
+            "y": 46.497459
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1601645294\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.148548,
+            "y": 46.656155
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1207849776\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"243\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Drausport",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.156807,
+            "y": 46.773052
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1281821998\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.150385,
+            "y": 46.672564
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"433\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport San Vito",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.205521,
+            "y": 46.459494
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"49\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Nationalpark-Info Mautturm Winklern",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.875589,
+            "y": 46.871401
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 10,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzE5Nj9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--1b380c7315ed00d73a49269e2feab2e5b0452a00\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Via Galilei - Galilei-Strasse",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 2,
+            "x": 11.335918,
+            "y": 46.485846
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"25\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Gasthof Hüttenwirt",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 14.955461,
+            "y": 46.636229
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"734332577\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"9584424\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"76\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Alpinhotel Keil",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.038106,
+            "y": 46.757939
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"174456788\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.151295,
+            "y": 46.677869
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"52\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Camping am Waldbad",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.078691,
+            "y": 46.731088
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 2,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzQ2NT9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--bc328b4da961b3abf1e86643a210909746cf640a\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Viale Europa",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 10,
+            "x": 11.324903,
+            "y": 46.492615
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"40\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Alpencamp Kötschach-Mauthen",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 12.991663,
+            "y": 46.669605
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"801\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Reischach",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.94238,
+            "y": 46.77068
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1851966409\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"2127216321\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.165031,
+            "y": 46.669996
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"77694183\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"80\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Kreaktiv Basecamp Taufers",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 11.95411,
+            "y": 46.917748
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1108091915\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 0,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzQxNz9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--78b09f10f7e8c0905a6dad4c9589f784b8fe96aa\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Piazza Matteotti - Matteotti Platz",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 6,
+            "x": 11.337135,
+            "y": 46.490211
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"119860741\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"2146287732\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"2070070248\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 0,
+            "id": "\"1371339801\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Via Piave Terme/Piavestraße Therme",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 1000,
+            "x": 11.1596901128485,
+            "y": 46.6691707274645
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"1021591541\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"887955024\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159619,
+            "y": 46.668685
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"294\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Sport Schiffer",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.745042,
+            "y": 46.971574
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"367229908\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.159046,
+            "y": 46.672432
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"53\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Touristikbüro Feldkirchen",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 14.091878,
+            "y": 46.723292
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"41\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Auto Essl",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.374635,
+            "y": 46.627575
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"358209492\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.165031,
+            "y": 46.669996
+        },
+        {
+            "allowDropoff": false,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 1,
+            "id": "\"882548390\"",
+            "isCarStation": false,
+            "isFloatingBike": true,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "",
+            "networks": [
+                "ME"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 0,
+            "x": 11.14956,
+            "y": 46.673334
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 3,
+            "id": "\"BAh7CEkiCGdpZAY6BkVUSSIsZ2lkOi8vYmt3L1NoYXJpbmdTdGF0aW9uLzE5OD9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--9bc94cf15edb94fdc76de38a15033eba707d96bd\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Ospedale - Krankenhaus",
+            "networks": [
+                "BZ"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 9,
+            "x": 11.308948,
+            "y": 46.499597
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"117\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Alla Vecchia Stazione Ugovizza",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.474141,
+            "y": 46.509873
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"105\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Hotel Savoy Grado",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.39301,
+            "y": 45.678339
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"359\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Papin Sport Spondinig Bahnhof",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 10.610182,
+            "y": 46.634644
+        },
+        {
+            "allowDropoff": true,
+            "allowOverloading": false,
+            "allowPickup": true,
+            "bikesAvailable": 100,
+            "id": "\"537\"",
+            "isCarStation": false,
+            "isFloatingBike": false,
+            "lastReportedEpochSeconds": 1678186762,
+            "name": "Bacher Touristik GmbH",
+            "networks": [
+                "PAPIN"
+            ],
+            "realTimeData": true,
+            "spacesAvailable": 100,
+            "x": 13.53442,
+            "y": 46.901
+        }
+    ],
+    "systemInformationDataByNetwork": {}
+}

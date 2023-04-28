@@ -1,0 +1,22 @@
+{
+    "filters": {
+        "networks": {
+            "enabled": true,
+            "label": "label_networks",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "PAPIN"
+                },
+                {
+                    "enabled": true,
+                    "value": "ME"
+                },
+                {
+                    "enabled": true,
+                    "value": "BZ"
+                }
+            ]
+        }
+    }
+}

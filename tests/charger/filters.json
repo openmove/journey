@@ -1,0 +1,174 @@
+{
+  "filters": {
+    "provider": {
+      "enabled": true,
+      "label": "label_provider",
+      "values": [
+        {
+          "value": "H2 Center",
+          "enabled": true
+        },
+        {
+          "value": "AER",
+          "enabled": true
+        },
+        {
+          "value": "Neogy",
+          "enabled": true
+        },
+        {
+          "value": "EDY",
+          "enabled": true
+        },
+        {
+          "value": "Alperia Smart Mobility",
+          "enabled": true
+        },
+        {
+          "value": "ASM",
+          "enabled": true
+        },
+        {
+          "value": "NHP",
+          "enabled": true
+        },
+        {
+          "value": "ASD",
+          "enabled": true
+        },
+        {
+          "value": "DriWe",
+          "enabled": true
+        },
+        {
+          "value": "Route220",
+          "enabled": true
+        },
+        {
+          "value": "AP_GEN",
+          "enabled": true
+        }
+      ]
+    },
+    "accessType": {
+      "enabled": true,
+      "label": "label_accesstype",
+      "values": [
+        {
+          "value": "PUBLIC",
+          "enabled": true
+        },
+        {
+          "value": "undefined",
+          "enabled": true
+        },
+        {
+          "value": "PRIVATE",
+          "enabled": true
+        },
+        {
+          "value": "PRIVATE_WITHPUBLICACCESS",
+          "enabled": true
+        }
+      ]
+    },
+    "reservable": {
+      "enabled": true,
+      "label": "label_reservable",
+      "values": [
+        {
+          "value": "yes",
+          "enabled": true
+        },
+        {
+          "value": "no",
+          "enabled": true
+        }
+      ]
+    },
+    "state": {
+      "enabled": true,
+      "label": "label_state",
+      "values": [
+        {
+          "value": "UNAVAILABLE",
+          "enabled": true
+        },
+        {
+          "value": "MAINTENANCE",
+          "enabled": true
+        },
+        {
+          "value": "ACTIVE",
+          "enabled": true
+        },
+        {
+          "value": "TEMPORARYUNAVAILABLE",
+          "enabled": true
+        },
+        {
+          "value": "AVAILABLE",
+          "enabled": true
+        },
+        {
+          "value": "UNKNOWN",
+          "enabled": true
+        },
+        {
+          "value": "undefined",
+          "enabled": true
+        },
+        {
+          "value": "FAULT",
+          "enabled": true
+        },
+        {
+          "value": "null",
+          "enabled": true
+        },
+        {
+          "value": "OCCUPIED",
+          "enabled": true
+        }
+      ]
+    },
+    "plugsTypes": {
+      "enabled": true,
+      "label": "label_plugs_types",
+      "values": [
+        {
+          "value": "700 bar small vehicles",
+          "enabled": true
+        },
+        {
+          "value": "IEC 62196-2 type 2 outlets (all amperage and phase)",
+          "enabled": true
+        },
+        {
+          "value": "Type2Mennekes",
+          "enabled": true
+        },
+        {
+          "value": "CHAdeMO",
+          "enabled": true
+        },
+        {
+          "value": "CCS",
+          "enabled": true
+        },
+        {
+          "value": "UNKNOWN",
+          "enabled": true
+        },
+        {
+          "value": "Schuko",
+          "enabled": true
+        },
+        {
+          "value": "OTHER",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+    "filters": {
+        "active": {
+            "enabled": true,
+            "label": "label_active",
+            "values": [
+              {
+                "enabled": true,
+                "value": true,
+                "label" : "true"
+              },
+              {
+                "enabled": true,
+                "value": false,
+                "label" : "false"
+            }]
+        },
+        "city": {
+            "enabled": true,
+            "label": "label_city",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "Trento"
+                },
+                {
+                    "enabled": true,
+                    "value": "Faedo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Vermiglio"
+                },
+                {
+                    "enabled": true,
+                    "value": "Cis"
+                },
+                {
+                    "enabled": true,
+                    "value": "Ruffrè Mendola"
+                },
+                {
+                    "enabled": true,
+                    "value": "Predaia"
+                },
+                {
+                    "enabled": true,
+                    "value": "Mezzolombardo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Vallarsa"
+                },
+                {
+                    "enabled": true,
+                    "value": "Grigno"
+                },
+                {
+                    "enabled": true,
+                    "value": "Borgo Valsugana"
+                },
+                {
+                    "enabled": true,
+                    "value": "Roncegno Terme"
+                },
+                {
+                    "enabled": true,
+                    "value": "Levico Terme"
+                },
+                {
+                    "enabled": true,
+                    "value": "Pergine Valsugana"
+                },
+                {
+                    "enabled": true,
+                    "value": "Castello Molina di Fiemme"
+                },
+                {
+                    "enabled": true,
+                    "value": "Predazzo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Moena"
+                },
+                {
+                    "enabled": true,
+                    "value": "Mazzin"
+                },
+                {
+                    "enabled": true,
+                    "value": "Canazei"
+                },
+                {
+                    "enabled": true,
+                    "value": "Imer"
+                },
+                {
+                    "enabled": true,
+                    "value": "Primiero San Martino di Castrozza"
+                },
+                {
+                    "enabled": true,
+                    "value": "Storo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Borgo Lares"
+                },
+                {
+                    "enabled": true,
+                    "value": "Pinzolo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Mori"
+                },
+                {
+                    "enabled": true,
+                    "value": "Nago Torbole"
+                },
+                {
+                    "enabled": true,
+                    "value": "Riva del Garda"
+                },
+                {
+                    "enabled": true,
+                    "value": "Campitello di Fassa"
+                },
+                {
+                    "enabled": true,
+                    "value": "Altopiano della Vigolana"
+                },
+                {
+                    "enabled": true,
+                    "value": "Folgaria"
+                },
+                {
+                    "enabled": true,
+                    "value": "Andalo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Fiavè"
+                },
+                {
+                    "enabled": true,
+                    "value": "Varena"
+                },
+                {
+                    "enabled": true,
+                    "value": "Serrada"
+                },
+                {
+                    "enabled": true,
+                    "value": "Brentonico"
+                },
+                {
+                    "enabled": true,
+                    "value": "Rumo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Vallelaghi"
+                },
+                {
+                    "enabled": true,
+                    "value": "Villa Lagarina"
+                },
+                {
+                    "enabled": true,
+                    "value": "Valdaone"
+                },
+                {
+                    "enabled": true,
+                    "value": "Cavedago"
+                },
+                {
+                    "enabled": true,
+                    "value": "Sporminore"
+                },
+                {
+                    "enabled": true,
+                    "value": "Bondone"
+                },
+                {
+                    "enabled": true,
+                    "value": "Canal San Bovo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Castello Tesino"
+                },
+                {
+                    "enabled": true,
+                    "value": "Madruzzo"
+                },
+                {
+                    "enabled": true,
+                    "value": "Rabbi"
+                },
+                {
+                    "enabled": true,
+                    "value": "Peio"
+                },
+                {
+                    "enabled": true,
+                    "value": "Ledro"
+                },
+                {
+                    "enabled": true,
+                    "value": "Mezzana"
+                },
+                {
+                    "enabled": true,
+                    "value": "Ala"
+                },
+                {
+                    "enabled": true,
+                    "value": "Avio"
+                },
+                {
+                    "enabled": true,
+                    "value": "Lavis"
+                },
+                {
+                    "enabled": true,
+                    "value": "Vigo di Fassa"
+                },
+                {
+                    "enabled": true,
+                    "value": ""
+                }
+            ]
+        },
+        "operator": {
+            "enabled": true,
+            "label": "label_operator",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "trilogis"
+                },
+                {
+                    "enabled": true,
+                    "value": "Noegy"
+                }
+            ]
+        }
+    }
+}

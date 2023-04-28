@@ -1,0 +1,1451 @@
+[
+    {
+        "id": "Parentit:22021:2172",
+        "lat": 46.4883752940039,
+        "lon": 11.3196814060011,
+        "name": "Bolzano, Via Sassari alla Torre",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2172",
+                "id": "1:it:22021:2172:0:5337",
+                "lat": 46.4883536110696,
+                "lon": 11.3198629058844,
+                "name": "Bolzano, Via Sassari alla Torre"
+            },
+            {
+                "cluster": "Parentit:22021:2172",
+                "id": "1:it:22021:2172:0:5220",
+                "lat": 46.4883427593747,
+                "lon": 11.3195106302372,
+                "name": "Bolzano, Via Sassari alla Torre"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2149:0:5320",
+        "lat": 46.4869173648827,
+        "lon": 11.3408710241805,
+        "name": "Bolzano, Galileo",
+        "stops": [
+            {
+                "id": "1:it:22021:2149:0:5320",
+                "lat": 46.4869173648827,
+                "lon": 11.3408710241805,
+                "name": "Bolzano, Galileo"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:819:0:851",
+        "lat": 46.4973389851179,
+        "lon": 11.3050104506675,
+        "name": "Bolzano, Bivio Ospedale",
+        "stops": [
+            {
+                "id": "1:it:22021:819:0:851",
+                "lat": 46.4973389851179,
+                "lon": 11.3050104506675,
+                "name": "Bolzano, Bivio Ospedale"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2158",
+        "lat": 46.4899637050247,
+        "lon": 11.3185762213868,
+        "name": "Bolzano, Campi Resia",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2158",
+                "id": "1:it:22021:2158:0:5000",
+                "lat": 46.489877215679,
+                "lon": 11.3184031475258,
+                "name": "Bolzano, Campi Resia"
+            },
+            {
+                "cluster": "Parentit:22021:2158",
+                "id": "1:it:22021:2158:0:869",
+                "lat": 46.4900160738171,
+                "lon": 11.3186566311846,
+                "name": "Bolzano, Campi Resia"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2163",
+        "lat": 46.4951691880073,
+        "lon": 11.3540746249294,
+        "name": "Bolzano, Piazza Verdi",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2163",
+                "id": "1:it:22021:2163:0:5309",
+                "lat": 46.4949778185641,
+                "lon": 11.3546267279552,
+                "name": "Bolzano, Piazza Verdi"
+            },
+            {
+                "cluster": "Parentit:22021:2163",
+                "id": "1:it:22021:2163:0:5307",
+                "lat": 46.4954114115071,
+                "lon": 11.3532380123475,
+                "name": "Bolzano, Piazza Verdi"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:468",
+        "lat": 46.4966373063368,
+        "lon": 11.35838649525,
+        "name": "Bolzano",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:51:31063",
+                "lat": 46.4964902120723,
+                "lon": 11.3585365178793,
+                "name": "Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:2:5104",
+                "lat": 46.497187140293,
+                "lon": 11.3592182812159,
+                "name": "Bolzano, Stazione di Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:2:5105",
+                "lat": 46.4970244963228,
+                "lon": 11.3583771794771,
+                "name": "Bolzano, Stazione di Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:1:2805",
+                "lat": 46.4966068497157,
+                "lon": 11.3576814419562,
+                "name": "Bolzano, Stazione di Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:1:5352",
+                "lat": 46.4963016611643,
+                "lon": 11.3576421804484,
+                "name": "Bolzano, Stazione di Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:54:31067",
+                "lat": 46.4963142612859,
+                "lon": 11.3587765158619,
+                "name": "Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:54:31068",
+                "lat": 46.4962314533462,
+                "lon": 11.3588641577133,
+                "name": "Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:53:31066",
+                "lat": 46.4963330510979,
+                "lon": 11.3587382325319,
+                "name": "Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:53:31065",
+                "lat": 46.4964161275891,
+                "lon": 11.35863756985,
+                "name": "Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:52:31143",
+                "lat": 46.4959452061367,
+                "lon": 11.3574703827552,
+                "name": "Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:3:5106",
+                "lat": 46.4971148308969,
+                "lon": 11.3570517958982,
+                "name": "Bolzano, Stazione di Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:3:5107",
+                "lat": 46.4969078797795,
+                "lon": 11.357485944231,
+                "name": "Bolzano, Stazione di Bolzano"
+            },
+            {
+                "cluster": "Parentit:22021:468",
+                "id": "1:it:22021:468:2:3086",
+                "lat": 46.4974395750768,
+                "lon": 11.3596332075414,
+                "name": "Bolzano, Stazione di Bolzano"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2203",
+        "lat": 46.4941322017037,
+        "lon": 11.3149482599526,
+        "name": "Bolzano, Bivio Via Resia",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2203",
+                "id": "1:it:22021:2203:0:5154",
+                "lat": 46.4940790394277,
+                "lon": 11.3149069083748,
+                "name": "Bolzano, Bivio Via Resia"
+            },
+            {
+                "cluster": "Parentit:22021:2203",
+                "id": "1:it:22021:2203:0:5153",
+                "lat": 46.4941676432117,
+                "lon": 11.3149758277166,
+                "name": "Bolzano, Bivio Via Resia"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2167",
+        "lat": 46.4953059528561,
+        "lon": 11.3351192207719,
+        "name": "Bolzano, Via Gaismair",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2167",
+                "id": "1:it:22021:2167:0:5267",
+                "lat": 46.4952390692034,
+                "lon": 11.3348687519914,
+                "name": "Bolzano, Via Gaismair"
+            },
+            {
+                "cluster": "Parentit:22021:2167",
+                "id": "1:it:22021:2167:0:5266",
+                "lat": 46.4953559157408,
+                "lon": 11.3353168380809,
+                "name": "Bolzano, Via Gaismair"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2189",
+        "lat": 46.487388241751,
+        "lon": 11.3459989683839,
+        "name": "Bolzano, Via del Parco",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2189",
+                "id": "1:it:22021:2189:0:5133",
+                "lat": 46.4872650250309,
+                "lon": 11.3458633691578,
+                "name": "Bolzano, Via del Parco"
+            },
+            {
+                "cluster": "Parentit:22021:2189",
+                "id": "1:it:22021:2189:0:5132",
+                "lat": 46.4875566855674,
+                "lon": 11.346123483838,
+                "name": "Bolzano, Via del Parco"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2194:0:5136",
+        "lat": 46.4863361320479,
+        "lon": 11.3485857089088,
+        "name": "Bolzano, Scuola Gianni Rodari",
+        "stops": [
+            {
+                "id": "1:it:22021:2194:0:5136",
+                "lat": 46.4863361320479,
+                "lon": 11.3485857089088,
+                "name": "Bolzano, Scuola Gianni Rodari"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2191",
+        "lat": 46.490070785831,
+        "lon": 11.3472871187783,
+        "name": "Bolzano, Via Trento",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2191",
+                "id": "1:it:22021:2191:0:5129",
+                "lat": 46.4901051498961,
+                "lon": 11.3473667814177,
+                "name": "Bolzano, Via Trento"
+            },
+            {
+                "cluster": "Parentit:22021:2191",
+                "id": "1:it:22021:2191:0:5128",
+                "lat": 46.4900192396255,
+                "lon": 11.347167625005,
+                "name": "Bolzano, Via Trento"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2151",
+        "lat": 46.4973587007967,
+        "lon": 11.335963013725,
+        "name": "Bolzano, Via Roen Asilo",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2151",
+                "id": "1:it:22021:2151:0:5014",
+                "lat": 46.4972264803371,
+                "lon": 11.3358270257988,
+                "name": "Bolzano, Via Roen Asilo"
+            },
+            {
+                "cluster": "Parentit:22021:2151",
+                "id": "1:it:22021:2151:0:5015",
+                "lat": 46.4974917193165,
+                "lon": 11.3360599394812,
+                "name": "Bolzano, Via Roen Asilo"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2201",
+        "lat": 46.4946846252505,
+        "lon": 11.324536957203,
+        "name": "Bolzano, Via Positano",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2201",
+                "id": "1:it:22021:2201:0:5150",
+                "lat": 46.494653942133,
+                "lon": 11.3247180923833,
+                "name": "Bolzano, Via Positano"
+            },
+            {
+                "cluster": "Parentit:22021:2201",
+                "id": "1:it:22021:2201:0:5149",
+                "lat": 46.4946899200105,
+                "lon": 11.3242765495205,
+                "name": "Bolzano, Via Positano"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2202",
+        "lat": 46.4944645996888,
+        "lon": 11.3207484085218,
+        "name": "Bolzano, Vigili del Fuoco",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2202",
+                "id": "1:it:22021:2202:0:5323",
+                "lat": 46.4944862843742,
+                "lon": 11.3205668887927,
+                "name": "Bolzano, Vigili del Fuoco"
+            },
+            {
+                "cluster": "Parentit:22021:2202",
+                "id": "1:it:22021:2202:0:5324",
+                "lat": 46.4944355085686,
+                "lon": 11.3208514232009,
+                "name": "Bolzano, Vigili del Fuoco"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2168",
+        "lat": 46.4950944383275,
+        "lon": 11.3318131239921,
+        "name": "Bolzano, Via Amalfi",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2168",
+                "id": "1:it:22021:2168:0:5145",
+                "lat": 46.4951185305418,
+                "lon": 11.3315144234709,
+                "name": "Bolzano, Via Amalfi"
+            },
+            {
+                "cluster": "Parentit:22021:2168",
+                "id": "1:it:22021:2168:0:5146",
+                "lat": 46.4950703453372,
+                "lon": 11.3321118242196,
+                "name": "Bolzano, Via Amalfi"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2084",
+        "lat": 46.4978801990315,
+        "lon": 11.3544132336259,
+        "name": "Bolzano, Piazza Walther",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2084",
+                "id": "1:it:22021:2084:0:5029",
+                "lat": 46.4978795195678,
+                "lon": 11.3540091983969,
+                "name": "Bolzano, Piazza Walther"
+            },
+            {
+                "cluster": "Parentit:22021:2084",
+                "id": "1:it:22021:2084:0:5028",
+                "lat": 46.4977674684068,
+                "lon": 11.354642948886,
+                "name": "Bolzano, Piazza Walther"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2223",
+        "lat": 46.4931312342752,
+        "lon": 11.3629912784424,
+        "name": "Bolzano, Via Mayr Nusser",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2223",
+                "id": "1:it:22021:2223:0:5256",
+                "lat": 46.4932105466086,
+                "lon": 11.3630729035301,
+                "name": "Bolzano, Via Mayr Nusser"
+            },
+            {
+                "cluster": "Parentit:22021:2223",
+                "id": "1:it:22021:2223:0:2797",
+                "lat": 46.4930167616063,
+                "lon": 11.3628690360855,
+                "name": "Bolzano, Via Mayr Nusser"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2206",
+        "lat": 46.4927442377066,
+        "lon": 11.3150457100896,
+        "name": "Bolzano, Stadio Europa",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2206",
+                "id": "1:it:22021:2206:0:885",
+                "lat": 46.4928436793311,
+                "lon": 11.3150238694504,
+                "name": "Bolzano, Stadio Europa"
+            },
+            {
+                "cluster": "Parentit:22021:2206",
+                "id": "1:it:22021:2206:0:884",
+                "lat": 46.4926450597432,
+                "lon": 11.3150545306731,
+                "name": "Bolzano, Stadio Europa"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2133",
+        "lat": 46.4893919254311,
+        "lon": 11.3254580252064,
+        "name": "Bolzano, Via Montecassino",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2133",
+                "id": "1:it:22021:2133:0:5333",
+                "lat": 46.4894826414095,
+                "lon": 11.3254228021768,
+                "name": "Bolzano, Via Montecassino"
+            },
+            {
+                "cluster": "Parentit:22021:2133",
+                "id": "1:it:22021:2133:0:5207",
+                "lat": 46.4892737033199,
+                "lon": 11.3255181359681,
+                "name": "Bolzano, Via Montecassino"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2536:0:5009",
+        "lat": 46.4923737780086,
+        "lon": 11.3319443708798,
+        "name": "Bolzano, Piazza Marcella Casagrande",
+        "stops": [
+            {
+                "id": "1:it:22021:2536:0:5009",
+                "lat": 46.4923737780086,
+                "lon": 11.3319443708798,
+                "name": "Bolzano, Piazza Marcella Casagrande"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2160:0:5275",
+        "lat": 46.4892542826791,
+        "lon": 11.3162787765188,
+        "name": "Bolzano, Firmian",
+        "stops": [
+            {
+                "id": "1:it:22021:2160:0:5275",
+                "lat": 46.4892542826791,
+                "lon": 11.3162787765188,
+                "name": "Bolzano, Firmian"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2188",
+        "lat": 46.4874444874337,
+        "lon": 11.3476431612615,
+        "name": "Bolzano, Via S. Geltrude",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2188",
+                "id": "1:it:22021:2188:0:5135",
+                "lat": 46.4875090355791,
+                "lon": 11.3475677599906,
+                "name": "Bolzano, Via S. Geltrude"
+            },
+            {
+                "cluster": "Parentit:22021:2188",
+                "id": "1:it:22021:2188:0:5134",
+                "lat": 46.4873521611314,
+                "lon": 11.3477564563763,
+                "name": "Bolzano, Via S. Geltrude"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2225:0:5254",
+        "lat": 46.4949300540624,
+        "lon": 11.3578174423179,
+        "name": "Bolzano, Via Macello Loacker",
+        "stops": [
+            {
+                "id": "1:it:22021:2225:0:5254",
+                "lat": 46.4949300540624,
+                "lon": 11.3578174423179,
+                "name": "Bolzano, Via Macello Loacker"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2136:0:5210",
+        "lat": 46.489525328867,
+        "lon": 11.3326043933181,
+        "name": "Bolzano, Via Aosta",
+        "stops": [
+            {
+                "id": "1:it:22021:2136:0:5210",
+                "lat": 46.489525328867,
+                "lon": 11.3326043933181,
+                "name": "Bolzano, Via Aosta"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2224",
+        "lat": 46.4939234417988,
+        "lon": 11.3603671831683,
+        "name": "Bolzano, Cineplexx",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2224",
+                "id": "1:it:22021:2224:0:2796",
+                "lat": 46.4936938047791,
+                "lon": 11.3605918085836,
+                "name": "Bolzano, Cineplexx"
+            },
+            {
+                "cluster": "Parentit:22021:2224",
+                "id": "1:it:22021:2224:0:5255",
+                "lat": 46.4941729438279,
+                "lon": 11.3600521948118,
+                "name": "Bolzano, Cineplexx"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2166",
+        "lat": 46.4948499491531,
+        "lon": 11.3411333757349,
+        "name": "Bolzano, Via Vicenza",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2166",
+                "id": "1:it:22021:2166:0:5315",
+                "lat": 46.4947957302762,
+                "lon": 11.3411440794375,
+                "name": "Bolzano, Via Vicenza"
+            },
+            {
+                "cluster": "Parentit:22021:2166",
+                "id": "1:it:22021:2166:0:5314",
+                "lat": 46.4948774585529,
+                "lon": 11.3411084934646,
+                "name": "Bolzano, Via Vicenza"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2154",
+        "lat": 46.4925030469856,
+        "lon": 11.3291351706015,
+        "name": "Bolzano, Scuola Johann Heinrich Pestalozzi",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2154",
+                "id": "1:it:22021:2154:0:5008",
+                "lat": 46.4925599175526,
+                "lon": 11.3289942569431,
+                "name": "Bolzano, Scuola Johann Heinrich Pestalozzi"
+            },
+            {
+                "cluster": "Parentit:22021:2154",
+                "id": "1:it:22021:2154:0:5007",
+                "lat": 46.4924906062742,
+                "lon": 11.3293040441234,
+                "name": "Bolzano, Scuola Johann Heinrich Pestalozzi"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:470",
+        "lat": 46.4951105980485,
+        "lon": 11.3385121480817,
+        "name": "Bolzano, Piazza Adriano",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:470",
+                "id": "1:it:22021:470:0:5144",
+                "lat": 46.4950531831059,
+                "lon": 11.3386790985258,
+                "name": "Bolzano, Piazza Adriano"
+            },
+            {
+                "cluster": "Parentit:22021:470",
+                "id": "1:it:22021:470:0:5143",
+                "lat": 46.4951674800966,
+                "lon": 11.3383712380179,
+                "name": "Bolzano, Piazza Adriano"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2169",
+        "lat": 46.4943020525208,
+        "lon": 11.3282998052623,
+        "name": "Bolzano, Scuola Max Valier",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2169",
+                "id": "1:it:22021:2169:0:5335",
+                "lat": 46.4944350780482,
+                "lon": 11.3283967068462,
+                "name": "Bolzano, Scuola Max Valier"
+            },
+            {
+                "cluster": "Parentit:22021:2169",
+                "id": "1:it:22021:2169:0:5334",
+                "lat": 46.4941867459765,
+                "lon": 11.3282166922949,
+                "name": "Bolzano, Scuola Max Valier"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2101",
+        "lat": 46.4920901186112,
+        "lon": 11.3414188479391,
+        "name": "Bolzano, Via Firenze",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2101",
+                "id": "1:it:22021:2101:0:5213",
+                "lat": 46.4921346192507,
+                "lon": 11.3410037645708,
+                "name": "Bolzano, Via Firenze"
+            },
+            {
+                "cluster": "Parentit:22021:2101",
+                "id": "1:it:22021:2101:0:5042",
+                "lat": 46.4923061942659,
+                "lon": 11.3414150947937,
+                "name": "Bolzano, Via Firenze"
+            },
+            {
+                "cluster": "Parentit:22021:2101",
+                "id": "1:it:22021:2101:0:5041",
+                "lat": 46.4916844100792,
+                "lon": 11.3414535515538,
+                "name": "Bolzano, Via Firenze"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2187:0:5142",
+        "lat": 46.4864030455251,
+        "lon": 11.349709144491,
+        "name": "Bolzano, Scuola Enrico Fermi",
+        "stops": [
+            {
+                "id": "1:it:22021:2187:0:5142",
+                "lat": 46.4864030455251,
+                "lon": 11.349709144491,
+                "name": "Bolzano, Scuola Enrico Fermi"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2157",
+        "lat": 46.4914310658451,
+        "lon": 11.3207756754625,
+        "name": "Bolzano, Via Gutenberg",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2157",
+                "id": "1:it:22021:2157:0:5002",
+                "lat": 46.4915778479774,
+                "lon": 11.320638582115,
+                "name": "Bolzano, Via Gutenberg"
+            },
+            {
+                "cluster": "Parentit:22021:2157",
+                "id": "1:it:22021:2157:0:5001",
+                "lat": 46.4912247744397,
+                "lon": 11.3207408344244,
+                "name": "Bolzano, Via Gutenberg"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2126",
+        "lat": 46.4864885387948,
+        "lon": 11.3243960919076,
+        "name": "Bolzano, Parco delle Semirurali",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2126",
+                "id": "1:it:22021:2126:0:5265",
+                "lat": 46.4865078466017,
+                "lon": 11.3243317661888,
+                "name": "Bolzano, Parco delle Semirurali"
+            },
+            {
+                "cluster": "Parentit:22021:2126",
+                "id": "1:it:22021:2126:0:5204",
+                "lat": 46.4864144838681,
+                "lon": 11.3244971734175,
+                "name": "Bolzano, Parco delle Semirurali"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2153",
+        "lat": 46.4943210394251,
+        "lon": 11.3326661970336,
+        "name": "Bolzano, Via della Visitazione",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2153",
+                "id": "1:it:22021:2153:0:5010",
+                "lat": 46.4943853124506,
+                "lon": 11.3326037886887,
+                "name": "Bolzano, Via della Visitazione"
+            },
+            {
+                "cluster": "Parentit:22021:2153",
+                "id": "1:it:22021:2153:0:5011",
+                "lat": 46.4942385164959,
+                "lon": 11.3327408560346,
+                "name": "Bolzano, Via della Visitazione"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2156",
+        "lat": 46.4924538003198,
+        "lon": 11.3227087169403,
+        "name": "Bolzano, Passaggio Walter Tobagi",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2156",
+                "id": "1:it:22021:2156:0:5004",
+                "lat": 46.4924826285123,
+                "lon": 11.3226187268953,
+                "name": "Bolzano, Passaggio Walter Tobagi"
+            },
+            {
+                "cluster": "Parentit:22021:2156",
+                "id": "1:it:22021:2156:0:5003",
+                "lat": 46.4923882097764,
+                "lon": 11.3228362342875,
+                "name": "Bolzano, Passaggio Walter Tobagi"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2100",
+        "lat": 46.4939873191859,
+        "lon": 11.3406272033391,
+        "name": "Bolzano, Via di Novacella",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2100",
+                "id": "1:it:22021:2100:0:5039",
+                "lat": 46.4934165550019,
+                "lon": 11.3408112047433,
+                "name": "Bolzano, Via di Novacella"
+            },
+            {
+                "cluster": "Parentit:22021:2100",
+                "id": "1:it:22021:2100:0:5040",
+                "lat": 46.4944128775626,
+                "lon": 11.3405021235761,
+                "name": "Bolzano, Via di Novacella"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2103",
+        "lat": 46.4869697890179,
+        "lon": 11.3435834793706,
+        "name": "Bolzano, Via Roma Sottopasso",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2103",
+                "id": "1:it:22021:2103:0:5044",
+                "lat": 46.4870398570514,
+                "lon": 11.3436776991666,
+                "name": "Bolzano, Via Roma Sottopasso"
+            },
+            {
+                "cluster": "Parentit:22021:2103",
+                "id": "1:it:22021:2103:0:5043",
+                "lat": 46.4868814699522,
+                "lon": 11.3435015054146,
+                "name": "Bolzano, Via Roma Sottopasso"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2192",
+        "lat": 46.4927706899602,
+        "lon": 11.3521076106158,
+        "name": "Bolzano, Piè di Virgolo",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2192",
+                "id": "1:it:22021:2192:0:5126",
+                "lat": 46.49295967233,
+                "lon": 11.3525457944145,
+                "name": "Bolzano, Piè di Virgolo"
+            },
+            {
+                "cluster": "Parentit:22021:2192",
+                "id": "1:it:22021:2192:0:5127",
+                "lat": 46.4926263978881,
+                "lon": 11.351684388449,
+                "name": "Bolzano, Piè di Virgolo"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2170",
+        "lat": 46.492036661912,
+        "lon": 11.3259617389699,
+        "name": "Bolzano, Via del Ronco",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2170",
+                "id": "1:it:22021:2170:0:5332",
+                "lat": 46.4918642218003,
+                "lon": 11.3260325696475,
+                "name": "Bolzano, Via del Ronco"
+            },
+            {
+                "cluster": "Parentit:22021:2170",
+                "id": "1:it:22021:2170:0:5331",
+                "lat": 46.492162816782,
+                "lon": 11.3259540889804,
+                "name": "Bolzano, Via del Ronco"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2099",
+        "lat": 46.4971486616824,
+        "lon": 11.3400722102631,
+        "name": "Bolzano, Tribunale",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2099",
+                "id": "1:it:22021:2099:0:5018",
+                "lat": 46.4971410022812,
+                "lon": 11.340006720191,
+                "name": "Bolzano, Tribunale"
+            },
+            {
+                "cluster": "Parentit:22021:2099",
+                "id": "1:it:22021:2099:0:5017",
+                "lat": 46.4980304148079,
+                "lon": 11.3400839920461,
+                "name": "Bolzano, Tribunale"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2102:0:5241",
+        "lat": 46.4905547284927,
+        "lon": 11.342121734367,
+        "name": "Bolzano, Ponte Roma",
+        "stops": [
+            {
+                "id": "1:it:22021:2102:0:5241",
+                "lat": 46.4905547284927,
+                "lon": 11.342121734367,
+                "name": "Bolzano, Ponte Roma"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:471",
+        "lat": 46.4948926154154,
+        "lon": 11.3284683720425,
+        "name": "Bolzano, Via Sorrento",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:471",
+                "id": "1:it:22021:471:0:5148",
+                "lat": 46.4948257398803,
+                "lon": 11.3277748357973,
+                "name": "Bolzano, Via Sorrento"
+            },
+            {
+                "cluster": "Parentit:22021:471",
+                "id": "1:it:22021:471:0:5147",
+                "lat": 46.4950155040995,
+                "lon": 11.3299462078076,
+                "name": "Bolzano, Via Sorrento"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2125",
+        "lat": 46.4877984172292,
+        "lon": 11.3268103515057,
+        "name": "Bolzano, S. Maria in Augia",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2125",
+                "id": "1:it:22021:2125:0:5205",
+                "lat": 46.4878230087573,
+                "lon": 11.3269286709319,
+                "name": "Bolzano, S. Maria in Augia"
+            },
+            {
+                "cluster": "Parentit:22021:2125",
+                "id": "1:it:22021:2125:0:5264",
+                "lat": 46.4877645684652,
+                "lon": 11.3267046672756,
+                "name": "Bolzano, S. Maria in Augia"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2171",
+        "lat": 46.488753788681,
+        "lon": 11.3227596134354,
+        "name": "Bolzano, Via Alessandria",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2171",
+                "id": "1:it:22021:2171:0:5218",
+                "lat": 46.4887786489319,
+                "lon": 11.3228649142973,
+                "name": "Bolzano, Via Alessandria"
+            },
+            {
+                "cluster": "Parentit:22021:2171",
+                "id": "1:it:22021:2171:0:5336",
+                "lat": 46.4886744463024,
+                "lon": 11.3226780528107,
+                "name": "Bolzano, Via Alessandria"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:812",
+        "lat": 46.4904832656838,
+        "lon": 11.3053461316902,
+        "name": "Bolzano, Casa di Cura Firmian",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:812",
+                "id": "1:it:22021:812:0:5344",
+                "lat": 46.4906314081721,
+                "lon": 11.3055869466661,
+                "name": "Bolzano, Casa di Cura Firmian"
+            },
+            {
+                "cluster": "Parentit:22021:812",
+                "id": "1:it:22021:812:0:5343",
+                "lat": 46.4903356477021,
+                "lon": 11.3050792789725,
+                "name": "Bolzano, Casa di Cura Firmian"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2121:0:5214",
+        "lat": 46.491692788051,
+        "lon": 11.33664548688,
+        "name": "Bolzano, Regina Pacis",
+        "stops": [
+            {
+                "id": "1:it:22021:2121:0:5214",
+                "lat": 46.491692788051,
+                "lon": 11.33664548688,
+                "name": "Bolzano, Regina Pacis"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2226",
+        "lat": 46.494655737365,
+        "lon": 11.3562808736406,
+        "name": "Bolzano, Parcheggio Bolzano Centro",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2226",
+                "id": "1:it:22021:2226:0:5253",
+                "lat": 46.4944826071785,
+                "lon": 11.3559476009546,
+                "name": "Bolzano, Parcheggio Bolzano Centro"
+            },
+            {
+                "cluster": "Parentit:22021:2226",
+                "id": "1:it:22021:2226:0:2795",
+                "lat": 46.4948285981299,
+                "lon": 11.3566271685453,
+                "name": "Bolzano, Parcheggio Bolzano Centro"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2137:0:5211",
+        "lat": 46.4902106363932,
+        "lon": 11.3369468361109,
+        "name": "Bolzano, Piazza Matteotti",
+        "stops": [
+            {
+                "id": "1:it:22021:2137:0:5211",
+                "lat": 46.4902106363932,
+                "lon": 11.3369468361109,
+                "name": "Bolzano, Piazza Matteotti"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2159:0:5274",
+        "lat": 46.4905908807904,
+        "lon": 11.315162785459,
+        "name": "Bolzano, Via Don Narciso Sordo",
+        "stops": [
+            {
+                "id": "1:it:22021:2159:0:5274",
+                "lat": 46.4905908807904,
+                "lon": 11.315162785459,
+                "name": "Bolzano, Via Don Narciso Sordo"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2164",
+        "lat": 46.4947112913536,
+        "lon": 11.3470177437979,
+        "name": "Bolzano, Eurac",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2164",
+                "id": "1:it:22021:2164:0:2760",
+                "lat": 46.494692238092,
+                "lon": 11.3470690503782,
+                "name": "Bolzano, Eurac"
+            },
+            {
+                "cluster": "Parentit:22021:2164",
+                "id": "1:it:22021:2164:0:5310",
+                "lat": 46.4947300772858,
+                "lon": 11.346979457366,
+                "name": "Bolzano, Eurac"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2138:0:5212",
+        "lat": 46.4912446169449,
+        "lon": 11.339636409972,
+        "name": "Bolzano, Via Torino",
+        "stops": [
+            {
+                "id": "1:it:22021:2138:0:5212",
+                "lat": 46.4912446169449,
+                "lon": 11.339636409972,
+                "name": "Bolzano, Via Torino"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:472",
+        "lat": 46.4939145312337,
+        "lon": 11.3114726451434,
+        "name": "Bolzano, Bivio Merano",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:472",
+                "id": "1:it:22021:472:0:854",
+                "lat": 46.4939965143417,
+                "lon": 11.3114239945182,
+                "name": "Bolzano, Bivio Merano"
+            },
+            {
+                "cluster": "Parentit:22021:472",
+                "id": "1:it:22021:472:0:855",
+                "lat": 46.4938507958327,
+                "lon": 11.3115090377197,
+                "name": "Bolzano, Bivio Merano"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:467",
+        "lat": 46.4978119333247,
+        "lon": 11.3516083128329,
+        "name": "Bolzano, Piazza Domenicani",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:467",
+                "id": "1:it:22021:467:0:5027",
+                "lat": 46.497833131331,
+                "lon": 11.3514528379611,
+                "name": "Bolzano, Piazza Domenicani"
+            },
+            {
+                "cluster": "Parentit:22021:467",
+                "id": "1:it:22021:467:0:5026",
+                "lat": 46.4977809395397,
+                "lon": 11.351802462296,
+                "name": "Bolzano, Piazza Domenicani"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2207",
+        "lat": 46.4884593363491,
+        "lon": 11.3177565143786,
+        "name": "Bolzano, Via Glorenza",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2207",
+                "id": "1:it:22021:2207:0:5173",
+                "lat": 46.4884328876582,
+                "lon": 11.3177293300105,
+                "name": "Bolzano, Via Glorenza"
+            },
+            {
+                "cluster": "Parentit:22021:2207",
+                "id": "1:it:22021:2207:0:5174",
+                "lat": 46.4885035054714,
+                "lon": 11.3177974820614,
+                "name": "Bolzano, Via Glorenza"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2162",
+        "lat": 46.4970183347278,
+        "lon": 11.356057173635,
+        "name": "Bolzano, Via Perathoner",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2162",
+                "id": "1:it:22021:2162:0:5125",
+                "lat": 46.4971243594976,
+                "lon": 11.3561529813284,
+                "name": "Bolzano, Via Perathoner"
+            },
+            {
+                "cluster": "Parentit:22021:2162",
+                "id": "1:it:22021:2162:0:5124",
+                "lat": 46.4970294734289,
+                "lon": 11.3559533970249,
+                "name": "Bolzano, Via Perathoner"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2134:0:5208",
+        "lat": 46.4901945662354,
+        "lon": 11.326704096918,
+        "name": "Bolzano, Via Udine",
+        "stops": [
+            {
+                "id": "1:it:22021:2134:0:5208",
+                "lat": 46.4901945662354,
+                "lon": 11.326704096918,
+                "name": "Bolzano, Via Udine"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2155",
+        "lat": 46.4930656891923,
+        "lon": 11.3271393543234,
+        "name": "Bolzano, Scuola Albert Schweitzer",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2155",
+                "id": "1:it:22021:2155:0:5006",
+                "lat": 46.4930736397863,
+                "lon": 11.3267487550848,
+                "name": "Bolzano, Scuola Albert Schweitzer"
+            },
+            {
+                "cluster": "Parentit:22021:2155",
+                "id": "1:it:22021:2155:0:5005",
+                "lat": 46.4929760329178,
+                "lon": 11.3271224967607,
+                "name": "Bolzano, Scuola Albert Schweitzer"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2123:0:5216",
+        "lat": 46.4890721183986,
+        "lon": 11.3314383395119,
+        "name": "Bolzano, Scuola S. Filippo Neri",
+        "stops": [
+            {
+                "id": "1:it:22021:2123:0:5216",
+                "lat": 46.4890721183986,
+                "lon": 11.3314383395119,
+                "name": "Bolzano, Scuola S. Filippo Neri"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2958",
+        "lat": 46.4981127157843,
+        "lon": 11.3610307553158,
+        "name": "Bolzano, Autostazione",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2958",
+                "id": "1:it:22021:2958:0:2819",
+                "lat": 46.4981623642659,
+                "lon": 11.3612414257714,
+                "name": "Bolzano, Autostazione"
+            },
+            {
+                "cluster": "Parentit:22021:2958",
+                "id": "1:it:22021:2958:0:2818",
+                "lat": 46.4979279194052,
+                "lon": 11.3608272653533,
+                "name": "Bolzano, Autostazione"
+            },
+            {
+                "cluster": "Parentit:22021:2958",
+                "id": "1:it:22021:2958:0:2817",
+                "lat": 46.4980895048281,
+                "lon": 11.3608472950889,
+                "name": "Bolzano, Autostazione"
+            },
+            {
+                "cluster": "Parentit:22021:2958",
+                "id": "1:it:22021:2958:0:2724",
+                "lat": 46.4983236806356,
+                "lon": 11.3612744777542,
+                "name": "Bolzano, Autostazione"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:1635",
+        "lat": 46.4934650507464,
+        "lon": 11.3101113601487,
+        "name": "Bivio Merano/Mendola",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:1635",
+                "id": "1:it:22021:1635:0:856",
+                "lat": 46.4934793516012,
+                "lon": 11.3102944052503,
+                "name": "Bivio Merano/Mendola"
+            },
+            {
+                "cluster": "Parentit:22021:1635",
+                "id": "1:it:22021:1635:0:1940",
+                "lat": 46.493432502031,
+                "lon": 11.3099405734894,
+                "name": "Bivio Merano/Mendola"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2205",
+        "lat": 46.490866261577,
+        "lon": 11.3162299674419,
+        "name": "Bolzano, Palasport",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2205",
+                "id": "1:it:22021:2205:0:5171",
+                "lat": 46.4906121056918,
+                "lon": 11.3163364487221,
+                "name": "Bolzano, Palasport"
+            },
+            {
+                "cluster": "Parentit:22021:2205",
+                "id": "1:it:22021:2205:0:5172",
+                "lat": 46.4911198898084,
+                "lon": 11.3161495244288,
+                "name": "Bolzano, Palasport"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2173",
+        "lat": 46.4867183297614,
+        "lon": 11.3188421765006,
+        "name": "Bolzano, Via Malles",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2173",
+                "id": "1:it:22021:2173:0:5176",
+                "lat": 46.487008456566,
+                "lon": 11.3187372430821,
+                "name": "Bolzano, Via Malles"
+            },
+            {
+                "cluster": "Parentit:22021:2173",
+                "id": "1:it:22021:2173:0:5175",
+                "lat": 46.4866741609918,
+                "lon": 11.3188012093827,
+                "name": "Bolzano, Via Malles"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2547",
+        "lat": 46.4904950849148,
+        "lon": 11.3238762332305,
+        "name": "Bolzano, Casa di Riposo Don Bosco",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2547",
+                "id": "1:it:22021:2547:0:1910",
+                "lat": 46.4904813286505,
+                "lon": 11.3241101989674,
+                "name": "Bolzano, Casa di Riposo Don Bosco"
+            }
+        ]
+    },
+    {
+        "id": "Parentit:22021:2152",
+        "lat": 46.4962471212377,
+        "lon": 11.3335435556726,
+        "name": "Bolzano, Via Roen Scuola Superiore",
+        "stops": [
+            {
+                "cluster": "Parentit:22021:2152",
+                "id": "1:it:22021:2152:0:5012",
+                "lat": 46.4962434001046,
+                "lon": 11.3337258450604,
+                "name": "Bolzano, Via Roen Scuola Superiore"
+            },
+            {
+                "cluster": "Parentit:22021:2152",
+                "id": "1:it:22021:2152:0:5013",
+                "lat": 46.4962333894323,
+                "lon": 11.3333344552477,
+                "name": "Bolzano, Via Roen Scuola Superiore"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2094:0:5351",
+        "lat": 46.497591058847,
+        "lon": 11.349656961496,
+        "name": "Bolzano, Via dell'Ospedale",
+        "stops": [
+            {
+                "id": "1:it:22021:2094:0:5351",
+                "lat": 46.497591058847,
+                "lon": 11.349656961496,
+                "name": "Bolzano, Via dell'Ospedale"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2537:0:5221",
+        "lat": 46.4897905189644,
+        "lon": 11.3204582802363,
+        "name": "Bolzano, Via Parma",
+        "stops": [
+            {
+                "id": "1:it:22021:2537:0:5221",
+                "lat": 46.4897905189644,
+                "lon": 11.3204582802363,
+                "name": "Bolzano, Via Parma"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2124:0:5217",
+        "lat": 46.4883549987398,
+        "lon": 11.3295313401295,
+        "name": "Bolzano, Via Cagliari",
+        "stops": [
+            {
+                "id": "1:it:22021:2124:0:5217",
+                "lat": 46.4883549987398,
+                "lon": 11.3295313401295,
+                "name": "Bolzano, Via Cagliari"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2135:0:5209",
+        "lat": 46.4898283802241,
+        "lon": 11.329659429774,
+        "name": "Bolzano, Via Milano",
+        "stops": [
+            {
+                "id": "1:it:22021:2135:0:5209",
+                "lat": 46.4898283802241,
+                "lon": 11.329659429774,
+                "name": "Bolzano, Via Milano"
+            }
+        ]
+    },
+    {
+        "id": "it:22021:2122:0:5215",
+        "lat": 46.4919402590978,
+        "lon": 11.3324601034477,
+        "name": "Bolzano, Via Palermo",
+        "stops": [
+            {
+                "id": "1:it:22021:2122:0:5215",
+                "lat": 46.4919402590978,
+                "lon": 11.3324601034477,
+                "name": "Bolzano, Via Palermo"
+            }
+        ]
+    }
+]

@@ -1,0 +1,370 @@
+{
+    "last_updated": 1670575463,
+    "ttl": 0,
+    "version": "3.0.0",
+    "data":
+    {
+        "itinerary": "_|y{G_obcAJBpA\\rDbAZLNBF@DJHBHCFG@E@GAGAICGEE@K@G@IBUJkAJqAFy@Ba@?qACuA@a@|@JlAr@f@Af@On@a@\\UPIJEj@YBA|Au@d@UPK\\[LM|A}Ap@s@LOhAsCNYh@g@DGLIFKh@s@hAeA`@_@d@a@`@Yf@Yh@M\\EXEDOBsAT{A\\mB@}@Iu@@iAHw@\\{Ap@wBb@gFVuAwBiCgA_B{@gBe@q@kCyCu@mAGQO_@CQTqAm@cA??IM_@o@SU_@[i@]i@[q@e@w@s@KG_@MiAOiBg@y@y@a@KKTYj@MTSHSFC@UDOF}@`AsBpFUn@oAp@o@Nu@ROFYHMT?VBL?RGfBB^DPJPDHZZLHfAn@\\ZHHV`@t@~AGHKDcDp@[REJILMb@C\\?v@ETQZ[RTvDOJuAr@k@h@{@p@SLLb@PlAL^~@dBR`@Vv@Jn@Cl@AJ[jBK^CLO\\KVOROLa@d@ABILIR_@`AMZIGGCC?E?CBCDADEVIx@ObBKfAIhCE|A?X?NAlA@jB?vA?h@?D?F?^R?J?B?F@b@JB@XNb@TZN`@Jd@L",
+        "vehicles":
+        [
+            {
+                "position":
+                {
+                    "latitude": 46.660692,
+                    "longitude": 11.158734
+                },
+                "lat": 46.660692,
+                "lon": 11.158734,
+                "timestamp": 1648744517,
+                "vehicle":
+                {
+                    "id": "IT 123",
+                    "name": "MAN e TGE",
+                    "label": "MAN e TGE"
+                },
+                "capacity": 5,
+                "free": 5,
+                "occupancyStatus": 0
+            }
+        ],
+        "stops":
+        [
+            {
+                "position":
+                {
+                    "latitude": 46.66829,
+                    "longitude": 11.15925
+                },
+                "lat": 46.66829,
+                "lon": 11.15925,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:43",
+                    "name": "Therme Meran / Terme Merano"
+                },
+                "area": 1
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.66496,
+                    "longitude": 11.16106
+                },
+                "lat": 46.66496,
+                "lon": 11.16106,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:44",
+                    "name": "Matteottistraße / Via Matteotti"
+                },
+                "area": 1
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.66213,
+                    "longitude": 11.16472
+                },
+                "lat": 46.66213,
+                "lon": 11.16472,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:45",
+                    "name": "Maria-Trost-Straße /  Via S. Maria d. Conforto"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.661969,
+                    "longitude": 11.166612
+                },
+                "lat": 46.661969,
+                "lon": 11.166612,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:46",
+                    "name": "Sibyllastraße / Via Sibilla"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.661272,
+                    "longitude": 11.167701
+                },
+                "lat": 46.661272,
+                "lon": 11.167701,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:47",
+                    "name": "Hotel Pollinger / Hotel Pollinger"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.661291,
+                    "longitude": 11.170147
+                },
+                "lat": 46.661291,
+                "lon": 11.170147,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:48",
+                    "name": "St.-Katharina-Str. / Via S. Caterina"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.659745,
+                    "longitude": 11.171435
+                },
+                "lat": 46.659745,
+                "lon": 11.171435,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:49",
+                    "name": "Mayr-Nusser-Str. A / Via Mayr-Nusser A"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.661533,
+                    "longitude": 11.173959
+                },
+                "lat": 46.661533,
+                "lon": 11.173959,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:50",
+                    "name": "Mayr-Nusser-Str. B / Via Mayr-Nusser B"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.661816,
+                    "longitude": 11.175149
+                },
+                "lat": 46.661816,
+                "lon": 11.175149,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:51",
+                    "name": "Waalweg / Vicolo della Roggia"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.661526,
+                    "longitude": 11.177762
+                },
+                "lat": 46.661526,
+                "lon": 11.177762,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:52",
+                    "name": "Villa Eden/Villa Eden"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.664809,
+                    "longitude": 11.176875
+                },
+                "lat": 46.664809,
+                "lon": 11.176875,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:53",
+                    "name": "Dantestraße / Via Dante"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.66766,
+                    "longitude": 11.17644
+                },
+                "lat": 46.66766,
+                "lon": 11.17644,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:54",
+                    "name": "Leichtergasse / Via Leichter"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.667416,
+                    "longitude": 11.174393
+                },
+                "lat": 46.667416,
+                "lon": 11.174393,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:55",
+                    "name": "Th.-Christomannos-Str. / Via Th. Christomannos"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.66584,
+                    "longitude": 11.17046
+                },
+                "lat": 46.66584,
+                "lon": 11.17046,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:56",
+                    "name": "Maiser Park / Parco di Maia"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.664546,
+                    "longitude": 11.167684
+                },
+                "lat": 46.664546,
+                "lon": 11.167684,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:57",
+                    "name": "Schafferstraße / Via Schaffer"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.664856,
+                    "longitude": 11.1661
+                },
+                "lat": 46.664856,
+                "lon": 11.1661,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:58",
+                    "name": "Karl-v.-Grabmayr-Str. / Via Karl v. Grabmayr"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.66508,
+                    "longitude": 11.163277
+                },
+                "lat": 46.66508,
+                "lon": 11.163277,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:59",
+                    "name": "Tobias-Brenner-Str. / Via Tobias Brenner"
+                },
+                "area": 2
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.667996,
+                    "longitude": 11.163211
+                },
+                "lat": 46.667996,
+                "lon": 11.163211,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:60",
+                    "name": "Maiastraße / Via Maia"
+                },
+                "area": 3
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.65977,
+                    "longitude": 11.15503
+                },
+                "lat": 46.65977,
+                "lon": 11.15503,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:61",
+                    "name": "Meranarena / Meranarena"
+                },
+                "area": 3
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.656158,
+                    "longitude": 11.148414
+                },
+                "lat": 46.656158,
+                "lon": 11.148414,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:62",
+                    "name": "Bahnhof Untermais / Stazione di Maia Bassa"
+                },
+                "area": 3
+            },
+            {
+                "position":
+                {
+                    "latitude": 46.65778,
+                    "longitude": 11.16123
+                },
+                "lat": 46.65778,
+                "lon": 11.16123,
+                "timestamp": 0,
+                "stop":
+                {
+                    "id": "ON_DEMAND_MERANO:63",
+                    "name": "Friedhof Untermais / Cimitero Maia Bassa"
+                },
+                "area": 3
+            }
+        ]
+    }
+}

@@ -1,0 +1,1863 @@
+{
+    "last_updated": 1670575271,
+    "ttl": 0,
+    "version": "3.0.0",
+    "data":
+    {
+        "stations":
+        [
+            {
+                "station_id": "404541",
+                "name": "Mazziniplatz / Piazza Mazzini",
+                "lat": 46.501367,
+                "lon": 11.339867,
+                "free": 4,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up",
+                    "vw-golf",
+                    "vw-golf-variant",
+                    "vw-caddy"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156005",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 918 TG",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "156580",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "ES 010 TJ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "171786",
+                        "name": "VW Golf Variant",
+                        "model": "vw-golf-variant",
+                        "plate": "FB 454 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "183007",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FL 240 BC",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "183008",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FL 238 BC",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "189790",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FR 546 BH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "192908",
+                        "name": "VW Golf Variant",
+                        "model": "vw-golf-variant",
+                        "plate": "FS 182 GX",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "216275",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "GD 647 FR",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "216278",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "GD 649 FR",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    },
+                    {
+                        "id": "217520",
+                        "name": "VW Caddy",
+                        "model": "vw-caddy",
+                        "plate": "GF 398 NZ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.501367,
+                            "longitude": 11.339867
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Mazziniplatz / Piazza Mazzini"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-caddy",
+                        "modelName": "VW Caddy",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-golf-variant",
+                        "modelName": "VW Golf Variant",
+                        "free": 1,
+                        "count": 2
+                    },
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 1,
+                        "count": 4
+                    },
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 3
+                    }
+                ]
+            },
+            {
+                "station_id": "404542",
+                "name": "Bozen süd / Bolzano sud",
+                "lat": 46.473328,
+                "lon": 11.326334,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-golf",
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "154858",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "ES 916 TG",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.473328,
+                            "longitude": 11.326334
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bozen süd / Bolzano sud"
+                    },
+                    {
+                        "id": "171787",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FB 456 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.473328,
+                            "longitude": 11.326334
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bozen süd / Bolzano sud"
+                    },
+                    {
+                        "id": "181873",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FK 034 BE",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.473328,
+                            "longitude": 11.326334
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bozen süd / Bolzano sud"
+                    },
+                    {
+                        "id": "183006",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FL 237 BC",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.473328,
+                            "longitude": 11.326334
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bozen süd / Bolzano sud"
+                    },
+                    {
+                        "id": "189115",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FM 085 LZ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.473328,
+                            "longitude": 11.326334
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bozen süd / Bolzano sud"
+                    },
+                    {
+                        "id": "216443",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "GE 122 BB",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.473328,
+                            "longitude": 11.326334
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Bozen süd / Bolzano sud"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 4
+                    },
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 0,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "404543",
+                "name": "Bozner Boden / Piani di Bolzano",
+                "lat": 46.497591,
+                "lon": 11.366465,
+                "free": 3,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up",
+                    "vw-golf"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156004",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 920 TG",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.497591,
+                            "longitude": 11.366465
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bozner Boden / Piani di Bolzano"
+                    },
+                    {
+                        "id": "171781",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FB 450 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.497591,
+                            "longitude": 11.366465
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bozner Boden / Piani di Bolzano"
+                    },
+                    {
+                        "id": "192685",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 867 MF",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.497591,
+                            "longitude": 11.366465
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Bozner Boden / Piani di Bolzano"
+                    },
+                    {
+                        "id": "192812",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FS 122 GX",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.497591,
+                            "longitude": 11.366465
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Bozner Boden / Piani di Bolzano"
+                    },
+                    {
+                        "id": "192826",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FS 121 GX",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.497591,
+                            "longitude": 11.366465
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Bozner Boden / Piani di Bolzano"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 2,
+                        "count": 3
+                    },
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "404547",
+                "name": "Bahnhof / Stazione",
+                "lat": 46.684401,
+                "lon": 10.547858,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-golf"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156360",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "ES 008 TJ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.684401,
+                            "longitude": 10.547858
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bahnhof / Stazione"
+                    },
+                    {
+                        "id": "192825",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FS 120 GX",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.684401,
+                            "longitude": 10.547858
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Bahnhof / Stazione"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "404572",
+                "name": "Hauptbahnhof / Stazione",
+                "lat": 46.67391,
+                "lon": 11.148974,
+                "free": 3,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up",
+                    "vw-caddy",
+                    "vw-caddy-life",
+                    "vw-golf"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156172",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 999 TH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.67391,
+                            "longitude": 11.148974
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Hauptbahnhof / Stazione"
+                    },
+                    {
+                        "id": "156429",
+                        "name": "VW Caddy",
+                        "model": "vw-caddy",
+                        "plate": "ES 013 TJ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.67391,
+                            "longitude": 11.148974
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Hauptbahnhof / Stazione"
+                    },
+                    {
+                        "id": "171791",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FB 459 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.67391,
+                            "longitude": 11.148974
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Hauptbahnhof / Stazione"
+                    },
+                    {
+                        "id": "187837",
+                        "name": "VW Caddy Life",
+                        "model": "vw-caddy-life",
+                        "plate": "FM 633 LW",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.67391,
+                            "longitude": 11.148974
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Hauptbahnhof / Stazione"
+                    },
+                    {
+                        "id": "189351",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FN 774 YP",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.67391,
+                            "longitude": 11.148974
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Hauptbahnhof / Stazione"
+                    },
+                    {
+                        "id": "192683",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 865 MF",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.67391,
+                            "longitude": 11.148974
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Hauptbahnhof / Stazione"
+                    },
+                    {
+                        "id": "206174",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FW 695 SB",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.67391,
+                            "longitude": 11.148974
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Hauptbahnhof / Stazione"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 2,
+                        "count": 4
+                    },
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-caddy-life",
+                        "modelName": "VW Caddy Life",
+                        "free": 0,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-caddy",
+                        "modelName": "VW Caddy",
+                        "free": 0,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "404750",
+                "name": "Industriezone / Zona industriale",
+                "lat": 46.799615,
+                "lon": 11.926495,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-golf",
+                    "vw-golf-variant"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "171780",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FB 451 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.799615,
+                            "longitude": 11.926495
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Industriezone / Zona industriale"
+                    },
+                    {
+                        "id": "192907",
+                        "name": "VW Golf Variant",
+                        "model": "vw-golf-variant",
+                        "plate": "FS 181 GX",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.799615,
+                            "longitude": 11.926495
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Industriezone / Zona industriale"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-golf-variant",
+                        "modelName": "VW Golf Variant",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 0,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "404805",
+                "name": "CooperDolomiti",
+                "lat": 46.487416,
+                "lon": 11.341817,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156003",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 935 TG",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.487416,
+                            "longitude": 11.341817
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "CooperDolomiti"
+                    },
+                    {
+                        "id": "171790",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FB 455 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.487416,
+                            "longitude": 11.341817
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "CooperDolomiti"
+                    },
+                    {
+                        "id": "189353",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FN 776 YP",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.487416,
+                            "longitude": 11.341817
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "CooperDolomiti"
+                    },
+                    {
+                        "id": "189788",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 545 BH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.487416,
+                            "longitude": 11.341817
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "CooperDolomiti"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 4
+                    }
+                ]
+            },
+            {
+                "station_id": "404947",
+                "name": "Mauls",
+                "lat": 46.853274,
+                "lon": 11.521935,
+                "free": 2,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Trentino",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "renault-zoe",
+                    "vw-id3"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "182202",
+                        "name": "Renault Zoe",
+                        "model": "renault-zoe",
+                        "plate": "FJ 080 VJ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.853274,
+                            "longitude": 11.521935
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Mauls"
+                    },
+                    {
+                        "id": "216890",
+                        "name": "VW ID.3",
+                        "model": "vw-id3",
+                        "plate": "GE 338 BA",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.853274,
+                            "longitude": 11.521935
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Mauls"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-id3",
+                        "modelName": "VW ID.3",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "renault-zoe",
+                        "modelName": "Renault Zoe",
+                        "free": 1,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "405415",
+                "name": "Piavestraße / Via Piave",
+                "lat": 46.499825,
+                "lon": 11.358539,
+                "free": 2,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up",
+                    "vw-golf"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "192681",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 863 MF",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.499825,
+                            "longitude": 11.358539
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Piavestraße / Via Piave"
+                    },
+                    {
+                        "id": "216276",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "GD 524 FR",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.499825,
+                            "longitude": 11.358539
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Piavestraße / Via Piave"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "405462",
+                "name": "Cineplexx",
+                "lat": 46.49414,
+                "lon": 11.360051,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-golf-variant"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "171784",
+                        "name": "VW Golf Variant",
+                        "model": "vw-golf-variant",
+                        "plate": "FB 453 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.49414,
+                            "longitude": 11.360051
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Cineplexx"
+                    },
+                    {
+                        "id": "192947",
+                        "name": "VW Golf Variant",
+                        "model": "vw-golf-variant",
+                        "plate": "FS 361 HA",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.49414,
+                            "longitude": 11.360051
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Cineplexx"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-golf-variant",
+                        "modelName": "VW Golf Variant",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "405650",
+                "name": "Klausen / Chiusa",
+                "lat": 46.642588,
+                "lon": 11.572045,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "171792",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FB 457 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.642588,
+                            "longitude": 11.572045
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Klausen / Chiusa"
+                    },
+                    {
+                        "id": "189349",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FN 772 YP",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.642588,
+                            "longitude": 11.572045
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Klausen / Chiusa"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "405673",
+                "name": "Tiefgarage Gemeinde",
+                "lat": 46.689446,
+                "lon": 10.544952,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-egolf"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "170614",
+                        "name": "VW e-Golf",
+                        "model": "vw-egolf",
+                        "plate": "FA 862 AB",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.689446,
+                            "longitude": 10.544952
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Tiefgarage Gemeinde"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-egolf",
+                        "modelName": "VW e-Golf",
+                        "free": 1,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "405709",
+                "name": "Garibaldistraße / Via Garibaldi",
+                "lat": 46.668734,
+                "lon": 11.162112,
+                "free": 2,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-golf",
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156593",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "ES 011 TJ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.668734,
+                            "longitude": 11.162112
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Garibaldistraße / Via Garibaldi"
+                    },
+                    {
+                        "id": "192682",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 864 MF",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.668734,
+                            "longitude": 11.162112
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Garibaldistraße / Via Garibaldi"
+                    },
+                    {
+                        "id": "192827",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FS 123 GX",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.668734,
+                            "longitude": 11.162112
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Garibaldistraße / Via Garibaldi"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "405855",
+                "name": "Palermostraße / Via Palermo",
+                "lat": 46.492949,
+                "lon": 11.332901,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156001",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 934 TG",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.492949,
+                            "longitude": 11.332901
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Palermostraße / Via Palermo"
+                    },
+                    {
+                        "id": "189355",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FN 778 YP",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.492949,
+                            "longitude": 11.332901
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Palermostraße / Via Palermo"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "405956",
+                "name": "Kapuzinerplatz / Piazza Cappuccini",
+                "lat": 46.797007,
+                "lon": 11.940329,
+                "free": 2,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-caddy",
+                    "vw-golf-variant",
+                    "vw-up",
+                    "vw-caddy-life"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156377",
+                        "name": "VW Caddy",
+                        "model": "vw-caddy",
+                        "plate": "ES 012 TJ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.797007,
+                            "longitude": 11.940329
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Kapuzinerplatz / Piazza Cappuccini"
+                    },
+                    {
+                        "id": "171785",
+                        "name": "VW Golf Variant",
+                        "model": "vw-golf-variant",
+                        "plate": "FB 431 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.797007,
+                            "longitude": 11.940329
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Kapuzinerplatz / Piazza Cappuccini"
+                    },
+                    {
+                        "id": "171788",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FB 460 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.797007,
+                            "longitude": 11.940329
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Kapuzinerplatz / Piazza Cappuccini"
+                    },
+                    {
+                        "id": "187838",
+                        "name": "VW Caddy Life",
+                        "model": "vw-caddy-life",
+                        "plate": "FM 635 LW",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.797007,
+                            "longitude": 11.940329
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Kapuzinerplatz / Piazza Cappuccini"
+                    },
+                    {
+                        "id": "192680",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 862 MF",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.797007,
+                            "longitude": 11.940329
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Kapuzinerplatz / Piazza Cappuccini"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-caddy-life",
+                        "modelName": "VW Caddy Life",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 2
+                    },
+                    {
+                        "modelId": "vw-golf-variant",
+                        "modelName": "VW Golf Variant",
+                        "free": 0,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-caddy",
+                        "modelName": "VW Caddy",
+                        "free": 0,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "406004",
+                "name": "Bahnhof / stazione",
+                "lat": 46.710335,
+                "lon": 11.650183,
+                "free": 2,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up",
+                    "vw-golf"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156581",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 001 TJ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.710335,
+                            "longitude": 11.650183
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bahnhof / stazione"
+                    },
+                    {
+                        "id": "171789",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FB 461 GH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.710335,
+                            "longitude": 11.650183
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Bahnhof / stazione"
+                    },
+                    {
+                        "id": "192684",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 866 MF",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.710335,
+                            "longitude": 11.650183
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Bahnhof / stazione"
+                    },
+                    {
+                        "id": "216277",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "GD 509 FR",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.710335,
+                            "longitude": 11.650183
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Bahnhof / stazione"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 3
+                    }
+                ]
+            },
+            {
+                "station_id": "406299",
+                "name": "Schlanders / Silandro",
+                "lat": 46.628371,
+                "lon": 10.770989,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156002",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 921 TG",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.628371,
+                            "longitude": 10.770989
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Schlanders / Silandro"
+                    },
+                    {
+                        "id": "189789",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 547 BH",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.628371,
+                            "longitude": 10.770989
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Schlanders / Silandro"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "406308",
+                "name": "Lana",
+                "lat": 46.615601,
+                "lon": 11.146892,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "156170",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 000 TJ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.615601,
+                            "longitude": 11.146892
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Lana"
+                    },
+                    {
+                        "id": "192679",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FR 861 MF",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.615601,
+                            "longitude": 11.146892
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Lana"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "406603",
+                "name": "NOI Techpark",
+                "lat": 46.479387,
+                "lon": 11.332601,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "155917",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "ES 917 TG",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.479387,
+                            "longitude": 11.332601
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "NOI Techpark"
+                    },
+                    {
+                        "id": "189352",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FN 775 YP",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.479387,
+                            "longitude": 11.332601
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "NOI Techpark"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 2
+                    }
+                ]
+            },
+            {
+                "station_id": "408324",
+                "name": "Trientstraße / Via Trento",
+                "lat": 46.493565,
+                "lon": 11.353217,
+                "free": 2,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-up",
+                    "vw-golf-variant"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "189350",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FN 773 YP",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.493565,
+                            "longitude": 11.353217
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Trientstraße / Via Trento"
+                    },
+                    {
+                        "id": "193011",
+                        "name": "VW Golf Variant",
+                        "model": "vw-golf-variant",
+                        "plate": "FS 360 HA",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.493565,
+                            "longitude": 11.353217
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Trientstraße / Via Trento"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-golf-variant",
+                        "modelName": "VW Golf Variant",
+                        "free": 1,
+                        "count": 1
+                    },
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "408533",
+                "name": "Carduccistraße / Via Carducci",
+                "lat": 46.495485,
+                "lon": 11.350747,
+                "free": 3,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-golf",
+                    "vw-up"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "187840",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FM 636 LW",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.495485,
+                            "longitude": 11.350747
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Carduccistraße / Via Carducci"
+                    },
+                    {
+                        "id": "189116",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FM 136 LZ",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.495485,
+                            "longitude": 11.350747
+                        },
+                        "freeForRental": false,
+                        "fuelType": "unknown",
+                        "address": "Carduccistraße / Via Carducci"
+                    },
+                    {
+                        "id": "189354",
+                        "name": "VW up!",
+                        "model": "vw-up",
+                        "plate": "FN 777 YP",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.495485,
+                            "longitude": 11.350747
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Carduccistraße / Via Carducci"
+                    },
+                    {
+                        "id": "192824",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "FS 119 GX",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.495485,
+                            "longitude": 11.350747
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Carduccistraße / Via Carducci"
+                    },
+                    {
+                        "id": "216279",
+                        "name": "VW Golf",
+                        "model": "vw-golf",
+                        "plate": "GD 648 FR",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.495485,
+                            "longitude": 11.350747
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Carduccistraße / Via Carducci"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-golf",
+                        "modelName": "VW Golf",
+                        "free": 2,
+                        "count": 4
+                    },
+                    {
+                        "modelId": "vw-up",
+                        "modelName": "VW up!",
+                        "free": 1,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "408655",
+                "name": "E-Werk Prad",
+                "lat": 46.617307,
+                "lon": 10.589167,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "nissan-leaf-elektro"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "207856",
+                        "name": "Nissan Leaf (elektro)",
+                        "model": "nissan-leaf-elektro",
+                        "plate": "FZ 338 BD",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.617307,
+                            "longitude": 10.589167
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "E-Werk Prad"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "nissan-leaf-elektro",
+                        "modelName": "Nissan Leaf (elektro)",
+                        "free": 1,
+                        "count": 1
+                    }
+                ]
+            },
+            {
+                "station_id": "409194",
+                "name": "Lana Industriezone/Lana zona industriale",
+                "lat": 46.630092,
+                "lon": 11.167164,
+                "free": 1,
+                "type": "carsharing-hub",
+                "networks":
+                [
+                    "SUEDTIROL"
+                ],
+                "company": "Car Sharing Südtirol Alto Adige",
+                "bookahead": "yes",
+                "vehiclesModels":
+                [
+                    "vw-eup"
+                ],
+                "vehicles":
+                [
+                    {
+                        "id": "160275",
+                        "name": "VW e-UP!",
+                        "model": "vw-eup",
+                        "plate": "EX 609 BK",
+                        "geoCoordinate":
+                        {
+                            "latitude": 46.630092,
+                            "longitude": 11.167164
+                        },
+                        "freeForRental": true,
+                        "fuelType": "unknown",
+                        "address": "Lana Industriezone/Lana zona industriale"
+                    }
+                ],
+                "groupVehicles":
+                [
+                    {
+                        "modelId": "vw-eup",
+                        "modelName": "VW e-UP!",
+                        "free": 1,
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    }
+}

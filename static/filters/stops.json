@@ -1,0 +1,44 @@
+{
+    "filters": {
+        "locationType": {
+            "enabled": true,
+            "label": "label_locationtype",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "0"
+                }
+            ]
+        },
+        "vehicleType": {
+            "enabled": true,
+            "label": "label_vehicletype",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "-999"
+                }
+            ]
+        },
+        "wheelchairBoarding": {
+            "enabled": true,
+            "label": "label_wheelchairboarding",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "0"
+                }
+            ]
+        },
+        "zoneId": {
+            "enabled": true,
+            "label": "label_zoneid",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "undefined"
+                }
+            ]
+        }
+    }
+}

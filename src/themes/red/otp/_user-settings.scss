@@ -1,0 +1,61 @@
+.otp .user-settings {
+
+  h5{
+    margin-bottom: 0px;
+  }
+
+  .remember-settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      min-width: 40px;
+    }
+  }
+
+  .disclaimer {
+    font-size: $font-size-xsmall;
+    color:$input-color;
+  }
+
+  .place-list-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__cta {
+      transform: translateY(-50%);
+    }
+  }
+
+  .place-list-group{
+
+    h5,div{
+      color:black
+    }
+  }
+
+  .panel {
+    box-shadow: none;
+    border: 0;
+    margin-bottom: $font-size-base / 2;
+
+    .panel-heading {
+      border: 0;
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+      color:$input-color;
+    }
+
+    .panel-body,
+    .list-group-item {
+      padding-left: 0;
+      padding-right: 0;
+      color:$input-color;
+
+
+    }
+  }
+}

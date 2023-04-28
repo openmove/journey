@@ -1,0 +1,9 @@
+.env
+**node_modules
+src/config.yml
+yarn-error.log
+node_modules
+dist
+.env
+.DS_Store
+*.bak

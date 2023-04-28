@@ -1,0 +1,2673 @@
+{
+    "filters": {
+        "locationType": {
+            "enabled": true,
+            "label": "label_locationtype",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "0"
+                }
+            ]
+        },
+        "wheelchairBoarding": {
+            "enabled": true,
+            "label": "label_wheelchairboarding",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "0"
+                },
+                {
+                    "enabled": true,
+                    "value": "1"
+                },
+                {
+                    "enabled": true,
+                    "value": "2"
+                }
+            ]
+        },
+        "vehicleType": {
+            "enabled": false,
+            "label": "label_vehicletype",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "-999"
+                }
+            ]
+        },
+        "zoneId": {
+            "enabled": false,
+            "label": "label_zoneid",
+            "__TODO": "regroup best values",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "1001"
+                },
+                {
+                    "enabled": true,
+                    "value": "1010"
+                },
+                {
+                    "enabled": true,
+                    "value": "1020"
+                },
+                {
+                    "enabled": true,
+                    "value": "1030"
+                },
+                {
+                    "enabled": true,
+                    "value": "1040"
+                },
+                {
+                    "enabled": true,
+                    "value": "1050"
+                },
+                {
+                    "enabled": true,
+                    "value": "1058"
+                },
+                {
+                    "enabled": true,
+                    "value": "1060"
+                },
+                {
+                    "enabled": true,
+                    "value": "1070"
+                },
+                {
+                    "enabled": true,
+                    "value": "1071"
+                },
+                {
+                    "enabled": true,
+                    "value": "1072"
+                },
+                {
+                    "enabled": true,
+                    "value": "1073"
+                },
+                {
+                    "enabled": true,
+                    "value": "1074"
+                },
+                {
+                    "enabled": true,
+                    "value": "1075"
+                },
+                {
+                    "enabled": true,
+                    "value": "1076"
+                },
+                {
+                    "enabled": true,
+                    "value": "1077"
+                },
+                {
+                    "enabled": true,
+                    "value": "1078"
+                },
+                {
+                    "enabled": true,
+                    "value": "1079"
+                },
+                {
+                    "enabled": true,
+                    "value": "1080"
+                },
+                {
+                    "enabled": true,
+                    "value": "1081"
+                },
+                {
+                    "enabled": true,
+                    "value": "1082"
+                },
+                {
+                    "enabled": true,
+                    "value": "1084"
+                },
+                {
+                    "enabled": true,
+                    "value": "1085"
+                },
+                {
+                    "enabled": true,
+                    "value": "1088"
+                },
+                {
+                    "enabled": true,
+                    "value": "1098"
+                },
+                {
+                    "enabled": true,
+                    "value": "1100"
+                },
+                {
+                    "enabled": true,
+                    "value": "1103"
+                },
+                {
+                    "enabled": true,
+                    "value": "1105"
+                },
+                {
+                    "enabled": true,
+                    "value": "1106"
+                },
+                {
+                    "enabled": true,
+                    "value": "1110"
+                },
+                {
+                    "enabled": true,
+                    "value": "1111"
+                },
+                {
+                    "enabled": true,
+                    "value": "1112"
+                },
+                {
+                    "enabled": true,
+                    "value": "1114"
+                },
+                {
+                    "enabled": true,
+                    "value": "1115"
+                },
+                {
+                    "enabled": true,
+                    "value": "1118"
+                },
+                {
+                    "enabled": true,
+                    "value": "1120"
+                },
+                {
+                    "enabled": true,
+                    "value": "1121"
+                },
+                {
+                    "enabled": true,
+                    "value": "1122"
+                },
+                {
+                    "enabled": true,
+                    "value": "1123"
+                },
+                {
+                    "enabled": true,
+                    "value": "1126"
+                },
+                {
+                    "enabled": true,
+                    "value": "1127"
+                },
+                {
+                    "enabled": true,
+                    "value": "1128"
+                },
+                {
+                    "enabled": true,
+                    "value": "1129"
+                },
+                {
+                    "enabled": true,
+                    "value": "1135"
+                },
+                {
+                    "enabled": true,
+                    "value": "1136"
+                },
+                {
+                    "enabled": true,
+                    "value": "1137"
+                },
+                {
+                    "enabled": true,
+                    "value": "1140"
+                },
+                {
+                    "enabled": true,
+                    "value": "1141"
+                },
+                {
+                    "enabled": true,
+                    "value": "1152"
+                },
+                {
+                    "enabled": true,
+                    "value": "1160"
+                },
+                {
+                    "enabled": true,
+                    "value": "1167"
+                },
+                {
+                    "enabled": true,
+                    "value": "1182"
+                },
+                {
+                    "enabled": true,
+                    "value": "1190"
+                },
+                {
+                    "enabled": true,
+                    "value": "1200"
+                },
+                {
+                    "enabled": true,
+                    "value": "1210"
+                },
+                {
+                    "enabled": true,
+                    "value": "1220"
+                },
+                {
+                    "enabled": true,
+                    "value": "1221"
+                },
+                {
+                    "enabled": true,
+                    "value": "1222"
+                },
+                {
+                    "enabled": true,
+                    "value": "1223"
+                },
+                {
+                    "enabled": true,
+                    "value": "1224"
+                },
+                {
+                    "enabled": true,
+                    "value": "1227"
+                },
+                {
+                    "enabled": true,
+                    "value": "1239"
+                },
+                {
+                    "enabled": true,
+                    "value": "1240"
+                },
+                {
+                    "enabled": true,
+                    "value": "1250"
+                },
+                {
+                    "enabled": true,
+                    "value": "1251"
+                },
+                {
+                    "enabled": true,
+                    "value": "1253"
+                },
+                {
+                    "enabled": true,
+                    "value": "1254"
+                },
+                {
+                    "enabled": true,
+                    "value": "1255"
+                },
+                {
+                    "enabled": true,
+                    "value": "1256"
+                },
+                {
+                    "enabled": true,
+                    "value": "1270"
+                },
+                {
+                    "enabled": true,
+                    "value": "1280"
+                },
+                {
+                    "enabled": true,
+                    "value": "1300"
+                },
+                {
+                    "enabled": true,
+                    "value": "1310"
+                },
+                {
+                    "enabled": true,
+                    "value": "1320"
+                },
+                {
+                    "enabled": true,
+                    "value": "1330"
+                },
+                {
+                    "enabled": true,
+                    "value": "1340"
+                },
+                {
+                    "enabled": true,
+                    "value": "1350"
+                },
+                {
+                    "enabled": true,
+                    "value": "1360"
+                },
+                {
+                    "enabled": true,
+                    "value": "1380"
+                },
+                {
+                    "enabled": true,
+                    "value": "1390"
+                },
+                {
+                    "enabled": true,
+                    "value": "2010"
+                },
+                {
+                    "enabled": true,
+                    "value": "2021"
+                },
+                {
+                    "enabled": true,
+                    "value": "2023"
+                },
+                {
+                    "enabled": true,
+                    "value": "2030"
+                },
+                {
+                    "enabled": true,
+                    "value": "2040"
+                },
+                {
+                    "enabled": true,
+                    "value": "2045"
+                },
+                {
+                    "enabled": true,
+                    "value": "2048"
+                },
+                {
+                    "enabled": true,
+                    "value": "2049"
+                },
+                {
+                    "enabled": true,
+                    "value": "2050"
+                },
+                {
+                    "enabled": true,
+                    "value": "2051"
+                },
+                {
+                    "enabled": true,
+                    "value": "2052"
+                },
+                {
+                    "enabled": true,
+                    "value": "2054"
+                },
+                {
+                    "enabled": true,
+                    "value": "2055"
+                },
+                {
+                    "enabled": true,
+                    "value": "2056"
+                },
+                {
+                    "enabled": true,
+                    "value": "2057"
+                },
+                {
+                    "enabled": true,
+                    "value": "2058"
+                },
+                {
+                    "enabled": true,
+                    "value": "2060"
+                },
+                {
+                    "enabled": true,
+                    "value": "2090"
+                },
+                {
+                    "enabled": true,
+                    "value": "2101"
+                },
+                {
+                    "enabled": true,
+                    "value": "2110"
+                },
+                {
+                    "enabled": true,
+                    "value": "2120"
+                },
+                {
+                    "enabled": true,
+                    "value": "2121"
+                },
+                {
+                    "enabled": true,
+                    "value": "2122"
+                },
+                {
+                    "enabled": true,
+                    "value": "2123"
+                },
+                {
+                    "enabled": true,
+                    "value": "2124"
+                },
+                {
+                    "enabled": true,
+                    "value": "2125"
+                },
+                {
+                    "enabled": true,
+                    "value": "2127"
+                },
+                {
+                    "enabled": true,
+                    "value": "2128"
+                },
+                {
+                    "enabled": true,
+                    "value": "2129"
+                },
+                {
+                    "enabled": true,
+                    "value": "2132"
+                },
+                {
+                    "enabled": true,
+                    "value": "2136"
+                },
+                {
+                    "enabled": true,
+                    "value": "2142"
+                },
+                {
+                    "enabled": true,
+                    "value": "2143"
+                },
+                {
+                    "enabled": true,
+                    "value": "2144"
+                },
+                {
+                    "enabled": true,
+                    "value": "2145"
+                },
+                {
+                    "enabled": true,
+                    "value": "2146"
+                },
+                {
+                    "enabled": true,
+                    "value": "2147"
+                },
+                {
+                    "enabled": true,
+                    "value": "2153"
+                },
+                {
+                    "enabled": true,
+                    "value": "2154"
+                },
+                {
+                    "enabled": true,
+                    "value": "2155"
+                },
+                {
+                    "enabled": true,
+                    "value": "2156"
+                },
+                {
+                    "enabled": true,
+                    "value": "2159"
+                },
+                {
+                    "enabled": true,
+                    "value": "2160"
+                },
+                {
+                    "enabled": true,
+                    "value": "2162"
+                },
+                {
+                    "enabled": true,
+                    "value": "2163"
+                },
+                {
+                    "enabled": true,
+                    "value": "2171"
+                },
+                {
+                    "enabled": true,
+                    "value": "2173"
+                },
+                {
+                    "enabled": true,
+                    "value": "2174"
+                },
+                {
+                    "enabled": true,
+                    "value": "2179"
+                },
+                {
+                    "enabled": true,
+                    "value": "2180"
+                },
+                {
+                    "enabled": true,
+                    "value": "2181"
+                },
+                {
+                    "enabled": true,
+                    "value": "2182"
+                },
+                {
+                    "enabled": true,
+                    "value": "2183"
+                },
+                {
+                    "enabled": true,
+                    "value": "2184"
+                },
+                {
+                    "enabled": true,
+                    "value": "2185"
+                },
+                {
+                    "enabled": true,
+                    "value": "2187"
+                },
+                {
+                    "enabled": true,
+                    "value": "2188"
+                },
+                {
+                    "enabled": true,
+                    "value": "2189"
+                },
+                {
+                    "enabled": true,
+                    "value": "2191"
+                },
+                {
+                    "enabled": true,
+                    "value": "2192"
+                },
+                {
+                    "enabled": true,
+                    "value": "2193"
+                },
+                {
+                    "enabled": true,
+                    "value": "2195"
+                },
+                {
+                    "enabled": true,
+                    "value": "2196"
+                },
+                {
+                    "enabled": true,
+                    "value": "2197"
+                },
+                {
+                    "enabled": true,
+                    "value": "2198"
+                },
+                {
+                    "enabled": true,
+                    "value": "2199"
+                },
+                {
+                    "enabled": true,
+                    "value": "2201"
+                },
+                {
+                    "enabled": true,
+                    "value": "2202"
+                },
+                {
+                    "enabled": true,
+                    "value": "2207"
+                },
+                {
+                    "enabled": true,
+                    "value": "2208"
+                },
+                {
+                    "enabled": true,
+                    "value": "2210"
+                },
+                {
+                    "enabled": true,
+                    "value": "2211"
+                },
+                {
+                    "enabled": true,
+                    "value": "2212"
+                },
+                {
+                    "enabled": true,
+                    "value": "2213"
+                },
+                {
+                    "enabled": true,
+                    "value": "2214"
+                },
+                {
+                    "enabled": true,
+                    "value": "2215"
+                },
+                {
+                    "enabled": true,
+                    "value": "2216"
+                },
+                {
+                    "enabled": true,
+                    "value": "2218"
+                },
+                {
+                    "enabled": true,
+                    "value": "2219"
+                },
+                {
+                    "enabled": true,
+                    "value": "2220"
+                },
+                {
+                    "enabled": true,
+                    "value": "2225"
+                },
+                {
+                    "enabled": true,
+                    "value": "2240"
+                },
+                {
+                    "enabled": true,
+                    "value": "2241"
+                },
+                {
+                    "enabled": true,
+                    "value": "2270"
+                },
+                {
+                    "enabled": true,
+                    "value": "2280"
+                },
+                {
+                    "enabled": true,
+                    "value": "2290"
+                },
+                {
+                    "enabled": true,
+                    "value": "2291"
+                },
+                {
+                    "enabled": true,
+                    "value": "2292"
+                },
+                {
+                    "enabled": true,
+                    "value": "2293"
+                },
+                {
+                    "enabled": true,
+                    "value": "2294"
+                },
+                {
+                    "enabled": true,
+                    "value": "2295"
+                },
+                {
+                    "enabled": true,
+                    "value": "2296"
+                },
+                {
+                    "enabled": true,
+                    "value": "2297"
+                },
+                {
+                    "enabled": true,
+                    "value": "2298"
+                },
+                {
+                    "enabled": true,
+                    "value": "2299"
+                },
+                {
+                    "enabled": true,
+                    "value": "2300"
+                },
+                {
+                    "enabled": true,
+                    "value": "2305"
+                },
+                {
+                    "enabled": true,
+                    "value": "2308"
+                },
+                {
+                    "enabled": true,
+                    "value": "2309"
+                },
+                {
+                    "enabled": true,
+                    "value": "2310"
+                },
+                {
+                    "enabled": true,
+                    "value": "2311"
+                },
+                {
+                    "enabled": true,
+                    "value": "2314"
+                },
+                {
+                    "enabled": true,
+                    "value": "2320"
+                },
+                {
+                    "enabled": true,
+                    "value": "2321"
+                },
+                {
+                    "enabled": true,
+                    "value": "2323"
+                },
+                {
+                    "enabled": true,
+                    "value": "2324"
+                },
+                {
+                    "enabled": true,
+                    "value": "2330"
+                },
+                {
+                    "enabled": true,
+                    "value": "2332"
+                },
+                {
+                    "enabled": true,
+                    "value": "2334"
+                },
+                {
+                    "enabled": true,
+                    "value": "2336"
+                },
+                {
+                    "enabled": true,
+                    "value": "2340"
+                },
+                {
+                    "enabled": true,
+                    "value": "2350"
+                },
+                {
+                    "enabled": true,
+                    "value": "2360"
+                },
+                {
+                    "enabled": true,
+                    "value": "2370"
+                },
+                {
+                    "enabled": true,
+                    "value": "2380"
+                },
+                {
+                    "enabled": true,
+                    "value": "2390"
+                },
+                {
+                    "enabled": true,
+                    "value": "2400"
+                },
+                {
+                    "enabled": true,
+                    "value": "2420"
+                },
+                {
+                    "enabled": true,
+                    "value": "2430"
+                },
+                {
+                    "enabled": true,
+                    "value": "2440"
+                },
+                {
+                    "enabled": true,
+                    "value": "2450"
+                },
+                {
+                    "enabled": true,
+                    "value": "2460"
+                },
+                {
+                    "enabled": true,
+                    "value": "2470"
+                },
+                {
+                    "enabled": true,
+                    "value": "2620"
+                },
+                {
+                    "enabled": true,
+                    "value": "2621"
+                },
+                {
+                    "enabled": true,
+                    "value": "2630"
+                },
+                {
+                    "enabled": true,
+                    "value": "2631"
+                },
+                {
+                    "enabled": true,
+                    "value": "2640"
+                },
+                {
+                    "enabled": true,
+                    "value": "2645"
+                },
+                {
+                    "enabled": true,
+                    "value": "2650"
+                },
+                {
+                    "enabled": true,
+                    "value": "2660"
+                },
+                {
+                    "enabled": true,
+                    "value": "3010"
+                },
+                {
+                    "enabled": true,
+                    "value": "3020"
+                },
+                {
+                    "enabled": true,
+                    "value": "3030"
+                },
+                {
+                    "enabled": true,
+                    "value": "3040"
+                },
+                {
+                    "enabled": true,
+                    "value": "3041"
+                },
+                {
+                    "enabled": true,
+                    "value": "3042"
+                },
+                {
+                    "enabled": true,
+                    "value": "3043"
+                },
+                {
+                    "enabled": true,
+                    "value": "3044"
+                },
+                {
+                    "enabled": true,
+                    "value": "3045"
+                },
+                {
+                    "enabled": true,
+                    "value": "3046"
+                },
+                {
+                    "enabled": true,
+                    "value": "3047"
+                },
+                {
+                    "enabled": true,
+                    "value": "3048"
+                },
+                {
+                    "enabled": true,
+                    "value": "3049"
+                },
+                {
+                    "enabled": true,
+                    "value": "3051"
+                },
+                {
+                    "enabled": true,
+                    "value": "3053"
+                },
+                {
+                    "enabled": true,
+                    "value": "3054"
+                },
+                {
+                    "enabled": true,
+                    "value": "3055"
+                },
+                {
+                    "enabled": true,
+                    "value": "3070"
+                },
+                {
+                    "enabled": true,
+                    "value": "3100"
+                },
+                {
+                    "enabled": true,
+                    "value": "3101"
+                },
+                {
+                    "enabled": true,
+                    "value": "3102"
+                },
+                {
+                    "enabled": true,
+                    "value": "3103"
+                },
+                {
+                    "enabled": true,
+                    "value": "3104"
+                },
+                {
+                    "enabled": true,
+                    "value": "3105"
+                },
+                {
+                    "enabled": true,
+                    "value": "3150"
+                },
+                {
+                    "enabled": true,
+                    "value": "3151"
+                },
+                {
+                    "enabled": true,
+                    "value": "3153"
+                },
+                {
+                    "enabled": true,
+                    "value": "3154"
+                },
+                {
+                    "enabled": true,
+                    "value": "3155"
+                },
+                {
+                    "enabled": true,
+                    "value": "3156"
+                },
+                {
+                    "enabled": true,
+                    "value": "3159"
+                },
+                {
+                    "enabled": true,
+                    "value": "3160"
+                },
+                {
+                    "enabled": true,
+                    "value": "3162"
+                },
+                {
+                    "enabled": true,
+                    "value": "3163"
+                },
+                {
+                    "enabled": true,
+                    "value": "3164"
+                },
+                {
+                    "enabled": true,
+                    "value": "3165"
+                },
+                {
+                    "enabled": true,
+                    "value": "3166"
+                },
+                {
+                    "enabled": true,
+                    "value": "3167"
+                },
+                {
+                    "enabled": true,
+                    "value": "3175"
+                },
+                {
+                    "enabled": true,
+                    "value": "3183"
+                },
+                {
+                    "enabled": true,
+                    "value": "3184"
+                },
+                {
+                    "enabled": true,
+                    "value": "3197"
+                },
+                {
+                    "enabled": true,
+                    "value": "3198"
+                },
+                {
+                    "enabled": true,
+                    "value": "3201"
+                },
+                {
+                    "enabled": true,
+                    "value": "3207"
+                },
+                {
+                    "enabled": true,
+                    "value": "3208"
+                },
+                {
+                    "enabled": true,
+                    "value": "3209"
+                },
+                {
+                    "enabled": true,
+                    "value": "3210"
+                },
+                {
+                    "enabled": true,
+                    "value": "3212"
+                },
+                {
+                    "enabled": true,
+                    "value": "3213"
+                },
+                {
+                    "enabled": true,
+                    "value": "3215"
+                },
+                {
+                    "enabled": true,
+                    "value": "3219"
+                },
+                {
+                    "enabled": true,
+                    "value": "3222"
+                },
+                {
+                    "enabled": true,
+                    "value": "3223"
+                },
+                {
+                    "enabled": true,
+                    "value": "3226"
+                },
+                {
+                    "enabled": true,
+                    "value": "3230"
+                },
+                {
+                    "enabled": true,
+                    "value": "3231"
+                },
+                {
+                    "enabled": true,
+                    "value": "3232"
+                },
+                {
+                    "enabled": true,
+                    "value": "3233"
+                },
+                {
+                    "enabled": true,
+                    "value": "3234"
+                },
+                {
+                    "enabled": true,
+                    "value": "3236"
+                },
+                {
+                    "enabled": true,
+                    "value": "3237"
+                },
+                {
+                    "enabled": true,
+                    "value": "3238"
+                },
+                {
+                    "enabled": true,
+                    "value": "3239"
+                },
+                {
+                    "enabled": true,
+                    "value": "3240"
+                },
+                {
+                    "enabled": true,
+                    "value": "3243"
+                },
+                {
+                    "enabled": true,
+                    "value": "3253"
+                },
+                {
+                    "enabled": true,
+                    "value": "3310"
+                },
+                {
+                    "enabled": true,
+                    "value": "3312"
+                },
+                {
+                    "enabled": true,
+                    "value": "3320"
+                },
+                {
+                    "enabled": true,
+                    "value": "3335"
+                },
+                {
+                    "enabled": true,
+                    "value": "3336"
+                },
+                {
+                    "enabled": true,
+                    "value": "3337"
+                },
+                {
+                    "enabled": true,
+                    "value": "3340"
+                },
+                {
+                    "enabled": true,
+                    "value": "3341"
+                },
+                {
+                    "enabled": true,
+                    "value": "3342"
+                },
+                {
+                    "enabled": true,
+                    "value": "3343"
+                },
+                {
+                    "enabled": true,
+                    "value": "3344"
+                },
+                {
+                    "enabled": true,
+                    "value": "3346"
+                },
+                {
+                    "enabled": true,
+                    "value": "3347"
+                },
+                {
+                    "enabled": true,
+                    "value": "3349"
+                },
+                {
+                    "enabled": true,
+                    "value": "3350"
+                },
+                {
+                    "enabled": true,
+                    "value": "3351"
+                },
+                {
+                    "enabled": true,
+                    "value": "3352"
+                },
+                {
+                    "enabled": true,
+                    "value": "3353"
+                },
+                {
+                    "enabled": true,
+                    "value": "3354"
+                },
+                {
+                    "enabled": true,
+                    "value": "3356"
+                },
+                {
+                    "enabled": true,
+                    "value": "3358"
+                },
+                {
+                    "enabled": true,
+                    "value": "3362"
+                },
+                {
+                    "enabled": true,
+                    "value": "3363"
+                },
+                {
+                    "enabled": true,
+                    "value": "3364"
+                },
+                {
+                    "enabled": true,
+                    "value": "3381"
+                },
+                {
+                    "enabled": true,
+                    "value": "3384"
+                },
+                {
+                    "enabled": true,
+                    "value": "3385"
+                },
+                {
+                    "enabled": true,
+                    "value": "3389"
+                },
+                {
+                    "enabled": true,
+                    "value": "3401"
+                },
+                {
+                    "enabled": true,
+                    "value": "3405"
+                },
+                {
+                    "enabled": true,
+                    "value": "3407"
+                },
+                {
+                    "enabled": true,
+                    "value": "3408"
+                },
+                {
+                    "enabled": true,
+                    "value": "3410"
+                },
+                {
+                    "enabled": true,
+                    "value": "3411"
+                },
+                {
+                    "enabled": true,
+                    "value": "3412"
+                },
+                {
+                    "enabled": true,
+                    "value": "3413"
+                },
+                {
+                    "enabled": true,
+                    "value": "3460"
+                },
+                {
+                    "enabled": true,
+                    "value": "3465"
+                },
+                {
+                    "enabled": true,
+                    "value": "3470"
+                },
+                {
+                    "enabled": true,
+                    "value": "3480"
+                },
+                {
+                    "enabled": true,
+                    "value": "3510"
+                },
+                {
+                    "enabled": true,
+                    "value": "3520"
+                },
+                {
+                    "enabled": true,
+                    "value": "3542"
+                },
+                {
+                    "enabled": true,
+                    "value": "3610"
+                },
+                {
+                    "enabled": true,
+                    "value": "3620"
+                },
+                {
+                    "enabled": true,
+                    "value": "3640"
+                },
+                {
+                    "enabled": true,
+                    "value": "3650"
+                },
+                {
+                    "enabled": true,
+                    "value": "3670"
+                },
+                {
+                    "enabled": true,
+                    "value": "3680"
+                },
+                {
+                    "enabled": true,
+                    "value": "3690"
+                },
+                {
+                    "enabled": true,
+                    "value": "3695"
+                },
+                {
+                    "enabled": true,
+                    "value": "3710"
+                },
+                {
+                    "enabled": true,
+                    "value": "3720"
+                },
+                {
+                    "enabled": true,
+                    "value": "3730"
+                },
+                {
+                    "enabled": true,
+                    "value": "3740"
+                },
+                {
+                    "enabled": true,
+                    "value": "3760"
+                },
+                {
+                    "enabled": true,
+                    "value": "3770"
+                },
+                {
+                    "enabled": true,
+                    "value": "3790"
+                },
+                {
+                    "enabled": true,
+                    "value": "3791"
+                },
+                {
+                    "enabled": true,
+                    "value": "3800"
+                },
+                {
+                    "enabled": true,
+                    "value": "3810"
+                },
+                {
+                    "enabled": true,
+                    "value": "3820"
+                },
+                {
+                    "enabled": true,
+                    "value": "3830"
+                },
+                {
+                    "enabled": true,
+                    "value": "3849"
+                },
+                {
+                    "enabled": true,
+                    "value": "3850"
+                },
+                {
+                    "enabled": true,
+                    "value": "3851"
+                },
+                {
+                    "enabled": true,
+                    "value": "3860"
+                },
+                {
+                    "enabled": true,
+                    "value": "3861"
+                },
+                {
+                    "enabled": true,
+                    "value": "3862"
+                },
+                {
+                    "enabled": true,
+                    "value": "3863"
+                },
+                {
+                    "enabled": true,
+                    "value": "3870"
+                },
+                {
+                    "enabled": true,
+                    "value": "3878"
+                },
+                {
+                    "enabled": true,
+                    "value": "3880"
+                },
+                {
+                    "enabled": true,
+                    "value": "3890"
+                },
+                {
+                    "enabled": true,
+                    "value": "3895"
+                },
+                {
+                    "enabled": true,
+                    "value": "4005"
+                },
+                {
+                    "enabled": true,
+                    "value": "4010"
+                },
+                {
+                    "enabled": true,
+                    "value": "4020"
+                },
+                {
+                    "enabled": true,
+                    "value": "4022"
+                },
+                {
+                    "enabled": true,
+                    "value": "4023"
+                },
+                {
+                    "enabled": true,
+                    "value": "4024"
+                },
+                {
+                    "enabled": true,
+                    "value": "4025"
+                },
+                {
+                    "enabled": true,
+                    "value": "4026"
+                },
+                {
+                    "enabled": true,
+                    "value": "4030"
+                },
+                {
+                    "enabled": true,
+                    "value": "4032"
+                },
+                {
+                    "enabled": true,
+                    "value": "4038"
+                },
+                {
+                    "enabled": true,
+                    "value": "4039"
+                },
+                {
+                    "enabled": true,
+                    "value": "4041"
+                },
+                {
+                    "enabled": true,
+                    "value": "4042"
+                },
+                {
+                    "enabled": true,
+                    "value": "4043"
+                },
+                {
+                    "enabled": true,
+                    "value": "4044"
+                },
+                {
+                    "enabled": true,
+                    "value": "4045"
+                },
+                {
+                    "enabled": true,
+                    "value": "4046"
+                },
+                {
+                    "enabled": true,
+                    "value": "4048"
+                },
+                {
+                    "enabled": true,
+                    "value": "4050"
+                },
+                {
+                    "enabled": true,
+                    "value": "4060"
+                },
+                {
+                    "enabled": true,
+                    "value": "4061"
+                },
+                {
+                    "enabled": true,
+                    "value": "4070"
+                },
+                {
+                    "enabled": true,
+                    "value": "4080"
+                },
+                {
+                    "enabled": true,
+                    "value": "4100"
+                },
+                {
+                    "enabled": true,
+                    "value": "4111"
+                },
+                {
+                    "enabled": true,
+                    "value": "4112"
+                },
+                {
+                    "enabled": true,
+                    "value": "4113"
+                },
+                {
+                    "enabled": true,
+                    "value": "4114"
+                },
+                {
+                    "enabled": true,
+                    "value": "4115"
+                },
+                {
+                    "enabled": true,
+                    "value": "4116"
+                },
+                {
+                    "enabled": true,
+                    "value": "4118"
+                },
+                {
+                    "enabled": true,
+                    "value": "4120"
+                },
+                {
+                    "enabled": true,
+                    "value": "4122"
+                },
+                {
+                    "enabled": true,
+                    "value": "4123"
+                },
+                {
+                    "enabled": true,
+                    "value": "4125"
+                },
+                {
+                    "enabled": true,
+                    "value": "4126"
+                },
+                {
+                    "enabled": true,
+                    "value": "4127"
+                },
+                {
+                    "enabled": true,
+                    "value": "4130"
+                },
+                {
+                    "enabled": true,
+                    "value": "4132"
+                },
+                {
+                    "enabled": true,
+                    "value": "4133"
+                },
+                {
+                    "enabled": true,
+                    "value": "4134"
+                },
+                {
+                    "enabled": true,
+                    "value": "4135"
+                },
+                {
+                    "enabled": true,
+                    "value": "4136"
+                },
+                {
+                    "enabled": true,
+                    "value": "4137"
+                },
+                {
+                    "enabled": true,
+                    "value": "4140"
+                },
+                {
+                    "enabled": true,
+                    "value": "4141"
+                },
+                {
+                    "enabled": true,
+                    "value": "4142"
+                },
+                {
+                    "enabled": true,
+                    "value": "4143"
+                },
+                {
+                    "enabled": true,
+                    "value": "4200"
+                },
+                {
+                    "enabled": true,
+                    "value": "4210"
+                },
+                {
+                    "enabled": true,
+                    "value": "4211"
+                },
+                {
+                    "enabled": true,
+                    "value": "4212"
+                },
+                {
+                    "enabled": true,
+                    "value": "4250"
+                },
+                {
+                    "enabled": true,
+                    "value": "4260"
+                },
+                {
+                    "enabled": true,
+                    "value": "4270"
+                },
+                {
+                    "enabled": true,
+                    "value": "4280"
+                },
+                {
+                    "enabled": true,
+                    "value": "4282"
+                },
+                {
+                    "enabled": true,
+                    "value": "4290"
+                },
+                {
+                    "enabled": true,
+                    "value": "4292"
+                },
+                {
+                    "enabled": true,
+                    "value": "4300"
+                },
+                {
+                    "enabled": true,
+                    "value": "4310"
+                },
+                {
+                    "enabled": true,
+                    "value": "4320"
+                },
+                {
+                    "enabled": true,
+                    "value": "4321"
+                },
+                {
+                    "enabled": true,
+                    "value": "4322"
+                },
+                {
+                    "enabled": true,
+                    "value": "4350"
+                },
+                {
+                    "enabled": true,
+                    "value": "4360"
+                },
+                {
+                    "enabled": true,
+                    "value": "4361"
+                },
+                {
+                    "enabled": true,
+                    "value": "4370"
+                },
+                {
+                    "enabled": true,
+                    "value": "4380"
+                },
+                {
+                    "enabled": true,
+                    "value": "4382"
+                },
+                {
+                    "enabled": true,
+                    "value": "4400"
+                },
+                {
+                    "enabled": true,
+                    "value": "4405"
+                },
+                {
+                    "enabled": true,
+                    "value": "4410"
+                },
+                {
+                    "enabled": true,
+                    "value": "4420"
+                },
+                {
+                    "enabled": true,
+                    "value": "4430"
+                },
+                {
+                    "enabled": true,
+                    "value": "4440"
+                },
+                {
+                    "enabled": true,
+                    "value": "4448"
+                },
+                {
+                    "enabled": true,
+                    "value": "4449"
+                },
+                {
+                    "enabled": true,
+                    "value": "4450"
+                },
+                {
+                    "enabled": true,
+                    "value": "4451"
+                },
+                {
+                    "enabled": true,
+                    "value": "4452"
+                },
+                {
+                    "enabled": true,
+                    "value": "4453"
+                },
+                {
+                    "enabled": true,
+                    "value": "4454"
+                },
+                {
+                    "enabled": true,
+                    "value": "4455"
+                },
+                {
+                    "enabled": true,
+                    "value": "4456"
+                },
+                {
+                    "enabled": true,
+                    "value": "4457"
+                },
+                {
+                    "enabled": true,
+                    "value": "4458"
+                },
+                {
+                    "enabled": true,
+                    "value": "4461"
+                },
+                {
+                    "enabled": true,
+                    "value": "4462"
+                },
+                {
+                    "enabled": true,
+                    "value": "4463"
+                },
+                {
+                    "enabled": true,
+                    "value": "4464"
+                },
+                {
+                    "enabled": true,
+                    "value": "4465"
+                },
+                {
+                    "enabled": true,
+                    "value": "4490"
+                },
+                {
+                    "enabled": true,
+                    "value": "4491"
+                },
+                {
+                    "enabled": true,
+                    "value": "4492"
+                },
+                {
+                    "enabled": true,
+                    "value": "4493"
+                },
+                {
+                    "enabled": true,
+                    "value": "4494"
+                },
+                {
+                    "enabled": true,
+                    "value": "4495"
+                },
+                {
+                    "enabled": true,
+                    "value": "4496"
+                },
+                {
+                    "enabled": true,
+                    "value": "4497"
+                },
+                {
+                    "enabled": true,
+                    "value": "4498"
+                },
+                {
+                    "enabled": true,
+                    "value": "4500"
+                },
+                {
+                    "enabled": true,
+                    "value": "4511"
+                },
+                {
+                    "enabled": true,
+                    "value": "4520"
+                },
+                {
+                    "enabled": true,
+                    "value": "4530"
+                },
+                {
+                    "enabled": true,
+                    "value": "4540"
+                },
+                {
+                    "enabled": true,
+                    "value": "4541"
+                },
+                {
+                    "enabled": true,
+                    "value": "4550"
+                },
+                {
+                    "enabled": true,
+                    "value": "4570"
+                },
+                {
+                    "enabled": true,
+                    "value": "5010"
+                },
+                {
+                    "enabled": true,
+                    "value": "5020"
+                },
+                {
+                    "enabled": true,
+                    "value": "5030"
+                },
+                {
+                    "enabled": true,
+                    "value": "5040"
+                },
+                {
+                    "enabled": true,
+                    "value": "5050"
+                },
+                {
+                    "enabled": true,
+                    "value": "5060"
+                },
+                {
+                    "enabled": true,
+                    "value": "5070"
+                },
+                {
+                    "enabled": true,
+                    "value": "5090"
+                },
+                {
+                    "enabled": true,
+                    "value": "5100"
+                },
+                {
+                    "enabled": true,
+                    "value": "5110"
+                },
+                {
+                    "enabled": true,
+                    "value": "5111"
+                },
+                {
+                    "enabled": true,
+                    "value": "5112"
+                },
+                {
+                    "enabled": true,
+                    "value": "5113"
+                },
+                {
+                    "enabled": true,
+                    "value": "5114"
+                },
+                {
+                    "enabled": true,
+                    "value": "5115"
+                },
+                {
+                    "enabled": true,
+                    "value": "5116"
+                },
+                {
+                    "enabled": true,
+                    "value": "5117"
+                },
+                {
+                    "enabled": true,
+                    "value": "5118"
+                },
+                {
+                    "enabled": true,
+                    "value": "5119"
+                },
+                {
+                    "enabled": true,
+                    "value": "5120"
+                },
+                {
+                    "enabled": true,
+                    "value": "5127"
+                },
+                {
+                    "enabled": true,
+                    "value": "5128"
+                },
+                {
+                    "enabled": true,
+                    "value": "5130"
+                },
+                {
+                    "enabled": true,
+                    "value": "5135"
+                },
+                {
+                    "enabled": true,
+                    "value": "5140"
+                },
+                {
+                    "enabled": true,
+                    "value": "5142"
+                },
+                {
+                    "enabled": true,
+                    "value": "5143"
+                },
+                {
+                    "enabled": true,
+                    "value": "5144"
+                },
+                {
+                    "enabled": true,
+                    "value": "5145"
+                },
+                {
+                    "enabled": true,
+                    "value": "5154"
+                },
+                {
+                    "enabled": true,
+                    "value": "5170"
+                },
+                {
+                    "enabled": true,
+                    "value": "5180"
+                },
+                {
+                    "enabled": true,
+                    "value": "5258"
+                },
+                {
+                    "enabled": true,
+                    "value": "5260"
+                },
+                {
+                    "enabled": true,
+                    "value": "5261"
+                },
+                {
+                    "enabled": true,
+                    "value": "5262"
+                },
+                {
+                    "enabled": true,
+                    "value": "5263"
+                },
+                {
+                    "enabled": true,
+                    "value": "5264"
+                },
+                {
+                    "enabled": true,
+                    "value": "5265"
+                },
+                {
+                    "enabled": true,
+                    "value": "5266"
+                },
+                {
+                    "enabled": true,
+                    "value": "6092"
+                },
+                {
+                    "enabled": true,
+                    "value": "6093"
+                },
+                {
+                    "enabled": true,
+                    "value": "6094"
+                },
+                {
+                    "enabled": true,
+                    "value": "6095"
+                },
+                {
+                    "enabled": true,
+                    "value": "6096"
+                },
+                {
+                    "enabled": true,
+                    "value": "6110"
+                },
+                {
+                    "enabled": true,
+                    "value": "6111"
+                },
+                {
+                    "enabled": true,
+                    "value": "6112"
+                },
+                {
+                    "enabled": true,
+                    "value": "6113"
+                },
+                {
+                    "enabled": true,
+                    "value": "6120"
+                },
+                {
+                    "enabled": true,
+                    "value": "6123"
+                },
+                {
+                    "enabled": true,
+                    "value": "6124"
+                },
+                {
+                    "enabled": true,
+                    "value": "6125"
+                },
+                {
+                    "enabled": true,
+                    "value": "6127"
+                },
+                {
+                    "enabled": true,
+                    "value": "6131"
+                },
+                {
+                    "enabled": true,
+                    "value": "6132"
+                },
+                {
+                    "enabled": true,
+                    "value": "6133"
+                },
+                {
+                    "enabled": true,
+                    "value": "6134"
+                },
+                {
+                    "enabled": true,
+                    "value": "6135"
+                },
+                {
+                    "enabled": true,
+                    "value": "6136"
+                },
+                {
+                    "enabled": true,
+                    "value": "6137"
+                },
+                {
+                    "enabled": true,
+                    "value": "6143"
+                },
+                {
+                    "enabled": true,
+                    "value": "6144"
+                },
+                {
+                    "enabled": true,
+                    "value": "6145"
+                },
+                {
+                    "enabled": true,
+                    "value": "6150"
+                },
+                {
+                    "enabled": true,
+                    "value": "6151"
+                },
+                {
+                    "enabled": true,
+                    "value": "6152"
+                },
+                {
+                    "enabled": true,
+                    "value": "6153"
+                },
+                {
+                    "enabled": true,
+                    "value": "6154"
+                },
+                {
+                    "enabled": true,
+                    "value": "6155"
+                },
+                {
+                    "enabled": true,
+                    "value": "6157"
+                },
+                {
+                    "enabled": true,
+                    "value": "6170"
+                },
+                {
+                    "enabled": true,
+                    "value": "6171"
+                },
+                {
+                    "enabled": true,
+                    "value": "6172"
+                },
+                {
+                    "enabled": true,
+                    "value": "6173"
+                },
+                {
+                    "enabled": true,
+                    "value": "6180"
+                },
+                {
+                    "enabled": true,
+                    "value": "6190"
+                },
+                {
+                    "enabled": true,
+                    "value": "6191"
+                },
+                {
+                    "enabled": true,
+                    "value": "6200"
+                },
+                {
+                    "enabled": true,
+                    "value": "6210"
+                },
+                {
+                    "enabled": true,
+                    "value": "6215"
+                },
+                {
+                    "enabled": true,
+                    "value": "6216"
+                },
+                {
+                    "enabled": true,
+                    "value": "6220"
+                },
+                {
+                    "enabled": true,
+                    "value": "6230"
+                },
+                {
+                    "enabled": true,
+                    "value": "6240"
+                },
+                {
+                    "enabled": true,
+                    "value": "6250"
+                },
+                {
+                    "enabled": true,
+                    "value": "6270"
+                },
+                {
+                    "enabled": true,
+                    "value": "6280"
+                },
+                {
+                    "enabled": true,
+                    "value": "6300"
+                },
+                {
+                    "enabled": true,
+                    "value": "6301"
+                },
+                {
+                    "enabled": true,
+                    "value": "6302"
+                },
+                {
+                    "enabled": true,
+                    "value": "6310"
+                },
+                {
+                    "enabled": true,
+                    "value": "6320"
+                },
+                {
+                    "enabled": true,
+                    "value": "6321"
+                },
+                {
+                    "enabled": true,
+                    "value": "6322"
+                },
+                {
+                    "enabled": true,
+                    "value": "6323"
+                },
+                {
+                    "enabled": true,
+                    "value": "6324"
+                },
+                {
+                    "enabled": true,
+                    "value": "6327"
+                },
+                {
+                    "enabled": true,
+                    "value": "6328"
+                },
+                {
+                    "enabled": true,
+                    "value": "6340"
+                },
+                {
+                    "enabled": true,
+                    "value": "6341"
+                },
+                {
+                    "enabled": true,
+                    "value": "6342"
+                },
+                {
+                    "enabled": true,
+                    "value": "6343"
+                },
+                {
+                    "enabled": true,
+                    "value": "6344"
+                },
+                {
+                    "enabled": true,
+                    "value": "6350"
+                },
+                {
+                    "enabled": true,
+                    "value": "6360"
+                },
+                {
+                    "enabled": true,
+                    "value": "6370"
+                },
+                {
+                    "enabled": true,
+                    "value": "6380"
+                },
+                {
+                    "enabled": true,
+                    "value": "6382"
+                },
+                {
+                    "enabled": true,
+                    "value": "6386"
+                },
+                {
+                    "enabled": true,
+                    "value": "6388"
+                },
+                {
+                    "enabled": true,
+                    "value": "6389"
+                },
+                {
+                    "enabled": true,
+                    "value": "6390"
+                },
+                {
+                    "enabled": true,
+                    "value": "6391"
+                },
+                {
+                    "enabled": true,
+                    "value": "6395"
+                },
+                {
+                    "enabled": true,
+                    "value": "6398"
+                },
+                {
+                    "enabled": true,
+                    "value": "6401"
+                },
+                {
+                    "enabled": true,
+                    "value": "6402"
+                },
+                {
+                    "enabled": true,
+                    "value": "6404"
+                },
+                {
+                    "enabled": true,
+                    "value": "6405"
+                },
+                {
+                    "enabled": true,
+                    "value": "6406"
+                },
+                {
+                    "enabled": true,
+                    "value": "6407"
+                },
+                {
+                    "enabled": true,
+                    "value": "6408"
+                },
+                {
+                    "enabled": true,
+                    "value": "6409"
+                },
+                {
+                    "enabled": true,
+                    "value": "6410"
+                },
+                {
+                    "enabled": true,
+                    "value": "6416"
+                },
+                {
+                    "enabled": true,
+                    "value": "6501"
+                },
+                {
+                    "enabled": true,
+                    "value": "6503"
+                },
+                {
+                    "enabled": true,
+                    "value": "6510"
+                },
+                {
+                    "enabled": true,
+                    "value": "6513"
+                },
+                {
+                    "enabled": true,
+                    "value": "6514"
+                },
+                {
+                    "enabled": true,
+                    "value": "6530"
+                },
+                {
+                    "enabled": true,
+                    "value": "6540"
+                },
+                {
+                    "enabled": true,
+                    "value": "6550"
+                },
+                {
+                    "enabled": true,
+                    "value": "6560"
+                },
+                {
+                    "enabled": true,
+                    "value": "6570"
+                },
+                {
+                    "enabled": true,
+                    "value": "6580"
+                },
+                {
+                    "enabled": true,
+                    "value": "6581"
+                },
+                {
+                    "enabled": true,
+                    "value": "6590"
+                },
+                {
+                    "enabled": true,
+                    "value": "6600"
+                },
+                {
+                    "enabled": true,
+                    "value": "6610"
+                },
+                {
+                    "enabled": true,
+                    "value": "6630"
+                },
+                {
+                    "enabled": true,
+                    "value": "6650"
+                },
+                {
+                    "enabled": true,
+                    "value": "6655"
+                },
+                {
+                    "enabled": true,
+                    "value": "6660"
+                },
+                {
+                    "enabled": true,
+                    "value": "6665"
+                },
+                {
+                    "enabled": true,
+                    "value": "6670"
+                },
+                {
+                    "enabled": true,
+                    "value": "6675"
+                },
+                {
+                    "enabled": true,
+                    "value": "6686"
+                },
+                {
+                    "enabled": true,
+                    "value": "6700"
+                },
+                {
+                    "enabled": true,
+                    "value": "6705"
+                },
+                {
+                    "enabled": true,
+                    "value": "6710"
+                },
+                {
+                    "enabled": true,
+                    "value": "6715"
+                },
+                {
+                    "enabled": true,
+                    "value": "6720"
+                },
+                {
+                    "enabled": true,
+                    "value": "6730"
+                },
+                {
+                    "enabled": true,
+                    "value": "6750"
+                },
+                {
+                    "enabled": true,
+                    "value": "6755"
+                },
+                {
+                    "enabled": true,
+                    "value": "6760"
+                },
+                {
+                    "enabled": true,
+                    "value": "6765"
+                },
+                {
+                    "enabled": true,
+                    "value": "10002"
+                },
+                {
+                    "enabled": true,
+                    "value": "10101"
+                },
+                {
+                    "enabled": true,
+                    "value": "10110"
+                },
+                {
+                    "enabled": true,
+                    "value": "10121"
+                },
+                {
+                    "enabled": true,
+                    "value": "11015"
+                },
+                {
+                    "enabled": true,
+                    "value": "13041"
+                },
+                {
+                    "enabled": true,
+                    "value": "14051"
+                },
+                {
+                    "enabled": true,
+                    "value": "15091"
+                },
+                {
+                    "enabled": true,
+                    "value": "15650"
+                },
+                {
+                    "enabled": true,
+                    "value": "16011"
+                },
+                {
+                    "enabled": true,
+                    "value": "16501"
+                },
+                {
+                    "enabled": true,
+                    "value": "17031"
+                },
+                {
+                    "enabled": true,
+                    "value": "18041"
+                },
+                {
+                    "enabled": true,
+                    "value": "18511"
+                },
+                {
+                    "enabled": true,
+                    "value": "19011"
+                },
+                {
+                    "enabled": true,
+                    "value": "19025"
+                },
+                {
+                    "enabled": true,
+                    "value": "0001"
+                },
+                {
+                    "enabled": true,
+                    "value": "0950"
+                },
+                {
+                    "enabled": true,
+                    "value": "0949"
+                },
+                {
+                    "enabled": true,
+                    "value": "0948"
+                },
+                {
+                    "enabled": true,
+                    "value": "0947"
+                },
+                {
+                    "enabled": true,
+                    "value": "0945"
+                },
+                {
+                    "enabled": true,
+                    "value": "0940"
+                },
+                {
+                    "enabled": true,
+                    "value": "0951"
+                },
+                {
+                    "enabled": true,
+                    "value": "0960"
+                },
+                {
+                    "enabled": true,
+                    "value": "0956"
+                },
+                {
+                    "enabled": true,
+                    "value": "0961"
+                },
+                {
+                    "enabled": true,
+                    "value": "0937"
+                },
+                {
+                    "enabled": true,
+                    "value": "0935"
+                },
+                {
+                    "enabled": true,
+                    "value": "0946"
+                },
+                {
+                    "enabled": true,
+                    "value": "0944"
+                },
+                {
+                    "enabled": true,
+                    "value": "undefined"
+                },
+                {
+                    "enabled": true,
+                    "value": "0958"
+                },
+                {
+                    "enabled": true,
+                    "value": "0957"
+                }
+            ]
+        }
+    }
+}

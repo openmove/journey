@@ -1,0 +1,56 @@
+@mixin settings-selector-panel {
+    margin-bottom: $font-size-base;
+    overflow-x: auto;
+
+    .btn-group {
+      display: flex;
+
+      > * {
+         // all direct descendants of a btn-group should have these behaviours
+        min-width: 90px;
+      }
+
+      .btn {
+        color: black;
+        float: none;
+        flex: 1;
+        flex-grow: 1;
+        flex-basis: 0;
+        flex-shrink: 0;
+        display: block;
+        white-space: normal;
+        align-items: center;
+        justify-content: start;
+
+        padding: 12px 6px;
+        text-transform: uppercase;
+        font-size: $font-size-xxsmall;
+        box-shadow: none;
+        border: 0;
+        background-color:  lighten($brand-primary, 30%);
+
+        span {
+          font-weight: bold;
+        }
+
+        svg {
+          margin-bottom: 8px;
+          height: 30px;
+        }
+
+        svg path {
+          fill: currentColor;
+        }
+
+        &.active {
+            color: #fff;
+            opacity: 1;
+            background-color: $brand-primary;
+            span {
+              fill: currentColor;
+            }
+
+        }
+      }
+    }
+}

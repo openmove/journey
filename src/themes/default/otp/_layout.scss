@@ -1,0 +1,41 @@
+.otp {
+  .main-container {
+    position: fixed;
+    top: $navbar-height;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+
+  .main-container.top-positioned{
+    top:0px
+  }
+
+  .sidebar {
+    position: absolute;
+    width: $sidebar-width;
+    top: $grid-gutter-width;
+    left: $grid-gutter-width;
+    bottom: $grid-gutter-width;
+    z-index: 2;
+    background-color: $body-bg;
+    border-radius: $border-radius-large;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+    main{
+      // PATCH issue #167
+      // safari has problems with overflow hidden/auto and position fixed
+      // https://stackoverflow.com/questions/26704903/only-in-safari-positionfixed-child-cut-off-when-parent-is-positionfixed-and
+      width: auto;
+      height: 100%;
+      overflow-y: auto;
+      padding: $grid-gutter-width;
+    }
+  }
+
+  .map-container {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+  }
+}

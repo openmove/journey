@@ -1,0 +1,108 @@
+{
+    "filters": {
+        "city": {
+            "enabled": true,
+            "label": "label_city",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "Bolzano - Bozen"
+                },
+                {
+                    "enabled": true,
+                    "value": "Rovereto"
+                },
+                {
+                    "enabled": true,
+                    "value": "Trento"
+                },
+                {
+                    "enabled": true,
+                    "value": "Meran - Merano"
+                }
+            ]
+        },
+        "group_name": {
+            "enabled": true,
+            "label": "label_group_name",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "area viale Druso"
+                },
+                {
+                    "enabled": true,
+                    "value": "Via A. Rosmini 22-26"
+                },
+                {
+                    "enabled": true,
+                    "value": "Viale Druso 91"
+                },
+                {
+                    "enabled": true,
+                    "value": "Viale Druso 237"
+                },
+                {
+                    "enabled": true,
+                    "value": "Leonardo da vinci, 17"
+                },
+                {
+                    "enabled": true,
+                    "value": "Via Michael Gaismar"
+                },
+                {
+                    "enabled": true,
+                    "value": "Via Holfer, 18"
+                },
+                {
+                    "enabled": true,
+                    "value": "Via Amalfi"
+                },
+                {
+                    "enabled": true,
+                    "value": "Via Cavour 1"
+                }
+            ]
+        },
+        "operator": {
+            "enabled": true,
+            "label": "label_operator",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "FAMAS"
+                },
+                {
+                    "enabled": true,
+                    "value": "FBK"
+                },
+                {
+                    "enabled": true,
+                    "value": "Municipality Merano"
+                },
+                {
+                    "enabled": true,
+                    "value": "AXIANS"
+                },
+                {
+                    "enabled": true,
+                    "value": "systems"
+                }
+            ]
+        },
+        "type": {
+            "enabled": true,
+            "label": "label_type",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "station"
+                },
+                {
+                    "enabled": true,
+                    "value": "sensor"
+                }
+            ]
+        }
+    }
+}

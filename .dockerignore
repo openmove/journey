@@ -1,0 +1,10 @@
+**/*.osm
+**/*.osm.pbf
+**/*.zip
+**/*.tif
+**/.env
+**/.token*
+**/node_modules
+dist
+src/config.yml
+tests

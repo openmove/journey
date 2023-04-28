@@ -1,0 +1,88 @@
+{
+    "filters": {
+        "bookahead": {
+            "enabled": true,
+            "label": "label_bookahead",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "no"
+                },
+                {
+                    "enabled": true,
+                    "value": "yes"
+                }
+            ]
+        },
+        "company": {
+            "enabled": true,
+            "label": "label_company",
+            "values": [
+                {
+                    "enabled": true,
+                    "value": "Car Sharing Trentino"
+                },
+                {
+                    "enabled": true,
+                    "value": "Car Sharing Südtirol Alto Adige"
+                }
+            ]
+        },
+        "vehiclesModels": {
+            "enabled": true,
+            "label": "label_vehicles_models",
+            "values": [
+                {
+                    "enabled": true,
+                    "label": "VW Golf",
+                    "value": "vw-golf"
+                },
+                {
+                    "enabled": true,
+                    "label": "VW up!",
+                    "value": "vw-up"
+                },
+                {
+                    "enabled": true,
+                    "label": "Renault Zoe",
+                    "value": "renault-zoe"
+                },
+                {
+                    "enabled": true,
+                    "label": "VW ID.3",
+                    "value": "vw-id3"
+                },
+                {
+                    "enabled": true,
+                    "label": "VW Golf Variant",
+                    "value": "vw-golf-variant"
+                },
+                {
+                    "enabled": true,
+                    "label": "VW Caddy",
+                    "value": "vw-caddy"
+                },
+                {
+                    "enabled": true,
+                    "label": "VW Caddy Life",
+                    "value": "vw-caddy-life"
+                },
+                {
+                    "enabled": true,
+                    "label": "VW e-Golf",
+                    "value": "vw-egolf"
+                },
+                {
+                    "enabled": true,
+                    "label": "Nissan Leaf (elektro)",
+                    "value": "nissan-leaf-elektro"
+                },
+                {
+                    "enabled": true,
+                    "label": "VW e-UP!",
+                    "value": "vw-eup"
+                }
+            ]
+        }
+    }
+}
