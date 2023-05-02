@@ -1,4 +1,4 @@
-FROM node:18.15.0-alpine3.16 AS builder
+FROM node:18.15.0-alpine3.16
 #for next upgrades https://github.com/openmove/odh-mentor-otp/issues/126
 
 ARG API_HOST=http://localhost \
@@ -42,7 +42,7 @@ RUN apk add --no-cache \
 
 RUN mkdir -p /journey
 
-COPY ./journey /journey
+COPY . /journey
 
 WORKDIR /journey
 
@@ -51,7 +51,7 @@ RUN yarn install && yarn build
 RUN mv dist/* /var/www/html/
 RUN mv static /var/www/html/static
 
-COPY ./infrastructure/docker/journey/docker-entrypoint.sh /docker-entrypoint.sh
+COPY ./docker/docker-entrypoint.sh /docker-entrypoint.sh
 
 ENTRYPOINT ["/bin/bash"]
 CMD ["/docker-entrypoint.sh"]
