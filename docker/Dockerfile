@@ -1,7 +1,7 @@
 FROM node:18.15.0-alpine3.16 AS builder
 #for next upgrades https://github.com/openmove/odh-mentor-otp/issues/126
 
-ARG API_HOST=http://localhost
+ARG API_HOST=http://localhost \
 		API_PATH=/otp/routers/default \
 		API_PORT=8080 \
 		FOLDER=/ \

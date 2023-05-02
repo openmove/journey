@@ -9,7 +9,6 @@ networks:
     driver: bridge
 
 services:
-
   journey:
     container_name: journey
     ports:
