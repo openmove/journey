@@ -11,10 +11,10 @@ networks:
 services:
 
   journey:
-    container_name: openmove-journey
+    container_name: journey
     ports:
       - "8081:80"
-    image: openmove_journey:latest
+    image: journey:latest
     build:
       context: ./
       dockerfile: docker/Dockerfile
@@ -44,12 +44,12 @@ services:
         ##
         #GOOGLE_ANALYTICS_ID: $GOOGLE_ANALYTICS_ID
 
-  datatest:
-    container_name: datatest
-    ports:
-      - "7000:7000"
-    image: datatest:latest
-    build:
-      context: journey/tests/
-      #dockerfile: journey/tests/Dockerfile
-    restart: "no"
+  # datatest:
+  #   container_name: datatest
+  #   ports:
+  #     - "7000:7000"
+  #   image: datatest:latest
+  #   build:
+  #     context: journey/tests/
+  #     #dockerfile: journey/tests/Dockerfile
+  #   restart: "no"
