@@ -1,5 +1,5 @@
-FROM node:18.15.0-alpine3.16
-#for next upgrades https://github.com/openmove/odh-mentor-otp/issues/126
+#FROM node:18.15.0-alpine3.16
+FROM node:16.14.0-alpine3.14
 
 ARG API_HOST=http://localhost \
 		API_PATH=/otp/routers/default \

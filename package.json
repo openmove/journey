@@ -12,8 +12,8 @@
     "build": "webpack --env.SASS_THEME=${JOURNEY_THEME:=default} --mode=production",
     "start": "webpack-dev-server --env.SASS_THEME=${JOURNEY_THEME:=default} --hot --mode=development --port 8081 --host 0.0.0.0 --disableHostCheck=true",
     "start-red": "webpack-dev-server --env.SASS_THEME=red --hot --mode=development --port 8081 --host 0.0.0.0 --disableHostCheck=true",
-    "genconfig": "node genconfig.js config.yml > src/config.yml",
-    "genconfig-red": "JOURNEY_THEME=red node genconfig.js config.yml > src/config.yml"
+    "genconfig": "node scripts/genconfig.js config.yml > src/config.yml",
+    "genconfig-red": "JOURNEY_THEME=red node scripts/genconfig.js config.yml > src/config.yml"
   },
   "author": "OpenMove <info@openmove.com>",
   "contributors": [
