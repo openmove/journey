@@ -31,9 +31,6 @@ ENV API_HOST=$API_HOST \
 		MATOMO_BASE_URL=${MATOMO_BASE_URL} \
 		MATOMO_SITE_ID=${MATOMO_SITE_ID}
 
-#TODO ENV NODE_ENV=production
-#before resolve npm dependecies
-
 RUN apk add --no-cache \
 	bash \
 	nginx && \
