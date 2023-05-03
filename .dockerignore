@@ -1,10 +1,7 @@
-**/*.osm
-**/*.osm.pbf
-**/*.zip
-**/*.tif
 **/.env
-**/.token*
 **/node_modules
 dist
+docs
 src/config.yml
 tests
+
