@@ -1,6 +1,6 @@
 #
 # this file is a template for valued configuration file
-# use this command to generate src/config.yml before running the webapp
+# use this command to generate src/config.yml before running the webapp (yarn start)
 #
 # `npm run genconfig`
 #
