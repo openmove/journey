@@ -15,6 +15,10 @@
     "genconfig": "node scripts/genconfig.js config.yml > src/config.yml",
     "genconfig-red": "JOURNEY_THEME=red node scripts/genconfig.js config.yml > src/config.yml"
   },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "license": "MIT",
   "author": "OpenMove <info@openmove.com>",
   "contributors": [
     {
@@ -31,12 +35,13 @@
       "name": "Valerio Capogna",
       "email": "capogna.valerio@gmail.com",
       "url": "https://github.com/capognavalerio"
+    },
+    {
+      "name": "Marco Bonora",
+      "email": "marco.bonora@openmove.com",
+      "url": "https://github.com/capognavalerio"
     }
   ],
-  "license": "MIT",
-  "standard": {
-    "parser": "babel-eslint"
-  },
   "dependencies": {
     "@conveyal/geocoder-arcgis-geojson": "^0.0.2",
     "@conveyal/lonlat": "^1.4.0",
