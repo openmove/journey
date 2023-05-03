@@ -1,3 +1,11 @@
+#
+# this file is a template for valued configuration file
+# use this command to generate src/config.yml before running the webapp
+#
+# `npm run genconfig`
+#
+# src/config.yml file isn't tracked by git, you can use standard or development version
+
 ## build version
 version: '${npm_package_version}'
 #
