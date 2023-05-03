@@ -37,7 +37,7 @@ RUN apk add --no-cache \
 	mkdir -p /run/nginx && \
 	mkdir -p /var/www/html
 
-RUN mkdir -p /journey
+RUN mkdir /journey
 
 COPY . /journey
 
