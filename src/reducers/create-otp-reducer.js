@@ -13,7 +13,8 @@ const { filterProfileOptions } = coreUtils.profile
 const {
   ensureSingleAccessMode,
   getDefaultQuery,
-  getTripOptionsFromQuery
+  getTripOptionsFromQuery,
+  getResponseData
 } = coreUtils.query
 const { getItem, removeItem, storeItem } = coreUtils.storage
 const { getUserTimezone } = coreUtils.time
@@ -407,18 +408,19 @@ function createOtpReducer (config, initialQuery) {
             }
           }
         })
-      case 'CAR_RENTAL_RESPONSE':
+      case 'CAR_RENTAL_RESPONSE': {
+        const {stations} = getResponseData(action.payload);
         return update(state, {
           overlay: {
             carRental: {
               stations: {
-                $set: action.payload.data ? action.payload.data.stations : action.payload.stations
-                //WORKAROUND for retro compatibility
+                $set:stations
               },
               pending: { $set: false }
             }
           }
         })
+      }
       case 'SET_USE_REALTIME_RESPONSE':
         return update(state, {
           useRealtime: { $set: action.payload.useRealtime }
@@ -959,21 +961,22 @@ function createOtpReducer (config, initialQuery) {
           }
         })
 
-      case 'PARKING_LOCATIONS_RESPONSE':
+      case 'PARKING_LOCATIONS_RESPONSE': {
+        const {stations} =  getResponseData(action.payload)
         return update(state, {
           overlay: {
             parking: {
-              locations: { $set: action.payload.data.stations },
+              locations: { $set: stations},
               pending: { $set: false }
             }
           }
         })
-
+      }
       case 'DRT_LOCATIONS_RESPONSE':
         return update(state, {
           overlay: {
             drt: {
-              locations: { $set: action.payload.data },
+              locations: { $set: getResponseData(action.payload) },
               //TODO maybe split stops and vehicles
               pending: { $set: false }
             }
@@ -984,42 +987,47 @@ function createOtpReducer (config, initialQuery) {
         return update(state, {
           overlay: {
             traffic: {
-              locations: { $set: action.payload.data },
+              locations: { $set: getResponseData(action.payload)},
               //TODO maybe split stops and vehicles
               pending: { $set: false }
             }
           }
         })
 
-      case 'VMS_LOCATIONS_RESPONSE':
+      case 'VMS_LOCATIONS_RESPONSE': {
+        const {stations} = getResponseData(action.payload)
         return update(state, {
           overlay: {
             vms: {
-              locations: { $set: action.payload.data.stations },
+              locations: { $set: stations},
               pending: { $set: false }
             }
           }
         })
+      }
 
-      case 'WEBCAM_LOCATIONS_RESPONSE':
-          return update(state, {
+      case 'WEBCAM_LOCATIONS_RESPONSE': {
+        const {stations} = getResponseData(action.payload);
+        return update(state, {
             overlay: {
               webcam: {
-                locations: { $set: action.payload.data.stations },
+                locations: { $set: stations },
                 pending: { $set: false }
               }
             }
         })
-
-      case 'CHARGER_LOCATIONS_RESPONSE':
+      }
+      case 'CHARGER_LOCATIONS_RESPONSE': {
+        const {stations} = getResponseData(action.payload);
         return update(state, {
             overlay: {
               charger: {
-                locations: { $set: action.payload.data.stations },
+                locations: { $set: stations },
                 pending: { $set: false }
               }
             }
-      })
+        })
+      }
       case 'UPDATE_OVERLAY_VISIBILITY':
         const mapOverlays = clone(state.config.map.overlays)
         for (let key in action.payload) {

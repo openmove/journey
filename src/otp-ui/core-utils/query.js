@@ -414,3 +414,16 @@ export function getRoutingParams(config, currentQuery, ignoreRealtimeUpdates) {
 
   return params;
 }
+
+// TODO: maybe move in a different file
+export function getResponseData(response){
+  // get data from response,
+  // this is needed since api might have different implementation
+  // for retro compatibility
+
+  console.log(response);
+  if (response.data) {
+    return response.data;
+  }
+  return response;
+}

@@ -18,7 +18,7 @@ import { getSecureFetchOptions } from '../util/middleware'
 if (typeof (fetch) === 'undefined') require('isomorphic-fetch')
 
 const { hasCar } = coreUtils.itinerary
-const { getTripOptionsFromQuery, getUrlParams } = coreUtils.query
+const { getTripOptionsFromQuery, getUrlParams, getResponseData } = coreUtils.query
 const { randId } = coreUtils.storage
 const { OTP_API_DATE_FORMAT, OTP_API_TIME_FORMAT } = coreUtils.time
 
@@ -617,7 +617,8 @@ export function findRoutes (params) {
       serviceId: 'routes',
       rewritePayload: (payload) => {
         const routes = {}
-        payload.data.routes.forEach(rte => { routes[rte.id] = rte })
+        const {routes: responseRoutes} = getResponseData(payload);
+        responseRoutes.forEach(rte => { routes[rte.id] = rte })
         return routes
       }
     }
@@ -733,7 +734,8 @@ export function findRoute (params) {
         // convert pattern array to ID-mapped object
         // note: some params have changed name to keep compatibility with previous code
         const patterns = {}
-        payload.data.route.patterns.forEach(ptn => {
+        const {route} = getResponseData(payload);
+        route.patterns.forEach(ptn => {
           patterns[ptn.id] = {
             routeId: params.routeId ,
             id: ptn.id,
@@ -741,9 +743,10 @@ export function findRoute (params) {
             desc: ptn.name
           }
         })
+
         return {
           routeId: params.routeId,
-          ... payload.data.route,
+          ...route,
           patterns
         }
       }
