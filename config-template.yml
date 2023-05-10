@@ -253,7 +253,7 @@ map:
   # Base layers for default map
   controls:
     overlays:
-      collapsed: false
+      collapsed: true
       closeBtn: true
   baseLayers:
     - name: Streets
