@@ -30,7 +30,8 @@ module.exports = async env => {
 
   const def_themes_path = path.resolve(__dirname, `src/themes/`);
 
-  const THEMES_PATH = (env && env.THEMES_PATH) ? env.THEMES_PATH : def_themes_path;
+  const THEMES_PATH = (env && env.THEMES_PATH && env.THEMES_PATH !== 'default') ? env.THEMES_PATH : def_themes_path;
+
   const THEME = (env && env.THEME) ? env.THEME : 'default';
 
   const THEME_PATH = path.join(THEMES_PATH, THEME, 'index.scss');

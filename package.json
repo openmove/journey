@@ -9,7 +9,7 @@
     "cleandeps": "rm -fr node_modules",
     "prebuild": "npm run genconfig",
     "prestart": "yarn",
-    "build": "webpack --env.THEME=${JOURNEY_THEME:=default} --mode=production",
+    "build": "webpack --env.THEME=${JOURNEY_THEME:=default} --env.THEMES_PATH=${THEMES_PATH:=default} --mode=production",
     "start": "webpack-dev-server --env.THEME=${JOURNEY_THEME:=default} --hot --mode=development --port 8081 --host 0.0.0.0 --disableHostCheck=true",
     "start-red": "webpack-dev-server --env.THEME=red --hot --mode=development --port 8081 --host 0.0.0.0 --disableHostCheck=true",
     "genconfig": "node scripts/genconfig.js config-template.yml > src/config.yml",
