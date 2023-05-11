@@ -1,6 +1,8 @@
 #TODO FROM node:18.15.0-alpine3.16
 FROM node:16.14.0-alpine3.14
 
+ARG VERSION=v3.3.0
+
 ARG API_HOST=http://localhost \
 		API_PATH=/otp/routers/default \
 		API_PORT=8080 \
@@ -32,23 +34,22 @@ ENV API_HOST=$API_HOST \
 		MATOMO_SITE_ID=${MATOMO_SITE_ID}
 
 RUN apk add --no-cache \
+	git \
 	bash \
 	nginx && \
 	mkdir -p /run/nginx && \
 	mkdir -p /var/www/html
 
-RUN mkdir /journey
-
-COPY . /journey
+RUN git clone --depth 1 --single-branch --branch $VERSION https://github.com/openmove/journey.git /journey
 
 WORKDIR /journey
 
 RUN yarn install && yarn build
-
 RUN mv dist/* /var/www/html/
 RUN mv static /var/www/html/static
 
 COPY ./docker/docker-entrypoint.sh /docker-entrypoint.sh
 
 ENTRYPOINT ["/bin/bash"]
+
 CMD ["/docker-entrypoint.sh"]

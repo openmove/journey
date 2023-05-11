@@ -12,12 +12,13 @@ services:
   journey:
     container_name: journey
     ports:
-      - "8081:80"
+      - "80:80"
     image: journey:latest
     build:
       context: ./
       dockerfile: docker/Dockerfile
       args:
+        JOURNEY_VERSION: v3.3.0
         JOURNEY_THEME: $JOURNEY_THEME
         API_HOST: $API_HOST
         API_PATH: $API_PATH
