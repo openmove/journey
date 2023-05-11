@@ -28,14 +28,15 @@ module.exports = async env => {
   // temporary folder within this project so that the file will be able to
   // use the node_modules from this project
 
+  const def_themes_path = path.resolve(__dirname, `src/themes/`);
 
-  //unused look at config.theme
-  const SASS_THEME = (env && env.SASS_THEME) ? env.SASS_THEME : 'default';
+  const THEMES_PATH = (env && env.THEMES_PATH) ? env.THEMES_PATH : def_themes_path;
+  const THEME = (env && env.THEME) ? env.THEME : 'default';
 
-  let THEME_PATH = path.resolve(__dirname, `src/themes/${SASS_THEME}/index.scss`);
+  const THEME_PATH = path.join(THEMES_PATH, THEME, 'index.scss');
 
   if(fs.existsSync(THEME_PATH) === false) {
-    console.warn(`Error THEME_PATH: '${THEME_PATH}' path not exists!`);
+    console.warn(`Error theme path not exists: '${THEME_PATH}'`);
     process.exit(1)
   }
 
@@ -73,7 +74,7 @@ module.exports = async env => {
               /*options: {
                 //TODO check if additionalData used
                 additionalData:  (content, loaderContext) => {
-                  return `$SASS_THEME: '${SASS_THEME}';`
+                  return `$THEME: '${THEME}';`
                 }
               }*/
             }
