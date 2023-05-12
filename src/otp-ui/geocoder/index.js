@@ -22,7 +22,7 @@ const getGeocoder = memoize(geocoderConfig => {
     case "PELIAS":
       return new PeliasGeocoder(isomorphicMapzenSearch, geocoderConfig);
     case "HERE":
-        return new HereGeocoder(isomorphicMapzenSearch, geocoderConfig);
+        return new HereGeocoder(geocoderConfig);
     default:
       console.error(`Unkown geocoder type: "${type}". Using NoApiGeocoder.`);
       return new NoApiGeocoder();

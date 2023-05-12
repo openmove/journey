@@ -6,9 +6,17 @@
  * behaves very closely to https://github.com/conveyal/isomorphic-mapzen-search
  */
 export default class Geocoder {
-  constructor(geocoderApi, geocoderConfig) {
-    this.api = geocoderApi;
+  constructor( geocoderConfig) {
+    console.log(geocoderConfig);
+    this.api = geocoderConfig.api;
     this.geocoderConfig = geocoderConfig;
+  }
+
+  fetch(type, query,rewriteResponse){
+    const url = this.api[type];
+    return fetch( url + query)
+      .then((response) => response.json())
+      .then((results)=>rewriteResponse(results))
   }
 
   /**
@@ -17,36 +25,12 @@ export default class Geocoder {
    */
   autocomplete(query) {
     console.log('query',query);
-
-    const {
-      apiKey,
-      baseUrl,
-      boundary,
-      focusPoint,
-      options,
-      sources
-    } = this.geocoderConfig;
-
-		// const latitude = params.lat,
-		// 	longitude = params.lon,
-		  const	limit = 20,//params.maxresults,
-			country = 'IT',//params.country,
-			{maxLat, minLon, minLat, maxLon} = boundary.rect,
-			//bbox = `${maxLat},${minLon},${minLat},${maxLon}`,
-			bbox = `${minLon},${minLat},${maxLon},${maxLat}`,
-			// lang = params.language,
-			// text = encodeURIComponent(query),
-       {text} = query,
-			 url = 'https://autosuggest.search.hereapi.com/v1/autosuggest?'
-       +`q=${text}`
-				+`&apiKey=${apiKey}`
-				// +`&lang=${lang}`
-				+'&result_types=address,place'
-				+`&in=bbox:${bbox}`
-				+`&in=countryCode:${country}`
-				+`&limit=${limit}`;
-
-        return fetch(url).then((response) => response.json()).then((results)=>(this.convertResultsToFeatures(results)))
+    console.log('query', this.getAutocompleteQuery(query));
+    return this.fetch(
+      'autocomplete',
+      this.getAutocompleteQuery(query),
+      (results)=>this.convertResultsToFeatures(results)
+    )
   }
 
   convertResultsToFeatures(results){
@@ -116,24 +100,42 @@ export default class Geocoder {
   /**
    * Default autocomplete query generator
    */
- /*  getAutocompleteQuery(query) {
+  getAutocompleteQuery(query) {
+
     const {
       apiKey,
       baseUrl,
       boundary,
       focusPoint,
-      options
+      options,
+      sources
     } = this.geocoderConfig;
 
+		// const latitude = params.lat,
+		// 	longitude = params.lon,
+		  const	limit = 20 //params.maxresults,
+			const country = 'IT' //params.country
+			const {maxLat, minLon, minLat, maxLon} = boundary.rect
+			const bbox = `${minLon},${minLat},${maxLon},${maxLat}`
+			// const lang = params.language
+			const text = encodeURIComponent(query.text)
+      const queryToReturn = '?'
+       +`q=${text}`
+				+`&apiKey=${apiKey}`
+				// +`&lang=${lang}`
+				// +'&result_types=address,place'
+				+`&in=bbox:${bbox}`
+				// +`&in=countryCode:${country}`
+				+`&limit=${limit}`;
+    return queryToReturn
     return {
       apiKey,
       boundary,
       focusPoint,
       options,
-      url: baseUrl ? `${baseUrl}/autocomplete` : undefined,
-      ...query
+      query: queryToReturn
     };
-  } */
+  }
 
   /**
    * Default reverse query generator
