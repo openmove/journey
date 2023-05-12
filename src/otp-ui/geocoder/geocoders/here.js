@@ -7,7 +7,6 @@
  */
 export default class Geocoder {
   constructor( geocoderConfig) {
-    console.log(geocoderConfig);
     this.api = geocoderConfig.api;
     this.geocoderConfig = geocoderConfig;
   }
@@ -24,8 +23,6 @@ export default class Geocoder {
    * address or POI, attempt to find possible matches.
    */
   autocomplete(query) {
-    console.log('query',query);
-    console.log('query', this.getAutocompleteQuery(query));
     return this.fetch(
       'autocomplete',
       this.getAutocompleteQuery(query),
@@ -34,7 +31,6 @@ export default class Geocoder {
   }
 
   convertResultsToFeatures(results){
-    console.log('results',results);
     // retro compatibility function
     // note: not all fields are converted only the strictly needed ones
     const features = []
@@ -66,13 +62,11 @@ export default class Geocoder {
    * done to obtain that detailed data.
    */
   getLocationFromGeocodedFeature(item) {
-    console.log('result',item);
     const locationToReturn =  {}
      locationToReturn.lat = item.position.lat// lonlat.fromLatlng(result.position);
      locationToReturn.lon = item.position.lng
     locationToReturn.name = item.title //feature.address.label;
     // location.rawGeocodedFeature = feature; // not used
-    console.log(locationToReturn);
     return Promise.resolve(locationToReturn);
   }
 
@@ -108,16 +102,16 @@ export default class Geocoder {
       boundary,
       focusPoint,
       options,
-      sources
+      sources,
+      maxResults,
     } = this.geocoderConfig;
 
 		// const latitude = params.lat,
 		// 	longitude = params.lon,
-		  const	limit = 20 //params.maxresults,
-			const country = 'IT' //params.country
+		  const	limit = maxResults
 			const {maxLat, minLon, minLat, maxLon} = boundary.rect
 			const bbox = `${minLon},${minLat},${maxLon},${maxLat}`
-			// const lang = params.language
+			// const lang = params.language // todo: language
 			const text = encodeURIComponent(query.text)
       const queryToReturn = '?'
        +`q=${text}`
@@ -125,7 +119,6 @@ export default class Geocoder {
 				// +`&lang=${lang}`
 				// +'&result_types=address,place'
 				+`&in=bbox:${bbox}`
-				// +`&in=countryCode:${country}`
 				+`&limit=${limit}`;
     return queryToReturn
     return {
