@@ -275,6 +275,18 @@ class DrtOverlay extends MapLayer {
       </FeatureGroup>
 
       <FeatureGroup>
+      {/*
+          TODO support multiple itineraries:
+          new format of locations now is array:
+          {
+            "itineraries": [
+              {
+                "id": "drt-merano",
+                "geometry": "xxxxxxxx"
+              }
+            ]
+          }
+      */}
         <Polyline
           positions={getPolyline(locations.itinerary)}
           color={overlayDrtConf.pathColor}
