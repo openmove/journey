@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {  MapLayer } from 'react-leaflet'
+import { getItem } from "../core-utils/storage";
 
 class AbstractOverlay extends MapLayer {
 
