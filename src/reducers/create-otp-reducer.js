@@ -138,6 +138,15 @@ export function getInitialState (userDefinedConfig, initialQuery) {
 
   const config = mergeDeep(defaultConfig, userConfig)
 
+  // generate names that are used as keys inside each overlay to memorize data
+  const overlayNames= (type) =>(
+    config.map.overlays
+    .filter((obj)=>obj.type === type)
+    .map((overlay) => overlay.name)
+  )
+  const parking = {}
+  overlayNames('parking').forEach(name => parking[name] = { locations: [] } )
+
   if (!config.homeTimezone) {
     config.homeTimezone = getUserTimezone()
     console.warn(
@@ -265,9 +274,7 @@ export function getInitialState (userDefinedConfig, initialQuery) {
         stops: []
       },
       transitive: null,
-      parking: {
-        locations: []
-      },
+      parking,
       charger: {
         locations: []
       },
@@ -962,12 +969,16 @@ function createOtpReducer (config, initialQuery) {
         })
 
       case 'PARKING_LOCATIONS_RESPONSE': {
-        const {stations} =  getResponseData(action.payload)
+        const {overlayName, data} = action.payload
+        const {stations} =  getResponseData(data)
+
         return update(state, {
           overlay: {
             parking: {
-              locations: { $set: stations},
-              pending: { $set: false }
+                [overlayName]: {
+                    locations: { $set: stations },
+                    pending: { $set: false }
+                }
             }
           }
         })

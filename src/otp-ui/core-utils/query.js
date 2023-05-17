@@ -421,8 +421,7 @@ export function getResponseData(response){
   // this is needed since api might have different implementation
   // for retro compatibility
 
-  console.log(response);
-  if (response.data) {
+  if (response?.data) {
     return response.data;
   }
   return response;

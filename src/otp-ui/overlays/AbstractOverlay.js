@@ -31,18 +31,18 @@ class AbstractOverlay extends MapLayer {
   }
 
   _startRefreshing(launchNow) {
-    console.log('refreshing', 'query:', this.query);
-    const bb =  getItem('mapBounds')
+    const isMapUpdating = this.config.updateBBox || this.config.pollingUpdate
+    const bb = isMapUpdating ? getItem('mapBounds') : {}
     const params = bb
     if(launchNow === true){
-      this.query(this.api , params);
+      this.query(this.config.name, this.api , params);
     }else{
       if (this._refreshTimer) clearTimeout(this._refreshTimer);
 
       this._refreshTimer =  setTimeout(()=>{
         const bb =  getItem('mapBounds')
         const params = bb
-        this.query(this.api, params);
+        this.query(this.config.name, this.api, params);
       },500)
 
     }
