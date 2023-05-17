@@ -2,13 +2,24 @@ import { createAction } from 'redux-actions'
 import {addQueryParams} from '../util/query-params'
 if (typeof (fetch) === 'undefined') require('isomorphic-fetch')
 
-export const receivedParkingLocationsError = createAction('PARKING_LOCATIONS_ERROR')
-export const receivedParkingLocationsResponse = createAction('PARKING_LOCATIONS_RESPONSE')
-export const requestParkingLocationsResponse = createAction('PARKING_LOCATIONS_REQUEST')
+function preparePayload(payload) {
+  if(!payload){return}
 
-export function parkingLocationsQuery (url,params) {
+  const {overlayName,data} = payload
+  return ({
+    overlayName,
+    data
+  })
+}
+
+export const receivedParkingLocationsError =  createAction('PARKING_LOCATIONS_ERROR',preparePayload)
+export const receivedParkingLocationsResponse  = createAction('PARKING_LOCATIONS_RESPONSE',preparePayload)
+export const requestParkingLocationsResponse =  createAction('PARKING_LOCATIONS_REQUEST',preparePayload)
+
+export function parkingLocationsQuery (overlayName,url,params) {
   return async function (dispatch, getState) {
-    dispatch(requestParkingLocationsResponse())
+
+    dispatch(requestParkingLocationsResponse()) // todo: is this doing something?
     let json
     try {
       const newUrl = addQueryParams(url,params)
@@ -20,9 +31,9 @@ export function parkingLocationsQuery (url,params) {
       }
       json = await response.json();
     } catch (err) {
-      return dispatch(receivedParkingLocationsError(err))
+      return dispatch(receivedParkingLocationsError({overlayName, data:err}))
     }
 
-    dispatch(receivedParkingLocationsResponse(json))
+    dispatch(receivedParkingLocationsResponse({overlayName, data:json}))
   }
 }

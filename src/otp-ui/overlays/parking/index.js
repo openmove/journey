@@ -1,4 +1,5 @@
 import React from 'react'
+import AbstractOverlay from '../AbstractOverlay'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { LayerGroup, FeatureGroup, MapLayer, Marker, Popup, withLeaflet } from 'react-leaflet'
@@ -22,13 +23,17 @@ import { filterOverlay } from "../../core-utils/overlays";
 import AdvancedMarkerCluster from "../../advanced-marker-cluster";
 import MarkerCluster from "../../icons/modern/MarkerCluster";
 
-class ParkingOverlay extends MapLayer {
+class ParkingOverlay extends AbstractOverlay {
 
   constructor(props){
-    super(props);
+    super({
+      props,
+      query:props.parkingLocationsQuery,
+      api:props.api,
+      config:props.overlayParkingConf
+    });
+
     this.popup = React.createRef();
-    this._startRefreshing = this._startRefreshing.bind(this)
-    this._stopRefreshing = this._stopRefreshing.bind(this)
   }
 
   static propTypes = {
@@ -36,70 +41,6 @@ class ParkingOverlay extends MapLayer {
     locations: PropTypes.array,
     parkingLocationsQuery: PropTypes.func,
     setLocation: PropTypes.func
-  }
-
-  _startRefreshing (launchNow) {
-    // ititial station retrieval
-    const bb =  getItem('mapBounds')
-    const params = bb
-    if(launchNow === true){
-      this.props.parkingLocationsQuery(this.props.api, params)
-    }else{
-      if (this._refreshTimer) clearTimeout(this._refreshTimer)
-      this._refreshTimer = setTimeout(() => {
-        const bb =  getItem('mapBounds')
-        const params = bb
-        this.props.parkingLocationsQuery(this.props.api , params)
-      }, 500)
-    }
-
-    // set up timer to refresh stations periodically
-     // defaults to every 30 sec. TODO: make this configurable?*/
-  }
-
-  _stopRefreshing () {
-    if (this._refreshTimer) clearTimeout(this._refreshTimer)
-  }
-
-  componentDidMount () {
-    this.props.registerOverlay(this)
-
-    if (this.props.visible) {
-      this.props.leaflet.map.on("moveend", this._startRefreshing);
-      this._startRefreshing()
-    }
-  }
-
-  onOverlayAdded = (e) => {
-    this.props.leaflet.map.on("moveend", this._startRefreshing);
-    this._startRefreshing(true);
-    const { locations, overlayParkingConf } = this.props;
-    const newLoc = []
-    const { map } = this.props.leaflet;
-
-    if(overlayParkingConf.startCenter){
-      map.flyTo(overlayParkingConf.startCenter);
-    }
-  }
-
-  onOverlayRemoved = () => {
-    this.props.leaflet.map.off("moveend", this._startRefreshing)
-    this._stopRefreshing()
-  }
-
-  componentWillUnmount () {
-    this.props.leaflet.map.off("moveend", this._startRefreshing)
-    this._stopRefreshing()
-  }
-
-  componentDidUpdate (prevProps) {
-    if (!prevProps.visible && this.props.visible) {
-      this._startRefreshing()
-      this.props.leaflet.map.on("moveend", this._startRefreshing)
-    } else if (prevProps.visible && !this.props.visible) {
-      this._stopRefreshing()
-      this.props.leaflet.map.off("moveend", this._startRefreshing)
-    }
   }
 
   createLeafletElement () {}
@@ -276,10 +217,10 @@ class ParkingOverlay extends MapLayer {
                     station.type === 'station' &&
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
                       <CircularProgressbar
-                        value={station.free}
+                        value={station.free === -1 ? 0 : station.free }
                         minValue={0}
                         maxValue={station.capacity}
-                        text={station.free+''}
+                        text={station.free === -1 ? 'N/A' : `${station.free}`}
                         className="otp-ui-mapOverlayPopup__popupAvailableInfoProgress"
                       />
                       <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">{t('capacity')}: {station.capacity}</div>
@@ -322,9 +263,10 @@ class ParkingOverlay extends MapLayer {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  const {name: overlayName} = ownProps
   return {
-    locations: state.otp.overlay.parking && state.otp.overlay.parking.locations,
-    overlayParkingConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'parking')[0],
+    locations: state.otp.overlay.parking?.[overlayName]?.locations,
+    overlayParkingConf: state.otp?.config?.map?.overlays?.filter(item => item.name === `${overlayName}`)[0],
   }
 }
 

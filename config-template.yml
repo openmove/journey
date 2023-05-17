@@ -344,7 +344,7 @@ map:
       filters: "/static/filters/charger.json"
 
     - type: parking
-      name: parking
+      name: parking # name is used as an identifier keep it unique per overlay type
       # enabled: true
       # visible: false
       # markerCluster: true
@@ -358,6 +358,8 @@ map:
       ##dinamic filters
       ##filters: ${PARKING_BASEURL}/parking/filters.json
       filters: "/static/filters/parking.json"
+      pollingUpdate: false
+      updateBBox: false
 
     - type: drt
       name: ondemand
