@@ -103,13 +103,15 @@ class PatternRow extends Component {
                         </div>
                         <div className='cell time-column'>
                           {stopTime.tripId}
+                          <div className='second-row'>
+                          {getFormattedStopTime(stopTime, homeTimezone, stopViewerArriving, timeFormat)}
                           <ViewTripButton
                               tripId={stopTime.tripId}
                               fromIndex={stopTime.stopIndex}
                               setViewedTrip={this.props.setViewedTrip}
                               toIndex={stopTime.stopIndex}
                             />
-                          {getFormattedStopTime(stopTime, homeTimezone, stopViewerArriving, timeFormat)}
+                          </div>
                         </div>
                         <div className='cell status-column'>
                           {stopTime.realtimeState === 'UPDATED'

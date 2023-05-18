@@ -94,7 +94,8 @@ class TripViewer extends Component {
 
               // determine whether to show highlight in strip map
               let highlightClass
-              if (i === viewedTrip.fromIndex) highlightClass = 'strip-map-highlight-first'
+              if (i === viewedTrip.fromIndex && i === viewedTrip.toIndex) highlightClass = 'strip-map-highlight-unique'
+              else if (i === viewedTrip.fromIndex) highlightClass = 'strip-map-highlight-first'
               else if (i > viewedTrip.fromIndex && i < viewedTrip.toIndex) highlightClass = 'strip-map-highlight'
               else if (i === viewedTrip.toIndex) highlightClass = 'strip-map-highlight-last'
 
