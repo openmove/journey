@@ -45,6 +45,7 @@ class TrafficOverlay extends MapLayer {
     const {overlayTrafficConf} = this.props;
 
     // set up timer to refresh stations periodically
+    if (this._refreshTimer)  clearInterval(this._refreshTimer) // needed to not create multiple intervals
     this._refreshTimer = setInterval(() => {
       const bb =  getItem('mapBounds')
       const params = bb

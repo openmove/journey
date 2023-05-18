@@ -75,7 +75,7 @@ class WebcamOverlay extends MapLayer {
   }
 
   onOverlayAdded = () => {
-    this.props.leaflet.map.on("moveend", this._startRefreshing.bind(this));
+    this.props.leaflet.map.on("moveend", this._startRefreshing);
     const { locations, overlayWebCamConf , t } = this.props;
     this._startRefreshing(true);
     const newLoc = []

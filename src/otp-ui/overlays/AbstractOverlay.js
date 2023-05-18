@@ -22,6 +22,12 @@ class AbstractOverlay extends MapLayer {
     if(!this.config.pollingUpdate){
       return
     }
+
+    if (this._refreshTimer) {
+       // needed to not create multiple intervals
+      clearInterval(this._refreshTimer)
+    }
+
     console.log('setup interval');
     // set up interval to refresh stations periodically
     this._refreshInterval = setInterval(() => {
