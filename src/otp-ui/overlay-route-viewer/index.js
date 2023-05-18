@@ -42,7 +42,7 @@ class RouteViewerOverlay extends MapLayer {
       !isGeomComplete(prevProps.routeData) &&
       isGeomComplete(this.props.routeData)
     ) {
-      if (!this.props.routeData?.patterns?.geometry) return;
+      // if (!this.props.routeData?.patterns) return; // todo: is this needed?
       const allPoints = Object.values(this.props.routeData.patterns).reduce(
         (acc, ptn) => {
           return acc.concat(polyline.decode(ptn.geometry.points));
