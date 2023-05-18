@@ -255,6 +255,13 @@
         width: 90px;
       }
 
+      .second-row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 5px;
+      }
+
       .status-column {
         width: 80px;
       }
@@ -320,6 +327,14 @@
 
     .strip-map-highlight {
       position: absolute;
+      background-color: #337ab7;
+      width: 20px;
+      height: 40px;
+    }
+
+    .strip-map-highlight-unique {
+      position: absolute;
+      border-radius: 10px;
       background-color: #337ab7;
       width: 20px;
       height: 40px;
