@@ -8,6 +8,7 @@ import memoize from "lodash.memoize";
 import ArcGISGeocoder from "./geocoders/arcgis";
 import NoApiGeocoder from "./geocoders/noapi";
 import PeliasGeocoder from "./geocoders/pelias";
+import HereGeocoder from "./geocoders/here";
 
 // Create a memoized getter to avoid recreating new geocoders each time.
 const getGeocoder = memoize(geocoderConfig => {
@@ -20,6 +21,8 @@ const getGeocoder = memoize(geocoderConfig => {
       return new ArcGISGeocoder(arcgis, geocoderConfig);
     case "PELIAS":
       return new PeliasGeocoder(isomorphicMapzenSearch, geocoderConfig);
+    case "HERE":
+        return new HereGeocoder(geocoderConfig);
     default:
       console.error(`Unkown geocoder type: "${type}". Using NoApiGeocoder.`);
       return new NoApiGeocoder();
