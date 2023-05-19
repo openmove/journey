@@ -30,7 +30,8 @@ class TripViewerOverlay extends MapLayer {
   updateLeafletElement() {}
 
   render() {
-    const { leafletPath, tripData } = this.props;
+    const { leafletPath, tripData, style } = this.props;
+    const mergedStyle = {... leafletPath, ...style}
 
     if (!tripData || !tripData.geometry) return <FeatureGroup />;
 
@@ -38,7 +39,7 @@ class TripViewerOverlay extends MapLayer {
     return (
       <FeatureGroup>
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Polyline {...leafletPath} positions={pts} />
+        <Polyline {...mergedStyle} positions={pts} />
       </FeatureGroup>
     );
   }
@@ -63,6 +64,7 @@ TripViewerOverlay.propTypes = {
 };
 
 TripViewerOverlay.defaultProps = {
+  style: { },
   leafletPath: {
     color: "#095980",
     opacity: 0.6,
