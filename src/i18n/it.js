@@ -86,6 +86,7 @@ export const TRANSLATIONS_IT = {
   "trip_view": "Dettagli Corsa",
   "train": "Treno",
   "rail": "Treno",
+  "gondola": "Funivia",
   "my_bike": "Bici personale",
   "add": "aggiungi",
   "favorite_stops": "Preferiti",

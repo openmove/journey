@@ -86,6 +86,7 @@ export const TRANSLATIONS_EN = {
   "trip_view": "Trip Details",
   "train": "Train",
   "rail": "Train",
+  "gondola": "Gondola",
   "my_bike": "Personal bike",
   "add": "add",
   "favorite_stops": "Favorites",
