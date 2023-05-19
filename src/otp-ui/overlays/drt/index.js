@@ -282,7 +282,9 @@ class DrtOverlay extends MapLayer {
             "itineraries": [
               {
                 "id": "drt-merano",
-                "geometry": "xxxxxxxx"
+                "geometry": "xxxxxxxx",
+                name,
+                longName,
               }
             ]
           }
