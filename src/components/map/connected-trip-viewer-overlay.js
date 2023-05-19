@@ -6,15 +6,17 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state, ownProps) => {
   const viewedTrip = state.otp.ui?.viewedTrip
-  // const routeColor = state.otp.transitIndex?.trips[viewedTrip?.tripId]?.route?.mode?.route?.color
+  const route = state.otp.transitIndex?.trips[viewedTrip?.tripId]?.route
+  const routeColor =  route?.color
+  const mode = route?.type
 
-  // const color = getRouteColor(routeColor)
-  // TODO: overwrite default color with route specific one if present
+  const color = getRouteColor(mode,routeColor)
+  // overwrite default color with route specific one if present
   const style = state?.otp?.config?.trip?.style
- /*  if(color){
+  if(color){
     style.color = color;
   }
- */
+
   return {
     style,
     tripData: viewedTrip

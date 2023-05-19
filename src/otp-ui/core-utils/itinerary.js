@@ -14,6 +14,16 @@ export const transitModes = [
   "FUNICULAR"
 ];
 
+export const mapRouteTypeToMode = {
+  0: "TRAM",
+  1: "SUBWAY",
+  2: "RAIL",
+  3: "BUS",
+  4: "FERRY",
+  6: "GONDOLA",
+  7: "FUNICULAR"
+}
+
 /**
  * @param  {config} config OTP-RR configuration object
  * @return {Array}  List of all transit modes defined in config; otherwise default mode list
@@ -122,12 +132,15 @@ export function hasRental(modesStr) {
 }
 
 export function getMapColor(mode) {
+  function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
   // color function TODO:unify
   console.log('getMapColor');//todo: remove; used to see if this component is used
   // return '#FFFF00' // debug color just used to see if something changes
   const modeColors = stylesConfig.modes;
 
-  let myMode = mode || this.get("mode");
+  let myMode = isNumber(mode) ? mapRouteTypeToMode[mode] : mode
+  myMode = myMode == null ? this?.get("mode") : myMode;
+
   if(typeof myMode !== 'string') return modeColors.default.color
 
   myMode = myMode.toLowerCase();
