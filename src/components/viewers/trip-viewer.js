@@ -11,6 +11,7 @@ import ViewStopButton from './view-stop-button'
 import { setViewedTrip } from '../../actions/ui'
 import { findTrip } from '../../actions/api'
 import { setLocation } from '../../actions/map'
+import { getRouteColor } from '../../otp-ui/itinerary-body/util'
 
 class TripViewer extends Component {
   static propTypes = {
@@ -36,8 +37,16 @@ class TripViewer extends Component {
       timeFormat,
       tripData,
       viewedTrip,
+      showRouteFares,
       t
     } = this.props
+    const route = tripData?.route
+
+    // determine highlight color
+    const routeColor =  route?.color
+    const mode = route?.type
+
+    const highlightColor = getRouteColor(mode,routeColor)
 
     return (
       <div className='trip-viewer'>
@@ -108,14 +117,14 @@ class TripViewer extends Component {
 
                   {/* the vertical strip map */}
                   <div className='strip-map-container'>
-                    { highlightClass && <div className={highlightClass} /> }
+                    { highlightClass && <div className={highlightClass} style={{backgroundColor:highlightColor}}/> }
                     <div className={stripMapLineClass} />
                     <div className='strip-map-icon'><Icon type='circle' /></div>
                   </div>
 
                   {/* the stop-viewer button */}
                   <div className='stop-button-container'>
-                    <ViewStopButton stopId={stop.id} text='View' />
+                    <ViewStopButton stopId={stop.id} text={t('view')} />
                   </div>
 
                   {/* the main stop label */}
@@ -139,6 +148,7 @@ const mapStateToProps = (state, ownProps) => {
   const viewedTrip = state.otp.ui.viewedTrip
   return {
     languageConfig: state.otp.config.language,
+    showRouteFares: state.otp.config.itinerary.showRouteFares,
     timeFormat: coreUtils.time.getTimeFormat(state.otp.config),
     tripData: state.otp.transitIndex.trips[viewedTrip.tripId],
     viewedTrip
