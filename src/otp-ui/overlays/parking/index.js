@@ -263,7 +263,7 @@ class ParkingOverlay extends AbstractOverlay {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const {name: overlayName} = ownProps
+  const {originalName: overlayName} = ownProps
   return {
     locations: state.otp.overlay.parking?.[overlayName]?.locations,
     overlayParkingConf: state.otp?.config?.map?.overlays?.filter(item => item.name === `${overlayName}`)[0],
