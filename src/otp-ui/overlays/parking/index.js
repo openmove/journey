@@ -217,10 +217,10 @@ class ParkingOverlay extends AbstractOverlay {
                     station.type === 'station' &&
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
                       <CircularProgressbar
-                        value={station.free === -1 ? 0 : station.free }
+                        value={station.free === null ? 0 : station.free }
                         minValue={0}
                         maxValue={station.capacity}
-                        text={station.free === -1 ? 'N/A' : `${station.free}`}
+                        text={station.free === null ? 'N/A' : `${station.free}`}
                         className="otp-ui-mapOverlayPopup__popupAvailableInfoProgress"
                       />
                       <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">{t('capacity')}: {station.capacity}</div>
