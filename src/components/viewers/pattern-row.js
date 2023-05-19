@@ -88,6 +88,7 @@ class PatternRow extends Component {
                   <div className='cell' />
                   <div className='cell time-column'>{t('departure_cap')}</div>
                   <div className='cell status-column'>{t('status_cap')}</div>
+                  <div className='cell show-trip-column'/>
                 </div>
 
                 {/* list of upcoming trips */}
@@ -102,16 +103,7 @@ class PatternRow extends Component {
                           {t('direction')} {stopTime.headsign}
                         </div>
                         <div className='cell time-column'>
-                          {stopTime.tripId}
-                          <div className='second-row'>
                           {getFormattedStopTime(stopTime, homeTimezone, stopViewerArriving, timeFormat)}
-                          <ViewTripButton
-                              tripId={stopTime.tripId}
-                              fromIndex={stopTime.stopIndex}
-                              setViewedTrip={this.props.setViewedTrip}
-                              toIndex={stopTime.stopIndex}
-                            />
-                          </div>
                         </div>
                         <div className='cell status-column'>
                           {stopTime.realtimeState === 'UPDATED'
@@ -122,6 +114,14 @@ class PatternRow extends Component {
                               {t('scheduled')}
                             </div>
                           }
+                        </div>
+                        <div className='cell show-trip-column'>
+                          <ViewTripButton
+                              tripId={stopTime.tripId}
+                              fromIndex={stopTime.stopIndex}
+                              setViewedTrip={this.props.setViewedTrip}
+                              toIndex={stopTime.stopIndex}
+                            />
                         </div>
                       </div>
                     )
@@ -181,8 +181,8 @@ class PatternRow extends Component {
             {/* trips table header row */}
             <div className='header'>
               <div className='cell' />
-              <div className='cell'>{t('mean_cap')}</div>
               <div className='cell time-column'>{t('departure_cap')}</div>
+              <div className='cell show-trip-column'/>
             </div>
 
             {/* list of upcoming trips */}
@@ -194,15 +194,21 @@ class PatternRow extends Component {
                   <div
                     className='trip-row'
                     style={{ display: 'table-row', marginTop: 6, fontSize: 14 }}
-                    key={i}>
+                    key={i}
+                  >
                     <div className='cell'>
                       {t('direction')} {stopTime.headsign}
                     </div>
-                    <div className='cell' style={{textAlign: 'center'}}>
-                      {stopTime.blockId}
-                    </div>
                     <div className='cell time-column'>
                       {time}
+                    </div>
+                    <div className='cell show-trip-column'>
+                      <ViewTripButton
+                        tripId={stopTime.tripId}
+                        fromIndex={stopTime.stopIndex}
+                        setViewedTrip={this.props.setViewedTrip}
+                        toIndex={stopTime.stopIndex}
+                      />
                     </div>
                   </div>
                 )
