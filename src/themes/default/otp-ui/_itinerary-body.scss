@@ -77,10 +77,17 @@
   }
 
   &-agencyInfo{
-    margin-top: 10px;
+    margin: 10px 0;
+    margin-left: 50px;
+    a {
+      padding: 0;
+    }
   }
 
   &-fare{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
   }
