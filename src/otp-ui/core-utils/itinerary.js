@@ -550,10 +550,10 @@ export function calculateFares(itinerary) {
     symbol = reg.currency.symbol;
     transitFare = reg.cents;
     centsToString = cents =>
-      `${symbol}${(cents / 10 ** reg.currency.defaultFractionDigits).toFixed(
+      `${symbol} ${(cents / 10 ** reg.currency.defaultFractionDigits).toFixed(
         reg.currency.defaultFractionDigits
       )}`;
-    dollarsToString = dollars => `${symbol}${dollars.toFixed(2)}`;
+    dollarsToString = dollars => `${symbol} ${dollars.toFixed(2)}`;
   }
 
   // Process any TNC fares
@@ -825,7 +825,7 @@ export function getTransitFare(fareComponent) {
 
   const centsToString = cents => {
     const dollars = (cents / 10 ** digits).toFixed(digits);
-    return `${symbol}${dollars}`;
+    return `${symbol} ${dollars}`;
   }; // For dollars to string conversion, assume we're rounding to two digits.
 
 
