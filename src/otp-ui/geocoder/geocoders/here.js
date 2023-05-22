@@ -75,6 +75,12 @@ export default class Geocoder {
    * GPS coordiante.
    */
   reverse(query) {
+    // TODO: implement
+    // now it returns the query
+    return new Promise((resolve, reject) => {
+      resolve(query.point)
+    });
+
     return this.api
       .reverse(this.getReverseQuery(query))
       .then(this.rewriteReverseResponse);
