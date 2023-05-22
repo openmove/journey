@@ -1,11 +1,3 @@
-#
-# this file is a template for valued configuration file
-# use this command to generate src/config.yml before running the webapp (yarn start)
-#
-# `npm run genconfig`
-#
-# src/config.yml file isn't tracked by git, you can use standard or development version
-
 ## build version
 version: '${npm_package_version}'
 #
@@ -169,11 +161,11 @@ footer:
   enabled: false
 
 geocoder:
+  baseUrl: ${GEOCODER_BASEURL}
+  api:
+    autocomplete: 'https://autosuggest.search.hereapi.com/v1/autosuggest'
   maxNearbyStops: 6
   maxResults: 20
-  apiKey: "${HERE_APIKEY}"
-  api:
-    autocomplete: https://autosuggest.search.hereapi.com/v1/autosuggest
   type: HERE
   boundary:
     #IF boundary is empty get bounds from current map bounds
@@ -253,10 +245,6 @@ map:
   # closer-in zoom levels don't have any tiles that could be rendered by
   maxZoom: 18
   # Base layers for default map
-  controls:
-    overlays:
-      collapsed: true
-      closeBtn: true
   baseLayers:
     - name: Streets
       url: //cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}@2x.png
@@ -350,7 +338,7 @@ map:
       # enabled: true
       # visible: false
       # markerCluster: true
-      api: ${PARKING_BASEURL}/parking/stations.json
+      api: ${PARKING_BASEURL}/parking/all.json
       iconWidth: 42
       iconHeight: 50
       iconMarkerColor: "#b0d1ef"
@@ -360,8 +348,8 @@ map:
       ##dinamic filters
       ##filters: ${PARKING_BASEURL}/parking/filters.json
       filters: "/static/filters/parking.json"
-      pollingUpdate: true
-      updateBBox: true
+      pollingUpdate: false
+      updateBBox: false
 
     - type: drt
       name: ondemand
@@ -526,7 +514,7 @@ transit:
   style:
     fill: '#095980'
     stroke: '#095980'
-    stroke_width: 6
+    stroke_width: 2
     background: '#095980'
     places:
       fill:
