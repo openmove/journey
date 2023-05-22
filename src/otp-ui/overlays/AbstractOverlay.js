@@ -33,7 +33,7 @@ class AbstractOverlay extends MapLayer {
     this._refreshInterval = setInterval(() => {
       console.log('interval call');
       this._startRefreshing()
-    }, Number(this.config?.pollingInterval || 3000)) // defaults to every 30 sec.
+    }, Number(this.config?.pollingInterval || 30000)) // defaults to every 30 sec.
   }
 
   _startRefreshing(launchNow) {
