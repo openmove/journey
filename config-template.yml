@@ -360,8 +360,8 @@ map:
       ##dinamic filters
       ##filters: ${PARKING_BASEURL}/parking/filters.json
       filters: "/static/filters/parking.json"
-      pollingUpdate: false
-      updateBBox: false
+      pollingUpdate: true
+      updateBBox: true
 
     - type: drt
       name: ondemand
