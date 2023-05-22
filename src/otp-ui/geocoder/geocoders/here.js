@@ -92,6 +92,9 @@ export default class Geocoder {
    * well-fromatted address.
    */
   search(query) {
+    // TODO: implement now returns nothing
+    return new Promise((resolve, reject) => resolve({features:[]}))
+
     return this.api
       .search(this.getSearchQuery(query))
       .then(this.rewriteSearchResponse);
