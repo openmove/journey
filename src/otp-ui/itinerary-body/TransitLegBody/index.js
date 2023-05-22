@@ -118,12 +118,6 @@ class TransitLegBody extends Component {
               </Button>
             </div>
           )}
-          {/* Fares information */}
-          {fareForLeg && (
-                <div className="otp-ui-transitLegBody-fare">
-                   <p className="subtitle">{t('fare')} {fareForLeg.centsToString(fareForLeg.transitFare)}</p>
-                </div>
-          )}
 
           {/* Alerts toggle */}
           {alerts && alerts.length > 2 && (
@@ -184,7 +178,22 @@ class TransitLegBody extends Component {
               {leg.averageWait && (
                 <span>{t('typical_wait')}: {formatDuration(leg.averageWait)}</span>
               )}
+              {/* Fares information */}
+              {fareForLeg && (
+                    <div className="otp-ui-transitLegBody-fare">
+                      <p className="subtitle">{t('fare')} {fareForLeg.centsToString(fareForLeg.transitFare)}</p>
+                      {agencyUrl && (
+                        <Button bsStyle="primary" bsSize='xsmall' href={agencyUrl} rel="noopener noreferrer" target="_blank">
+                          {t('buy_ticket')}
+                          {/* {logoUrl && (
+                          <img alt={`${agencyName} logo`} src={logoUrl} height={20} style={{marginLeft: 8}}/>
+                          )} */}
+                        </Button>)
+                      }
+                    </div>
+              )}
             </div>
+
           )}
         </div>
       </>

@@ -37,10 +37,11 @@ class TripViewer extends Component {
       timeFormat,
       tripData,
       viewedTrip,
-      showRouteFares,
+      showFares,
       t
     } = this.props
     const route = tripData?.route
+    const agencyUrl = route?.agency?.fareUrl
 
     // determine highlight color
     const routeColor =  route?.color
@@ -90,6 +91,15 @@ class TripViewer extends Component {
                   </Label>
                 }
               </h4>
+              { showFares && agencyUrl && (
+                  <Button bsStyle="primary" className="mt-1" href={agencyUrl} rel="noopener noreferrer" target="_blank">
+                    {t('buy_ticket')}
+                    {/* {logoUrl && (
+                    <img alt={`${agencyName} logo`} src={logoUrl} height={20} style={{marginLeft: 8}}/>
+                    )} */}
+                  </Button>
+                )
+              }
             </div>
           )}
 
@@ -146,9 +156,10 @@ class TripViewer extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const viewedTrip = state.otp.ui.viewedTrip
+
   return {
     languageConfig: state.otp.config.language,
-    showRouteFares: state.otp.config.itinerary.showRouteFares,
+    showFares: state.otp.config.trip.showFares,
     timeFormat: coreUtils.time.getTimeFormat(state.otp.config),
     tripData: state.otp.transitIndex.trips[viewedTrip.tripId],
     viewedTrip

@@ -339,6 +339,8 @@ export const TRANSLATIONS_EN = {
   "toggle_elevation_chart": "Toggle elevation chart",
   "ride": "Ride",
   "fare": "Fare",
+  "buy": "Buy",
+  "buy_ticket": "Buy Ticket",
   "transit_fare": "Transit Fare",
   "typical_wait": "Typical Wait",
   "use_companies": "Use companies",

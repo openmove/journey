@@ -339,6 +339,8 @@ export const TRANSLATIONS_IT = {
   "toggle_elevation_chart": "Alza il grafico dell'elevazione",
   "ride": "Corsa",
   "fare": "Tariffa",
+  "buy": "Acquista",
+  "buy_ticket": "Acquista Biglietto",
   "transit_fare": "Prezzo di viaggio",
   "typical_wait": "Attesa tipica",
   "use_companies": "Viaggia in compagnia",
