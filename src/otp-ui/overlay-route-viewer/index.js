@@ -1,8 +1,12 @@
 import { encodedPolylineType, leafletPathType } from "../core-utils/types";
-import { polylineLength, humanizeDistanceStringMetric } from "../core-utils/distance";
+import {
+  polylineLength,
+  humanizeDistanceStringMetric,
+} from "../core-utils/distance";
 // import { getMapColor } from "../core-utils/itinerary";
 import { getRouteColor } from "../itinerary-body/util";
 import OpenMoveModeIcon from "../../otp-ui/icons/openmove-mode-icon";
+import { Graph, createSequences } from "./grafo";
 
 import PropTypes from "prop-types";
 import React from "react";
@@ -62,7 +66,7 @@ class RouteViewerOverlay extends MapLayer {
 
     if (!routeData || !routeData.patterns) return <FeatureGroup />;
 
-   /*  let routeColor
+    /*  let routeColor
     if(routeData.color){
       routeColor = `#${routeData.color}`
     }else if( routeData.mode){
@@ -70,47 +74,78 @@ class RouteViewerOverlay extends MapLayer {
     }
     routeColor =  routeColor || path.color; */
 
-    const routeColor = getRouteColor(routeData?.mode, routeData?.color )
+    const routeColor = getRouteColor(routeData?.mode, routeData?.color);
 
-    const text = routeData.longName !== routeData.shortName ? routeData.longName : null
-        , desc = routeData?.desc
-        , mode = routeData.mode
-        , bikesAllowed = routeData?.bikesAllowed
-        , segments = [];
+    const text =
+        routeData.longName !== routeData.shortName ? routeData.longName : null,
+      desc = routeData?.desc,
+      mode = routeData.mode,
+      bikesAllowed = routeData?.bikesAllowed,
+      segments = [],
+      graph = new Graph();
 
-    Object.values(routeData.patterns).forEach( pattern => {
+    let startStop;
+
+    Object.values(routeData.patterns).forEach((pattern) => {
+      console.log("====================================");
+      console.log("pattern",pattern);
+      console.log("====================================");
       if (!pattern?.geometry?.points) return;
-
+      const toString = (pt) => `${pt[0]}-${pt[1]}`;
       const pts = polyline.decode(pattern.geometry.points);
+      if (!startStop) {
+        startStop = toString(pts[0]);
+      } else if (startStop != toString(pts[0])) {
+        console.error("what");
+        return
+      }
 
-      const humanLength = humanizeDistanceStringMetric(polylineLength(pts))
+      for (let i = 0; i < pts.length - 1; i++) {
+        graph.addEdge(toString(pts[i]), toString(pts[i + 1]));
+      }
 
-      segments.push(
-        <Polyline
-          /* eslint-disable-next-line react/jsx-props-no-spreading */
-          {...path}
-          color={routeColor}
-          // className="is-walk"
-          key={pattern.id}
-          positions={pts}
-        >
-          <Tooltip
-            sticky={true}
+    });
+    function selectColor(number) {
+      const hue = number * 137.508; // use golden angle approximation
+      return `hsl(${hue},50%,75%)`;
+    }
+    const sequences = createSequences(graph, startStop);
+    // graph.print()
+    // console.log('====================================');
+    // console.log(createSequences(graph,startStop));
+    // console.log('====================================');
+    sequences.forEach((sequence,index) => {
+      console.log('====================================');
+      console.log(sequence[0],sequence[sequence.length-1]);
+      console.log('====================================');
+      const pts = sequence.map((sequenceStr) => sequenceStr.split("-"));
+
+      const humanLength = humanizeDistanceStringMetric(polylineLength(pts));
+        segments.push(
+          <Polyline
+            /* eslint-disable-next-line react/jsx-props-no-spreading */
+            {...path}
+            color={selectColor(index)/* routeColor */}
+            // className="is-walk"
+            // key={pattern.id}
+            positions={pts}
           >
-            <div className="leaflet-tooltip-content">
-
-            <h4>
-              <OpenMoveModeIcon mode={mode} width={20} height={20} /> &nbsp;
-              {routeData.shortName} <small>{routeData.id}</small>
-            </h4>
-            <p>{text}</p>
-            <p>{humanLength}</p>
-            {desc && <p>{desc}</p>}
-            {bikesAllowed && bikesAllowed!=='NO_INFORMATION' && <p>bikesAllowed: {bikesAllowed}</p>}
-            </div>
-          </Tooltip>
-        </Polyline>
-      );
+            <Tooltip sticky={true}>
+              <div className="leaflet-tooltip-content">
+                <h4>
+                  <OpenMoveModeIcon mode={mode} width={20} height={20} /> &nbsp;
+                  {routeData.shortName} <small>{routeData.id}</small>
+                </h4>
+                <p>{text}</p>
+                <p>{humanLength}</p>
+                {desc && <p>{desc}</p>}
+                {bikesAllowed && bikesAllowed !== "NO_INFORMATION" && (
+                  <p>bikesAllowed: {bikesAllowed}</p>
+                )}
+              </div>
+            </Tooltip>
+          </Polyline>
+        );
     });
 
     return segments.length > 0 ? (
