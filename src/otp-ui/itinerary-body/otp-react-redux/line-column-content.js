@@ -1,5 +1,8 @@
 import coreUtils from "../../core-utils";
 import LocationIcon from "../../location-icon";
+import CONFIG from '../../../../config-template.yml'
+const style = CONFIG.transit.style
+// TODO: remove hardcoded colors
 import PropTypes from "prop-types";
 import React from "react";
 import { Circle } from "@styled-icons/fa-solid";
@@ -82,7 +85,7 @@ export default function LineColumnContent({
               backgroundColor: coreUtils.itinerary.isTransit(leg.mode)
                   ? leg.routeColor
                     ? `#${leg.routeColor}`
-                    : "#095980"
+                    : style.fill || "#FBCEB1"
                   : 'inherit'
             }}
           >

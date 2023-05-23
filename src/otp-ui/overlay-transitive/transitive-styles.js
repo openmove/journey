@@ -91,7 +91,9 @@ const style = {
     if (segment.type ==='TRANSIT'){
       return segment?.patterns?.[0]?.route.getColor();
     }else if (segment.type === 'WALK') {
-      return '#86cdf9'
+      return stylesConfig.modes?.walk?.color || '#86cdf9'
+    } else {
+      return stylesConfig.modes?.[segment?.type?.toLowerCase()]?.color
     }
   }],
   background: [ stylesConfig.background,function(display, segment) {
