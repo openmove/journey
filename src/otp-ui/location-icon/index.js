@@ -6,7 +6,7 @@ import CONFIG from '../../config.yml'
 const locationIconsColor = CONFIG.location.iconColor
 
 const LocationIcon = ({ className, size = 10, title, type}) => {
-  console.log(locationIconsColor);
+
   switch (type) {
     case "from":
       return (
