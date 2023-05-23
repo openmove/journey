@@ -502,7 +502,7 @@ companies:
       label: carsharing_car2go
       modes: CAR_RENT
 location:
-  iconColor: '#095980'
+  iconColor: "#000033"
 errorMessages:
   - id: 404
     msg: msg_404
@@ -520,15 +520,15 @@ itinerary:
 trip:
   showFares: true
   style:
-    color: "#095980"
+    color: "#000033"
     opacity: 0.6
     weight: 8
 transit:
   style:
-    fill: '#095980'
-    stroke: '#095980'
+    fill: '#000033'
+    stroke: '#000033'
     stroke_width: 6
-    background: '#095980'
+    background: '#000033'
     places:
       fill:
         bikeshare_station: "#f00"
@@ -540,22 +540,24 @@ transit:
       radius: 7
     modes:
       bicycle:
-        color: "#E0C3E2"
+        color: "#8f99c2"
       bus:
-         color: "#CAC3DF"
+         color: "#000033"
       car:
-         color: "#E4CCCC"
+         color: "#336699"
       park:
-         color: "#E4CCCC"
+         color: "#E4CCCC" #todo
       rail:
-         color: "#BDDAC0"
+         color: "#000033"
+      gondola:
+        color: "#CAC3DF"
       walk:
-         color: "#DFC486"
+         color: "#A89968"
       default:
         color: "#333333"
     stops_merged:
       radius: 6
-      stroke: "#095980"
+      stroke: "#000033"
 
 # modes:
 #   WALK: "#87cefa"
