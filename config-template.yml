@@ -501,7 +501,8 @@ companies:
     - id: CAR2GO
       label: carsharing_car2go
       modes: CAR_RENT
-
+location:
+  iconColor: '#095980'
 errorMessages:
   - id: 404
     msg: msg_404

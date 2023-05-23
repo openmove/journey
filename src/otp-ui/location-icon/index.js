@@ -2,13 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import MarkerLocationFrom from "../icons/modern/MarkerLocationFrom";
 import MarkerLocationTo from "../icons/modern/MarkerLocationTo";
+import CONFIG from '../../config.yml'
+const locationIconsColor = CONFIG.location.iconColor
 
-const LocationIcon = ({ className, size = 10, title, type }) => {
+const LocationIcon = ({ className, size = 10, title, type}) => {
+  console.log(locationIconsColor);
   switch (type) {
     case "from":
       return (
         <MarkerLocationFrom
-          iconColor="#095980"
+          iconColor={locationIconsColor}
           className={className}
           width={size}
           height={size}
@@ -18,7 +21,7 @@ const LocationIcon = ({ className, size = 10, title, type }) => {
     case "to":
       return (
         <MarkerLocationTo
-          iconColor="#095980"
+        iconColor={locationIconsColor}
           className={className}
           width={size}
           height={size}
