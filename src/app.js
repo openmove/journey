@@ -51,7 +51,7 @@ const JourneyWebapp = (props) => {
   const header = useSelector((state) => state.otp.config?.header)
   const documentTitle = useSelector((state) => state.otp.config?.title)
 
-  let brandLogo =  logos[brandNavbarLogo] || null;
+  let brandLogo =  logos[brandNavbarLogo] || brandNavbarLogo;
 
   const desktopFooter = (
     <div className="footer-container">

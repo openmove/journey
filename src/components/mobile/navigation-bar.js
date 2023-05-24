@@ -55,7 +55,7 @@ class MobileNavigationBar extends Component {
 
     //TODO switch by domain location.hostname
     let {branding, brandNavbar, brandNavbarLogo} = config;
-    let brandLogo =  logos[brandNavbarLogo] || null;
+    let brandLogo =  logos[brandNavbarLogo] || brandNavbarLogo;
 
     return (
       <Navbar fluid fixedTop collapseOnSelect>
