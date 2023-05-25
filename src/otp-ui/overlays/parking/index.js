@@ -199,10 +199,10 @@ class ParkingOverlay extends AbstractOverlay {
         {
           locationsFiltered.map( station => {
           if(station.type!=='station' && station.type!== 'sensorGroup') return null;
-          // station.payment = true
-          // station.parkingType = 'covered-with-barrier'
-          // station.payPeriod = 'high-season'
-          // station.timed = true;
+          station.payment = true
+          station.parkingType = 'covered-with-barrier'
+          station.payPeriod = 'high-season'
+          station.timed = true;
 
           let price = '';
           if( station.payment === true){

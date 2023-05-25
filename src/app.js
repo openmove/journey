@@ -85,7 +85,7 @@ const desktopNav = (
       {brandLogo && <img className="brandLogo" src={brandLogo} />}
       <Navbar.Brand>
         {" "}
-        {brandNavbar} <span>BETA</span>
+        {brandNavbar && (<>{brandNavbar} <span>BETA</span></>)}
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
