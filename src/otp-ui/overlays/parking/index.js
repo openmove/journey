@@ -66,6 +66,7 @@ class ParkingOverlay extends AbstractOverlay {
     const markerIcon = (data) => {
       let badgeType = 'success';
       let badgeCounter = 0;
+      const paid = data?.payment;
       let iconWidth, iconHeight;
 
       if( data.type === 'station') {
@@ -107,7 +108,7 @@ class ParkingOverlay extends AbstractOverlay {
         iconAnchor: [iconWidth/2, iconHeight],
         popupAnchor: [0, -iconHeight],
         html: ReactDOMServer.renderToStaticMarkup(
-          <BadgeIcon type={badgeType} width={iconWidth}>
+          <BadgeIcon type={badgeType} width={iconWidth} paid={paid}>
           { data.type === 'station' &&
             <MarkerParking
               width={iconWidth}
@@ -198,6 +199,26 @@ class ParkingOverlay extends AbstractOverlay {
         {
           locationsFiltered.map( station => {
           if(station.type!=='station' && station.type!== 'sensorGroup') return null;
+          // station.payment = true
+          // station.parkingType = 'covered-with-barrier'
+          // station.payPeriod = 'high-season'
+          // station.timed = true;
+
+          let price = '';
+          if( station.payment === true){
+            price+=t('paid')
+            if(station.payPeriod){
+              price+=` ${t('parking-during')}`
+              price+=station.payPeriod!=='always' ? ` ${t(`parking-${station.payPeriod}`)}`:''
+            }
+          } else {
+            price+=t('free')
+            if(station.timed){
+              price+=` ${t('parking-with')}`
+              price+=` ${t('parking-timed')}`
+            }
+          }
+
           return (
             <Marker
               icon={markerIcon(station)}
@@ -208,22 +229,30 @@ class ParkingOverlay extends AbstractOverlay {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-                    <Parking width={24} height={20} />&nbsp;{t('parking')}
+                    <Parking width={24} height={20} />&nbsp;{t(station.parkingType ? `parking-${station.parkingType}` : 'parking')}
                   </div>
-
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
                   <small>{station.group_name}</small>
                   {
                     station.type === 'station' &&
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                      <CircularProgressbar
-                        value={station.free === null ? 0 : station.free }
-                        minValue={0}
-                        maxValue={station.capacity}
-                        text={station.free === null ? 'N/A' : `${station.free}`}
-                        className="otp-ui-mapOverlayPopup__popupAvailableInfoProgress"
-                      />
-                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">{t('capacity')}: {station.capacity}</div>
+                      {station.free !== null ? (
+                        <CircularProgressbar
+                          value={station.free === null ? 'N/A' : station.free }
+                          minValue={0}
+                          maxValue={station.capacity}
+                          text={station.free === null ? 'N/A' : `${station.free}`}
+                          className="otp-ui-mapOverlayPopup__popupAvailableInfoProgress"
+                        />
+                      ) : (
+                        <></>
+                      )}
+                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: station.free === null ? '10px' : ''}}>
+                        {station?.payment!=null && (
+                          <p>{t('parking-price')}: {price}</p>
+                        )}
+                        {station.capacity && <p>{t('capacity')}: {station.capacity!==null ? station.capacity : 'N/A'}</p>}
+                      </div>
                     </div>
                   }
                   {
