@@ -73,13 +73,13 @@ class MobileNavigationBar extends Component {
 
                 </>
             }
-            {config.brandNavbar} <span>BETA</span>
+            {config.brandNavbar && (<>{config.brandNavbar} <span>BETA</span></>)}
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
 
         <Navbar.Collapse>
-          <Navbar.Text>
+          <Navbar.Text className='text-center'>
             { headerText || title }
           </Navbar.Text>
           <Nav pullRight>
