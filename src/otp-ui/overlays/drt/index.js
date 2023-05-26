@@ -10,6 +10,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { getItem } from "../../core-utils/storage";
 import { setLocation } from '../../../actions/map'
 import { drtLocationsQuery } from '../../../actions/drt'
+import AbstractOverlay from '../AbstractOverlay'
 
 import BadgeIcon from "../../icons/badge-icon";
 
@@ -25,12 +26,15 @@ import polyline from "@mapbox/polyline";
 import { map } from 'lodash'
 
 
-class DrtOverlay extends MapLayer {
+class DrtOverlay extends AbstractOverlay {
 
   constructor(props){
-    super(props);
-    this._startRefreshing = this._startRefreshing.bind(this)
-    this._stopRefreshing = this._stopRefreshing.bind(this)
+    super({
+      props,
+      query:props.drtLocationsQuery,
+      api:props.api,
+      config:props.overlayDrtConf
+    });
   }
 
   static propTypes = {
@@ -39,78 +43,6 @@ class DrtOverlay extends MapLayer {
     // locations: PropTypes.array,
     drtLocationsQuery: PropTypes.func,
     setLocation: PropTypes.func
-  }
-
-  _startRefreshing (launchNow) {
-    // ititial station retrieval
-    const bb =  getItem('mapBounds')
-    const params = bb
-    if(launchNow === true){
-      this.props.drtLocationsQuery(this.props.api,params)
-
-    }else{
-      if (this._refreshTimer) clearTimeout(this._refreshTimer);
-      this._refreshTimer =  setTimeout(()=>{
-        const bb =  getItem('mapBounds')
-        const params = bb
-        this.props.drtLocationsQuery(this.props.api,params)
-      },500)
-    }
-
-    // set up timer to refresh stations periodically
-    // this._refreshTimer = setInterval(() => {
-    //   this.props.drtLocationsQuery(this.props.api)
-    // }, Number(overlayDrtConf.pollingInterval)) // defaults to every 30 sec. TODO: make this configurable?*/
-  }
-
-  _stopRefreshing () {
-    if (this._refreshTimer) clearTimeout(this._refreshTimer)
-  }
-
-  componentDidMount () {
-    this.props.registerOverlay(this)
-
-    if (this.props.visible) {
-      this.props.leaflet.map.on("moveend", this._startRefreshing);
-      this._startRefreshing()
-    }
-  }
-
-  onOverlayAdded = (e) => {
-
-    const { locations, overlayDrtConf, t } = this.props
-    const newLoc = []
-    const { map } = this.props.leaflet;
-    this.props.leaflet.map.on("moveend", this._startRefreshing);
-    this._startRefreshing(true);
-
-
-    if(overlayDrtConf.startCenter){
-      map.flyTo(overlayDrtConf.startCenter);
-    }
-
-    this._startRefreshing();
-
-  }
-
-  onOverlayRemoved = () => {
-    this.props.leaflet.map.off("moveend", this._startRefreshing);
-    this._stopRefreshing()
-  }
-
-  componentWillUnmount () {
-    this.props.leaflet.map.off("moveend", this._startRefreshing);
-    this._stopRefreshing()
-  }
-
-  componentDidUpdate (prevProps) {
-    if (!prevProps.visible && this.props.visible) {
-      this._startRefreshing()
-      this.props.leaflet.map.on("moveend", this._startRefreshing);
-    } else if (prevProps.visible && !this.props.visible) {
-      this._stopRefreshing()
-      this.props.leaflet.map.off("moveend", this._startRefreshing);
-    }
   }
 
   createLeafletElement () {}
