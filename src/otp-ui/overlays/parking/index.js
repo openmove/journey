@@ -2,6 +2,7 @@ import React from 'react'
 import AbstractOverlay from '../AbstractOverlay'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { Button } from 'react-bootstrap'
 import { LayerGroup, FeatureGroup, MapLayer, Marker, Popup, withLeaflet } from 'react-leaflet'
 import { divIcon } from 'leaflet'
 import { withNamespaces } from "react-i18next";
@@ -203,6 +204,8 @@ class ParkingOverlay extends AbstractOverlay {
           station.parkingType = 'covered-with-barrier'
           station.payPeriod = 'high-season'
           station.timed = true;
+          station.url ='https://www.google.com'
+          // station.operator = 'ciaone il tuo bus di fiducia'
 
           let price = '';
           if( station.payment === true){
@@ -251,6 +254,7 @@ class ParkingOverlay extends AbstractOverlay {
                         {station?.payment!=null && (
                           <p>{t('parking-price')}: {price}</p>
                         )}
+                        {station.operator && <p>{t('managed')}: { station.operator}</p>}
                         {station.capacity && <p>{t('capacity')}: {station.capacity!==null ? station.capacity : 'N/A'}</p>}
                       </div>
                     </div>
@@ -275,6 +279,9 @@ class ParkingOverlay extends AbstractOverlay {
                   }
 
                   <div className='popup-row'>
+                    {station.payment &&  station.url && (
+                      <Button bsStyle='link' href={station.url} target="_blank">{t('buy')}</Button>
+                    )}
                     <FromToLocationPicker
                       location={station}
                       setLocation={this.props.setLocation}

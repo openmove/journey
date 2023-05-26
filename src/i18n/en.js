@@ -205,6 +205,7 @@ export const TRANSLATIONS_EN = {
   "parking-with":"with",
   "parking-high-season":"high season",
   "parking-during":"during",
+  "managed":"Handled by",
   "paid": "on payment",
   "free": 'free',
   "charger": "E-Charger",
