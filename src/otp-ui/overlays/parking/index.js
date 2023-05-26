@@ -200,23 +200,25 @@ class ParkingOverlay extends AbstractOverlay {
         {
           locationsFiltered.map( station => {
           if(station.type!=='station' && station.type!== 'sensorGroup') return null;
-          station.payment = true
-          station.parkingType = 'covered-with-barrier'
-          station.payPeriod = 'high-season'
-          station.timed = true;
-          station.url ='https://www.google.com'
+          console.log(station);
+          // station.payment = true
+          // station.parkingType = 'covered-with-barrier'
+          // station.payPeriod = 'high-season'
+          // station.timed = true;
+          // station.url ='https://www.google.com'
           // station.operator = 'ciaone il tuo bus di fiducia'
+          console.log(station.payment_timed && station.payment!==null);
 
           let price = '';
           if( station.payment === true){
             price+=t('paid')
-            if(station.payPeriod){
+            if(station.payment_period!=='always'){
               price+=` ${t('parking-during')}`
-              price+=station.payPeriod!=='always' ? ` ${t(`parking-${station.payPeriod}`)}`:''
+              price+=` ${t(`parking-${station.payment_period}`)}`
             }
           } else {
             price+=t('free')
-            if(station.timed){
+            if(station.payment_timed){
               price+=` ${t('parking-with')}`
               price+=` ${t('parking-timed')}`
             }
@@ -232,7 +234,7 @@ class ParkingOverlay extends AbstractOverlay {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-                    <Parking width={24} height={20} />&nbsp;{t(station.parkingType ? `parking-${station.parkingType}` : 'parking')}
+                    <Parking width={24} height={20} />&nbsp;{t(station.parking_type ? `parking-${station.parking_type}` : 'parking')}
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
                   <small>{station.group_name}</small>
