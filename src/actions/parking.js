@@ -16,7 +16,7 @@ export const receivedParkingLocationsError =  createAction('PARKING_LOCATIONS_ER
 export const receivedParkingLocationsResponse  = createAction('PARKING_LOCATIONS_RESPONSE',preparePayload)
 export const requestParkingLocationsResponse =  createAction('PARKING_LOCATIONS_REQUEST',preparePayload)
 
-export function parkingLocationsQuery (overlayName,url,params) {
+export function parkingLocationsQuery (url, params, overlayName) {
   return async function (dispatch, getState) {
 
     dispatch(requestParkingLocationsResponse()) // todo: is this doing something?
