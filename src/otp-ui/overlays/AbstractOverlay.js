@@ -41,14 +41,14 @@ class AbstractOverlay extends MapLayer {
     const bb = isMapUpdating ? getItem('mapBounds') : {}
     const params = bb
     if(launchNow === true){
-      this.query(this.config.name, this.api , params);
+      this.query(this.api , params, this.config.name);
     }else{
       if (this._refreshTimer) clearTimeout(this._refreshTimer);
 
       this._refreshTimer =  setTimeout(()=>{
         const bb =  getItem('mapBounds')
         const params = bb
-        this.query(this.config.name, this.api, params);
+        this.query(this.api, params, this.config.name);
       },500)
 
     }
