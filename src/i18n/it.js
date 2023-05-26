@@ -343,7 +343,7 @@ export const TRANSLATIONS_IT = {
   "buy_ticket": "Acquista Biglietto",
   "transit_fare": "Prezzo di viaggio",
   "typical_wait": "Attesa tipica",
-  "use_companies": "Viaggia in compagnia",
+  "use_companies": "Aziende abilitate",
   "available_bikes": "Bici disponibili",
   "available_docks": "Stalli disponibili",
   "available_slots": "Posti disponibili",
