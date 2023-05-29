@@ -35,7 +35,7 @@ class AdvancedOverlaysController extends Component {
           onFilterRequest
       } = this.props;
 
-      const  {collapsed, closeBtn} = overlaysConf;
+      const  {collapsed, closeBtn, allBtn} = overlaysConf;
 
       const overlaysArray = overlays.map((child, i) => {
           return (
@@ -57,7 +57,7 @@ class AdvancedOverlaysController extends Component {
               closeBtn={closeBtn}
               overlays={overlaysArray}
             >
-              <ControlButtonsTranslated />
+             { allBtn && <ControlButtonsTranslated />}
             </AdvancedLayersControl>
         )
     }
