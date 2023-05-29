@@ -39,7 +39,7 @@ class RouteRow extends Component {
     const color = route.textColor ? `#${
       route.textColor}` :  contrastColor || defaultRouteTextColor; */
 
-      const color = getRouteTextColor(route?.mode, backgroundColor, route?.color)
+    const color = getRouteTextColor(route?.mode, backgroundColor, route?.textColor)
 
 
     // Default long name is empty string (long name is an optional GTFS value).
@@ -58,7 +58,7 @@ class RouteRow extends Component {
     }
     return (
       <div className={"route-row"}>
-        <Button onClick={this._onClick} block className={`${isActive ? 'active' : ''}`}>
+        <div onClick={this._onClick} block className={`btn ${isActive ? 'active' : ''}`}>
           {/* <div style={{display: 'inline-block'}}>
             // TODO: re-implement multi-agency logos for route viewer.
               // Currently, the agency object is not nested within the get all
@@ -67,12 +67,12 @@ class RouteRow extends Component {
               // operator && <img src={operator.logo} style={{marginRight: '5px'}} height={25} />
 
           </div> */}
-          {/* <div style={{backgroundColor:backgroundColor,borderRadius:'8px',padding:'3px'}}> */}
-          <OpenMoveModeIcon mode={route.mode} width={20} height={20} />
-          <strong className="shortname" style={{color:backgroundColor}}> {route.shortName} </strong>
-           {/* </div> */}
+          <div style={{backgroundColor:backgroundColor,borderRadius:'8px',padding:'3px',color}}>
+            <OpenMoveModeIcon mode={route.mode} width={20} height={20} />
+            <strong className="shortname" style={{color:color}}> {route.shortName} </strong>
+           </div>
           <p className="longname">{longName}</p>
-        </Button>
+        </div>
       </div>
     );
   }
