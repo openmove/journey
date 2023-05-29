@@ -15,11 +15,13 @@ class ViewTripButton extends Component {
   }
 
   _onClick = () => {
+    const {setMainPanelContent, tripId, fromIndex, toIndex} = this.props
+
     this.props.setMainPanelContent(null)
     this.props.setViewedTrip({
-      tripId: this.props.tripId,
-      fromIndex: this.props.fromIndex,
-      toIndex: this.props.toIndex
+      tripId,
+      fromIndex,
+      toIndex,
     })
   }
 

@@ -13,6 +13,7 @@ import { drtLocationsQuery } from '../../../actions/drt'
 import AbstractOverlay from '../AbstractOverlay'
 
 import BadgeIcon from "../../icons/badge-icon";
+import ViewTripButton from '../../../components/viewers/view-trip-button'
 
 import MarkerDrtStop from "../../icons/modern/MarkerDrtStop";
 import MarkerDrtVehicle from "../../icons/modern/MarkerDrtVehicle";
@@ -192,7 +193,11 @@ class DrtOverlay extends AbstractOverlay {
                       <div className="otp-ui-mapOverlayPopup__popupTitle">
                         {vehicle.vehicle.label || vehicle.vehicle.name}
                       </div>
-
+                      {vehicle?.trip?.id && (
+                        <ViewTripButton
+                          tripId={vehicle?.trip?.id}
+                        />)
+                      }
                       {vehicle.capacity && (
                         <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
                           <CircularProgressbar

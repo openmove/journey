@@ -24,10 +24,30 @@ class TripViewer extends Component {
     this.props.setViewedTrip(null)
   }
 
-  componentDidMount () {
+  findTripData(prevViewedTrip){
     const { findTrip, viewedTrip } = this.props
-    const { tripId } = viewedTrip
+    const { tripId,fromIndex, toIndex } = viewedTrip
+
+    if(prevViewedTrip){
+      const { tripId:prevTripId,
+              fromIndex:prevFromIndex,
+              toIndex:prevToIndex
+            } = prevViewedTrip
+      if( tripId === prevTripId &&
+          fromIndex === prevFromIndex &&
+          toIndex === prevToIndex){
+            return;
+        }
+    }
     findTrip({ tripId })
+  }
+
+  componentDidMount () {
+    this.findTripData(undefined)
+  }
+
+  componentDidUpdate(prevProps){
+    this.findTripData(prevProps.viewedTrip)
   }
 
   render () {
@@ -113,7 +133,8 @@ class TripViewer extends Component {
 
               // determine whether to show highlight in strip map
               let highlightClass
-              if (i === viewedTrip.fromIndex && i === viewedTrip.toIndex) highlightClass = 'strip-map-highlight-unique'
+              if (viewedTrip.fromIndex==null && viewedTrip.toIndex==null) highlightClass = '' //TODO: find stops based on time?
+              else if (i === viewedTrip.fromIndex && i === viewedTrip.toIndex) highlightClass = 'strip-map-highlight-unique'
               else if (i === viewedTrip.fromIndex) highlightClass = 'strip-map-highlight-first'
               else if (i > viewedTrip.fromIndex && i < viewedTrip.toIndex) highlightClass = 'strip-map-highlight'
               else if (i === viewedTrip.toIndex) highlightClass = 'strip-map-highlight-last'
