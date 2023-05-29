@@ -186,18 +186,13 @@ class DrtOverlay extends AbstractOverlay {
                 >
                   <Popup>
                     <div className="otp-ui-mapOverlayPopup">
-                      <div className="otp-ui-mapOverlayPopup__popupHeader">
-                        <span>&nbsp;{vehicle.vehicle.id}</span>
-                      </div>
+                    {/*<div className="otp-ui-mapOverlayPopup__popupHeader">
+                        <span>&nbsp;{vehicle.vehicle.name}</span>
+                      </div> */}
 
                       <div className="otp-ui-mapOverlayPopup__popupTitle">
-                        {vehicle.vehicle.label || vehicle.vehicle.name}
+                        {vehicle.vehicle.label}  <span className='subtitle'>&nbsp;{vehicle.vehicle.name}</span>
                       </div>
-                      {vehicle?.trip?.id && (
-                        <ViewTripButton
-                          tripId={vehicle?.trip?.id}
-                        />)
-                      }
                       {vehicle.capacity && (
                         <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
                           <CircularProgressbar
@@ -214,7 +209,14 @@ class DrtOverlay extends AbstractOverlay {
                           </div>
                         </div>
                       )}
-
+                      {vehicle?.trip?.id && (
+                        <div className='otp-ui-mapOverlayPopup__popupRow'>
+                          <ViewTripButton
+                            tripId={vehicle?.trip?.id}
+                          />
+                        </div>
+                        )
+                      }
                     </div>
                   </Popup>
                 </Marker>
