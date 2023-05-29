@@ -26,7 +26,7 @@ const Details = styled.div`
 `
 
 const Header = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: -3px;
 `
@@ -52,7 +52,9 @@ const Routes = styled.div`
   text-align: right;
 `
 
-const ShortName = styled.div`
+// Changed with div of class otp-ui-legDescForTransit__shortName
+// TODO: remove styled components :/
+/* const ShortName = styled.div`
   background-color: ${props => getRouteColorForBadge(props.leg)};
   border-radius: 15px;
   border: 2px solid white;
@@ -68,7 +70,7 @@ const ShortName = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 30px;
-`
+` */
 // Helper functions
 
 function getRouteLongName (leg) {
@@ -158,9 +160,9 @@ class ItinerarySummary extends Component {
                 <LegIconContainer><LegIcon leg={leg} /></LegIconContainer>
                 {coreUtils.itinerary.isTransit(leg.mode)
                   ? (
-                    <ShortName leg={leg} >
+                    <div className='otp-ui-legDescForTransit__shortName' leg={leg} >
                       {getRouteNameForBadge(leg)}
-                    </ShortName>
+                    </div>
                   )
                   : (<NonTransitSpacer />)
                 }
