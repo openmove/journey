@@ -205,7 +205,7 @@ class ParkingOverlay extends AbstractOverlay {
           // station.parkingType = 'covered-with-barrier'
           // station.payPeriod = 'high-season'
           // station.timed = true;
-          // station.url ='https://www.google.com'
+          // station.payment_url ='https://www.google.com'
           // station.operator = 'ciaone il tuo bus di fiducia'
 
 
@@ -281,8 +281,10 @@ class ParkingOverlay extends AbstractOverlay {
                   }
 
                   <div className='popup-row'>
-                    {station.payment &&  overlayParkingConf.paymentUrl && (
-                      <Button bsStyle="link" href={overlayParkingConf.paymentUrl} target="_blank">{t('buy')}</Button>
+                    { overlayParkingConf.showPaymentUrl &&
+                      station.payment &&
+                      station.payment_url && (
+                      <Button bsStyle='link' href={station.payment_url} target="_blank">{t('buy')}</Button>
                     )}
                     <FromToLocationPicker
                       location={station}
