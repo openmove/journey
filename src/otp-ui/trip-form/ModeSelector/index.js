@@ -59,9 +59,12 @@ const ModeSelector = props => {
   const makeButton = option => {
     let selected = option.selected
 
+    //  why this does this code exists? vv
+    // commented because it causes two buttons to be selected at startup
+    /*
     if (!selected) {
       selected = isTransit(option.id) && hasTransit(currentSelectionId)
-    }
+    } */
 
     if (!isTransit(option.id)) {
       return <ModeButton
@@ -118,7 +121,7 @@ const ModeSelector = props => {
 
 
 
-        { makeButton({
+       {/*  { makeButton({
             id: 'BICYCLE_RENT',
             //PATCH issue #111 selected: false
             selected: isBicycleRent(currentSelectionId),
@@ -126,7 +129,7 @@ const ModeSelector = props => {
             title: t('bikesharing'),
             icon: OpenMoveModeIcon({mode:'bicycle_rent', width: 28, height: 28}),
         }) }
-
+      */}
 
 
         {tertiary && tertiary.map(makeButton)}
