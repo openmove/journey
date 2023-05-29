@@ -207,7 +207,7 @@ class ParkingOverlay extends AbstractOverlay {
           // station.timed = true;
           // station.url ='https://www.google.com'
           // station.operator = 'ciaone il tuo bus di fiducia'
-          console.log(station.payment_timed && station.payment!==null);
+
 
           let price = '';
           if( station.payment === true){

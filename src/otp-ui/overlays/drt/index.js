@@ -35,6 +35,8 @@ class DrtOverlay extends AbstractOverlay {
       api:props.api,
       config:props.overlayDrtConf
     });
+
+    this.popup = React.createRef();
   }
 
   static propTypes = {
@@ -179,6 +181,7 @@ class DrtOverlay extends AbstractOverlay {
                   icon={markerIcon(vehicle)}
                   key={vehicle.vehicle.id}
                   position={[vehicle.position.longitude, vehicle.position.latitude]}
+                  onClick={(e)=>{ e.target.openPopup()}}
                 >
                   <Popup>
                     <div className="otp-ui-mapOverlayPopup">
