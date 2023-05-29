@@ -281,8 +281,8 @@ class ParkingOverlay extends AbstractOverlay {
                   }
 
                   <div className='popup-row'>
-                    {station.payment &&  station.url && (
-                      <Button bsStyle='link' href={station.url} target="_blank">{t('buy')}</Button>
+                    {station.payment &&  overlayParkingConf.paymentUrl && (
+                      <Button bsStyle="link" href={overlayParkingConf.paymentUrl} target="_blank">{t('buy')}</Button>
                     )}
                     <FromToLocationPicker
                       location={station}
