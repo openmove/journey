@@ -11,6 +11,7 @@ import { getItem } from "../../core-utils/storage";
 import { setLocation } from '../../../actions/map'
 import { drtLocationsQuery } from '../../../actions/drt'
 import AbstractOverlay from '../AbstractOverlay'
+import AnimatedMarker from '../../animated-marker'
 
 import BadgeIcon from "../../icons/badge-icon";
 import ViewTripButton from '../../../components/viewers/view-trip-button'
@@ -178,9 +179,9 @@ class DrtOverlay extends AbstractOverlay {
           locations.vehicles && locations.vehicles?.length >0 && (
             locations.vehicles.map( vehicle => {
               return (
-                <Marker
+                <AnimatedMarker
                   icon={markerIcon(vehicle)}
-                  key={vehicle.vehicle.id}
+                  key={vehicle.trip.id } // TODO: why are vehicles not unique?
                   position={[vehicle.position.longitude, vehicle.position.latitude]}
                   onClick={(e)=>{ e.target.openPopup()}}
                 >
@@ -219,7 +220,7 @@ class DrtOverlay extends AbstractOverlay {
                       }
                     </div>
                   </Popup>
-                </Marker>
+                </AnimatedMarker>
               )
             }
           )
