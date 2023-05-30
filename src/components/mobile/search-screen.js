@@ -65,14 +65,14 @@ class MobileSearchScreen extends Component {
 
           <div className="search-settings-options">
             <Row>
-              <Col xs={6}>
+              <Col xs={7}>
                 <DateTimePreview
-                  onClick={this._expandDateTimeClicked}                
+                  onClick={this._expandDateTimeClicked}
                 />
               </Col>
-              <Col xs={6}>
+              <Col xs={5}>
                 <SettingsPreview
-                  onClick={this._expandOptionsClicked}                
+                  onClick={this._expandOptionsClicked}
                 />
               </Col>
             </Row>
