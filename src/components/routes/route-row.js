@@ -58,7 +58,7 @@ class RouteRow extends Component {
     }
     return (
       <div className={"route-row"}>
-        <div onClick={this._onClick} block className={`btn ${isActive ? 'active' : ''}`}>
+        <div onClick={this._onClick} className={`btn ${isActive ? 'active' : ''}`}>
           {/* <div style={{display: 'inline-block'}}>
             // TODO: re-implement multi-agency logos for route viewer.
               // Currently, the agency object is not nested within the get all
