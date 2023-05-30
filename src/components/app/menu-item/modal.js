@@ -27,7 +27,7 @@ class Modal extends Component {
 
   onHide() {
     this.props.history.goBack();
-    this.setState({ isVisible: false });
+    // this.setState({ isVisible: false }); // probably is not needed, kept for safety
   }
 
   async fetchPage(pageUrl) {
