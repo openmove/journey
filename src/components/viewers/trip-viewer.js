@@ -112,7 +112,7 @@ class TripViewer extends Component {
                 }
               </h4>
               { showFares && agencyUrl && (
-                  <Button bsStyle="primary" className="mt-1" href={agencyUrl} rel="noopener noreferrer" target="_blank" bsSize='xsmall'>
+                  <Button bsStyle="primary" className="mt-1" href={agencyUrl} rel="noopener noreferrer" target="_blank" bsSize='small'>
                     {t('buy_ticket')}
                     {/* {logoUrl && (
                     <img alt={`${agencyName} logo`} src={logoUrl} height={20} style={{marginLeft: 8}}/>
