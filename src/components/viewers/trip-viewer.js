@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import { Button, Label } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { withNamespaces } from "react-i18next"
-
 import Icon from '../narrative/icon'
 import ViewStopButton from './view-stop-button'
 
@@ -53,7 +52,7 @@ class TripViewer extends Component {
 
   componentDidUpdate(prevProps){
     this.findTripData(prevProps.viewedTrip)
-    if (this.firstStopRef.current) {
+    if (this.props.scrollToView && this.firstStopRef.current) {
       this.firstStopRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }
