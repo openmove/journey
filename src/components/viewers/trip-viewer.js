@@ -20,6 +20,11 @@ class TripViewer extends Component {
     viewedTrip: PropTypes.object
   }
 
+  constructor(props){
+    super(props);
+    this.firstStopRef = React.createRef()
+  }
+
   _backClicked = () => {
     this.props.setViewedTrip(null)
   }
@@ -48,6 +53,9 @@ class TripViewer extends Component {
 
   componentDidUpdate(prevProps){
     this.findTripData(prevProps.viewedTrip)
+    if (this.firstStopRef.current) {
+      this.firstStopRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   render () {
@@ -140,7 +148,16 @@ class TripViewer extends Component {
               else if (i === viewedTrip.toIndex) highlightClass = 'strip-map-highlight-last'
 
               return (
-                <div key={i}>
+                <div
+                  key={i}
+                  ref={
+                        viewedTrip.fromIndex &&
+                        i===viewedTrip.fromIndex &&
+                        i!==0 ?
+                        this.firstStopRef : undefined
+                    }
+                  style={{scrollMarginTop:'100px'}}
+                >
                   {/* the departure time */}
                   <div className='stop-time'>
                     {coreUtils.time.formatSecondsAfterMidnight(tripData.stopTimes[i].scheduledDeparture, timeFormat)}
