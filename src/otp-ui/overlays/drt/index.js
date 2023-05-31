@@ -118,27 +118,32 @@ class DrtOverlay extends AbstractOverlay {
           <>
           { data.stop &&
             <MarkerDrtStop
-              width={iconWidth}
-              height={iconHeight}
-              iconColor={overlayDrtConf.iconColor}
-              markerColor={getAreaColor(data)}
+            width={iconWidth}
+            height={iconHeight}
+            iconColor={overlayDrtConf.iconColor}
+            markerColor={getAreaColor(data)}
             />
           }
           { data.vehicle &&
+          <div style={{
+              width:iconVehicleWidth,
+              height:iconVehicleHeight,
+              background:'white',
+              borderRadius:'10px'
+            }}
+          >
             <MarkerDrtVehicle
               width={iconVehicleWidth}
               height={iconVehicleHeight}
               iconColor={overlayDrtConf.iconVehicleColor}
             />
+          </div>
           }
           </>
         )
       });
     }
 
-    console.log('====================================');
-    console.log('returning');
-    console.log('====================================');
     return (
       <LayerGroup>
       <FeatureGroup>
