@@ -197,6 +197,13 @@ class ParkingOverlay extends AbstractOverlay {
         }
       </AdvancedMarkerCluster>
       <FeatureGroup>
+      <AdvancedMarkerCluster
+        enabled={isMarkClusterEnabled}
+        showCoverageOnHover={false}
+        maxClusterRadius={40}
+        disableClusteringAtZoom={16}
+        iconCreateFunction={clusterIcon}
+      >
         {
           locationsFiltered.map( station => {
           if(station.type!=='station' && station.type!== 'sensorGroup') return null;
@@ -296,6 +303,7 @@ class ParkingOverlay extends AbstractOverlay {
             </Marker>
           )
         })}
+        </AdvancedMarkerCluster>
       </FeatureGroup>
       </LayerGroup>
     )
