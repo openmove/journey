@@ -58,6 +58,12 @@ L.AnimatedMarker = L.Marker.extend({
     }
   },
 
+  onRemove: function (map){
+    L.Marker.prototype.onRemove.call(this, map);
+    // stop animation
+    this.stop();
+  },
+
   animate: function () {
     var self = this,
       len = this._latlngs.length,
@@ -97,6 +103,10 @@ L.AnimatedMarker = L.Marker.extend({
 
   // Start the animation
   start: function () {
+    console.log(this);
+    this._i=0; // PATCH:
+    // when removing and adding layer there's only a point and without this gives error
+    // but this causes the animation to start over
     this.animate();
   },
 
