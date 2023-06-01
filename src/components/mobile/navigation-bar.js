@@ -67,7 +67,7 @@ class MobileNavigationBar extends Component {
             {
               showBackButton &&
                 <>
-                  <Navbar.Link href="#" onClick={this._backButtonPressed}>
+                  <Navbar.Link onClick={this._backButtonPressed}>
                     <FontAwesome name='arrow-left' tag="i" />
                   </Navbar.Link>
 
