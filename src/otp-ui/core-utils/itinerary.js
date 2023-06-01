@@ -134,7 +134,7 @@ export function hasRental(modesStr) {
 export function getMapColor(mode) {
   function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
   // color function TODO:unify
-  console.log('getMapColor');//todo: remove; used to see if this component is used
+  // console.log('getMapColor');//todo: remove; used to see if this component is used
   // return '#FFFF00' // debug color just used to see if something changes
   const modeColors = stylesConfig.modes;
 

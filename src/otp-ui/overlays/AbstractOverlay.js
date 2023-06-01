@@ -11,7 +11,7 @@ class AbstractOverlay extends MapLayer {
     this._stopRefreshing = this._stopRefreshing.bind(this)
     this._setupInterval = this._setupInterval.bind(this)
 
-    console.log(config);
+    // console.log(config);
     this.config = config
     this.api = api
     this.query = query
@@ -28,10 +28,10 @@ class AbstractOverlay extends MapLayer {
       clearInterval(this._refreshTimer)
     }
 
-    console.log('setup interval');
+    // console.log('setup interval');
     // set up interval to refresh stations periodically
     this._refreshInterval = setInterval(() => {
-      console.log('interval call');
+      // console.log('interval call');
       this._startRefreshing()
     }, Number(this.config?.pollingInterval || 30000)) // defaults to every 30 sec.
   }
@@ -58,7 +58,7 @@ class AbstractOverlay extends MapLayer {
     if(!this.config.updateBBox){
       return
     }
-    console.log('added move event listener');
+    // console.log('added move event listener');
     this.props.leaflet.map.on("moveend", this._startRefreshing);
   }
 
@@ -66,19 +66,19 @@ class AbstractOverlay extends MapLayer {
     if(!this.config.updateBBox){
       return
     }
-    console.log('removed move event listener');
+    // console.log('removed move event listener');
     this.props.leaflet.map.off("moveend", this._startRefreshing)
   }
 
   _stopRefreshing() {
-    console.log('stop refreshing');
+    // console.log('stop refreshing');
     if (this._refreshTimer){
-      console.log('cleared timer');
+      // console.log('cleared timer');
       clearTimeout(this._refreshTimer);
     }
 
     if(this._refreshInterval){
-      console.log('cleared interval');
+      // console.log('cleared interval');
       clearInterval(this._refreshInterval)
     }
   }
@@ -93,14 +93,14 @@ class AbstractOverlay extends MapLayer {
   }
 
   componentWillUnmount() {
-    console.log('unmounting');
+    // console.log('unmounting');
     this.removeMoveEndEventListener()
     this._stopRefreshing()
   }
 
 
   onOverlayAdded = (e) => {
-    console.log('overlay added');
+    // console.log('overlay added');
     this.addMoveEndEventListener()
     this._setupInterval()
     this._startRefreshing(true);
@@ -111,7 +111,7 @@ class AbstractOverlay extends MapLayer {
   }
 
   onOverlayRemoved = () => {
-    console.log('overlay removed');
+    // console.log('overlay removed');
     this.removeMoveEndEventListener();
     this._stopRefreshing()
   }
