@@ -5,17 +5,19 @@ import {
 } from "../core-utils/types";
 import PropTypes from "prop-types";
 import React from "react";
+import { withNamespaces } from "react-i18next";
 
 import AccessLeg from "./access-leg";
 import TNCLeg from "./tnc-leg";
 import TransitLeg from "./transit-leg";
 
-export default function PrintableItinerary({
+function PrintableItinerary({
   className,
   config,
   itinerary,
   LegIcon,
-  timeOptions
+  timeOptions,
+  t
 }) {
   return (
     <div className={className}>
@@ -23,7 +25,7 @@ export default function PrintableItinerary({
         <div className="otp-ui-printableItineraryLeg otp-ui-printableItineraryLeg--noBorder">
           <div className="otp-ui-printableItineraryLeg__body">
             <div className="otp-ui-printableItineraryLeg__header">
-              <b>Depart</b> from <b>{itinerary.legs[0].from.name}</b>
+              <b>{t('departure')}</b> {t('from2')} <b>{itinerary.legs[0].from.name}</b>
             </div>
           </div>
         </div>
@@ -60,6 +62,8 @@ export default function PrintableItinerary({
     </div>
   );
 }
+
+export default withNamespaces()(PrintableItinerary)
 
 PrintableItinerary.propTypes = {
   /** Used for additional styling with styled components for example. */
