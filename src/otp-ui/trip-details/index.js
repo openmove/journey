@@ -24,8 +24,10 @@ function TripDetails({
   messages,
   routingType,
   timeOptions,
-  t
+  t,
+  lng
 }) {
+  moment.locale(lng || "it");
   const date = moment(itinerary.startTime);
   messages = mergeMessages(TripDetails.defaultProps.messages, messages);
 
@@ -128,9 +130,7 @@ function TripDetails({
                   description={
                     <>
                       {t('calories_info_1')}{" "}
-                      <b>{Math.round(walkDuration / 60)} minute(s)</b> spent walking
-                      and <b>{Math.round(bikeDuration / 60)} minute(s)</b> spent
-                      biking during this trip. Adapted from{" "}
+                      <b>{Math.round(walkDuration / 60)} {t('minute')}</b> {t('pass_walked')} <b>{Math.round(bikeDuration / 60)} {t('minute')}</b> {t("pass_rided")}.{" "}
                       <a
                         href="https://health.gov/dietaryguidelines/dga2005/document/html/chapter3.htm#table4"
                         rel="noopener noreferrer"

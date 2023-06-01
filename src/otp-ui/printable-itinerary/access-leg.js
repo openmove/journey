@@ -30,7 +30,7 @@ function AccessLeg({ config, leg, LegIcon, t }) {
             {leg.steps.map((step, k) => {
               return (
                 <div key={k}>
-                  {t(getStepDirection(step))} on <b>{t(getStepStreetName(step))}</b>
+                  {t(getStepDirection(step))} {t('on')} <b>{t(getStepStreetName(step))}</b>
                 </div>
               );
             })}

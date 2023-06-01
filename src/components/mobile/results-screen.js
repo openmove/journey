@@ -122,10 +122,10 @@ class MobileResultsScreen extends Component {
             <Col xs={4} sm={1}>
               <div className="text-right">
                 <Button
-                  bsStyle="link"                
+                  bsStyle="link"
                   onClick={this._editSearchClicked}
                 >{t('edit')}</Button>
-              </div> 
+              </div>
             </Col>
           </Row>
         </Grid>
