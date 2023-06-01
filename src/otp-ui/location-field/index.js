@@ -539,7 +539,7 @@ class LocationField extends Component {
 
     /** the text input element * */
     // Use this text for aria-label below.
-    const defaultPlaceholder = inputPlaceholder || locationType;
+    const defaultPlaceholder = inputPlaceholder || t(locationType==='to'? 'arrive':'departure');
     const placeholder =
       currentPosition && currentPosition.fetching
         ? `${t('fetching_location')}...`
