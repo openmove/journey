@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import { withNamespaces } from "react-i18next";
 import FontAwesome from 'react-fontawesome'
 import mergeDeep from '../../util/mergeDeep.js'
 import { Button } from 'react-bootstrap'
+import { isMobile } from "../core-utils/ui.js";
 
 import ToggleSwitch from "../toggle-switch"
 
@@ -14,7 +16,8 @@ class LocationFilter extends Component {
         this.state = {
           error: false,
           loading: false,
-          filters: null
+          filters: null,
+          containerElement: null,
         }
     }
 
@@ -52,6 +55,12 @@ class LocationFilter extends Component {
       }
     }
 
+    componentDidMount(){
+      if(isMobile()){
+        this.setState({'containerElement': document.getElementById('filters-container')})
+      }
+    }
+
     render() {
         const {
             t,
@@ -62,7 +71,7 @@ class LocationFilter extends Component {
             onReset
         } = this.props
 
-        return (
+        const filters = (
             <div className={`otp-ui-locationFilter ${show ? 'is-visible' : ''}`}>
                 <div className="otp-ui-locationFilter__header">
                     <h4 className="otp-ui-locationFilter__title">{title}</h4>
@@ -128,6 +137,13 @@ class LocationFilter extends Component {
                 </div>
             </div>
         )
+        if(this.state.containerElement){
+          // show filters full screen
+
+          return createPortal(filters,this.state.containerElement)
+        }
+
+        return filters;
     }
 }
 

@@ -138,6 +138,7 @@ const desktopNav = (
         LegIcon={LegIcon}
         ModeIcon={ModeIcon}
       />
+      <div id='filters-container' />
     </main>
   );
   /** the main webapp **/
