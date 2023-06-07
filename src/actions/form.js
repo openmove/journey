@@ -105,8 +105,11 @@ export function formChanged (oldQuery, newQuery) {
     // when the current position is auto-set the screen will change unexpectedly).
     if (
       isMobile &&
-      (fromChanged || toChanged) &&
-      otpState.ui.mobileScreen !== MobileScreens.WELCOME_SCREEN
+      (fromChanged || toChanged)
+      // && otpState.ui.mobileScreen !== MobileScreens.WELCOME_SCREEN
+      // TODO: check if needed,
+      // now it's commented to show starting position when user is localized initially
+      // also rn watch position is not working
     ) {
       dispatch(clearActiveSearch())
       dispatch(setMobileScreen(MobileScreens.SEARCH_FORM))
