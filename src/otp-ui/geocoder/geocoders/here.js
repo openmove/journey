@@ -42,11 +42,13 @@ export default class Geocoder {
 
       feature.properties.source = 'here' // needed for compatibility with location field options
       feature.properties.label =  item.title//item.address.label
-
-      features.push({
-        ... item, // original item
-        ...feature,
-      })
+      if(item.position){
+        // ignore results without coordinates
+        features.push({
+          ... item, // original item
+          ...feature,
+        })
+      }
     })
 
     return {features};
