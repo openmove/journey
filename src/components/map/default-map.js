@@ -199,6 +199,7 @@ class DefaultMap extends Component {
       mapConfig,
       mapPopupLocation,
       version,
+      hideAllControls,
       t
     } = this.props
 
@@ -249,6 +250,7 @@ class DefaultMap extends Component {
                 onPopupClose={this.onPopupClose}
                 onPopupOpen={this.onPopupOpen}
                 zoom={mapConfig.initZoom || 13}
+                hideAllControls={hideAllControls}
                 onLoad={() => {
                   document.querySelectorAll('.leaflet-control-layers-base label span').forEach(item => {
                     item.setAttribute('id', `${item.textContent.toLowerCase().trim().split(' ').join('-')}-layer-image`);

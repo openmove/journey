@@ -90,7 +90,23 @@ class BaseMap extends Component {
     };
   }
 
+  updateControlVisibility(){
+    const { hideAllControls } = this.props;
+    const visible = !(hideAllControls === true);
+    const styleVisibility = visible ? 'visible' : 'hidden'
+    const allLayersControls = document.getElementsByClassName('leaflet-control-layers');
+
+    for (let lc of allLayersControls) {
+      if( lc.style.visibility  !== styleVisibility){
+        lc.style.visibility = styleVisibility
+      }
+    }
+  }
+
   componentDidMount() {
+    // hide controls if needed
+    this.updateControlVisibility();
+
     // register single click event
     const lmap = this.refs.map.leafletElement;
     lmap.options.singleClickTimeout = 250;
@@ -100,7 +116,10 @@ class BaseMap extends Component {
     this.props.setMapRef(lmap)
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+      // update control visibility
+      this.updateControlVisibility();
+  }
 
   // remove custom overlays on unmount
   // TODO: Is this needed? It may have something to do with mobile vs desktop views
@@ -204,7 +223,8 @@ class BaseMap extends Component {
       onLoad,
       onFilterLayerRequest,
       appVersionAttribution,
-      zoom
+      zoom,
+      hideAllControls
     } = this.props;
     const { layerIndex } = this.state;
 
