@@ -33,7 +33,7 @@ class MobileRouteViewer extends Component {
           onBackClicked={this._backClicked}
         />
         <div className='viewer-map'>
-          <DefaultMap />
+          <DefaultMap hideAllControls/>
         </div>
 
         <div className='viewer-container'>

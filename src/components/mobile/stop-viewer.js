@@ -29,7 +29,7 @@ class MobileStopViewer extends Component {
 
         {/* include map as fixed component */}
         <div className='viewer-map'>
-          <DefaultMap />
+          <DefaultMap hideAllControls/>
         </div>
 
         {/* include StopViewer in embedded scrollable panel */}

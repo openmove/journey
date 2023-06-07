@@ -30,7 +30,7 @@ class MobileTripViewer extends Component {
 
         {/* include map as fixed component */}
         <div className='viewer-map'>
-          <DefaultMap />
+          <DefaultMap hideAllControls/>
         </div>
 
         {/* include TripViewer in embedded scrollable panel */}
