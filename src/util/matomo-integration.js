@@ -1,11 +1,17 @@
-import React from 'react'
-import { useMatomo } from '@datapunt/matomo-tracker-react'
+import React, {useContext} from 'react'
+import { useMatomo, MatomoContext } from '@datapunt/matomo-tracker-react'
 import "./cookieconsent.js";
 
 const MatomoIntegration = ({ t }) => {
+  const matomoContext = useContext(MatomoContext);
   const { trackPageView } = useMatomo()
 
   React.useEffect(() => {
+    if(!matomoContext){
+      // if we don't have an initialized context
+      // this might mean we don't use matomo in this project
+      return
+    }
     const cc = window.initCookieConsent();
 
     cc.run({
@@ -13,7 +19,7 @@ const MatomoIntegration = ({ t }) => {
       autoclear_cookies : true,
       cookie_expiration : 365,
       page_scripts: true,
-  
+
       gui_options: {
           consent_modal: {
               layout: 'box',
@@ -25,15 +31,15 @@ const MatomoIntegration = ({ t }) => {
               transition: 'slide'
           }
       },
-  
+
       onFirstAction: function() {},
-  
+
       onAccept: function (cookie) {
         if (cookie.categories.includes("targeting")) trackPageView();
       },
-  
+
       onChange: function (cookie, changed_preferences) {},
-  
+
       languages: {
           'en': {
               consent_modal: {
@@ -89,7 +95,7 @@ const MatomoIntegration = ({ t }) => {
       }
   });
 
-}, []);
+}, [matomoContext]);
 
   return ( <></> )
 }
