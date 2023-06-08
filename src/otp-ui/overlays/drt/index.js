@@ -207,7 +207,7 @@ class DrtOverlay extends AbstractOverlay {
                       </div> */}
 
                       <div className="otp-ui-mapOverlayPopup__popupTitle">
-                        {vehicle.vehicle.label}  <span className='subtitle'>&nbsp;{vehicle.vehicle.name}</span>
+                        <span className='subtitle'>&nbsp;{vehicle.vehicle.name}</span>{vehicle.vehicle.label}
                       </div>
                       {vehicle.capacity && (
                         <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
