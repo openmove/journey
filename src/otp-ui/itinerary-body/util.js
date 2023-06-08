@@ -17,7 +17,6 @@ export const getRouteColor = (mode, routeColor) => {
 export const getRouteTextColor = (mode, backgroundColor, textColor) => {
   const contrastColor = getContrastYIQ(backgroundColor);
   // const defaultRouteTextColor =
-  console.log(contrastColor,textColor);
   let color = textColor ? textColor : contrastColor /* || defaultRouteTextColor */;
   color = toSafeRouteColor(color);
 
