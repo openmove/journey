@@ -328,10 +328,10 @@ function makeMultiCriteriaSort(...criteria) {
 export const routeComparator = makeMultiCriteriaSort(
   makeNumericValueComparator(obj => getRouteSortOrderValue(obj.sortOrder)),
   routeTypeComparator,
-  alphabeticShortNameComparator,
   makeNumericValueComparator(obj => parseInt(obj.shortName, 10)),
-  makeStringValueComparator(obj => obj.shortName),
-  makeStringValueComparator(obj => obj.longName)
+  makeStringValueComparator(obj => obj.longName),
+  alphabeticShortNameComparator,
+  makeStringValueComparator(obj => obj.shortName)
 );
 
 export function makeRouteComparator(transitOperators) {
@@ -339,9 +339,9 @@ export function makeRouteComparator(transitOperators) {
     makeTransitOperatorComparator(transitOperators),
     makeNumericValueComparator(obj => getRouteSortOrderValue(obj.sortOrder)),
     routeTypeComparator,
-    alphabeticShortNameComparator,
     makeNumericValueComparator(obj => parseInt(obj.shortName, 10)),
-    makeStringValueComparator(obj => obj.shortName),
-    makeStringValueComparator(obj => obj.longName)
+    makeStringValueComparator(obj => obj.longName),
+    alphabeticShortNameComparator,
+    makeStringValueComparator(obj => obj.shortName)
   );
 }
