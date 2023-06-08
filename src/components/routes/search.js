@@ -10,6 +10,11 @@ class Search extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentDidMount(){
+    // initialize list
+    this.props.setFilteredList(this.props.completeList);
+  }
+
   componentDidUpdate(prevProps) {
     // initialize list if was previously empty
     if (
