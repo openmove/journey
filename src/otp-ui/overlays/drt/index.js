@@ -39,7 +39,10 @@ class DrtOverlay extends AbstractOverlay {
       config:props.overlayDrtConf
     });
 
+    this.state = {zoom: undefined}
     this.popup = React.createRef();
+
+    this.setZoom = this.setZoom.bind(this);
   }
 
   static propTypes = {
@@ -53,6 +56,19 @@ class DrtOverlay extends AbstractOverlay {
   createLeafletElement () {}
 
   updateLeafletElement () {}
+
+  setZoom(){
+    const zoom = this.props.leaflet?.map?.getZoom();
+    this.setState({zoom})
+  }
+
+  addCustomEventListener(){
+    this.props.leaflet?.map?.on('zoomend', this.setZoom)
+  }
+
+  removeCustomEventListener(){
+    this.props.leaflet?.map?.off('zoomend',this.setZoom)
+  }
 
   render () {
     const { locations, overlayDrtConf, t } = this.props
@@ -191,7 +207,13 @@ class DrtOverlay extends AbstractOverlay {
       </FeatureGroup>
       <FeatureGroup>
         {
-          locations.vehicles && locations.vehicles?.length >0 && (
+          (
+              locations.vehicles && locations.vehicles?.length > 0 &&
+             (
+                !overlayDrtConf?.minZoom ||
+                this.state.zoom > overlayDrtConf?.minZoom
+              )
+            ) && (
             locations.vehicles.map( vehicle => {
               return (
                 <AnimatedMarker

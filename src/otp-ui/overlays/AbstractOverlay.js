@@ -70,6 +70,9 @@ class AbstractOverlay extends MapLayer {
     this.props.leaflet.map.off("moveend", this._startRefreshing)
   }
 
+  addCustomEventListener(){}
+  removeCustomEventListener(){}
+
   _stopRefreshing() {
     // console.log('stop refreshing');
     if (this._refreshTimer){
@@ -95,14 +98,16 @@ class AbstractOverlay extends MapLayer {
   componentWillUnmount() {
     // console.log('unmounting');
     this.removeMoveEndEventListener()
+    this.removeCustomEventListener()
     this._stopRefreshing()
   }
 
 
   onOverlayAdded = (e) => {
     // console.log('overlay added');
-    this.addMoveEndEventListener()
-    this._setupInterval()
+    this.addMoveEndEventListener();
+    this.addCustomEventListener();
+    this._setupInterval();
     this._startRefreshing(true);
     const { map } = this.props.leaflet;
     if(this.config?.startCenter){
@@ -113,6 +118,7 @@ class AbstractOverlay extends MapLayer {
   onOverlayRemoved = () => {
     // console.log('overlay removed');
     this.removeMoveEndEventListener();
+    this.removeCustomEventListener()
     this._stopRefreshing()
   }
 
@@ -120,9 +126,11 @@ class AbstractOverlay extends MapLayer {
     if (!prevProps.visible && this.props.visible) {
       this._startRefreshing()
       this.addMoveEndEventListener()
+      this.addCustomEventListener()
     } else if (prevProps.visible && !this.props.visible) {
       this._stopRefreshing()
       this.removeMoveEndEventListener()
+      this.removeCustomEventListener()
     }
   }
 
