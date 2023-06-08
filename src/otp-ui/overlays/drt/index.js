@@ -10,6 +10,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { getItem } from "../../core-utils/storage";
 import { setLocation } from '../../../actions/map'
 import { drtLocationsQuery } from '../../../actions/drt'
+import { getRouteColor, getRouteTextColor } from '../../itinerary-body/util'
 import AbstractOverlay from '../AbstractOverlay'
 import AnimatedMarker from '../../animated-marker'
 
@@ -56,8 +57,6 @@ class DrtOverlay extends AbstractOverlay {
   render () {
     const { locations, overlayDrtConf, t } = this.props
 
-    console.log(locations);
-
     if (!locations) return <LayerGroup />
 
     const getAreaColor = (data) => {
@@ -95,9 +94,12 @@ class DrtOverlay extends AbstractOverlay {
 
       iconWidth = overlayDrtConf.iconWidth;
       iconHeight = overlayDrtConf.iconHeight;
+      const route = data.route;
+      const backgroundColor = getRouteColor(route?.mode,route?.color)
+      const color = getRouteTextColor(route?.mode, backgroundColor, route?.textColor)
 
-      iconVehicleWidth = 30;
-      iconVehicleHeight = 30;
+      iconVehicleWidth = 20;
+      iconVehicleHeight = 20;
 
 /*      if (data.vehicle) {
         if (data.free > 0 ) {
@@ -126,17 +128,25 @@ class DrtOverlay extends AbstractOverlay {
           }
           { data.vehicle &&
           <div style={{
-              width:iconVehicleWidth,
-              height:iconVehicleHeight,
-              background:'white',
-              borderRadius:'10px'
+              width: 70,
+              height: 30,
+              background:backgroundColor,
+              borderRadius:'10px',
+              display:'flex',
+              alignItems:'center',
+              justifyContent: 'space-around',
+              padding:'1.5px 3px'
             }}
           >
             <MarkerDrtVehicle
-              width={iconVehicleWidth}
+              width={iconVehicleWidth }
               height={iconVehicleHeight}
-              iconColor={overlayDrtConf.iconVehicleColor}
+              // iconColor={overlayDrtConf.iconVehicleColor}
+              iconColor={color}
             />
+            <p style={{fontSize:'16px',margin:'0 0 0 3px', color}}>
+              {data.vehicle.name}
+            </p>
           </div>
           }
           </>
