@@ -79,7 +79,7 @@ class TransitLegBody extends Component {
       t
     } = this.props;
     const { language: languageConfig } = config;
-    const { agencyBrandingUrl, agencyName, agencyUrl, alerts } = leg;
+    const { agencyBrandingUrl, agencyName, agencyUrl, agencyFareUrl, alerts } = leg;
     const { alertsExpanded, stopsExpanded } = this.state;
 
     // If the config contains an operator with a logo URL, prefer that over the
@@ -179,19 +179,19 @@ class TransitLegBody extends Component {
                 <span>{t('typical_wait')}: {formatDuration(leg.averageWait)}</span>
               )}
               {/* Fares information */}
-              {fareForLeg && (
-                    <div className="otp-ui-transitLegBody-fare">
-                      <p className="subtitle">{t('fare')} {fareForLeg.centsToString(fareForLeg.transitFare)}</p>
-                      {agencyUrl && (
-                        <Button bsStyle="primary" bsSize='xsmall' href={agencyUrl} rel="noopener noreferrer" target="_blank">
-                          {t('buy_ticket')}
-                          {/* {logoUrl && (
-                          <img alt={`${agencyName} logo`} src={logoUrl} height={20} style={{marginLeft: 8}}/>
-                          )} */}
-                        </Button>)
-                      }
-                    </div>
-              )}
+                <div className="otp-ui-transitLegBody-fare">
+                  {fareForLeg && (
+                    <p className="subtitle">{t('fare')} {fareForLeg.centsToString(fareForLeg.transitFare)}</p>
+                  )}
+                  {agencyFareUrl && (
+                    <Button bsStyle="primary" bsSize='xsmall' href={agencyFareUrl} rel="noopener noreferrer" target="_blank">
+                      {t('buy_ticket')}
+                      {/* {logoUrl && (
+                      <img alt={`${agencyName} logo`} src={logoUrl} height={20} style={{marginLeft: 8}}/>
+                      )} */}
+                    </Button>)
+                  }
+                </div>
             </div>
 
           )}

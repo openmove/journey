@@ -68,7 +68,7 @@ class TripViewer extends Component {
       t
     } = this.props
     const route = tripData?.route
-    const agencyUrl = route?.agency?.fareUrl
+    const fareUrl = route?.agency?.fareUrl
 
     // determine highlight color
     const routeColor =  route?.color
@@ -118,8 +118,8 @@ class TripViewer extends Component {
                   </Label>
                 }
               </h4>
-              { showFares && agencyUrl && (
-                  <Button bsStyle="primary" className="mt-1" href={agencyUrl} rel="noopener noreferrer" target="_blank" bsSize='small'>
+              { showFares && fareUrl && (
+                  <Button bsStyle="primary" className="mt-1" href={fareUrl} rel="noopener noreferrer" target="_blank" bsSize='small'>
                     {t('buy_ticket')}
                     {/* {logoUrl && (
                     <img alt={`${agencyName} logo`} src={logoUrl} height={20} style={{marginLeft: 8}}/>
