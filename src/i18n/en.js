@@ -75,6 +75,7 @@ export const TRANSLATIONS_EN = {
   "settings": "Settings",
   "arrive": "Arrival",
   "departure": "Departure",
+  "departure2": "departure",
   "preferences": "Travel Preferences",
   "forget_settings": "Forget settings",
   "tpl": "Public Transport",

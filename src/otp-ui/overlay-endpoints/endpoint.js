@@ -156,7 +156,7 @@ class Endpoint extends Component {
               <ListGroupItem
                 onClick={this.clearLocation}
               >
-                <UserLocationIcon type="times" /> {t('remove_as_location', { label: type })}
+                <UserLocationIcon type="times" /> {t('remove')} {t(type === 'from' ? 'departure2' : 'destination')}
               </ListGroupItem>
               <ListGroupItem
                 // bsStyle="link"
