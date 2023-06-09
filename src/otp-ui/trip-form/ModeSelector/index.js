@@ -97,7 +97,7 @@ const ModeSelector = props => {
                 className={`otp-ui-modeSelector__plusIcon ${showSecondaryMenu ? 'is-open' : ''}`}
                 onClick={() => setShowSecondaryMenu(!showSecondaryMenu)}
               >
-                <button className="circle plus"/>
+                <div className="circle plus"/>
               </div>
           }
         </div>
