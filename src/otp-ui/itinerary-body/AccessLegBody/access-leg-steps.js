@@ -16,10 +16,10 @@ function AccessLegSteps({ steps, t }) {
             <DirectionIcon relativeDirection={step.relativeDirection} />
             <span>
               {t(getStepDirection(step))}
-              <strong>
                 {` ${t(step.relativeDirection === "ELEVATOR" ? "to" : "on")} `}
+              <strong>
+                {t(getStepStreetName(step))}
               </strong>
-              {t(getStepStreetName(step))}
             </span>
           </li>
         );
