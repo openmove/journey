@@ -2,7 +2,7 @@ import { legType } from "../../core-utils/types";
 import PropTypes from "prop-types";
 import React from "react";
 
-export default function RouteDescription({ leg, LegIcon, transitOperator, onClick }) {
+export default function RouteDescription({ leg, LegIcon, transitOperator, onClick, t }) {
   const { headsign, routeLongName, routeShortName, routeColor, routeTextColor } = leg;
   // TODO: calculate text color if missing
   const shortNameStyle = routeColor && routeTextColor ? {backgroundColor:`#${routeColor}`, color: `#${routeTextColor}`} : undefined
@@ -27,8 +27,7 @@ export default function RouteDescription({ leg, LegIcon, transitOperator, onClic
           <span>
             {" "}
             <p className="otp-ui-legDescForTransit__headSignPrefix">
-              {/* TODO: I18N */}
-              to
+            {` ${t('to')} `}
             </p>{" "}
             <p  className="headsign">{headsign}</p>
           </span>

@@ -104,6 +104,7 @@ class TransitLegBody extends Component {
               LegIcon={LegIcon}
               transitOperator={transitOperator}
               onClick={this.onSummaryClick}
+              t={t}
             />
 
           {/* Agency information */}
