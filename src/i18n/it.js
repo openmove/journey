@@ -399,7 +399,7 @@ export const TRANSLATIONS_IT = {
   "plan_depart_at": "Pianifica partenza",
   "plan_arrive_at": "Pianifica arrivo",
   "active_all": "Attiva tutti",
-  "reset_filters": "Reset filters",
+  "reset_filters": "Ripristina",
   "cookie_title": "Hi, we use cookies!",
   "cookie_main_desc": 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent. <button type="button" data-cc="c-settings" class="cc-link">Let me choose</button>',
   "cookie_accept_all": "Accept all",
