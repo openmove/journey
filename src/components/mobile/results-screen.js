@@ -109,9 +109,9 @@ class MobileResultsScreen extends Component {
 
     const locationsSummary = (
       <div className="location-summary-container">
-        <Grid>
+        <Grid fluid>
           <Row>
-            <Col xs={8} sm={11}>
+            <Col xs={8} sm={10}>
               <div className="location-summary-item">
                 <LocationIcon type='from' /> { query.from ? query.from.name : '' }
               </div>
@@ -119,7 +119,7 @@ class MobileResultsScreen extends Component {
                 <LocationIcon type='to' /> { query.to ? query.to.name : '' }
               </div>
             </Col>
-            <Col xs={4} sm={1}>
+            <Col xs={4} sm={2}>
               <div className="text-right">
                 <Button
                   bsStyle="link"
