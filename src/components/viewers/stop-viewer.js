@@ -220,7 +220,7 @@ class StopViewer extends Component {
             className="pull-right"
             onClick={this._toggleScheduleView}>
             <Icon type={scheduleView ? 'clock-o' : 'calendar'} />{' '}
-            {t('view')} {scheduleView ? 'next arrivals' : 'schedule'}
+            {t('view')} {scheduleView ? t('next_arrivals') : t('schedule')}
           </Button>
         </div>
         <strong>{t('plan_a_trip')}</strong>

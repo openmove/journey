@@ -125,7 +125,7 @@ export const TRANSLATIONS_EN = {
   "available": "Accessible",
   "available_wheelchair": "Wheelchair accessible",
   "schedule": "schedule",
-  "next": "coming soon",
+  "next_arrivals": "next arrivals",
   "show": "Show",
   "direction": "To",
   "departure_cap": "DEPARTURE",
