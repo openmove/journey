@@ -246,7 +246,7 @@ class BaseMap extends Component {
     return (
       <Map
         ref="map"
-        className="map"
+        className="map noneselect"
         center={center}
         zoom={zoom}
         maxZoom={maxZoom}
