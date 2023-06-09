@@ -199,6 +199,7 @@ export const TRANSLATIONS_IT = {
   "remember_trip_settings": "Ricorda opzioni di viaggio",
   "parking": "Parcheggi",
   "parking-price":"Prezzo",
+  "parking_payment":"Prezzo",
   "parking-covered":"Parcheggio coperto",
   "parking-covered-with-barrier":"Parcheggio coperto con barriera",
   "parking-roadside":"Parcheggio su strada",
@@ -463,4 +464,6 @@ export const TRANSLATIONS_IT = {
   // routes tabs
  "not-specified" : "non specificato",
  "search": "Cerca",
+
+ "zone" : "Zona",
 }

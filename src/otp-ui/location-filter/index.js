@@ -94,7 +94,7 @@ class LocationFilter extends Component {
                                     <div className="otp-ui-locationFilter__panel">
                                         {
                                             filterGroup.values.map((item, i) => {
-                                                const label = item.label||item.value.toString();
+                                                const label = t(item.label||item.value.toString());
                                                 return (
                                                     <ToggleSwitch
                                                         title={label}

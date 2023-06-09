@@ -199,6 +199,7 @@ export const TRANSLATIONS_EN = {
   "remember_trip_settings": "Remember trip settings",
   "parking": "Parking",
   "parking-price":"Price",
+  "parking_payment":"Price",
   "parking-covered":"Covered parking",
   "parking-covered-with-barrier":"Covered parking with barrier",
   "parking-roadside":"Roadside parking",
@@ -465,4 +466,6 @@ export const TRANSLATIONS_EN = {
   // routes tabs
   "not-specified" : "not specified",
   "search": "Search",
+
+  "zone" : "Zone",
 };
