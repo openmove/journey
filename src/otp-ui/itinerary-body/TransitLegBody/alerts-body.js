@@ -23,7 +23,7 @@ export default function AlertsBody({ alerts, longDateFormat, timeFormat }) {
           );
           const effectiveDateString = `Effective as of ${dateTimeString}`;
           return (
-            <a className="otp-ui-transitAlert" key={i} href={alert.alertUrl}>
+            <a className="otp-ui-transitAlert" key={i} href={alert.alertUrl} target="_blank">
               <div className="otp-ui-transitAlert__iconContainer">
                 <ExclamationTriangle size={18} />
               </div>
