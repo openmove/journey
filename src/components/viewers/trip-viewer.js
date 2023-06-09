@@ -100,7 +100,7 @@ class TripViewer extends Component {
         <div className='trip-viewer-body'>
           {/* Basic Trip Info */}
           {tripData && (
-            <div>
+            <div className='trip-header'>
               {/* Route name */}
               <div>{t('route')}: <b>{tripData.route.shortName}</b> {tripData.route.longName}</div>
 
