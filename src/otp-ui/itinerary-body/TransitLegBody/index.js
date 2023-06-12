@@ -114,7 +114,7 @@ class TransitLegBody extends Component {
               <Button bsSize="small" bsStyle="link" href={agencyUrl} rel="noopener noreferrer" target="_blank">
                 {agencyName}
                 {logoUrl && (
-                  <img alt={`${agencyName} logo`} src={logoUrl} height={20} style={{marginLeft: 8}}/>
+                  <img alt={`${agencyName} logo`} src={logoUrl} height={20} style={{marginLeft: 8, verticalAlign:'text-bottom'}}/>
                 )}
               </Button>
             </div>
