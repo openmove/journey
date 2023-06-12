@@ -229,6 +229,7 @@ export const TRANSLATIONS_IT = {
   "traffic_travel_time": "Tempo di Percorrenza",
   "free_slots": "posti liberi",
   "free_sockets": "prese libere",
+  "sockets": "Prese",
   "socket": "Presa",
   "socket_type": "tipo",
   "invalid_mobile_screen": "Schermo mobile non valido",

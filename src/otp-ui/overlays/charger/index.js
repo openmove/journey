@@ -139,10 +139,11 @@ class ChargerOverlay extends MapLayer {
     );
 
     const markerIcon = (station) => {
-      let badgeType = "success";
+      let badgeType = "default";
       let badgeCounter = station.capacity || 0;
-
-      if (station.free > 0) {
+      if (station.free == null ){
+        badgeType = "default";
+      } else if (station.free > 0) {
         badgeType = "warning";
         if (station.free === station.capacity) {
           badgeType = "success";
@@ -218,23 +219,28 @@ class ChargerOverlay extends MapLayer {
                     </div>
 
                     <div>
-                      {t("provider")}: {station.provider}
+                   {station.provider && `${t("provider")}: ${station.provider}`}
                     </div>
-
-                    <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfoValue">
-                        {station.free}
+                    { ( station.free!==null || station.capacity!==null ) && (
+                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
+                        <div className="otp-ui-mapOverlayPopup__popupAvailableInfoValue">
+                          {station.free!==null ? station.free : station.capacity}
+                        </div>
+                        <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">
+                          {station.free!==null ? t("free_sockets") : t("sockets")}
+                        </div>
                       </div>
-                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">
-                        {t("free_sockets")}
-                      </div>
-                    </div>
-
+                      )}
                     <div className="otp-ui-mapOverlayPopup__popupAvailableSlots">
                       {station.plugs.map((plug, key) => {
-                        const ava = plug.available ? "bg-success" : "bg-danger";
-
-                        plug.maxPower = Math.round(plug.maxPower);
+                        if(plug.plug_id===null){
+                          return;
+                        }
+                        let ava = "bg-default";
+                        if(plug.available!==null){
+                          ava = plug.available ? "bg-success" : "bg-danger";
+                        }
+                        plug.maxPower = plug.maxPower !==null ? Math.round(plug.maxPower) : null;
 
                         return (
                           <div className="otp-ui-mapOverlayPopup__popupAvailableSlotItem" key={key}>
@@ -245,12 +251,18 @@ class ChargerOverlay extends MapLayer {
                               </strong>
                               <br />
                               <br />
-                              {plug.maxPower}W | {plug.minCurrent}-
-                              {plug.maxCurrent}A
-                              <br />
-                              <br />
+                              {plug.maxPower && `${plug.maxPower}W`}
+                              {(plug.minCurrent && plug.maxCurrent ) && (
+                                ` | ${plug.minCurrent}-${plug.maxCurrent}A`
+                                )}
+                              {(plug.maxPower || plug.minCurrent || plug.maxCurrent )&& (
+                                <>
+                                  <br />
+                                  <br />
+                                </>
+                              )}
                               <small>
-                                {t("socket_type")} {plug.outletTypeCode}
+                              {plug.outletTypeCode && ` ${t("socket_type")} ${plug.outletTypeCode}`}
                               </small>
                             </div>
                           </div>

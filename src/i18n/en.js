@@ -229,6 +229,7 @@ export const TRANSLATIONS_EN = {
   "free_slots": "free slots",
   "free_sockets": "free sockets",
   "socket": "Socket",
+  "socket": "Sockets",
   "socket_type": "Type",
   "invalid_mobile_screen": "Invalid mobile screen",
   "click_to_view_details": "Click to view details",
