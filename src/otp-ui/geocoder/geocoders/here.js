@@ -30,6 +30,46 @@ export default class Geocoder {
     )
   }
 
+  mapCategories(hereCategories){
+
+    if(!Array.isArray(hereCategories)){
+      console.error('not an array') // TODO: REMOVE
+      return;
+    }
+
+    if(hereCategories.length>1 && !hereCategories[0].primary){
+      console.error('what') // TODO: REMOVE
+    }
+
+    const hereCategory = hereCategories[0]?.id;
+    const [macroCategoryNumber, subCategoryNumber] = hereCategory.split('-')
+
+    switch(macroCategoryNumber){
+      case '100': return 'food'
+      case '200':
+        switch(subCategoryNumber){
+          case '2300': // Gambling-Lottery-Betting incorporated in nightlife
+          case '2000': return 'nightlife'
+          case '2100': return 'cinema'
+          case '2200': return 'theater'
+        }
+      case '300': return 'landmark'
+      case '350': return 'nature'
+      case '400': return 'transport'
+      case '500': return 'accommodation'
+      case '550':
+        switch(subCategoryNumber){
+          case '5510': return  'nature'// outdoor
+          case '5520': return  'landmark' //leisure
+        }
+      case '600': return 'shop'
+      case '700': return 'services' // BusinessAndServices
+      case '800': return 'facilities'
+      case '900': return 'buildings' // AreasAndBuildings
+      default: console.error('invalid category',hereCategory)
+    }
+  }
+
   convertResultsToFeatures(results){
     // retro compatibility function
     // note: not all fields are converted only the strictly needed ones
@@ -42,6 +82,8 @@ export default class Geocoder {
 
       feature.properties.source = 'here' // needed for compatibility with location field options
       feature.properties.label =  item.title//item.address.label
+      feature.properties.category = this.mapCategories(item.categories)
+
       if(item.position){
         // ignore results without coordinates
         features.push({

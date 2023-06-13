@@ -8,9 +8,10 @@ import PropTypes from "prop-types";
 import React from "react";
 import { MenuItem, Button } from 'react-bootstrap'
 
-
-import { Briefcase, Bed, Home, Hotel, MapMarker, MapPin, Bus } from "@styled-icons/fa-solid";
+import { Utensils,TheaterMasks,Landmark,ShoppingBag, Briefcase, Bed, Home, Hotel, MapMarker, MapPin, Bus,City } from "@styled-icons/fa-solid";
 import { Address, Shop} from "@styled-icons/entypo";
+import {Nightlife,LocalMovies, Nature} from '@styled-icons/material/'
+
 
 export function GeocodedOptionIcon({feature}) {
    /*
@@ -19,7 +20,21 @@ export function GeocodedOptionIcon({feature}) {
   */
   switch (feature.properties.source) {
     case 'here':
-      return <Address size={13} />;
+      switch(feature.properties.category){
+        case 'food': return <Utensils size={13}/>
+        case 'nightlife': return <Nightlife size={13}/>
+        case 'cinema': return <LocalMovies size={13}/>
+        case 'theater': return <TheaterMasks size={13}/>
+        case 'landmark': return <Landmark size={13}/>
+        case 'nature': return <Nature size={13}/>
+        case 'transport': return <Bus size={13}/>
+        case 'accommodation': return <Hotel size={13}/>
+        case 'shop': return <ShoppingBag size={13}/>
+        case 'services': return <City size={13}/>
+        case 'facilities': return <MapMarker size={13}/>
+        case 'buildings': return<City size={13}/>
+        default: return <MapMarker size={13}/>
+      }
     case 'opentripplanner':
       return <Bus size={13} />;
     case 'accommodations':
