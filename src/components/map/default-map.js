@@ -297,7 +297,7 @@ class DefaultMap extends Component {
                     ctrLayer.classList.remove("leaflet-control-layers-expanded");
                   }
                 }}
-                appVersionAttribution = {version ? `| build v${version}` : ''}
+                appVersionAttribution = {version ? ` | <a href="https://github.com/openmove/journey">App Version ${version}</a>` : ''}
               >
                 {/* The default overlays */}
                 <BoundsUpdatingOverlay />
