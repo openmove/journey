@@ -219,7 +219,7 @@ class ChargerOverlay extends MapLayer {
                     </div>
 
                     <div>
-                   {station.provider && `${t("provider")}: ${station.provider}`}
+                   {station.operator && `${t("operator")}: ${station.operator}`}
                     </div>
                     { ( station.free!==null || station.capacity!==null ) && (
                       <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
@@ -233,9 +233,6 @@ class ChargerOverlay extends MapLayer {
                       )}
                     <div className="otp-ui-mapOverlayPopup__popupAvailableSlots">
                       {station.plugs.map((plug, key) => {
-                        if(plug.plug_id===null){
-                          return;
-                        }
                         let ava = "bg-default";
                         if(plug.available!==null){
                           ava = plug.available ? "bg-success" : "bg-danger";

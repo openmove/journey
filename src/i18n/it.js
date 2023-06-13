@@ -393,6 +393,7 @@ export const TRANSLATIONS_IT = {
   "occupancy": "Occupazione",
   "credits": "Credits",
   "provider": "Operatore",
+  "operator": "Operatore",
   "credits_title": "Credits",
   "credits_title_developed": "Realizzato da",
   "credits_title_designed": "Design grafico a cura di",
