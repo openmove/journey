@@ -1,0 +1,2251 @@
+{
+  "last_updated": 1686666836,
+  "ttl": 0,
+  "version": "3.0.0",
+  "stations": [
+    {
+      "station_id": "92",
+      "name": "CP1-Limone",
+      "lat": 45.812177,
+      "lon": 10.794016,
+      "address": "Via Lungolago Marconi, 50",
+      "city": "Limone Sul Garda",
+      "accessType": "PUBLIC",
+      "capacity": 4,
+      "free": 4,
+      "provider": "GARDA UNO SPA",
+      "operator": "GARDA UNO SPA",
+      "reservable": "no",
+      "state": "TEMPORARYUNAVAILABLE",
+      "plugsTypes": [
+        "Type2 - 230Vac",
+        "Type 3A"
+      ],
+      "plugs": [
+        {
+          "plug_id": "92-1",
+          "name": "CP1-Limone-198",
+          "available": true,
+          "maxPower": 7400,
+          "maxCurrent": 32,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2 - 230Vac"
+        },
+        {
+          "plug_id": "92-2",
+          "name": "CP1-Limone-199",
+          "available": true,
+          "maxPower": 7400,
+          "maxCurrent": 32,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2 - 230Vac"
+        },
+        {
+          "plug_id": "92-3",
+          "name": "CP1-Limone-200",
+          "available": true,
+          "maxPower": 3600,
+          "maxCurrent": 16,
+          "minCurrent": 1,
+          "outletTypeCode": "Type 3A"
+        },
+        {
+          "plug_id": "92-4",
+          "name": "CP1-Limone-201",
+          "available": true,
+          "maxPower": 3600,
+          "maxCurrent": 16,
+          "minCurrent": 1,
+          "outletTypeCode": "Type 3A"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*220*ETN000005",
+      "name": "Hotel Villa Magnolia",
+      "lat": 45.87073,
+      "lon": 10.87273,
+      "address": "Via della Lova, 8",
+      "city": "Nago-torbole",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 0,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "UNKNOWN",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*220*ETN000005-IT*220*ETN000005",
+          "name": "Hotel Villa Magnolia-IT*220*ETN000005",
+          "available": false,
+          "maxPower": 7.4,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*TNK*ETN051",
+      "name": "Residence Toblini",
+      "lat": 45.872584,
+      "lon": 10.873313,
+      "address": "Via al Cor (fraz. Torbole sul Garda), 2",
+      "city": "Nago-torbole",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 0,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "UNKNOWN",
+      "plugsTypes": [
+        "Schuko"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*TNK*ETN051-IT*TNK*ETN051",
+          "name": "Residence Toblini-IT*TNK*ETN051",
+          "available": false,
+          "maxPower": 3.7,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Schuko"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*TNK*ETN052",
+      "name": "Residence Toblini",
+      "lat": 45.872584,
+      "lon": 10.873313,
+      "address": "Via al Cor (fraz. Torbole sul Garda), 2",
+      "city": "Nago-torbole",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 0,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "UNKNOWN",
+      "plugsTypes": [
+        "Schuko"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*TNK*ETN052-IT*TNK*ETN052",
+          "name": "Residence Toblini-IT*TNK*ETN052",
+          "available": false,
+          "maxPower": 3.7,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Schuko"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*TNK*ETN053",
+      "name": "Residence Toblini",
+      "lat": 45.872584,
+      "lon": 10.873313,
+      "address": "Via al Cor (fraz. Torbole sul Garda), 2",
+      "city": "Nago-torbole",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 0,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "UNKNOWN",
+      "plugsTypes": [
+        "Schuko"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*TNK*ETN053-IT*TNK*ETN053",
+          "name": "Residence Toblini-IT*TNK*ETN053",
+          "available": false,
+          "maxPower": 3.7,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Schuko"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*TNK*ETN054",
+      "name": "Residence Toblini",
+      "lat": 45.872584,
+      "lon": 10.873313,
+      "address": "Via al Cor (fraz. Torbole sul Garda), 2",
+      "city": "Nago-torbole",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 0,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "UNKNOWN",
+      "plugsTypes": [
+        "Schuko"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*TNK*ETN054-IT*TNK*ETN054",
+          "name": "Residence Toblini-IT*TNK*ETN054",
+          "available": false,
+          "maxPower": 3.7,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Schuko"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*220*E01301",
+      "name": "R220 - Riva del Garda",
+      "lat": 45.891532,
+      "lon": 10.845942,
+      "address": "Viale Trento, 5",
+      "city": "Riva Del Garda",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": 1,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "AVAILABLE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*220*E01301-IT*220*E01301",
+          "name": "R220 - Riva del Garda-IT*220*E01301",
+          "available": true,
+          "maxPower": 11,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*220*E01302",
+      "name": "R220 - Riva del Garda",
+      "lat": 45.891532,
+      "lon": 10.845942,
+      "address": "Viale Trento, 5",
+      "city": "Riva Del Garda",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": 1,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "AVAILABLE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*220*E01302-IT*220*E01302",
+          "name": "R220 - Riva del Garda-IT*220*E01302",
+          "available": true,
+          "maxPower": 11,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*ETN*E01621",
+      "name": "Garni Casa Moresc",
+      "lat": 46.100496,
+      "lon": 10.73842,
+      "address": "Via Fisto, 6/a",
+      "city": "Spiazzo",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 1,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "AVAILABLE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*ETN*E01621-IT*ETN*E01621",
+          "name": "Garni Casa Moresc-IT*ETN*E01621",
+          "available": true,
+          "maxPower": 11,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*ETN*E01622",
+      "name": "Garni Casa Moresc",
+      "lat": 46.100496,
+      "lon": 10.73842,
+      "address": "Via Fisto, 6/a",
+      "city": "Spiazzo",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 1,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "AVAILABLE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*ETN*E01622-IT*ETN*E01622",
+          "name": "Garni Casa Moresc-IT*ETN*E01622",
+          "available": true,
+          "maxPower": 11,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*ETN*E02061",
+      "name": "Ristorante Pizzeria La Contea",
+      "lat": 46.030909,
+      "lon": 10.733401,
+      "address": "Via Sant'Antonio, 21",
+      "city": "Borgo Lares",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 0,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "UNKNOWN",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*ETN*E02061-IT*ETN*E02061",
+          "name": "Ristorante Pizzeria La Contea-IT*ETN*E02061",
+          "available": false,
+          "maxPower": 22,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*ETN*E02062",
+      "name": "Ristorante Pizzeria La Contea",
+      "lat": 46.030909,
+      "lon": 10.733401,
+      "address": "Via Sant'Antonio, 21",
+      "city": "Borgo Lares",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 0,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "UNKNOWN",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*ETN*E02062-IT*ETN*E02062",
+          "name": "Ristorante Pizzeria La Contea-IT*ETN*E02062",
+          "available": false,
+          "maxPower": 22,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*ETN*E02351",
+      "name": "Hotel Bellariva",
+      "lat": 45.879884,
+      "lon": 10.853639,
+      "address": "Via Franz Kafka, 13",
+      "city": "Riva Del Garda",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 1,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "AVAILABLE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*ETN*E02351-IT*ETN*E02351",
+          "name": "Hotel Bellariva-IT*ETN*E02351",
+          "available": true,
+          "maxPower": 22,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*ETN*E02352",
+      "name": "Hotel Bellariva",
+      "lat": 45.879884,
+      "lon": 10.853639,
+      "address": "Via Franz Kafka, 13",
+      "city": "Riva Del Garda",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 1,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "AVAILABLE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*ETN*E02352-IT*ETN*E02352",
+          "name": "Hotel Bellariva-IT*ETN*E02352",
+          "available": true,
+          "maxPower": 22,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*ETN*E02071",
+      "name": "Agriturismo Il Favo",
+      "lat": 46.064143,
+      "lon": 10.714759,
+      "address": "Via Sacconi (fraz. Villa Rendena), ",
+      "city": "Porte Di Rendena",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 1,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "AVAILABLE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*ETN*E02071-IT*ETN*E02071",
+          "name": "Agriturismo Il Favo-IT*ETN*E02071",
+          "available": true,
+          "maxPower": 22,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "IT*ETN*E02072",
+      "name": "Agriturismo Il Favo",
+      "lat": 46.064143,
+      "lon": 10.714759,
+      "address": "Via Sacconi (fraz. Villa Rendena), ",
+      "city": "Porte Di Rendena",
+      "accessType": "PRIVATE_WITHPUBLICACCESS",
+      "capacity": 1,
+      "free": 1,
+      "provider": "Route220",
+      "operator": "Route220",
+      "reservable": "no",
+      "state": "AVAILABLE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "IT*ETN*E02072-IT*ETN*E02072",
+          "name": "Agriturismo Il Favo-IT*ETN*E02072",
+          "available": true,
+          "maxPower": 22,
+          "maxCurrent": 0,
+          "minCurrent": 0,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000492",
+      "name": "TERME_COMANO_01",
+      "lat": 46.04156,
+      "lon": 10.88186,
+      "address": "Loc.Terme di Comano 6 - c/o Terme",
+      "city": "Stenico",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000492-1",
+          "name": "TERME_COMANO_01-IT*ASM*E100210827*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000492-2",
+          "name": "TERME_COMANO_01-IT*ASM*E100210827*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000493",
+      "name": "TERME_COMANO_02",
+      "lat": 46.038914,
+      "lon": 10.873392,
+      "address": "Loc.Terme di Comano 8 - c/o Grand Hotel",
+      "city": "Stenico",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000493-1",
+          "name": "TERME_COMANO_02-IT*ASM*E100210334*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000493-2",
+          "name": "TERME_COMANO_02-IT*ASM*E100210334*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000497",
+      "name": "PIEVE_DI_BONO_01",
+      "lat": 45.928104,
+      "lon": 10.635572,
+      "address": "S.S. 237 del Caffaro",
+      "city": "Pieve Di Bono",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000497-1",
+          "name": "PIEVE_DI_BONO_01-IT*ASM*E1531xxx0013yyy19*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000497-2",
+          "name": "PIEVE_DI_BONO_01-IT*ASM*E1531xxx0013yyy19*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000499",
+      "name": "ARCO_01",
+      "lat": 45.910126,
+      "lon": 10.870807,
+      "address": "Via S. Caterina 78",
+      "city": "Arco",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000499-1",
+          "name": "ARCO_01-IT*ASM*E1530xxx0019yyy19*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000499-2",
+          "name": "ARCO_01-IT*ASM*E1530xxx0019yyy19*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000401",
+      "name": "CEIS_01",
+      "lat": 46.035244,
+      "lon": 10.870361,
+      "address": "PONTE ARCHE - Via S. Giovanni Bosco",
+      "city": "Bleggio Inferiore",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000401-1",
+          "name": "CEIS_01-IT*ASM*E12019014760004*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000401-2",
+          "name": "CEIS_01-IT*ASM*E12019014760004*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000406",
+      "name": "ARCO_02",
+      "lat": 45.916046,
+      "lon": 10.890577,
+      "address": "Parcheggio alla Sarca",
+      "city": "Arco",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000406-1",
+          "name": "ARCO_02-IT*ASM*E100191254*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000406-2",
+          "name": "ARCO_02-IT*ASM*E100191254*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000420",
+      "name": "ARCO_03",
+      "lat": 45.91531,
+      "lon": 10.878892,
+      "address": "Parcheggio San Pancrazio - Via Santa Caterina 10",
+      "city": "Arco",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000420-1",
+          "name": "ARCO_03-IT*ASM*E100192067*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000420-2",
+          "name": "ARCO_03-IT*ASM*E100192067*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000429",
+      "name": "ARCO_04",
+      "lat": 45.92127,
+      "lon": 10.889817,
+      "address": "Parcheggio Al Ponte - Via Paolina Caproni Maini",
+      "city": "Arco",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000429-1",
+          "name": "ARCO_04-IT*ASM*E100191731*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000429-2",
+          "name": "ARCO_04-IT*ASM*E100191731*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000436",
+      "name": "CR_ALTO_GARDA_01",
+      "lat": 45.91832,
+      "lon": 10.884144,
+      "address": "Viale delle Magnolie 1",
+      "city": "Arco",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 1,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000436-1",
+          "name": "CR_ALTO_GARDA_01-IT*ASM*E11946049130017*1",
+          "available": false,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000436-2",
+          "name": "CR_ALTO_GARDA_01-IT*ASM*E11946049130017*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000437",
+      "name": "CR_ALTO_GARDA_02",
+      "lat": 45.912277,
+      "lon": 10.902277,
+      "address": "Bolognano - Viale Stazione 3-B",
+      "city": "Arco",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000437-1",
+          "name": "CR_ALTO_GARDA_02-IT*ASM*E11946049130020*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000437-2",
+          "name": "CR_ALTO_GARDA_02-IT*ASM*E11946049130020*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000438",
+      "name": "CR_ALTO_GARDA_03",
+      "lat": 45.918446,
+      "lon": 10.86517,
+      "address": "Vigne - Via Luigi Negrelli 20-C",
+      "city": "Arco",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000438-1",
+          "name": "CR_ALTO_GARDA_03-IT*ASM*E11946049130012*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000438-2",
+          "name": "CR_ALTO_GARDA_03-IT*ASM*E11946049130012*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000440",
+      "name": "CR_ALTO_GARDA_05",
+      "lat": 46.028755,
+      "lon": 10.824652,
+      "address": "Località Larido 2",
+      "city": "Bleggio Superiore",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000440-1",
+          "name": "CR_ALTO_GARDA_05-IT*ASM*E11946049130013*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000440-2",
+          "name": "CR_ALTO_GARDA_05-IT*ASM*E11946049130013*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000444",
+      "name": "RIVA_DEL_GARDA_02",
+      "lat": 45.888657,
+      "lon": 10.841432,
+      "address": "Parcheggio Viale Cannella",
+      "city": "Riva Del Garda",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000444-1",
+          "name": "RIVA_DEL_GARDA_02-IT*ASM*E100204472*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000444-2",
+          "name": "RIVA_DEL_GARDA_02-IT*ASM*E100204472*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000445",
+      "name": "ARCO",
+      "lat": 45.91812,
+      "lon": 10.887188,
+      "address": "Via della Cinta - Parcheggio Foro Boario",
+      "city": "Arco",
+      "accessType": "PUBLIC",
+      "capacity": 3,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "no",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "CCS",
+        "CHAdeMO",
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000445-1",
+          "name": "ARCO-IT*ASM*EHYC15020BZ0455A*1",
+          "available": true,
+          "maxPower": 75,
+          "maxCurrent": 125,
+          "minCurrent": 0,
+          "outletTypeCode": "CCS"
+        },
+        {
+          "plug_id": "ASM_00000445-2",
+          "name": "ARCO-IT*ASM*EHYC15020BZ0455A*2",
+          "available": true,
+          "maxPower": 63,
+          "maxCurrent": 125,
+          "minCurrent": 0,
+          "outletTypeCode": "CHAdeMO"
+        },
+        {
+          "plug_id": "ASM_00000445-3",
+          "name": "ARCO-IT*ASM*EHYC15020BZ0455A*3",
+          "available": false,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000446",
+      "name": "RIVA_DEL_GARDA_03",
+      "lat": 45.878334,
+      "lon": 10.857235,
+      "address": "Parcheggio Viale Rovereto",
+      "city": "Riva Del Garda",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 0,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000446-1",
+          "name": "RIVA_DEL_GARDA_03-IT*ASM*E100204301*1",
+          "available": false,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000446-2",
+          "name": "RIVA_DEL_GARDA_03-IT*ASM*E100204301*2",
+          "available": false,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000451",
+      "name": "RIVA_DEL_GARDA_04",
+      "lat": 45.888386,
+      "lon": 10.843333,
+      "address": "Viale Madruzzo",
+      "city": "Riva Del Garda",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 0,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000451-1",
+          "name": "RIVA_DEL_GARDA_04-IT*ASM*E100204300*1",
+          "available": false,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000451-2",
+          "name": "RIVA_DEL_GARDA_04-IT*ASM*E100204300*2",
+          "available": false,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000460",
+      "name": "FC_BRENTA_PAGANEL_07",
+      "lat": 46.056484,
+      "lon": 10.883776,
+      "address": "SCLEMO - Piazza dei Corpi Franchi 4",
+      "city": "Stenico",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000460-1",
+          "name": "FC_BRENTA_PAGANEL_07-IT*ASM*E11946049130037*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000460-2",
+          "name": "FC_BRENTA_PAGANEL_07-IT*ASM*E11946049130037*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000461",
+      "name": "CR_GIUVALPAG_02",
+      "lat": 46.04272,
+      "lon": 10.767458,
+      "address": "SAONE - Via III Novembre 20",
+      "city": "Tione Di Trento",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000461-1",
+          "name": "CR_GIUVALPAG_02-IT*ASM*E100186052*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000461-2",
+          "name": "CR_GIUVALPAG_02-IT*ASM*E100186052*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000402",
+      "name": "VALLI_SARCA_01",
+      "lat": 45.911606,
+      "lon": 10.872358,
+      "address": "Via S. Caterina 70",
+      "city": "Arco",
+      "accessType": "PRIVATE",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000402-1",
+          "name": "VALLI_SARCA_01-IT*ASM*E11946049130009*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000402-2",
+          "name": "VALLI_SARCA_01-IT*ASM*E11946049130009*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000561",
+      "name": "RSA_S_VIGILIO",
+      "lat": 46.10405,
+      "lon": 10.736684,
+      "address": "Via S. Vigilio 13",
+      "city": "Spiazzo",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000561-1",
+          "name": "RSA_S_VIGILIO-IT*ASM*E100210824*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000561-2",
+          "name": "RSA_S_VIGILIO-IT*ASM*E100210824*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000607",
+      "name": "RIVA_DEL_GARDA",
+      "lat": 45.88337,
+      "lon": 10.83884,
+      "address": "Piazza Catena",
+      "city": "Riva Del Garda",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "no",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "CCS"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000607-1",
+          "name": "RIVA_DEL_GARDA-IT*ASM*EHYC15019BZ00333*1",
+          "available": true,
+          "maxPower": 150,
+          "maxCurrent": 125,
+          "minCurrent": 0,
+          "outletTypeCode": "CCS"
+        },
+        {
+          "plug_id": "ASM_00000607-2",
+          "name": "RIVA_DEL_GARDA-IT*ASM*EHYC15019BZ00333*2",
+          "available": true,
+          "maxPower": 150,
+          "maxCurrent": 125,
+          "minCurrent": 0,
+          "outletTypeCode": "CCS"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000504",
+      "name": "PINZOLO_01",
+      "lat": 46.159283,
+      "lon": 10.765966,
+      "address": "Piazza Libertà",
+      "city": "Pinzolo",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000504-1",
+          "name": "PINZOLO_01-IT*ASM*E4341xxx0018yyy18*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000504-2",
+          "name": "PINZOLO_01-IT*ASM*E4341xxx0018yyy18*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000512",
+      "name": "AGR_RIVA_DEL_GARDA_01",
+      "lat": 45.89714,
+      "lon": 10.853153,
+      "address": "Località S. Nazzaro 4",
+      "city": "Riva Del Garda",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000512-1",
+          "name": "AGR_RIVA_DEL_GARDA_01-IT*ASM*E100190624*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000512-2",
+          "name": "AGR_RIVA_DEL_GARDA_01-IT*ASM*E100190624*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "A15_00000001",
+      "name": "FC_BRENTA_PAGANEL_01",
+      "lat": 46.073036,
+      "lon": 10.89739,
+      "address": "DORSINO - Piazzetta del Municipio 1",
+      "city": "San Lorenzo Dorsino",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "A15_00000001-1",
+          "name": "FC_BRENTA_PAGANEL_01-IT*ASM*E11946049130030*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "A15_00000001-2",
+          "name": "FC_BRENTA_PAGANEL_01-IT*ASM*E11946049130030*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000213",
+      "name": "M_CAMPIGLIO_01",
+      "lat": 46.224644,
+      "lon": 10.828147,
+      "address": "Madonna di Campiglio - Via Vallesinella 7",
+      "city": "Pinzolo",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 1,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000213-1",
+          "name": "M_CAMPIGLIO_01-IT*ASM*E4332xxx0011yyy18*1",
+          "available": false,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000213-2",
+          "name": "M_CAMPIGLIO_01-IT*ASM*E4332xxx0011yyy18*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000239",
+      "name": "PREORE_01",
+      "lat": 46.044853,
+      "lon": 10.752391,
+      "address": "Via Cesena 6",
+      "city": "Preore",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000239-1",
+          "name": "PREORE_01-IT*ASM*E4341xxx0013yyy18*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000239-2",
+          "name": "PREORE_01-IT*ASM*E4341xxx0013yyy18*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000352",
+      "name": "COPAG_01",
+      "lat": 46.01159,
+      "lon": 10.862631,
+      "address": "DASINDO - Via Giovanni Prati 1",
+      "city": "Comano Terme",
+      "accessType": "PRIVATE",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000352-1",
+          "name": "COPAG_01-IT*ASM*E100186054*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000352-2",
+          "name": "COPAG_01-IT*ASM*E100186054*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000374",
+      "name": "CEDIS_02",
+      "lat": 45.844273,
+      "lon": 10.584213,
+      "address": "Via Emilio Miglio 2",
+      "city": "Storo",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000374-1",
+          "name": "CEDIS_02-IT*ASM*E100191253*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000374-2",
+          "name": "CEDIS_02-IT*ASM*E100191253*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000375",
+      "name": "CEDIS_03",
+      "lat": 45.848904,
+      "lon": 10.559124,
+      "address": "Località Sottovillo - SS237",
+      "city": "Storo",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000375-1",
+          "name": "CEDIS_03-IT*ASM*E100192071*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000375-2",
+          "name": "CEDIS_03-IT*ASM*E100192071*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000390",
+      "name": "CR_GIUVALPAG_03",
+      "lat": 46.034973,
+      "lon": 10.870473,
+      "address": "PONTE ARCHE - Via Marconi 4",
+      "city": "Bleggio Inferiore",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000390-1",
+          "name": "CR_GIUVALPAG_03-IT*ASM*E100186053*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000390-2",
+          "name": "CR_GIUVALPAG_03-IT*ASM*E100186053*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000399",
+      "name": "CR_GIUVALPAG_04",
+      "lat": 45.84163,
+      "lon": 10.550425,
+      "address": "DARZO - Via Marini 33",
+      "city": "Storo",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000399-1",
+          "name": "CR_GIUVALPAG_04-IT*ASM*E100186074*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000399-2",
+          "name": "CR_GIUVALPAG_04-IT*ASM*E100186074*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000340",
+      "name": "TIONE_01",
+      "lat": 46.041798,
+      "lon": 10.726659,
+      "address": "Via Pinzolo 87",
+      "city": "Tione Di Trento",
+      "accessType": "PUBLIC",
+      "capacity": 3,
+      "free": 3,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "CCS",
+        "Type2Mennekes",
+        "CHAdeMO"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000340-1",
+          "name": "TIONE_01-IT*ASM*E1532xxx0003yyy19*1",
+          "available": true,
+          "maxPower": 50,
+          "maxCurrent": 125,
+          "minCurrent": 0,
+          "outletTypeCode": "CCS"
+        },
+        {
+          "plug_id": "ASM_00000340-3",
+          "name": "TIONE_01-IT*ASM*E1532xxx0003yyy19*3",
+          "available": true,
+          "maxPower": 43.56,
+          "maxCurrent": 63,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000340-2",
+          "name": "TIONE_01-IT*ASM*E1532xxx0003yyy19*2",
+          "available": true,
+          "maxPower": 50,
+          "maxCurrent": 125,
+          "minCurrent": 0,
+          "outletTypeCode": "CHAdeMO"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000342",
+      "name": "RIVA_DEL_GARDA_01",
+      "lat": 45.885197,
+      "lon": 10.844677,
+      "address": "Via Filzi 4",
+      "city": "Riva Del Garda",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000342-1",
+          "name": "RIVA_DEL_GARDA_01-IT*ASM*E12019014760018*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000342-2",
+          "name": "RIVA_DEL_GARDA_01-IT*ASM*E12019014760018*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 7,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000344",
+      "name": "TENNO_01",
+      "lat": 45.935684,
+      "lon": 10.812232,
+      "address": "Parcheggio Località Lago di Tenno",
+      "city": "Tenno",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000344-1",
+          "name": "TENNO_01-IT*ASM*E100187967*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000344-2",
+          "name": "TENNO_01-IT*ASM*E100187967*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "ASM_00000348",
+      "name": "CR_LEDRO_01",
+      "lat": 45.89574,
+      "lon": 10.718395,
+      "address": "Bezzecca - Viale Chiassi 17",
+      "city": "Ledro",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "ASM_00000348-1",
+          "name": "CR_LEDRO_01-IT*ASM*E100186821*1",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "ASM_00000348-2",
+          "name": "CR_LEDRO_01-IT*ASM*E100186821*2",
+          "available": true,
+          "maxPower": 16.594,
+          "maxCurrent": 24,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "GAU_00000021",
+      "name": "LIMONE_01",
+      "lat": 45.81218,
+      "lon": 10.793904,
+      "address": "Via Lungolago Guglielmo Marconi 50",
+      "city": "Limone Sul Garda",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": 2,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "GAU_00000021-1",
+          "name": "LIMONE_01-IT*GAU*E100175869*1",
+          "available": true,
+          "maxPower": 11.062,
+          "maxCurrent": 16,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "GAU_00000021-2",
+          "name": "LIMONE_01-IT*GAU*E100175869*2",
+          "available": true,
+          "maxPower": 11.062,
+          "maxCurrent": 16,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "GAU_00000039",
+      "name": "LIMONE_02",
+      "lat": 45.812,
+      "lon": 10.79362,
+      "address": "Via Lungolago Guglielmo Marconi",
+      "city": "Limone Sul Garda",
+      "accessType": "PUBLIC",
+      "capacity": 6,
+      "free": 5,
+      "provider": "Neogy",
+      "operator": "Neogy",
+      "reservable": "yes",
+      "state": "ACTIVE",
+      "plugsTypes": [
+        "Type2Mennekes"
+      ],
+      "plugs": [
+        {
+          "plug_id": "GAU_00000039-1",
+          "name": "LIMONE_02-IT*GAU*E100252519*1",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "GAU_00000039-2",
+          "name": "LIMONE_02-IT*GAU*E100252519*2",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "GAU_00000039-3",
+          "name": "LIMONE_02-IT*GAU*E100252519*3",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "GAU_00000039-4",
+          "name": "LIMONE_02-IT*GAU*E100252519*4",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "GAU_00000039-5",
+          "name": "LIMONE_02-IT*GAU*E100252519*5",
+          "available": false,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        },
+        {
+          "plug_id": "GAU_00000039-6",
+          "name": "LIMONE_02-IT*GAU*E100252519*6",
+          "available": true,
+          "maxPower": 22.125,
+          "maxCurrent": 32,
+          "minCurrent": 6,
+          "outletTypeCode": "Type2Mennekes"
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec39c",
+      "name": "Campiglio eCharger 7520",
+      "lat": 46.14871,
+      "lon": 10.767242,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": null,
+      "provider": "Enel x",
+      "operator": "Enel x",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-4471",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec39d",
+      "name": "Campiglio eCharger 8713",
+      "lat": 46.128811,
+      "lon": 10.756652,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": null,
+      "provider": "Enel x",
+      "operator": "Enel x",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-2268",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec39e",
+      "name": "Campiglio eCharger 10824",
+      "lat": 46.159416,
+      "lon": 10.765854,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": null,
+      "provider": "Enel x e Dolomiti Energia",
+      "operator": "Enel x e Dolomiti Energia",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-7127",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        },
+        {
+          "plug_id": "plug-8113",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec39f",
+      "name": "Campiglio eCharger 9180",
+      "lat": 46.163227,
+      "lon": 10.765599,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": null,
+      "provider": "Enel x",
+      "operator": "Enel x",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-7101",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec3a0",
+      "name": "Campiglio eCharger 6207",
+      "lat": 46.065918,
+      "lon": 10.713516,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": null,
+      "provider": "Enel x",
+      "operator": "Enel x",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-9549",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec3a1",
+      "name": "Campiglio eCharger 8142",
+      "lat": 46.224553,
+      "lon": 10.827501,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 2,
+      "free": null,
+      "provider": "Enel x e Dolomiti Energia",
+      "operator": "Enel x e Dolomiti Energia",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-6784",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        },
+        {
+          "plug_id": "plug-5807",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec3a2",
+      "name": "Campiglio eCharger 9675",
+      "lat": 46.227836,
+      "lon": 10.828675,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": null,
+      "provider": "Enel x",
+      "operator": "Enel x",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-4880",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec3a3",
+      "name": "Campiglio eCharger 3955",
+      "lat": 46.237364,
+      "lon": 10.835963,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": null,
+      "provider": null,
+      "operator": null,
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-2618",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec3a4",
+      "name": "Campiglio eCharger 6485",
+      "lat": 46.223856,
+      "lon": 10.824238,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": null,
+      "provider": "Enel x",
+      "operator": "Enel x",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-8198",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    },
+    {
+      "station_id": "64774a32b3c1bf4faeeec3a5",
+      "name": "Campiglio eCharger 5297",
+      "lat": 46.242909,
+      "lon": 10.840195,
+      "address": null,
+      "city": "Madonna di Campiglio",
+      "accessType": "PUBLIC",
+      "capacity": 1,
+      "free": null,
+      "provider": "Audi",
+      "operator": "Audi",
+      "reservable": null,
+      "state": "UNKNOWN",
+      "plugsTypes": [],
+      "plugs": [
+        {
+          "plug_id": "plug-10009",
+          "name": null,
+          "available": null,
+          "maxPower": null,
+          "maxCurrent": null,
+          "minCurrent": null,
+          "outletTypeCode": null
+        }
+      ]
+    }
+  ]
+}
