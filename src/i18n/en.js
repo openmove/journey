@@ -168,6 +168,7 @@ export const TRANSLATIONS_EN = {
   "insert_departure_action": "Insert departure or {{actionText}} on map",
   "insert_arrive_action": "Insert arrival or {{actionText}} on map",
   "enter_intermediate_destination": "Enter intermediate destination",
+  'save_instructions':'Enter origin/destination in the form (or set via map click) and click the resulting marker to set as home/work location.',
   "maximum_intermediate_places_reached": "Maximum intermediate places reached",
   "define_origin_destination_to_add_intermediate_places": "Define origin/destination to add intermediate places",
   "add_place": "Add place",

@@ -75,7 +75,7 @@ class UserSettings extends Component {
             <ListGroup>
               {
                 sortedLocations.map(location => {
-                  return <Place key={location.id} location={location} {...this.props} />
+                  return <Place key={location.id} location={location} {...this.props} t={t}/>
                 })
               }
             </ListGroup>
@@ -169,9 +169,9 @@ class UserSettings extends Component {
 
 class Place extends Component {
   _onSelect = () => {
-    const { location, query, setLocation } = this.props
+    const { location, query, setLocation, t } = this.props
     if (location.blank) {
-      window.alert(`Enter origin/destination in the form (or set via map click) and click the resulting marker to set as ${location.type} location.`)
+      window.alert(t(`save_instructions`))
     } else {
       // If 'to' not set and 'from' does not match location, set as 'to'.
       if (

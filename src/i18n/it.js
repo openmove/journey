@@ -169,6 +169,7 @@ export const TRANSLATIONS_IT = {
   "insert_departure_action": "Inserisci luogo di partenza o {{actionText}} sulla mappa",
   "insert_arrive_action": "Inserisci luogo di arrivo o {{actionText}} sulla mappa",
   "enter_intermediate_destination": "Inserisci destinazione intermedia",
+  'save_instructions':"Inserire manualmente la partenza/destinazione (anche mediante clic sulla mappa) e fare clic sull'indicatore risultante per salvare il punto come casa/lavoro",
   "maximum_intermediate_places_reached": "Raggiunto il limite di destinazioni intermedie",
   "define_origin_destination_to_add_intermediate_places": "Inserire origine e destinazione per poter scegliere una fermata intermedia",
   "add_place": "Aggiungi luogo",
