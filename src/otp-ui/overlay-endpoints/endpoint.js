@@ -153,7 +153,8 @@ class Endpoint extends Component {
                   </>
                 )}
               </ListGroupItem>
-              <ListGroupItem
+              {/*TODO: fixme this is not working , commented temporarily*/}
+              {/* <ListGroupItem
                 onClick={this.clearLocation}
               >
                 <UserLocationIcon type="times" /> {t('remove')} {t(type === 'from' ? 'departure2' : 'destination')}
@@ -163,7 +164,7 @@ class Endpoint extends Component {
                 onClick={this.swapLocation}
               >
                 <UserLocationIcon type="refresh" /> {t('change_in_location', { label: otherType })}
-              </ListGroupItem>
+              </ListGroupItem> */}
             </ListGroup>
           </Popup>
         )}
