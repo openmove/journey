@@ -18,12 +18,12 @@ const BUTTON_WIDTH = 40
 
 class UserSettings extends Component {
   _disableTracking = () => {
-    const { user, toggleTracking } = this.props
+    const { user, toggleTracking,t } = this.props
     if (!user.trackRecent) return
     const hasRecents = user.recentPlaces.length > 0 || user.recentSearches.length > 0
     // If user has recents and does not confirm deletion, return without doing
     // anything.
-    if (hasRecents && !window.confirm('You have recent searches and/or places stored. Disabling storage of recent places/searches will remove these items. Continue?')) {
+    if (hasRecents && !window.confirm(t('disable_tracking'))) {
       return
     }
     // Disable tracking if we reach this statement.
