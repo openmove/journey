@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import {
   clearLocation,
+  switchLocations,
   forgetPlace,
   rememberPlace,
   setLocation
@@ -35,7 +36,8 @@ const mapDispatchToProps = {
   forgetPlace,
   rememberPlace,
   setLocation,
-  clearLocation
+  clearLocation,
+  switchLocations
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EndpointsOverlay)

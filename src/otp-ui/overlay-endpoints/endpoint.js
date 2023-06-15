@@ -74,14 +74,11 @@ class Endpoint extends Component {
 
   clearLocation = () => {
     const { clearLocation, type } = this.props;
-    clearLocation({ type });
+    clearLocation({ locationType:type });
   };
 
   swapLocation = () => {
-    const { location, setLocation, type, t } = this.props;
-    this.clearLocation();
-    const otherType = t(type === "from" ? "destination" : "origin");
-    setLocation({ type: otherType, location });
+    this.props.switchLocations();
   };
 
   onDragEnd = e => {
@@ -153,8 +150,7 @@ class Endpoint extends Component {
                   </>
                 )}
               </ListGroupItem>
-              {/*TODO: fixme this is not working , commented temporarily*/}
-              {/* <ListGroupItem
+              <ListGroupItem
                 onClick={this.clearLocation}
               >
                 <UserLocationIcon type="times" /> {t('remove')} {t(type === 'from' ? 'departure2' : 'destination')}
@@ -164,7 +160,7 @@ class Endpoint extends Component {
                 onClick={this.swapLocation}
               >
                 <UserLocationIcon type="refresh" /> {t('change_in_location', { label: otherType })}
-              </ListGroupItem> */}
+              </ListGroupItem>
             </ListGroup>
           </Popup>
         )}

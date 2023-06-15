@@ -20,6 +20,7 @@ DefaultMapMarkerIcon.propTypes = {
 
 function EndpointsOverlay({
   clearLocation,
+  switchLocations,
   forgetPlace,
   fromLocation,
   intermediatePlaces,
@@ -34,6 +35,7 @@ function EndpointsOverlay({
     <div>
       <Endpoint
         clearLocation={clearLocation}
+        switchLocations={switchLocations}
         forgetPlace={forgetPlace}
         location={fromLocation}
         locations={locations}
@@ -61,6 +63,7 @@ function EndpointsOverlay({
       })}
       <Endpoint
         clearLocation={clearLocation}
+        switchLocations={switchLocations}
         forgetPlace={forgetPlace}
         location={toLocation}
         locations={locations}
