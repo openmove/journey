@@ -107,7 +107,7 @@ class Endpoint extends Component {
     const iconHtml = ReactDOMServer.renderToStaticMarkup(
       <MapMarkerIcon location={location} type={type} />
     );
-    const otherType = t(type === "from" ? "destination" : "origin");
+    const otherType = t( type === 'from' ? 'destination' : 'departure2')
     const icon = isWork ? "briefcase" : isHome ? "home" : "map-marker";
     return (
       <Marker
