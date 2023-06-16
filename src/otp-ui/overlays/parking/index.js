@@ -97,7 +97,9 @@ class ParkingOverlay extends AbstractOverlay {
       }
       else if (data.type === 'sensor') {
 
-        if (data.free === true ) {
+        if (data.free == null ) {
+          badgeType = 'default';
+        } else if (data.free === true ) {
           badgeType = 'success';
         } else if (data.free === false) {
           badgeType = 'danger';
@@ -161,7 +163,7 @@ class ParkingOverlay extends AbstractOverlay {
 
     return (
       <LayerGroup>
-      <AdvancedMarkerCluster
+      {/* <AdvancedMarkerCluster
         enabled={isMarkClusterEnabled}
         showCoverageOnHover={false}
         maxClusterRadius={40}
@@ -169,6 +171,8 @@ class ParkingOverlay extends AbstractOverlay {
         iconCreateFunction={clusterIcon}
       >
         {
+          // commented because now sensors behave like normal stations
+          // left here if there will be differences in the future
          locationsFiltered.map( station => {
             if(station.type!=='sensor') return null;
             return (
@@ -199,7 +203,7 @@ class ParkingOverlay extends AbstractOverlay {
             );
           })
         }
-      </AdvancedMarkerCluster>
+      </AdvancedMarkerCluster> */}
       <FeatureGroup>
       <AdvancedMarkerCluster
         enabled={isMarkClusterEnabled}
@@ -210,7 +214,9 @@ class ParkingOverlay extends AbstractOverlay {
       >
         {
           locationsFiltered.map( station => {
-          if(station.type!=='station' && station.type!== 'sensorGroup') return null;
+          // commented because now sensors behave like normal stations
+          // left here if there will be differences in the future
+          // if(station.type!=='station' && station.type!== 'sensorGroup') return null;
 
           // station.payment = true
           // station.parkingType = 'covered-with-barrier'
@@ -250,9 +256,10 @@ class ParkingOverlay extends AbstractOverlay {
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
                   <small>{station.group_name}</small>
                   {
-                    station.type === 'station' &&
+                    // sensors and stations behave the same way
+                    (station.type === 'station' ||  station.type === 'sensor') && (
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                      {station.free !== null ? (
+                      {typeof station.free === 'number' ? (
                         <CircularProgressbar
                           value={station.free === null ? 'N/A' : station.free }
                           minValue={0}
@@ -271,7 +278,7 @@ class ParkingOverlay extends AbstractOverlay {
                         {station.capacity && <p>{t('capacity')}: {station.capacity!==null ? station.capacity : 'N/A'}</p>}
                       </div>
                     </div>
-                  }
+                  )}
                   {
                     station.type === 'sensorGroup' &&
                     <div className="otp-ui-mapOverlayPopup__popupAvailableSlots">
