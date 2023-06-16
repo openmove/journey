@@ -90,16 +90,17 @@ class LocationFilter extends Component {
 
                             return (
                                 <div className="otp-ui-locationFilter__group" key={index}>
-                                    <div className="otp-ui-locationFilter__label">{t(filterGroup.label)}</div>
+                                    <div className="otp-ui-locationFilter__label">{t(filterGroup.label?.replace('label_',''))}</div>
                                     <div className="otp-ui-locationFilter__panel">
                                         {
                                             filterGroup.values.map((item, i) => {
-                                                const label = t(item.label||item.value.toString());
+                                                const label = item.label||item.value.toString();
+                                                const translatedLabel = t(label.replace('label_',''))
                                                 return (
                                                     <ToggleSwitch
-                                                        title={label}
+                                                        title={translatedLabel}
                                                         key={`${filterGroup.label}-${i}`}
-                                                        label={label}
+                                                        label={translatedLabel}
                                                         value={item.value.toString()}
                                                         checked={item.enabled}
                                                         onChange={() => onChange(key, item.value)}

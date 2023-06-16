@@ -15,19 +15,19 @@ class ToggleSwitch extends Component {
             value
         } = this.props;
 
-        return (            
+        return (
             <label title={title} className="otp-ui-toggleSwitch">
                 <div>
-                    <input 
+                    <input
                         type="checkbox"
-                        className="otp-ui-toggleSwitch__selector"  
+                        className="otp-ui-toggleSwitch__selector"
                         checked={checked}
                         value={value}
-                        onChange={() => onChange(value)}                       
+                        onChange={() => onChange(value)}
                     />
-                    <span>{label}</span>
+                    <span> {label}</span>
                 </div>
-            </label>            
+            </label>
         )
     }
 }
