@@ -4,14 +4,24 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { withNamespaces } from "react-i18next";
 import { ButtonGroup, Button } from 'react-bootstrap';
+import { withLeaflet } from "react-leaflet";
 
 class FromToLocationPicker extends Component {
+  constructor(props){
+    super(props);
+    this.onFromClick = this.onFromClick.bind(this)
+  }
   onFromClick = () => {
-    const { location, onFromClick, setLocation } = this.props;
+    const { location, onFromClick, setLocation, closeOnInteraction = true} = this.props;
+
+    if (closeOnInteraction) {
+      this.props.leaflet?.map?.closePopup();
+    }
     if (onFromClick) {
       onFromClick();
       return;
     }
+
     setLocation({
       location,
       locationType: "from",
@@ -20,11 +30,16 @@ class FromToLocationPicker extends Component {
   };
 
   onToClick = () => {
-    const { location, onToClick, setLocation } = this.props;
+    const { location, onToClick, setLocation, closeOnInteraction = true } = this.props;
+
+    if (closeOnInteraction) {
+      this.props.leaflet?.map?.closePopup();
+    }
     if (onToClick) {
       onToClick();
       return;
     }
+
     setLocation({
       location,
       locationType: "to",
@@ -97,4 +112,4 @@ FromToLocationPicker.defaultProps = {
   toText: "to_here"
 };
 
-export default withNamespaces()(FromToLocationPicker);
+export default withNamespaces()(withLeaflet(FromToLocationPicker));
