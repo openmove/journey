@@ -90,8 +90,7 @@ class AbstractOverlay extends MapLayer {
     this.props.registerOverlay(this)
 
     if (this.props.visible) {
-        this._setupInterval()
-        this._startRefreshing()
+      this.onOverlayAdded()
     }
   }
 
