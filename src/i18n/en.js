@@ -356,6 +356,7 @@ export const TRANSLATIONS_EN = {
   "recently_searched": "Recently Searched",
   "my_places": "My Places",
   "current_location_not_available": "Current location not available",
+  "current_location": "Current Location ",
   "fetching_location": "Fetching location",
   "clear_location": "Clear location",
   "begin_typing_to_search_for_locations": "Begin typing to search for locations",

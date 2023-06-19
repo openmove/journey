@@ -356,6 +356,7 @@ export const TRANSLATIONS_IT = {
   "recently_searched": "Ricerche recenti",
   "my_places": "I miei luoghi",
   "current_location_not_available": "Posizione corrente non disponibile",
+  "current_location": "Posizione Corrente",
   "fetching_location": "Recupero della posizione",
   "clear_location": "Cancella la posizione",
   "begin_typing_to_search_for_locations": "Iniziare a digitare per cercare un luogo",

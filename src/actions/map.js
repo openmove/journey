@@ -5,6 +5,8 @@ import { createAction } from 'redux-actions'
 import { routingQuery } from './api'
 import { clearActiveSearch } from './form'
 
+import i18next from 'i18next'
+
 /* SET_LOCATION action creator. Updates a from or to location in the store
  *
  * payload format: {
@@ -87,7 +89,7 @@ export function setLocationToCurrent (payload) {
     payload.location = {
       lat: currentPosition.coords.latitude,
       lon: currentPosition.coords.longitude,
-      name: '(Posizione Corrente)',
+      name: `(${i18next.t('current_location')})`,
       category: 'CURRENT_LOCATION'
     }
     dispatch(settingLocation(payload))

@@ -1,6 +1,7 @@
 import moment from "moment";
 
 import { getPlaceName, isTransit, toSentenceCase } from "./itinerary";
+import i18next from 'i18next'
 
 export function latlngToString(latlng) {
   return (
@@ -23,7 +24,7 @@ export function currentPositionToLocation(currentPosition) {
   return {
     lat: currentPosition.coords.latitude,
     lon: currentPosition.coords.longitude,
-    name: "(Posizione Corrente)",
+    name: `(${i18next.t('current_location')})`,
     category: "CURRENT_LOCATION"
   };
 }
