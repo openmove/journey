@@ -59,7 +59,7 @@ class PatternRow extends Component {
         <div className='header'>
           {/* route name */}
           <div className='route-name'>
-            <b>{routeName}</b> To {pattern.headsign}
+            <b>{routeName}</b> {t('direction')} {pattern.headsign}
           </div>
           {/* next departure preview */}
           {hasStopTimes && (
@@ -161,7 +161,7 @@ class PatternRow extends Component {
         // according to shared headsigns, so we need to slice the stop times
         // here as well to ensure only x times are shown per route/headsign combo.
         // This is applied after the sort, so we're keeping the soonest departures.
-        .slice(0, stopViewerConfig.numberOfDepartures)
+        .slice(0, stopViewerConfig.numberOfDeparturesScheduled || stopViewerConfig.numberOfDepartures)
     } else {
       // Do not include pattern row if it has no stop times.
       return null

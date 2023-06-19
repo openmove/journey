@@ -104,16 +104,23 @@ class StopViewer extends Component {
   }
 
   _toggleScheduleView = () => {
-    const { findStopTimesForStop, viewedStop } = this.props
+    const { findStopTimesForStop, viewedStop, stopViewerConfig} = this.props
+
     const {date, scheduleView: isShowingScheduleView} = this.state
     if (!isShowingScheduleView) {
       // If not currently showing schedule view, fetch schedules for current
       // date and turn off auto refresh.
+      // if numberOfDeparturesScheduled is set in the config use it
       this._stopAutoRefresh()
       findStopTimesForStop({
         stopId: viewedStop.stopId,
         startTime: this._getStartTimeForDate(date),
-        timeRange: 86400
+        timeRange: 86400,
+        ...(
+           stopViewerConfig?.numberOfDeparturesScheduled &&
+           {
+              numberOfDepartures: stopViewerConfig?.numberOfDeparturesScheduled
+           })
       })
     } else {
       // Otherwise, turn on auto refresh.
