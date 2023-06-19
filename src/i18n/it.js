@@ -81,6 +81,7 @@ export const TRANSLATIONS_IT = {
   "tpl": "Trasporto Pubblico",
   "by_walk": "A piedi",
   "by_bike": "In bici",
+  "e-scooter": "E-scooter",
   "meter": "metri",
   "bus": "Bus",
   "stops": "Fermate",

@@ -17,17 +17,17 @@ export function isBike(mode) {
 const supportedExclusiveModes = [
   {
     mode: "WALK",
-    label: "Walk",
+    label: "by_walk",
     isActive: isWalk
   },
   {
     mode: "BICYCLE",
-    label: "Bike",
+    label: "by_bike",
     isActive: isBike
   },
   {
     mode: "MICROMOBILITY",
-    label: "E-scooter Only",
+    label: "E-scooter",
     isActive: isMicromobility
   },
   {
@@ -132,7 +132,7 @@ function getPrimaryModeOption(ModeIcon, selectedModes) {
     showTitle: true,
     icon: (<ModeIcon mode="TRANSIT" width={28} height={28} />),
     label: 'take_transit',
-    title: "Bus"
+    title: "tpl"
   };
 }
 

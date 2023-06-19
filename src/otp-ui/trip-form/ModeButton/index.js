@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { withNamespaces } from "react-i18next";
 
 /**
  * ModeButton lets the user pick a travel mode.
@@ -17,12 +18,13 @@ const ModeButton = props => {
     selected,
     showTitle,
     title,
-    style
+    style,
+    t
   } = props;
 
   const tooltip = text => (
     <Tooltip id="tooltip">
-      {text}
+      {t(text)}
     </Tooltip>
   );
 
@@ -89,4 +91,4 @@ ModeButton.defaultProps = {
   title: null
 };
 
-export default ModeButton;
+export default withNamespaces()(ModeButton);
