@@ -31,9 +31,9 @@ export function configure (otpConfig) {
       <div className='disclaimer'>
         {t('disclaimer')}
         <div className='link-row'>
-          <a href='https://openmove.com' target='_blank'>{t('tnc')}</a>
+          <a href='https://openmove.com/it-old/legal/terms2022.pdf' target='_blank'>{t('tnc')}</a>
           <span> &bull; </span>
-          <a href='https://openmove.com' target='_blank'>{t('privacy_policy')}</a>
+          <a href='https://openmove.com/it-old/legal/privacypolicy.html' target='_blank'>{t('privacy_policy')}</a>
           </div>
       </div>
       ),
