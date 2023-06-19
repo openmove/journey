@@ -1,6 +1,7 @@
 import moment from "moment";
 import getGeocoder from "../geocoder";
 import qs from "qs";
+import i18next from "i18next";
 
 import {
   getTransitModes,
@@ -98,8 +99,8 @@ export function summarizeQuery(query, locations = []) {
     findLocationType(query.from, locations) || query.from.name.split(",")[0];
   const to =
     findLocationType(query.to, locations) || query.to.name.split(",")[0];
-  const mode = hasTransit(query.mode) ? "Transit" : toSentenceCase(query.mode);
-  return `${mode} from ${from} to ${to}`;
+  const mode = hasTransit(query.mode) ? "tpl" : query.mode?.toLowerCase();
+  return `${i18next.t(mode)} ${i18next.t('from2')} ${from} ${i18next.t('to2')} ${i18next.t(to)}`;
 }
 
 export function getTripOptionsFromQuery(query, keepPlace = false) {
