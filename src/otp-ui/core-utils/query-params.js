@@ -458,19 +458,19 @@ const queryParams = [
       query.mode.indexOf("MICROMOBILITY_RENT") === -1,
     options: [
       {
-        text: "Kid's hoverboard (6mph)",
+        text: "Kid's hoverboard (10km/h)",
         value: 125
       },
       {
-        text: "Entry-level scooter (11mph)",
+        text: "Entry-level scooter (20km/h)",
         value: 250
       },
       {
-        text: "Robust E-scooter (18mph)",
+        text: "Robust E-scooter (30km/h)",
         value: 500
       },
       {
-        text: "Powerful E-scooter (24mph)",
+        text: "Powerful E-scooter (40km/h)",
         value: 1500
       }
     ],
