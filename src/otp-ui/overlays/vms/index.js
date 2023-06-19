@@ -111,7 +111,7 @@ class VmsOverlay extends MapLayer {
   updateLeafletElement() {}
 
   render() {
-    const { locations, overlayVmsConf,language, t } = this.props;
+    const { locations, overlayVmsConf, t } = this.props;
     const isMarkClusterEnabled = overlayVmsConf.markerCluster
 
     if (!locations || locations.length === 0) return <LayerGroup />;
@@ -181,7 +181,6 @@ class VmsOverlay extends MapLayer {
           iconCreateFunction={markerClusterIcon}
         >
           {locationsFiltered.map((station) => {
-            moment.locale(language.defaultLanguage || language.fallbackLanguage)
             const timeStamp =  moment(station.time).format('Do MMMM YYYY, h:mm:ss a')
             const lastUpdate = moment(station.lastUpdate).format('Do MMMM YYYY, h:mm:ss a')
             return (
@@ -223,8 +222,7 @@ class VmsOverlay extends MapLayer {
 const mapStateToProps = (state, ownProps) => {
   return {
     overlayVmsConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'vms')[0],
-    locations: state.otp.overlay.vms && state.otp.overlay.vms.locations,
-    language: state.otp.config.language
+    locations: state.otp.overlay.vms && state.otp.overlay.vms.locations
   };
 };
 

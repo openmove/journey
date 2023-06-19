@@ -29,7 +29,10 @@ class LanguageDropDown extends Component{
           {langList.map((slang, index) => {
             return (
               <MenuItem
-                onClick={() =>{ i18n.changeLanguage(slang.lang); document.documentElement.lang = i18n.language;}}
+                onClick={() =>{
+                    i18n.changeLanguage(slang.lang);
+                    document.documentElement.lang = i18n.language;
+                  }}
                 key={index}
               >
                 {slang.label}

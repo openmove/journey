@@ -24,10 +24,8 @@ function TripDetails({
   messages,
   routingType,
   timeOptions,
-  t,
-  lng
+  t
 }) {
-  moment.locale(lng || "it");
   const date = moment(itinerary.startTime);
   messages = mergeMessages(TripDetails.defaultProps.messages, messages);
 

@@ -112,7 +112,7 @@ class WebcamOverlay extends MapLayer {
   updateLeafletElement() {}
 
   render() {
-    const { locations, overlayWebCamConf, language, t, activeFilters } = this.props;
+    const { locations, overlayWebCamConf, t, activeFilters } = this.props;
     const isMarkClusterEnabled = overlayWebCamConf.markerCluster
     if (!locations || locations.length === 0) return <LayerGroup />;
     const bb =  getItem('mapBounds')
@@ -180,7 +180,6 @@ class WebcamOverlay extends MapLayer {
           iconCreateFunction={markerClusterIcon}
         >
           {locationsFiltered.map((station) => {
-            moment.locale(language.defaultLanguage || language.fallbackLanguage)
             const timeStamp =  moment(station.timestamp).format('Do MMMM YYYY, h:mm:ss a')
             const lastUpdate = moment(station.lastUpdate).format('Do MMMM YYYY, h:mm:ss a')
             return (
@@ -215,7 +214,6 @@ const mapStateToProps = (state, ownProps) => {
   return {
     overlayWebCamConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'webcam')[0],
     locations: state.otp.overlay.webcam && state.otp.overlay.webcam.locations,
-    language: state.otp.config.language
   };
 };
 

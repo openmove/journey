@@ -46,7 +46,6 @@ class DateTimePreview extends Component {
     } = this.props
 
     let timeStr
-    moment.locale(lng || "it");
     var separator = "a";
     switch(lng){
         case 'it': separator = "a"; break;
