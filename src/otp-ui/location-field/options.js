@@ -11,7 +11,7 @@ import { MenuItem, Button } from 'react-bootstrap'
 import { Utensils,TheaterMasks,Landmark,ShoppingBag, Briefcase, Bed, Home, Hotel, MapMarker, MapPin, Bus,City } from "@styled-icons/fa-solid";
 import { Address, Shop} from "@styled-icons/entypo";
 import {Nightlife,LocalMovies, Nature} from '@styled-icons/material/'
-
+import { getRouteColor, getRouteTextColor } from "../itinerary-body/util";
 
 export function GeocodedOptionIcon({feature}) {
    /*
@@ -84,16 +84,30 @@ export function TransitStopOption({ isActive, onClick, stop, stopOptionIcon }) {
   return (
     <>
       <>
-        <MenuItem header>
-          {stopOptionIcon}{' '}{humanizeDistanceString(stop.dist, true)}
-        </MenuItem>
         <MenuItem onClick={onClick} active={isActive}>
+        <strong>
+          {stopOptionIcon}{' '}{humanizeDistanceString(stop.dist, true)}
+        </strong>
+        {" "}
           {stop.name} ({stop.code})
-          <ul>
+          <ul style={{display:'flex',width:'100%',paddingLeft:'15px'}}>
             {(stop.routes || []).map(route => {
               const name = route.shortName || route.longName;
+              const backgroundColor = getRouteColor(route?.mode,route?.color)
+              const color = getRouteTextColor(route?.mode, backgroundColor, route?.textColor)
               return (
-                <Button bsSize="small" bsStyle="link" key={`route-${name}`}>{name}</Button>
+                <div
+                  key={`route-${name}`}
+                  style={{
+                      color,
+                      backgroundColor,
+                      padding:'2.5px 5px',
+                      margin:'5px',
+                      borderRadius: '8px'
+                    }}
+                >
+                  {name}
+                </div>
               );
             })}
           </ul>

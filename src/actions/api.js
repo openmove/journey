@@ -850,7 +850,7 @@ const receivedRoutesAtStopError = createAction('ROUTES_AT_STOP_ERROR')
 
 export function findRoutesAtStop (stopId) {
   return createQueryAction(
-    `index/stops/${stopId}/routes`,
+    `index/stops/${stopId}/routes?detail=true`,
     receivedRoutesAtStopResponse,
     receivedRoutesAtStopError,
     {
