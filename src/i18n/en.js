@@ -234,6 +234,7 @@ export const TRANSLATIONS_EN = {
   "carsharing_bookahead": "Bookahead",
   "carsharing_vehicles_models": "Vehicle models",
   "vehicles": "Vehicles",
+  "simulated_position_disclaimer":"The vehicles' position could be estimated based on the time",
   "ondemand": "OnDemand",
   "webcam": "Webcams",
   "vms": "Variable Message Signs",

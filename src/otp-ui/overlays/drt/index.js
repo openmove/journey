@@ -231,6 +231,7 @@ class DrtOverlay extends AbstractOverlay {
                       <div className="otp-ui-mapOverlayPopup__popupTitle">
                         <span className='subtitle'>&nbsp;{vehicle.vehicle.name}</span>{vehicle.vehicle.label}
                       </div>
+                      <small>{t('simulated_position_disclaimer')}</small>
                       {vehicle.capacity && (
                         <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
                           <CircularProgressbar
