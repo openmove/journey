@@ -156,7 +156,7 @@ const queryParams = [
       name: "maxWalkDistance",
       routingTypes: ["ITINERARY"],
       applicable: query => query.mode && (0, hasTransit)(query.mode) && query.mode.indexOf("WALK") !== -1,
-      default: 1000,
+      default: 2500,
       // 1Km
       selector: "DROPDOWN",
       label: "by_walk",
@@ -175,6 +175,9 @@ const queryParams = [
       }, {
         text: "1.5 Km",
         value: 1500
+      }, {
+        text: "2.5 Km",
+        value: 2500
       }, {
         text: "3 Km",
         value: 3000
