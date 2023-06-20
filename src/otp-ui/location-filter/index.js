@@ -101,7 +101,7 @@ class LocationFilter extends Component {
                                                         title={translatedLabel}
                                                         key={`${filterGroup.label}-${i}`}
                                                         label={translatedLabel}
-                                                        value={item.value.toString()}
+                                                        value={item.value?.toString()}
                                                         checked={item.enabled}
                                                         onChange={() => onChange(key, item.value)}
                                                     />
