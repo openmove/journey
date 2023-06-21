@@ -480,6 +480,7 @@ export const TRANSLATIONS_EN = {
   "attribution_street":"Map tiles: &copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>, &copy; <a href='https://carto.com/attributions'>CARTO</a>",
   "attribution_printer":"Map tiles by <a href='http://stamen.com'>Printer</a>",
   "attribution_osm":"Map data &copy; <a href='https://openstreetmap.org'>OpenStreetMap</a> contributors",
+  "attribution_geocode_earth": "Geocoder: © <a href='https://geocode.earth'>Geocode Earth</a>,  <a href='https://openstreetmap.org/copyright'>OpenStreetMap</a>, and <a href='https://geocode.earth/guidelines'>others</a>.",
 
   // routes tabs
   "not-specified" : "not specified",

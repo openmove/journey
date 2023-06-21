@@ -298,6 +298,7 @@ class DefaultMap extends Component {
                   }
                 }}
                 appVersionAttribution = {version ? ` | <a href="https://github.com/openmove/journey">App Version ${version}</a>` : ''}
+                geocoderAttribution = {` ${t(this.props.geocoderAttribution)} `}
               >
                 {/* The default overlays */}
                 <BoundsUpdatingOverlay />
@@ -457,6 +458,7 @@ const mapStateToProps = (state, ownProps) => {
     overlays,
     query: state.otp.currentQuery,
     version: state.otp.config.version,
+    geocoderAttribution: state.otp.config.geocoder.attribution
   }
 }
 

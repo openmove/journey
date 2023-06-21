@@ -223,6 +223,7 @@ class BaseMap extends Component {
       onLoad,
       onFilterLayerRequest,
       appVersionAttribution,
+      geocoderAttribution = "",
       zoom,
       hideAllControls
     } = this.props;
@@ -314,7 +315,7 @@ class BaseMap extends Component {
                   ) : (
                     <TileLayer
                       url={layer.url}
-                      attribution={this.props.t(layer.attribution) + appVersionAttribution}
+                      attribution={this.props.t(layer.attribution) + geocoderAttribution + appVersionAttribution}
                       maxZoom={layer.maxZoom}
                       detectRetina={layer.detectRetina}
 
