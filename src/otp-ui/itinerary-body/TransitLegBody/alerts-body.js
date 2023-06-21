@@ -11,7 +11,6 @@ export default function AlertsBody({ alerts, longDateFormat, timeFormat, t }) {
         .map((alert, i) => {
           // If alert is effective as of +/- one day, use today, tomorrow, or
           // yesterday with time. Otherwise, use long date format.
-          console.log(alert);
           const dateTimeString = moment(alert.effectiveStartDate).calendar(
         // commented because it's not localized
         /* null,
