@@ -9,6 +9,10 @@ import { isMobile } from "../core-utils/ui.js";
 
 import ToggleSwitch from "../toggle-switch"
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 class LocationFilter extends Component {
     constructor(props) {
         super(props)
@@ -95,7 +99,7 @@ class LocationFilter extends Component {
                                         {
                                             filterGroup.values.map((item, i) => {
                                                 const label = item.label||item.value.toString();
-                                                const translatedLabel = t(label.replace('label_',''))
+                                                const translatedLabel = capitalizeFirstLetter(t(label.replace('label_','')))
                                                 return (
                                                     <ToggleSwitch
                                                         title={translatedLabel}
