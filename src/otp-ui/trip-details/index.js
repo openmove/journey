@@ -44,7 +44,7 @@ function TripDetails({
     }
   });
   let fare;
-  if (transitFare || minTNCFare) {
+  if ((transitFare && transitFare!==-1) || minTNCFare) {
     fare = (
       <span>
         {transitFare && transitFare!==-1 && (
