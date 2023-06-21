@@ -545,7 +545,7 @@ export function calculateFares(itinerary) {
   let symbol = "$"; // default to USD
   let dollarsToString = dollars => `${symbol}${dollars.toFixed(2)}`;
   let centsToString = cents => `${symbol}${(cents / 100).toFixed(2)}`;
-  if (itinerary.fare && itinerary.fare.fare && itinerary.fare.fare.regular) {
+  if (itinerary.fare && itinerary.fare.fare && itinerary.fare.fare.regular && itinerary.fare !== -1) {
     const reg = itinerary.fare.fare.regular;
     symbol = reg.currency.symbol;
     transitFare = reg.cents;
@@ -554,6 +554,8 @@ export function calculateFares(itinerary) {
         reg.currency.defaultFractionDigits
       )}`;
     dollarsToString = dollars => `${symbol} ${dollars.toFixed(2)}`;
+  } else {
+    transitFare = -1;
   }
 
   // Process any TNC fares

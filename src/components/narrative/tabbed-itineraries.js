@@ -143,7 +143,7 @@ class TabButton extends Component {
       transitFare
     } = calculateFares(itinerary)
     // TODO: support non-USD
-    const minTotalFare = minTNCFare * 100 + transitFare
+    const minTotalFare = transitFare!==-1 ? minTNCFare * 100 + transitFare : transitFare
     const plus = maxTNCFare && maxTNCFare > minTNCFare ? '+' : ''
     if (isActive) classNames.push('selected')
     return (
@@ -182,7 +182,7 @@ class TabButton extends Component {
             )}
 
           {/* the fare summary line */}
-          {showRouteFares && !!minTotalFare && (
+          {showRouteFares && minTotalFare!==-1 && (
             <span className="text-center">
               <small><strong>{t('fare')}</strong></small><br/>
               {minTotalFare ? <span>{`${centsToString(minTotalFare)}${plus}`}  </span> : <></>}

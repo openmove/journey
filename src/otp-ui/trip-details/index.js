@@ -47,7 +47,7 @@ function TripDetails({
   if (transitFare || minTNCFare) {
     fare = (
       <span>
-        {transitFare && (
+        {transitFare && transitFare!==-1 && (
           <span>
             {t(messages.transitFare)}: <b>{centsToString(transitFare)}</b>
           </span>

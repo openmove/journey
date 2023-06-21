@@ -116,9 +116,9 @@ class ItinerarySummary extends Component {
       minTNCFare,
       transitFare
     } = coreUtils.itinerary.calculateFares(itinerary)
-    // TODO: support non-USD
-    const minTotalFare = minTNCFare * 100 + transitFare
-    const maxTotalFare = maxTNCFare * 100 + transitFare
+
+    const minTotalFare = transitFare !== -1 ? minTNCFare * 100 + transitFare : transitFare
+    const maxTotalFare = transitFare !== -1 ? maxTNCFare * 100 + transitFare : transitFare
 
     const { caloriesBurned } = coreUtils.itinerary.calculatePhysicalActivity(itinerary)
 
