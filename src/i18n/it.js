@@ -3,6 +3,7 @@ export const TRANSLATIONS_IT = {
   "privacy_policy": "Privacy Policy",
   "disclaimer": "Prima di partire controlla gli arrivi in tempo reale alla fermata e gli avvisi sul servizio che possono influire sul tuo viaggio. Tempi e percorsi sono solo a scopo di pianificazione e possono subire variazioni a causa del traffico, la condizione della strada, deviazioni e altri fattori.",
   "tnc": "Termini d'Uso",
+  "effective_from": "In vigore da",
   "south": "sud",
   "north": "nord",
   "west": "ovest",

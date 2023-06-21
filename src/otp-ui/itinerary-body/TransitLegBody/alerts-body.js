@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { ExclamationTriangle } from "@styled-icons/fa-solid";
 
-export default function AlertsBody({ alerts, longDateFormat, timeFormat }) {
+export default function AlertsBody({ alerts, longDateFormat, timeFormat, t }) {
   return (
     <div className="otp-ui-transitAlerts">
       {alerts
@@ -11,8 +11,10 @@ export default function AlertsBody({ alerts, longDateFormat, timeFormat }) {
         .map((alert, i) => {
           // If alert is effective as of +/- one day, use today, tomorrow, or
           // yesterday with time. Otherwise, use long date format.
+          console.log(alert);
           const dateTimeString = moment(alert.effectiveStartDate).calendar(
-            null,
+        // commented because it's not localized
+        /* null,
             {
               sameDay: `${timeFormat}, [Today]`,
               nextDay: `${timeFormat}, [Tomorrow]`,
@@ -20,8 +22,8 @@ export default function AlertsBody({ alerts, longDateFormat, timeFormat }) {
               lastWeek: `${longDateFormat}`,
               sameElse: `${longDateFormat}`
             }
-          );
-          const effectiveDateString = `Effective as of ${dateTimeString}`;
+           */);
+          const effectiveDateString = `${t('effective_from')} ${dateTimeString}`;
           return (
             <a className="otp-ui-transitAlert" key={i} href={alert.alertUrl} target="_blank">
               <div className="otp-ui-transitAlert__iconContainer">

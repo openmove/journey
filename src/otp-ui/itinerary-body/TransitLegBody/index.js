@@ -139,6 +139,7 @@ class TransitLegBody extends Component {
                 alerts={leg.alerts}
                 longDateFormat={longDateFormat}
                 timeFormat={timeFormat}
+                t={t}
               />
             )}
           </VelocityTransitionGroup>
