@@ -235,7 +235,7 @@ export const TRANSLATIONS_IT = {
   "carsharing_bookahead": "Prenotabile",
   "carsharing_vehicles_models": "Modelli di veicolo",
   "vehicles": "Veicoli",
-  "simulated_position_disclaimer":"La posizione dei mezzi potrebbe essere stimata in base all'orario",
+  "simulated_position_disclaimer":"La posizione dei mezzi è indicativa e potrebbe essere stimata in base all'orario",
   "ondemand": "onDemand",
   "webcam": "Webcams",
   "vms": "Cartelli messaggi variabili",
