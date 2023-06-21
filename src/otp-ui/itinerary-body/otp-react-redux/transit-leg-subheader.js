@@ -18,7 +18,7 @@ function TransitLegSubheader({
   const buttonText = t('stop');
   return (
     <div className="otp-ui-placeSubheader">
-      <span>{t('stop_id')}{from.stopId}</span>
+      <span>{t('stop_id')} {from.stopId}</span>
       <ViewStopButton
         onStopClick={onStopClick}
         stopId={from.stopId}
