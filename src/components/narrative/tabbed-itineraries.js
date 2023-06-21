@@ -43,6 +43,7 @@ class TabbedItineraries extends Component {
       setActiveItinerary,
       timeFormat,
       useRealtime,
+      showRouteFares,
       t,
       ...itineraryClassProps
     } = this.props
@@ -64,6 +65,7 @@ class TabbedItineraries extends Component {
               index={index}
               isActive={index === activeItinerary}
               itinerary={itinerary}
+              showRouteFares={showRouteFares}
               onClick={setActiveItinerary}
               timeFormat={timeFormat}
               t={t}>
@@ -107,7 +109,7 @@ const mapStateToProps = (state, ownProps) => {
     // swap out realtime itineraries with non-realtime depending on boolean
     pending,
     realtimeEffects,
-    showRoutesFares: state.otp.config.itinerary.showRoutesFares,
+    showRouteFares: state.otp.config.itinerary.showRouteFares,
     activeItinerary: activeSearch && activeSearch.activeItinerary,
     activeLeg: activeSearch && activeSearch.activeLeg,
     activeStep: activeSearch && activeSearch.activeStep,
@@ -180,7 +182,7 @@ class TabButton extends Component {
             )}
 
           {/* the fare summary line */}
-          {showRouteFares && (
+          {showRouteFares && !!minTotalFare && (
             <span className="text-center">
               <small><strong>{t('fare')}</strong></small><br/>
               {minTotalFare ? <span>{`${centsToString(minTotalFare)}${plus}`}  </span> : <></>}
