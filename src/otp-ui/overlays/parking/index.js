@@ -229,7 +229,7 @@ class ParkingOverlay extends AbstractOverlay {
           let price = '';
           if( station.payment === true){
             price+=t('paid')
-            if(station.payment_period!=='always'){
+            if(station.payment_period && station.payment_period!=='always'){
               price+=` ${t('parking-during')}`
               price+=` ${t(`parking-${station.payment_period}`)}`
             }
