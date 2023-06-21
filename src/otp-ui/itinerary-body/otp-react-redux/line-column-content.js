@@ -2,6 +2,7 @@ import coreUtils from "../../core-utils";
 import LocationIcon from "../../location-icon";
 import CONFIG from '../../../../config-template.yml'
 const style = CONFIG.transit.style
+import { getMapColor } from "../../core-utils/itinerary";
 // TODO: remove hardcoded colors
 import PropTypes from "prop-types";
 import React from "react";
@@ -65,7 +66,9 @@ export default function LineColumnContent({
   ) {
     // start or end of a car rental/TNC/P&R leg (not including origin or
     // destination)
-    legBadge = <Circle size={17} color="#888" className="otp-ui-lineColumnContent__iconCircle"/>;
+    const color = getMapColor('CAR')
+    // TODO: apply to every badge
+    legBadge = <Circle size={17} color={color} className="otp-ui-lineColumnContent__iconCircle"/>;
   } else {
     legBadge = (
       <>
