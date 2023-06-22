@@ -970,13 +970,14 @@ function createOtpReducer (config, initialQuery) {
 
       case 'PARKING_LOCATIONS_RESPONSE': {
         const {overlayName, data} = action.payload
-        const {stations} =  getResponseData(data)
+        const {stations =[], sensors=[]} =  getResponseData(data)
+        const locations = stations.concat(sensors);
 
         return update(state, {
           overlay: {
             parking: {
                 [overlayName]: {
-                    locations: { $set: stations },
+                    locations: { $set: locations },
                     pending: { $set: false }
                 }
             }
