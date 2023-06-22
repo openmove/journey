@@ -8,6 +8,7 @@ import {
   StandardTram,
   StandardWalk
 } from "./standard";
+import Bus from "./modern/Bus";
 
 //import BikeSharing from "./modern/BikeSharing";
 //import CarSharing from "./modern/CarSharing";
@@ -32,7 +33,7 @@ function StandardModeIcon({ mode, ...props }) {
     case "bicycle_rent":
       return <StandardBike {...props} />;
     case "bus":
-      return <StandardBus {...props} />;
+      return <Bus {...props} />;
     case "car":
     case "car_park":
       return <ClassicCar {...props} />;

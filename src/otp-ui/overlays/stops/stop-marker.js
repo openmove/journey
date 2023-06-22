@@ -19,6 +19,9 @@ import MarkerStation from "../../icons/modern/MarkerStation";
 
 import ReactDOMServer from "react-dom/server";
 import Bus from "../../icons/modern/Bus";
+import ClassicModeIcon from "../../icons/standard-mode-icon";
+import { getMapColor } from "../../core-utils/itinerary";
+import { getRouteColor, getRouteTextColor } from "../../itinerary-body/util";
 
 
 const stopMarkerIcon = memoize((stop,overlayStopConf) => {
@@ -32,6 +35,9 @@ const stopMarkerIcon = memoize((stop,overlayStopConf) => {
   else if(!stop.stops || stop.stops.length === 1 )  {
     isStopChild = true;
   }
+
+  let stopChildColor = overlayStopConf.iconMarkerColor;
+  stopChildColor = getMapColor(stop.vehicleMode)
 
   return divIcon({
     iconSize: [overlayStopConf.iconWidth, overlayStopConf.iconHeight],
@@ -51,7 +57,7 @@ const stopMarkerIcon = memoize((stop,overlayStopConf) => {
           width={overlayStopConf.iconWidth}
           height={overlayStopConf.iconHeight}
           iconColor={overlayStopConf.iconColor}
-          markerColor={overlayStopConf.iconMarkerColor}
+          markerColor={stopChildColor}
         />
       }
       </>
@@ -109,9 +115,18 @@ class StopMarker extends Component {
 
   render() {
     const { languageConfig, leafletPath,overlayStopConf, radius, stop, t, onClick } = this.props;
-    let { id, name, lat, lon, stops } = stop;
-
+    let { id, name, lat, lon, stops, vehicleMode:mode } = stop;
     const stopId = id.split(':').pop();
+
+    let routes = [];
+
+    const addRoutes = stop => {
+      if(Array.isArray(stop?.routes)){
+        stop?.routes.forEach(route => routes.push(route));
+      }
+    }
+    addRoutes(stop)
+
 
     if (Array.isArray(stops) && stops.length===1) {
       //id = stops[0].id;
@@ -134,10 +149,22 @@ class StopMarker extends Component {
         <Popup>
           <div className="otp-ui-mapOverlayPopup">
             <div onClick={this.onClickView} className="otp-ui-mapOverlayPopup__popupHeader">
-              <Bus />&nbsp;&nbsp;{t('stop')}
+              <ClassicModeIcon width={25} mode={mode} />&nbsp;&nbsp;{t('stop')}
             </div>
 
             <Button bsStyle="link" className="otp-ui-mapOverlayPopup__popupTitle" onClick={this.onClickView}>{name}</Button>
+            <div className="routes-container">
+              {routes.map((route)=>{
+                    const backgroundColor = getRouteColor(route?.mode,route?.color)
+                    const color = getRouteTextColor(route?.mode, backgroundColor, route?.textColor)
+                    return (
+                      <div style={{backgroundColor,color}} className="route">
+                        {/* <OpenMoveModeIcon mode={route.mode} width={20} height={20} /> */}
+                        <strong className="shortname" style={{color}}> {route.shortName} </strong>
+                      </div>
+                    )
+              })}
+            </div>
             <br />
             <small>{t('stop_id')}: {stopId}</small>
             {/* show stop childs

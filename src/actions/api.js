@@ -941,6 +941,14 @@ export function findStopsWithinBBox (params) {
         vehicleType
         vehicleMode
         platformCode
+        routes {
+          gtfsId
+          shortName
+          longName
+          mode
+          color
+          textColor
+        }
       }
     }`,
     clusters: `query clustersQuery(
@@ -964,6 +972,14 @@ export function findStopsWithinBBox (params) {
         vehicleType
         vehicleMode
         platformCode
+        routes {
+          gtfsId
+          mode
+          shortName
+          longName
+          color
+          textColor
+        }
       }
     }`
   }
