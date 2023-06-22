@@ -1,3 +1,4 @@
+import CONFIG from '../../config.yml'
 import {
   isTransit,
   isAccessMode,
@@ -8,7 +9,7 @@ import {
 } from "./itinerary";
 import { getItem } from "./storage";
 import { getCurrentDate, getCurrentTime } from "./time";
-
+const defaultMaxWalkDistance = CONFIG?.itinerary?.defaultMaxWalkDistance
 /**
  * name: the default name of the parameter used for internal reference and API calls
  *
@@ -156,7 +157,9 @@ const queryParams = [
       name: "maxWalkDistance",
       routingTypes: ["ITINERARY"],
       applicable: query => query.mode && (0, hasTransit)(query.mode) && query.mode.indexOf("WALK") !== -1,
-      default: 2500,
+      default: [250,500,750,1000,1500,2500,3000,10000].some(distance => distance === defaultMaxWalkDistance) ?
+         defaultMaxWalkDistance :
+         2500,
       // 1Km
       selector: "DROPDOWN",
       label: "by_walk",
