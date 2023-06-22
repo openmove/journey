@@ -220,7 +220,7 @@ export const TRANSLATIONS_IT = {
   "managed":"Gestito da",
   "paid": "a pagamento",
   "free": 'gratuito',
-  "charger": "E-Charger",
+  "charger": "Colonnine di ricarica",
   "charger_provider": "Fornitore",
   "charger_accesstype": "Tipo di accesso",
   "charger_reservable": "Prenotabile",
