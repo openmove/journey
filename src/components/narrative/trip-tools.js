@@ -1,14 +1,16 @@
 import React, {Component} from 'react'
+import {createPortal} from 'react-dom'
 import { connect } from 'react-redux'
 import { Button, ButtonGroup } from 'react-bootstrap'
 // import { DropdownButton, MenuItem } from 'react-bootstrap'
 import copyToClipboard from 'copy-to-clipboard'
 import Bowser from 'bowser'
+import QRCode from "react-qr-code";
 import { withNamespaces } from 'react-i18next'
 
 class TripTools extends Component {
   static defaultProps = {
-    buttonTypes: [ 'COPY_URL', 'PRINT', 'REPORT_ISSUE', 'START_OVER' ]
+    buttonTypes: [ 'SHARE_QR','COPY_URL', 'PRINT', 'REPORT_ISSUE', 'START_OVER' ]
   }
 
   render () {
@@ -17,6 +19,9 @@ class TripTools extends Component {
     const buttonComponents = []
     buttonTypes.forEach((type) => {
       switch (type) {
+        case 'SHARE_QR':
+          buttonComponents.push(<ShareQrButton labelShareQr={t('share_qr')}/>)
+          break
         case 'COPY_URL':
           buttonComponents.push(<CopyUrlButton labelCopy={t('copied')} labelCopied={t('copy')} />)
           break
@@ -43,6 +48,7 @@ class TripTools extends Component {
         <ButtonGroup>
           {buttonComponents.map((btn,index) => <div key={index}>{btn}</div>)}
         </ButtonGroup>
+        <div id='qrContainer'></div>
       </div>
     )
   }
@@ -71,6 +77,55 @@ class ShareSaveDropdownButton extends Component {
   }
 }
 */
+
+// Share Qr Button
+
+class ShareQrButton extends Component {
+  constructor (props) {
+    super(props)
+    this.state = { visible: false , url:''}
+  }
+
+  _resetState = () => this.setState({ visible: false })
+
+  _onClick = () => {
+    if(this.state.visible){
+      this.setState({ visible: false })
+      return;
+    }
+    // If special routerId has been set in session storage, construct copy URL
+    // for itinerary with #/start/ prefix to set routerId on page load.
+    const routerId = window.sessionStorage.getItem('routerId')
+    let url = window.location.href
+    if (routerId) {
+      const parts = url.split('#')
+      if (parts.length === 2) {
+        url = `${parts[0]}#/start/x/x/x/${routerId}${parts[1]}`
+      } else {
+        console.warn('URL not formatted as expected, copied URL will not contain session routerId.', routerId)
+      }
+    }
+    this.setState({ visible: true, url })
+  }
+
+  render () {
+    return (<>
+      {this.state.visible && (
+          createPortal(
+            <QRCode value={this.state.url} className='qr'/>,
+            document.getElementById('qrContainer')
+          )
+      )}
+        <Button
+          className='tool-button'
+          onClick={this._onClick}
+        >
+          <span><i className='fa fa-qrcode' /> { this.props.labelShareQr }</span>
+        </Button>
+      </>
+    )
+  }
+}
 
 // Copy URL Button
 
