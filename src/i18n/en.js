@@ -40,6 +40,7 @@ export const TRANSLATIONS_EN = {
   "drive": "Drive",
   "copy": "Copy Link",
   "copied": "Copied",
+  "share_qr": 'Share with QR code',
   "print": "Print",
   "report": "Report",
   "restart": "Restart",
