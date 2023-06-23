@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Button, ButtonGroup } from 'react-bootstrap'
 // import { DropdownButton, MenuItem } from 'react-bootstrap'
 import copyToClipboard from 'copy-to-clipboard'
-import bowser from 'bowser'
+import Bowser from 'bowser'
 import { withNamespaces } from 'react-i18next'
 
 class TripTools extends Component {
@@ -25,7 +25,7 @@ class TripTools extends Component {
           break
         case 'REPORT_ISSUE':
           if (!reportConfig || !reportConfig.mailto) break
-          buttonComponents.push(<ReportIssueButton label={t('report_issue')} {...reportConfig} />)
+          buttonComponents.push(<ReportIssueButton label={t('report_issue')} {...reportConfig} t={t} />)
           break
         case 'START_OVER':
           // Determine "home" URL
@@ -139,29 +139,41 @@ class PrintButton extends Component {
 // Report Issue Button Component
 
 class ReportIssueButton extends Component {
-  static defaultProps = {
+/*   static defaultProps = {
     subject: 'Reporting an Issue with OpenTripPlanner'
   }
-
+ */
   _onClick = () => {
-    const { mailto, subject } = this.props
+    const { mailto, subject, t } = this.props
+    const mailSubject = subject ? t(subject) : t('mail_support_subject')
+    const bowser = Bowser.parse(window.navigator.userAgent);
+    const {
+        browser = {
+          name:'',
+          version:''
+        },
+        os = {
+          name: '',
+          version: ''
+        }
+      } = bowser
 
     const bodyLines = [
-      '                       *** INSTRUCTIONS TO USER ***',
-      'This feature allows you to email a report to site administrators for review.',
-      `Please add any additional feedback for this trip under the 'Additional Comments'`,
-      'section below and send using your regular email program.',
+      `${t('mail_support_user_instruction')}`,
+      `${t('mail_support_user_instruction1')}`,
+      `${t('mail_support_description')}`,
       '',
-      'SEARCH DATA:',
-      'Address: ' + window.location.href,
-      'Browser: ' + bowser.name + ' ' + bowser.version,
-      'OS: ' + bowser.osname + ' ' + bowser.osversion,
       '',
-      'ADDITIONAL COMMENTS:',
+      '',
+      '',
+      `${t('mail_support_data')}`,
+      `${t('mail_support_address')}: ` + window.location.href,
+      `${t('mail_support_browser')}: ` + browser.name + ' ' + browser.version,
+      `${t('mail_support_os')}: ` + os.name + ' ' + os.version,
       ''
     ]
 
-    window.open(`mailto:${mailto}?subject=${subject}&body=${encodeURIComponent(bodyLines.join('\n'))}`, '_self')
+    window.open(`mailto:${mailto}?subject=${mailSubject}&body=${encodeURIComponent(bodyLines.join('\n'))}`, '_blank')
   }
 
   render () {

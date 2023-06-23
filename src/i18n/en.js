@@ -438,6 +438,16 @@ export const TRANSLATIONS_EN = {
   "cookie_block3_desc": "These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you",
   "cookie_block4_title": "More information",
   "cookie_block4_desc": "For any queries in relation to our policy on cookies and your choices, please contact us at help@opendatahub.com.",
+
+  "mail_support_subject": "Report problem to support",
+  "mail_support_user_instruction": "Hello,",
+  "mail_support_user_instruction1": "I would like to report an issue I have encountered with your service.",
+  "mail_support_description": "[Enter here a brief description of the problem you encountered, trying to provide useful details for technical support]",
+  "mail_support_data": "About my device:",
+  "mail_support_address": "Page",
+  "mail_support_browser": "Browser",
+  "mail_support_os": "Operating System",
+
   "what": "What is",
   "who": "who we are",
   "partners": "partners & Links",
