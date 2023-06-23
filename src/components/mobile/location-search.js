@@ -43,6 +43,7 @@ class MobileLocationSearch extends Component {
             locationType={locationType}
             onLocationSelected={this._locationSelected}
             static
+            autoFocus
             suppressNearby={suppressNearby}
           />
         </div>
