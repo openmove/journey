@@ -998,7 +998,6 @@ export function findStopsWithinBBox (params) {
       serviceId: 'stops',
       rewritePayload: ({data}) => {
         const {stopsByBbox:stops} = data
-        console.log(stops);
 
         // make stop clusters unique
         // stops = uniqBy(stops, 'id');
@@ -1017,7 +1016,7 @@ export function findStopsWithinBBox (params) {
             )
           }
         })
-        console.log(stops);
+
         return {stops}
       }
     }
