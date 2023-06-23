@@ -866,7 +866,7 @@ export function findRoutesAtStop (stopId) {
 const receivedStopsWithinBBoxResponse = createAction('STOPS_WITHIN_BBOX_RESPONSE')
 const receivedStopsWithinBBoxError = createAction('STOPS_WITHIN_BBOX_ERROR')
 
-export function findStopsWithinBBox (params) {
+/* export function findStopsWithinBBox (params) {
 
   let type = 'stops';
 
@@ -899,6 +899,125 @@ export function findStopsWithinBBox (params) {
             )
           }
         })
+        return {stops}
+      }
+    }
+  )
+} */
+
+export function findStopsWithinBBox (params) {
+  let type = 'stops';
+  const {
+          clusters:useClusters,
+          minLat,
+          minLon,
+          maxLat,
+          maxLon
+        } = params;
+
+  if (useClusters === true) {
+    // type = 'clusters';
+  }
+
+  const queries = {
+    stops: `query stopsQuery(
+      $minLat: Float
+      $minLon: Float
+      $maxLat: Float
+      $maxLon: Float
+    ) {
+      stopsByBbox(
+        minLat: $minLat
+        minLon:$minLon
+        maxLat: $maxLat
+        maxLon: $maxLon
+      ) {
+        id: gtfsId
+        name
+        lat
+        lon
+        code
+        desc
+        vehicleType
+        vehicleMode
+        platformCode
+        routes {
+          gtfsId
+          shortName
+          longName
+          mode
+          color
+          textColor
+        }
+      }
+    }`,
+    clusters: `query clustersQuery(
+      $minLat: Float
+      $minLon: Float
+      $maxLat: Float
+      $maxLon: Float
+    ) {
+        clustersByBbox(
+        minLat: $minLat
+        minLon:$minLon
+        maxLat: $maxLat
+        maxLon: $maxLon
+      ) {
+        id: gtfsId
+        name
+        lat
+        lon
+        code
+        desc
+        vehicleType
+        vehicleMode
+        platformCode
+        routes {
+          gtfsId
+          mode
+          shortName
+          longName
+          color
+          textColor
+        }
+      }
+    }`
+  }
+
+  return createGraphQLQueryAction(
+    queries[type],
+    {
+      minLat,
+      minLon,
+      maxLat,
+      maxLon
+    },
+    receivedStopsWithinBBoxResponse,
+    receivedStopsWithinBBoxError,
+    {
+      serviceId: 'stops',
+      rewritePayload: ({data}) => {
+        const {stopsByBbox:stops} = data
+        console.log(stops);
+
+        // make stop clusters unique
+        // stops = uniqBy(stops, 'id');
+        // make stops in cluster unique
+        // PATCH: it solves duplicates values but it shouldn't happen client side
+        // https://stackoverflow.com/a/36744732
+          stops?.forEach((stop)=>{
+            if(Array.isArray(stop.stops) && stop.stops.length > 1){
+            // if it's a cluster of stops keep only the first occurrence of each stop
+            stop.stops = stop?.stops?.filter((currentStop, index, stopsArray) =>
+              index === stopsArray.findIndex((s) => (
+                s.name === currentStop.name &&
+                s.lat === currentStop.lat &&
+                s.lon === currentStop.lon
+              ))
+            )
+          }
+        })
+        console.log(stops);
         return {stops}
       }
     }
