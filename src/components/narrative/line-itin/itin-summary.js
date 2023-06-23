@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { withNamespaces } from 'react-i18next'
 import styled from 'styled-components'
+import { getRouteColor, getRouteTextColor } from '../../../otp-ui/itinerary-body/util'
 
 // TODO: make this a prop
 const defaultRouteColor = '#095980'
@@ -155,12 +156,15 @@ class ItinerarySummary extends Component {
           {itinerary.legs.filter(leg => {
             return !(leg.mode === 'WALK' && itinerary.transitTime > 0)
           }).map((leg, k) => {
+            const backgroundColor = getRouteColor(leg?.mode,leg?.routeColor)
+            const color = getRouteTextColor(leg?.mode, backgroundColor, leg?.routeTextColor)
+
             return (
               <RoutePreview key={k}>
                 <LegIconContainer><LegIcon leg={leg} /></LegIconContainer>
                 {coreUtils.itinerary.isTransit(leg.mode)
                   ? (
-                    <div className='otp-ui-legDescForTransit__shortName' leg={leg} >
+                    <div className='otp-ui-legDescForTransit__shortName' style={{backgroundColor,color}}>
                       {getRouteNameForBadge(leg)}
                     </div>
                   )
