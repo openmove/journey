@@ -49,6 +49,7 @@ export const TRANSLATIONS_EN = {
   "options": "Options",
   "found": "Found",
   "wait": "Wait",
+  "due" : "Due",
   "from_here": "From here",
   "to_here": "To here",
   "travel": "Travel",

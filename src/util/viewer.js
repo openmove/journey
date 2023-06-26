@@ -2,6 +2,7 @@ import coreUtils from '../otp-ui/core-utils'
 import moment from 'moment'
 import 'moment-timezone'
 import React from 'react'
+import i18next from 'i18next'
 
 import Icon from '../components/narrative/icon'
 
@@ -19,12 +20,12 @@ const ONE_DAY_IN_SECONDS = 86400
  *
  * @param  {Object} stopTime  A stopTime object as received from a transit index API
  * @param  {string} [homeTimezone]  If configured, the timezone of the area
- * @param  {string} [soonText='Due']  The text to display for departure times
+ * @param  {string} [soonText='due']  The text to display for departure times
  *    about to depart in a short amount of time
  * @param  {string} timeFormat  A valid moment.js formatting string
  * @param  {boolean} useSchedule  Whether to use scheduled departure (otherwise uses realtime)
  */
-export function getFormattedStopTime (stopTime, homeTimezone, soonText = 'Due', timeFormat, useSchedule = false) {
+export function getFormattedStopTime (stopTime, homeTimezone, soonText = 'due', timeFormat, useSchedule = false) {
   const departureTime = useSchedule
     ? stopTime.scheduledDeparture
     : stopTime.realtimeDeparture
@@ -52,7 +53,7 @@ export function getFormattedStopTime (stopTime, homeTimezone, soonText = 'Due', 
 
   // Use "soon text" (e.g., Due) if vehicle is approaching.
   const countdownString = secondsUntilDeparture < 60
-    ? soonText
+    ? i18next.t(soonText)
     : formatDuration(secondsUntilDeparture)
   const formattedTime = formatSecondsAfterMidnight(
     departureTime,

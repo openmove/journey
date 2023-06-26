@@ -49,6 +49,7 @@ export const TRANSLATIONS_IT = {
   "options": "Opzioni",
   "found": "Trovate",
   "wait": "Attendi",
+  "due" : "In arrivo",
   "from_here": "Parti da qui",
   "to_here": "Arriva qui",
   "travel": "Viaggia",
