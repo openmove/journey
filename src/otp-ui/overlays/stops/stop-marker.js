@@ -19,7 +19,7 @@ import MarkerStation from "../../icons/modern/MarkerStation";
 
 import ReactDOMServer from "react-dom/server";
 import Bus from "../../icons/modern/Bus";
-import ClassicModeIcon from "../../icons/standard-mode-icon";
+import StandardModeIcon from "../../icons/standard-mode-icon";
 import { getMapColor } from "../../core-utils/itinerary";
 import { getRouteColor, getRouteTextColor } from "../../itinerary-body/util";
 
@@ -149,7 +149,7 @@ class StopMarker extends Component {
         <Popup>
           <div className="otp-ui-mapOverlayPopup">
             <div onClick={this.onClickView} className="otp-ui-mapOverlayPopup__popupHeader">
-              <ClassicModeIcon width={25} mode={mode} />&nbsp;&nbsp;{t('stop')}
+              <StandardModeIcon width={25} mode={mode} />&nbsp;&nbsp;{t('stop')}
             </div>
 
             <Button bsStyle="link" className="otp-ui-mapOverlayPopup__popupTitle" onClick={this.onClickView}>{name}</Button>
