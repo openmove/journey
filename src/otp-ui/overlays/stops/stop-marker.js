@@ -22,22 +22,24 @@ import Bus from "../../icons/modern/Bus";
 import StandardModeIcon from "../../icons/standard-mode-icon";
 import { getMapColor } from "../../core-utils/itinerary";
 import { getRouteColor, getRouteTextColor } from "../../itinerary-body/util";
+import OpenMoveModeIcon from "../../icons/openmove-mode-icon";
 
 
 const stopMarkerIcon = memoize((stop,overlayStopConf) => {
 
   let isStation = false;
   let isStopChild = false;
+  let stopColor = overlayStopConf.iconMarkerColor;
 
   if(Array.isArray(stop.stops) && stop.stops.length > 1) {
     isStation = true;
   }
   else if(!stop.stops || stop.stops.length === 1 )  {
     isStopChild = true;
+    const currentStop =  stop?.stops?.length === 1 ? stop.stops[0] : stop
+    stopColor = getMapColor(currentStop.vehicleMode)
   }
 
-  let stopChildColor = overlayStopConf.iconMarkerColor;
-  stopChildColor = getMapColor(stop.vehicleMode)
 
   return divIcon({
     iconSize: [overlayStopConf.iconWidth, overlayStopConf.iconHeight],
@@ -49,7 +51,7 @@ const stopMarkerIcon = memoize((stop,overlayStopConf) => {
           width={overlayStopConf.iconWidth}
           height={overlayStopConf.iconHeight}
           iconColor={overlayStopConf.iconColor}
-          markerColor={overlayStopConf.iconMarkerColor}
+          markerColor={stopColor}
         />
       }
       { isStopChild &&
@@ -57,7 +59,7 @@ const stopMarkerIcon = memoize((stop,overlayStopConf) => {
           width={overlayStopConf.iconWidth}
           height={overlayStopConf.iconHeight}
           iconColor={overlayStopConf.iconColor}
-          markerColor={stopChildColor}
+          markerColor={stopColor}
         />
       }
       </>
@@ -115,17 +117,19 @@ class StopMarker extends Component {
 
   render() {
     const { languageConfig, leafletPath,overlayStopConf, radius, stop, t, onClick } = this.props;
-    let { id, name, lat, lon, stops, vehicleMode:mode } = stop;
+    let { id, name, lat, lon, stops} = stop;
+    const currentStop =  stop?.stops?.length === 1 ? stop.stops[0] : stop
+    const {vehicleMode:mode} =currentStop
     const stopId = id.split(':').pop();
 
     let routes = [];
 
     const addRoutes = stop => {
-      if(Array.isArray(stop?.routes)){
-        stop?.routes.forEach(route => routes.push(route));
+      if(Array.isArray(currentStop?.routes)){
+        currentStop?.routes.forEach(route => routes.push(route));
       }
     }
-    addRoutes(stop)
+    addRoutes(currentStop)
 
 
     if (Array.isArray(stops) && stops.length===1) {
@@ -158,8 +162,8 @@ class StopMarker extends Component {
                     const backgroundColor = getRouteColor(route?.mode,route?.color)
                     const color = getRouteTextColor(route?.mode, backgroundColor, route?.textColor)
                     return (
-                      <div style={{backgroundColor,color}} className="route">
-                        {/* <OpenMoveModeIcon mode={route.mode} width={20} height={20} /> */}
+                      <div style={{backgroundColor,color}} className="route" key={route.gtfsId}>
+                        <OpenMoveModeIcon mode={route.mode} fill='currentColor' width={20} height={20} />
                         <strong className="shortname" style={{color}}> {route.shortName} </strong>
                       </div>
                     )

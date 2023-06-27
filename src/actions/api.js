@@ -916,7 +916,7 @@ export function findStopsWithinBBox (params) {
         } = params;
 
   if (useClusters === true) {
-    // type = 'clusters';
+    type = 'clusters';
   }
 
   const queries = {
@@ -967,18 +967,24 @@ export function findStopsWithinBBox (params) {
         name
         lat
         lon
-        code
-        desc
-        vehicleType
-        vehicleMode
-        platformCode
-        routes {
-          gtfsId
-          mode
-          shortName
-          longName
-          color
-          textColor
+        stops {
+          id: gtfsId
+          name
+          lat
+          lon
+          code
+          desc
+          vehicleType
+          vehicleMode
+          platformCode
+          routes {
+            gtfsId
+            mode
+            shortName
+            longName
+            color
+            textColor
+          }
         }
       }
     }`
@@ -997,7 +1003,7 @@ export function findStopsWithinBBox (params) {
     {
       serviceId: 'stops',
       rewritePayload: ({data}) => {
-        const {stopsByBbox:stops} = data
+        const stops = type==='stops'? data.stopsByBbox : data.clustersByBbox
 
         // make stop clusters unique
         // stops = uniqBy(stops, 'id');
