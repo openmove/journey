@@ -37,8 +37,7 @@ class AbstractOverlay extends MapLayer {
   }
 
   _startRefreshing(launchNow) {
-    const isMapUpdating = this.config.updateBBox || this.config.pollingUpdate
-    const bb = isMapUpdating ? getItem('mapBounds') : {}
+    const bb =  this.config.updateBBox ? getItem('mapBounds') : {}
     const params = bb
     if(launchNow === true){
       this.query(this.api , params, this.config.name);
@@ -46,7 +45,7 @@ class AbstractOverlay extends MapLayer {
       if (this._refreshTimer) clearTimeout(this._refreshTimer);
 
       this._refreshTimer =  setTimeout(()=>{
-        const bb =  getItem('mapBounds')
+        const bb =  this.config.updateBBox  ? getItem('mapBounds') : {}
         const params = bb
         this.query(this.api, params, this.config.name);
       },500)
