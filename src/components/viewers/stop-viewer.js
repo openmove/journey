@@ -16,6 +16,7 @@ import PatternRow from './pattern-row'
 import { getShowUserSettings, getStopViewerConfig } from '../../util/state'
 import { getRouteIdForPattern, getStopTimesByPattern } from '../../util/viewer'
 import { setViewedTrip } from '../../actions/ui'
+import OpenMoveModeIcon from '../../otp-ui/icons/openmove-mode-icon'
 
 const {
   getTimeFormat,
@@ -215,11 +216,21 @@ class StopViewer extends Component {
     const {stopData, t} = this.props
     const {scheduleView} = this.state
     const stopId = stopData.id?.split(":").pop();
+    let routesModes = []
+    if(stopData?.routes){
+      // remove duplicate modes from routes
+      routesModes = stopData.routes.filter(
+        (route, index, self) => index === self.findIndex((r) => (r.mode === route.mode))
+      ).map((route)=>route.mode)
+    }
 
     //TODO add agency
 
     return (
       <div>
+          <div className='route-modes'>
+          {routesModes.map((mode)=> <OpenMoveModeIcon mode={mode} fill='currentColor' width={40} height={40}  key={mode}/> )}
+          </div>
         <div>
           <strong>{t('stop_id')}</strong>: {stopId}
           <Button
