@@ -29,7 +29,7 @@ class TripTools extends Component {
           buttonComponents.push(<PrintButton label={t('print')} />)
           break
         case 'REPORT_ISSUE':
-          if (!reportConfig || !reportConfig.mailto) break
+          if (!reportConfig?.mailto) break
           buttonComponents.push(<ReportIssueButton label={t('report_issue')} {...reportConfig} t={t} />)
           break
         case 'START_OVER':
@@ -268,7 +268,8 @@ class LinkButton extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    reportConfig: state.otp.config.reportIssue,
+    buttonTypes: state.otp.config.trip.buttonTypes,
+    reportConfig: state.otp.config.trip.reportIssue,
     reactRouterConfig: state.otp.config.reactRouter
   }
 }
