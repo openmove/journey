@@ -10,6 +10,7 @@ import { routingQuery } from '../../actions/api'
 import DefaultMap from '../map/default-map'
 import TripDetails from '../narrative/connected-trip-details'
 import { getActiveItinerary } from '../../util/state'
+import PoweredByOpenmove from './poweredByOpenmove'
 
 class PrintLayout extends Component {
   static propTypes = {
@@ -89,6 +90,7 @@ class PrintLayout extends Component {
             <TripDetails itinerary={itinerary} />
           </>
         }
+      <PoweredByOpenmove />
       </div>
     )
   }
