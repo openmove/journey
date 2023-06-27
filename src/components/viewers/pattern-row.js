@@ -5,6 +5,8 @@ import { withNamespaces } from "react-i18next"
 import Icon from '../narrative/icon'
 import { getFormattedStopTime, getStatusLabel } from '../../util/viewer'
 import ViewTripButton from './view-trip-button'
+import { getRouteColor, getRouteTextColor } from '../../otp-ui/itinerary-body/util'
+import OpenMoveModeIcon from '../../otp-ui/icons/openmove-mode-icon'
 
 /**
  * Represents a single pattern row for displaying arrival times in the stop
@@ -52,14 +54,19 @@ class PatternRow extends Component {
       return null
     }
     const routeName = route.shortName ? route.shortName : route.longName
-
+    const backgroundColor = getRouteColor(route?.mode,route?.color)
+    const color = getRouteTextColor(route?.mode, backgroundColor, route?.textColor)
     return (
       <>
         {/* header row */}
         <div className='header'>
           {/* route name */}
           <div className='route-name'>
-            <b>{routeName}</b> {t('direction')} {pattern.headsign}
+            <div style={{backgroundColor,color}} className="route">
+              <OpenMoveModeIcon mode={route.mode} width={20} height={20} />
+              <strong>{routeName}</strong>
+            </div>
+            {t('direction')} {pattern.headsign}
           </div>
           {/* next departure preview */}
           {hasStopTimes && (
