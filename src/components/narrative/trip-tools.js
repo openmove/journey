@@ -48,7 +48,6 @@ class TripTools extends Component {
         <ButtonGroup>
           {buttonComponents.map((btn,index) => <div key={index}>{btn}</div>)}
         </ButtonGroup>
-        <div id='qrContainer'></div>
       </div>
     )
   }
@@ -110,18 +109,18 @@ class ShareQrButton extends Component {
 
   render () {
     return (<>
-      {this.state.visible && (
-          createPortal(
-            <QRCode value={this.state.url} className='qr'/>,
-            document.getElementById('qrContainer')
-          )
-      )}
         <Button
           className='tool-button'
           onClick={this._onClick}
         >
           <span><i className='fa fa-qrcode' /> { this.props.labelShareQr }</span>
         </Button>
+        {this.state.visible && (
+          <div id='qrContainer'>
+              <QRCode value={this.state.url} className='qr'/>
+          </div>
+        )
+      }
       </>
     )
   }
