@@ -10,12 +10,12 @@ import { withNamespaces } from 'react-i18next'
 
 class TripTools extends Component {
   static defaultProps = {
-    buttonTypes: [ 'SHARE_QR','COPY_URL', 'PRINT', 'REPORT_ISSUE', 'START_OVER' ]
+    configButtonTypes: [ 'SHARE_QR','COPY_URL', 'PRINT', 'REPORT_ISSUE', 'START_OVER' ]
   }
 
   render () {
-    const { buttonTypes, reportConfig, reactRouterConfig, t } = this.props
-
+    const { buttonTypes:propsButtonTypes, configButtonTypes, reportConfig, reactRouterConfig, t } = this.props
+    const buttonTypes = propsButtonTypes ? propsButtonTypes : configButtonTypes;
     const buttonComponents = []
     buttonTypes.forEach((type) => {
       switch (type) {
@@ -267,7 +267,7 @@ class LinkButton extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    buttonTypes: state.otp.config.trip.buttonTypes,
+    configButtonTypes: state.otp.config.trip.buttonTypes,
     reportConfig: state.otp.config.trip.reportIssue,
     reactRouterConfig: state.otp.config.reactRouter
   }
