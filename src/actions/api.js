@@ -109,7 +109,6 @@ export function routingQuery (searchId = null) {
       const requestId = randId()
       // fetch a realtime route
       const query = constructRoutingQuery(otpState, false, injectedParams)
-      console.log(query);
       fetch(query, getOtpFetchOptions(state))
         .then(getJsonAndCheckResponse)
         .then(json => {
