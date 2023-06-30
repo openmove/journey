@@ -38,6 +38,11 @@ class StopViewer extends Component {
     viewedStop: PropTypes.object
   }
 
+  constructor(props){
+    super(props);
+    this._stopAutoRefresh = this._stopAutoRefresh.bind(this)
+  }
+
   _backClicked = () => this.props.setMainPanelContent(null)
 
   _setLocationFromStop = (locationType) => {
@@ -158,12 +163,17 @@ class StopViewer extends Component {
   _getStartTimeForDate = date => moment(date).startOf('day').unix()
 
   handleDateChange = evt => {
-    const { findStopTimesForStop, viewedStop } = this.props
+    const { findStopTimesForStop, viewedStop, stopViewerConfig } = this.props
     const date = evt.target.value
     findStopTimesForStop({
       stopId: viewedStop.stopId,
       startTime: this._getStartTimeForDate(date),
-      timeRange: 86401
+      timeRange: 86401,
+      ...(
+         stopViewerConfig?.numberOfDeparturesScheduled &&
+         {
+            numberOfDepartures: stopViewerConfig?.numberOfDeparturesScheduled
+         })
     })
     this.setState({ date })
   }
