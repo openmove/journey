@@ -109,6 +109,7 @@ export function routingQuery (searchId = null) {
       const requestId = randId()
       // fetch a realtime route
       const query = constructRoutingQuery(otpState, false, injectedParams)
+      console.log(query);
       fetch(query, getOtpFetchOptions(state))
         .then(getJsonAndCheckResponse)
         .then(json => {
@@ -294,6 +295,14 @@ export function getRoutingParams (query, config, ignoreRealtimeUpdates) {
       // increase search timeout because these queries can take a while
       params.searchTimeout = 10000
     }
+
+    // temp: set additional parameters for CAR_PARK
+       if (
+        params.mode &&
+        params.mode.includes('CAR_PARK')
+      ) {
+        params.maxPreTransitTime = 120*60
+      }
 
     // set onlyTransitTrips for car rental searches
     if (params.mode && params.mode.includes('CAR_RENT')) {
