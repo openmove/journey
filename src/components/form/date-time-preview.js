@@ -62,12 +62,14 @@ class DateTimePreview extends Component {
     }
 
     const summary = (
-      <span>
-        <i className='fa fa-clock-o' /> {
+      <div className='summary'>
+        <i className='fa fa-clock-o icon' />
+        <div className='content'> {
           moment(date, OTP_API_DATE_FORMAT)
             .calendar(null, { sameElse: dateFormat })
             .split(" "+separator)[0]} - {timeStr}
-      </span>
+          </div>
+      </div>
     )
 
     return (
