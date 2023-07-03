@@ -8,7 +8,6 @@ import { withNamespaces } from "react-i18next"
 import * as narrativeActions from '../../actions/narrative'
 import DefaultItinerary from './default/default-itinerary'
 import { getActiveSearch, getRealtimeEffects } from '../../util/state'
-import PoweredByOpenmove from '../app/poweredByOpenmove'
 
 const { calculateFares, calculatePhysicalActivity, getTimeZoneOffset } = coreUtils.itinerary
 const { formatDuration, formatTime, getTimeFormat } = coreUtils.time
@@ -93,7 +92,6 @@ class TabbedItineraries extends Component {
             </TabButton>
           )})
         }
-        <PoweredByOpenmove />
       </div>
     )
   }

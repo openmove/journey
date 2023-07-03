@@ -7,6 +7,7 @@ import ItinerarySummary from './itin-summary'
 import NarrativeItinerary from '../narrative-itinerary'
 import SimpleRealtimeAnnotation from '../simple-realtime-annotation'
 import LinkButton from '../../user/link-button'
+import PoweredByOpenmove from '../../app/poweredByOpenmove'
 
 const { getLegModeLabel, getTimeZoneOffset, isTransit } = coreUtils.itinerary
 
@@ -93,6 +94,7 @@ class LineItinerary extends NarrativeItinerary {
           />
           : null}
         {itineraryFooter}
+        <PoweredByOpenmove centered/>
       </div>
     )
   }

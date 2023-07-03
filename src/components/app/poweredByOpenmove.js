@@ -1,7 +1,7 @@
  import React from "react"
 
- const PoweredByOpenmove = () => (
-  <div className='powered-by-logo'>
+ const PoweredByOpenmove = ({centered}) => (
+  <div className='powered-by-logo' style={centered? {justifyContent:'center'}: {}}>
           Powered by
           <img src='static/images/credits/openmove.png' />
     </div>
