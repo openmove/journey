@@ -291,6 +291,7 @@ class BaseMap extends Component {
             baseLayers.map((layer, i) => {
               return (
                 <LayersControl.BaseLayer
+                //TODO inject id
                   name={this.props.t(layer.name)}
                   checked={i === layerIndex}
                   key={i}

@@ -414,7 +414,7 @@ export const TRANSLATIONS_DE = {
 
   "msg_404": "No path found. Try changing your travel settings.",
 
-  "streets": "Straßen",
+  "streets": "Straben",
   "paths": "Wanderwege",
   "printable": "druckbar",
 
