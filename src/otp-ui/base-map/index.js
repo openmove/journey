@@ -291,7 +291,7 @@ class BaseMap extends Component {
             baseLayers.map((layer, i) => {
               return (
                 <LayersControl.BaseLayer
-                  name={layer.name}
+                  name={this.props.t(layer.name)}
                   checked={i === layerIndex}
                   key={i}
                 >

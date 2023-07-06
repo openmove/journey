@@ -466,7 +466,9 @@ export const TRANSLATIONS_IT = {
 
   "msg_404": "Nessun percorso trovato. Prova a modificare le impostazioni di viaggio.",
 
+  "streets": "Strade",
   "paths": "Sentieri",
+  "printable": "Stampabile",
 
   // copied from above charger_* / carsharing_* changing prefixes to label
   // used in dynamic filters

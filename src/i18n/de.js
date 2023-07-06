@@ -409,6 +409,14 @@ export const TRANSLATIONS_DE = {
   "meteo":"Meteo infos in Trentino",
   "footer-decs":"PROVINCIA AUTONOMA DI TRENTO - Dipartimento Infrastrutture e Mobilità Piazza Dante, 15 - 38122 Trento (IT) - tel. +39 0461495111 - numero verde 800 903606 - C.F. e P.IVA 00337460224",
 
+  "error_network": "Connection Error",
+  "reload" : "reload",
+
+  "msg_404": "No path found. Try changing your travel settings.",
+
+  "streets": "Straßen",
+  "paths": "Wanderwege",
+  "printable": "druckbar",
 
   // companies labels
   "bikesharing_bz": "Bikesharing BZ",
