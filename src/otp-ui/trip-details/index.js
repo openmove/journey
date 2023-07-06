@@ -130,11 +130,11 @@ function TripDetails({
                       {t('calories_info_1')}{" "}
                       <b>{Math.round(walkDuration / 60)} {t('minute')}</b> {t('pass_walked')} <b>{Math.round(bikeDuration / 60)} {t('minute')}</b> {t("pass_rided")}.{" "}
                       <a
-                        href="https://health.gov/dietaryguidelines/dga2005/document/html/chapter3.htm#table4"
+                        href="https://health.gov/sites/default/files/2020-01/DGA2005.pdf"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        Dietary Guidelines for Americans 2005, page 16, Table 4
+                        Dietary Guidelines for Americans 2005, page 27, Table 4
                       </a>
                       .
                     </>
