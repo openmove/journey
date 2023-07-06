@@ -467,6 +467,7 @@ export const TRANSLATIONS_EN = {
 
   "msg_404": "No path found. Try changing your travel settings.",
 
+  "paths": "Paths",
   // copied from above charger_* / carsharing_* changing prefixes to label
   // used in dynamic filters
 

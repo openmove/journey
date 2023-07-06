@@ -466,6 +466,8 @@ export const TRANSLATIONS_IT = {
 
   "msg_404": "Nessun percorso trovato. Prova a modificare le impostazioni di viaggio.",
 
+  "paths": "Sentieri",
+
   // copied from above charger_* / carsharing_* changing prefixes to label
   // used in dynamic filters
   "label_provider": "Fornitore",
