@@ -46,7 +46,7 @@ class LocationField extends Component {
     getGeocoder(geocoderConfig)
       .autocomplete({ text })
       .then(result => {
-        this.setState({ geocodedFeatures: result.features });
+        this.setState({ geocodedFeatures: result.features?.length ? result.features : [] });
       })
       .catch(err => {
         console.error(err);
