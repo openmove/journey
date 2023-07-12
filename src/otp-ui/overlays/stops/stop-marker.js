@@ -116,11 +116,12 @@ class StopMarker extends Component {
   }
 
   render() {
-    const { languageConfig, leafletPath,overlayStopConf, radius, stop, t, onClick } = this.props;
-    let { id, name, lat, lon, stops} = stop;
-    const currentStop =  stop?.stops?.length === 1 ? stop.stops[0] : stop
-    const {vehicleMode:mode} =currentStop
-    const stopId = id.split(':').pop();
+    const { languageConfig, leafletPath,overlayStopConf, radius, stop, t, onClick } = this.props
+        , currentStop =  stop?.stops?.length === 1 ? stop.stops[0] : stop
+        , { vehicleMode: mode } = currentStop;
+
+    let { id, name, lat, lon, stops} = stop
+        , stopId = id.split(':').pop();
 
     let routes = [];
 
@@ -129,7 +130,7 @@ class StopMarker extends Component {
         currentStop?.routes.forEach(route => routes.push(route));
       }
     }
-    addRoutes(currentStop)
+    addRoutes(currentStop);
 
 
     if (Array.isArray(stops) && stops.length===1) {
@@ -153,7 +154,7 @@ class StopMarker extends Component {
         <Popup>
           <div className="otp-ui-mapOverlayPopup">
             <div onClick={this.onClickView} className="otp-ui-mapOverlayPopup__popupHeader">
-              <StandardModeIcon width={25} mode={mode} />&nbsp;&nbsp;{t('stop')}
+              <StandardModeIcon width={25} mode={mode} />&nbsp;&nbsp;{t(mode) || 'stop'}
             </div>
 
             <Button bsStyle="link" className="otp-ui-mapOverlayPopup__popupTitle" onClick={this.onClickView}>{name}</Button>
