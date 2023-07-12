@@ -118,7 +118,7 @@ class StopMarker extends Component {
   render() {
     const { languageConfig, leafletPath,overlayStopConf, radius, stop, t, onClick } = this.props
         , currentStop =  stop?.stops?.length === 1 ? stop.stops[0] : stop
-        , { vehicleMode: mode } = currentStop;
+        , mode = `${currentStop.vehicleMode}`.toLowerCase();
 
     let { id, name, lat, lon, stops} = stop
         , stopId = id.split(':').pop();
