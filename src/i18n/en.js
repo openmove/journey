@@ -382,6 +382,7 @@ export const TRANSLATIONS_EN = {
   "available_bikes": "Available bikes",
   "available_docks": "Available docks",
   "available_slots": "Available slots",
+  "available_parking_slots": "Parking spaces available",
   "time_max_walk": "Time max walk",
   "time_max_bike": "Time max bike",
   "distance_max_escooter": "Maximum E-scooter Distance",
