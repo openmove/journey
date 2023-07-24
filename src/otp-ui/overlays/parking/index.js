@@ -241,6 +241,13 @@ class ParkingOverlay extends AbstractOverlay {
             }
           }
 
+          //WORK around for wrong data from server
+          let {capacity, free} = station;
+
+          if (typeof free === 'number' && typeof capacity === 'number') {
+            free = free > capacity ? capacity : free;
+          }
+
           return (
             <Marker
               icon={markerIcon(station)}
@@ -259,28 +266,28 @@ class ParkingOverlay extends AbstractOverlay {
                     // sensors and stations behave the same way
                     (station.type === 'station' ||  station.type === 'sensor') && (
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                      {typeof station.free === 'number' ? (
+                      {typeof free === 'number' ? (
                         <>
                           <p className='otp-ui-mapOverlayPopup__popupAvailableInfoProgress_description'>
                             {t('available_parking_slots')}
                           </p>
                           <CircularProgressbar
-                            value={station.free === null ? 'N/A' : station.free }
+                            value={free === null ? 'N/A' : free }
                             minValue={0}
-                            maxValue={station.capacity}
-                            text={station.free === null ? 'N/A' : `${station.free}`}
+                            maxValue={capacity}
+                            text={free === null ? 'N/A' : `${free}`}
                             className="otp-ui-mapOverlayPopup__popupAvailableInfoProgress"
                           />
                         </>
                       ) : (
                         <></>
                       )}
-                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: station.free === null ? '10px' : ''}}>
+                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: free === null ? '10px' : ''}}>
                         {station?.payment!=null && (
                           <p>{t('parking-price')}: {price}</p>
                         )}
                         {station.operator && <p>{t('managed')}: { station.operator}</p>}
-                        {station.capacity && <p>{t('capacity')}: {station.capacity!==null ? station.capacity : 'N/A'}</p>}
+                        {capacity && <p>{t('capacity')}: {capacity!==null ? capacity : 'N/A'}</p>}
                       </div>
                     </div>
                   )}
