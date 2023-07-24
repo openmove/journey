@@ -23,48 +23,50 @@ import StandardModeIcon from "../../icons/standard-mode-icon";
 import { getMapColor } from "../../core-utils/itinerary";
 import { getRouteColor, getRouteTextColor } from "../../itinerary-body/util";
 import OpenMoveModeIcon from "../../icons/openmove-mode-icon";
+import AdvancedStopMarker from "../../icons/modern/AdvancedStopsMarker";
 
 
-const stopMarkerIcon = memoize((stop,overlayStopConf) => {
-
+const stopMarkerIcon = memoize((stop, overlayStopConf) => {
   let isStation = false;
   let isStopChild = false;
   let stopColor = overlayStopConf.iconMarkerColor;
+  const markerType = overlayStopConf?.markerType;
 
-  if(Array.isArray(stop.stops) && stop.stops.length > 1) {
+  // since every cluster it's a group of stops of the same type I can check only the first one
+  const currentStop = stop?.stops ? stop.stops[0] : stop;
+  const vehicleMode = currentStop.vehicleMode
+  stopColor = getMapColor(vehicleMode);
+
+  if (Array.isArray(stop.stops) && stop.stops.length > 1) {
     isStation = true;
-  }
-  else if(!stop.stops || stop.stops.length === 1 )  {
+  } else if (!stop.stops || stop.stops.length === 1) {
     isStopChild = true;
-    const currentStop =  stop?.stops?.length === 1 ? stop.stops[0] : stop
-    stopColor = getMapColor(currentStop.vehicleMode)
   }
-
 
   return divIcon({
     iconSize: [overlayStopConf.iconWidth, overlayStopConf.iconHeight],
     popupAnchor: [0, -overlayStopConf.iconHeight / 2],
     html: ReactDOMServer.renderToStaticMarkup(
-      <>
-      { isStation &&
-        <MarkerStop
-          width={overlayStopConf.iconWidth}
-          height={overlayStopConf.iconHeight}
-          iconColor={overlayStopConf.iconColor}
-          markerColor={stopColor}
-        />
-      }
-      { isStopChild &&
-        <MarkerStopChild
-          width={overlayStopConf.iconWidth}
-          height={overlayStopConf.iconHeight}
-          iconColor={overlayStopConf.iconColor}
-          markerColor={stopColor}
-        />
-      }
-      </>
+      <AdvancedStopMarker
+        width={
+          isStopChild ?
+            overlayStopConf.iconWidth :
+            overlayStopConf.clusterIconWidth || overlayStopConf.iconWidth
+          }
+        height={
+          isStopChild ?
+            overlayStopConf.iconHeight :
+            overlayStopConf.clusterIconHeight || overlayStopConf.iconHeight
+          }
+        iconColor={overlayStopConf.iconColor}
+        markerColor={stopColor}
+        markerType={markerType}
+        isStopChild={isStopChild}
+        isStation={isStation}
+        vehicleMode={vehicleMode?.toLowerCase()}
+      />
     ),
-    className: ''
+    className: "",
   });
 });
 
