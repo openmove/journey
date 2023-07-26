@@ -38,6 +38,7 @@ class AdvancedOverlaysController extends Component {
       const  {collapsed, closeBtn, allBtn} = overlaysConf;
 
       const overlaysArray = overlays.map((child, i) => {
+
           return (
               <AdvancedLayersControl.Overlay
                   key={i}

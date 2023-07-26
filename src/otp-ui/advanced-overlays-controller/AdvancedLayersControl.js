@@ -160,7 +160,11 @@ const DumbControl = Control.Layers.extend({
       filterButton.setAttribute("disabled", "disabled");
     }
     filterButton.addEventListener("click", options?.onFiltersClick);
+
+/*console.log(layer, label)
+if (layer.)*/
     createWrap(label, wrapper);
+
     wrapper.appendChild(filterButton);
   },
 });
