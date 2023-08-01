@@ -63,6 +63,7 @@ export const TRANSLATIONS_EN = {
   "work": "Work",
   "yes": "Yes",
   "no": "No",
+  "null": "None",
   "storage_disclaimer": "Any preference, place or setting that you have decided to save will be saved in the local storage of your browser. No outsider will know the location of your home, your work, or other places. At any time you can decide to stop saving data and remove it. ",
   "route_viewer": "View Lines",
   "route_view_details": "Select a line to show on the map and see more information about this line.",

@@ -59,6 +59,7 @@ export const TRANSLATIONS_DE = {
   "work": "Arbeit",
   "yes": "Ja",
   "no": "Nein",
+  "null": "Niemand",
   "storage_disclaimer": "Jede Präferenz, jeder Ort und jede Einstellung, für die Sie sich entschieden haben, wird im lokalen Speicher Ihres Browsers gespeichert. Kein Außenstehender wird den Ort Ihres Zuhauses, Ihrer Arbeit oder anderer Orte kennen. Sie können jederzeit entscheiden, die Speicherung zu beenden und die Daten zu entfernen.",
   "route_viewer": "Linien anzeigen",
   "route_view_details": "Wählen Sie eine Linie aus, die auf der Karte angezeigt werden soll, und sehen Sie weitere Informationen zu dieser Linie.",
