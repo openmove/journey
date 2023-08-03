@@ -1,10 +1,17 @@
-version: '3.1.0'
-theme: 'campiglio'
-staticBaseUrl: '/static/'
+#
+# this file is a template for valued configuration file
+# use this command to generate src/config.yml before running the webapp (yarn start)
+#
+# `npm run genconfig`
+#
+# src/config.yml file isn't tracked by git, you can use standard or development version
+version: '${npm_package_version}'
+theme: '${JOURNEY_THEME}'
+staticBaseUrl: '${STATIC_BASEURL}'
 api:
-  host: https://dev-tripplanner.openmove.com
-  path: /otp/routers/trentino
-  port: 443
+  host: ${API_HOST}
+  path: ${API_PATH}
+  port: ${API_PORT}
 # configByTheme:
 #   red:
 branding: "Campiglio"
