@@ -12,23 +12,96 @@ api:
   host: ${API_HOST}
   path: ${API_PATH}
   port: ${API_PORT}
-# configByTheme:
-#   red:
-branding: "Campiglio"
-title: "Campiglio"
-brandNavbar: Campiglio
+
+#overwrite default values by theme
+configByTheme:
+  red:
+    map:
+      overlays:
+        - name: drt
+          enabled: false
+        - name: webcam
+          # visible: false
+          enabled: true
+        - name: vms
+          enabled: true
+          # visible: false
+    footer:
+      enabled: true
+      navList:
+        - name: acessibility
+          enabled: true
+          type: link
+          linkUrl : ""
+        - name: legals
+          enabled: true
+          type: link
+          linkUrl : ""
+        - name: credits
+          enabled: true
+          type: link-modal
+          htmlUrl: "/static/credits.html"
+        - name: privacy policy
+          enabled: true
+          type: link
+          linkUrl : ""
+        - name: meteo
+          enabled: true
+          type: link
+          linkUrl : ""
+      # - name: modal testuale di test
+      #   enabled: true
+      #   type: modal
+      #   text: contenuto del modal testuale di test
+
+branding: "Merano - Alto Adige/Suedtirol"
+title: "Merano - Alto Adige/Suedtirol"
+brandNavbar: Merano
 brandNavbarLogo: null
-#brandByDomain:
-# configByDomain:
-#   mobility.meran.eu:
-#     map:
-#       initLat: 46.6709
-#       initLon: 11.1550
-#       initZoom: 15
-# analytics:
-#   matomo:
-#     baseUrl: ${MATOMO_BASE_URL}
-#     siteId: ${MATOMO_SITE_ID}
+## overwrite default values by location.hostname
+brandByDomain:
+  localhost:
+    branding: Journey
+    title: Journey
+    brandNavbar: Journey
+    brandNavbarLogo: openmove
+
+  mobility.meran.eu:
+    branding: Merano - Alto Adige/Suedtirol
+    title: Merano - Alto Adige/Suedtirol
+    brandNavbar: ''
+    brandNavbarLogo: merano
+##
+configByDomain:
+  # localhost:
+  #   map:
+  #     overlays:
+  #     - type: webcam
+  #       name: webcam
+  #       enabled: true
+  mobility.meran.eu:
+    map:
+      initLat: 46.6709
+      initLon: 11.1550
+      initZoom: 15
+  mobility.bz.it:
+    map:
+      initLat: 46.4921
+      initLon: 11.3333
+      initZoom: 15
+
+#feedback
+reportIssue:
+  mailto: support@openmove.com
+
+#TODO check for configByDomain
+analytics:
+  matomo:
+    baseUrl: ${MATOMO_BASE_URL}
+    siteId: ${MATOMO_SITE_ID}
+  # google:
+  #   globalSiteTag: ${GOOGLE_ANALYTICS_ID}
+
 header:
   enabled: true
   navList:
