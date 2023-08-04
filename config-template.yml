@@ -96,9 +96,9 @@ reportIssue:
 
 #TODO check for configByDomain
 analytics:
-  matomo:
-    baseUrl: ${MATOMO_BASE_URL}
-    siteId: ${MATOMO_SITE_ID}
+  # matomo:
+  #   baseUrl: ${MATOMO_BASE_URL}
+  #   siteId: ${MATOMO_SITE_ID}
   # google:
   #   globalSiteTag: ${GOOGLE_ANALYTICS_ID}
 
@@ -133,7 +133,7 @@ footer:
 geocoder:
   maxNearbyStops: 6
   maxResults: 20
-  apiKey: "NB4mqpiwnodCU6gbc6GdgSQihrpnjxY_nk-b5o2J9y4"
+  apiKey: "${HERE_APIKEY}"
   api:
     autocomplete: https://autosuggest.search.hereapi.com/v1/autosuggest
   type: HERE
