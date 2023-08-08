@@ -967,7 +967,7 @@ export function findStopsWithinBBox (params) {
     ) {
         clustersByBbox(
         minLat: $minLat
-        minLon:$minLon
+        minLon: $minLon
         maxLat: $maxLat
         maxLon: $maxLon
       ) {
