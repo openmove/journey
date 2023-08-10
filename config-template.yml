@@ -78,53 +78,11 @@ brandByDomain:
     brandNavbar: Journey
     brandNavbarLogo: openmove
 
-  mobility.meran.eu:
-    branding: Merano - Alto Adige/Suedtirol
-    title: Merano - Alto Adige/Suedtirol
-    brandNavbar: ''
-    brandNavbarLogo: merano
-
-  mobility.merano.eu:
-    branding: Merano - Alto Adige/Suedtirol
-    title: Merano - Alto Adige/Suedtirol
-    brandNavbar: ''
-    brandNavbarLogo: merano
-
-  mobility.bz.it:
-    branding: Bolzano - Alto Adige/Suedtirol
-    title: Bolzano - Alto Adige/Suedtirol
-    brandNavbar: ''
-    brandNavbarLogo: bolzano
-
-  journey.opendatahub.bz.it:
-    branding: Mentor
-    title: Mentor
-    brandNavbar: ''
-    brandNavbarLogo: interreg
-
-  journey.opendatahub.com:
-    branding: Mentor
-    title: Mentor
-    brandNavbar: ''
-    brandNavbarLogo: interreg
-
 configByDomain:
-  # localhost:
-  #   map:
-  #     overlays:
-  #     - type: webcam
-  #       name: webcam
-  #       enabled: true
-  mobility.meran.eu:
+  localhost:
     map:
-      initLat: 46.6709
-      initLon: 11.1550
-      initZoom: 15
-  mobility.bz.it:
-    map:
-      initLat: 46.4921
-      initLon: 11.3333
-      initZoom: 15
+      initLat: 46.225787
+      initLon: 10.826701
 
 reportIssue:
   mailto: support@openmove.com
