@@ -276,9 +276,14 @@ class LocationField extends Component {
     getGeocoder(geocoderConfig)
       .search({ text })
       .then(result => {
+        // Only replace geocode items if results were found
         if (result.features && result.features.length > 0) {
-          // Only replace geocode items if results were found
-          this.setState({ geocodedFeatures: result.features });
+          // work around since geocode.earth needs to filter layers and isomorphic-mapzen-search don't allow it
+          let resultFeatures = result.features;
+          if(geocoderConfig?.layers?.length >0){
+            resultFeatures = resultFeatures.filter((feature)=>geocoderConfig?.layers.includes(feature.properties.layer))
+          }
+          this.setState({ geocodedFeatures: resultFeatures});
         } else {
           console.warn(
             "No results found for geocode search. Not replacing results."
