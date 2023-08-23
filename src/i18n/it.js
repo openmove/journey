@@ -193,6 +193,7 @@ export const TRANSLATIONS_IT = {
   "bike_ride": "Bike & ride",
   "could_not": "Non puoi",
   "recent_places": "Luoghi recenti",
+  "tenant_places": "Luoghi rilevanti",
   "recent_searches": "Ricerche recenti",
   "back_to_search": "Torna a ricerca",
   "report_issue": "Segnala problema",

@@ -57,7 +57,7 @@ export function Option({ disabled, icon, isActive, onClick, title }) {
         // See https://github.com/ibi-group/trimet-mod-otp/issues/237
         title
       ) : (
-        <div style={{display:'flex',alignItems:'center'}}>
+        <div style={{display:'flex',alignItems:'center','marginTop':-5}}>
           {icon}{' '}{title}
         </div>
       )}

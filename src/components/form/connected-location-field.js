@@ -62,6 +62,7 @@ const mapStateToProps = (state, ownProps) => {
   const { currentPosition, nearbyStops, sessionSearches } = location
   const activeSearch = getActiveSearch(state.otp)
   const query = activeSearch ? activeSearch.query : currentQuery
+
   return {
     currentPosition,
     geocoderConfig: config.geocoder,
@@ -70,7 +71,8 @@ const mapStateToProps = (state, ownProps) => {
     sessionSearches,
     showUserSettings: getShowUserSettings(state.otp),
     stopsIndex: transitIndex.stops,
-    userLocationsAndRecentPlaces: [...user.locations, ...user.recentPlaces]
+    userLocationsAndRecentPlaces: [...user.locations, ...user.recentPlaces],
+    customTenantPlaces: config.geocoder?.tenant_pois || []
   }
 }
 
