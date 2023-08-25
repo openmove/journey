@@ -41,6 +41,12 @@ export function GeocodedOptionIcon({feature}) {
       return <Hotel size={13} />;
     case 'ODHActivityPoi':
       return <Shop size={13} />;
+    case "openstreetmap":
+    case "whosonfirst":
+      switch(feature.properties?.layer){
+        case 'locality': return <City size={13}/>
+        default: return <MapPin size={13}/>
+      }
     default:
       return <MapPin size={13} />;
   }
