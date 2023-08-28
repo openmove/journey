@@ -130,17 +130,39 @@ geocoder:
   maxNearbyStops: 6
   maxResults: 20
   apiKey: "${HERE_APIKEY}"
+  # baseUrl: https://api.geocode.earth # alternative to api, used for pelias geocoder (only one api url)
   api:
     autocomplete: https://autosuggest.search.hereapi.com/v1/autosuggest
   type: HERE
   boundary:
-    #IF boundary is empty get bounds from current map bounds
     rect:
       minLon: 10.470121
       maxLon: 12.255011
       minLat: 46.188280
       maxLat: 47.088780
       #Suedtirol 10.470121,46.188280,12.255011,47.088780
+  # layers: #filter requested layers for pelias geocoder
+  # - venue
+  # - street
+  # - address
+  # - borough
+  # attribution: 'attribution_geocode_earth'
+  #  focusPoint:
+  #   lat: 46.229372
+  #   lon: 10.826636
+  # tenant_pois: #tenant specific array of pois that appear in the search dropdown
+  # - name: "poi 2"
+  #   lat: 46.218776
+  #   lon: 10.82389
+  #   type: "custom"
+  # - name: "poi 3"
+  #   lat: 46.21376
+  #   lon: 10.82189
+  #   type: "custom"
+  # - name: "poi 4"
+  #   lat: 46.2196
+  #   lon: 10.82189
+  #   type: "custom"
 
 language:
   storageDisclaimer: storage_disclaimer
