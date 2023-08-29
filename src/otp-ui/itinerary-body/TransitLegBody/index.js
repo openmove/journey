@@ -79,7 +79,8 @@ class TransitLegBody extends Component {
       t
     } = this.props;
     const { language: languageConfig } = config;
-    const { agencyBrandingUrl, agencyName, agencyUrl, agencyFareUrl, alerts } = leg;
+    const { agencyBrandingUrl, agencyName, agencyUrl, alerts, from, to } = leg;
+    let {agencyFareUrl} = leg;
     const { alertsExpanded, stopsExpanded } = this.state;
 
     // If the config contains an operator with a logo URL, prefer that over the
@@ -88,6 +89,19 @@ class TransitLegBody extends Component {
       transitOperator && transitOperator.logo
         ? transitOperator.logo
         : agencyBrandingUrl;
+
+    // handle starting and destination points for openmove app
+    // :hammer: maybe in the future would be useful to implement a parameter server side
+    if(agencyFareUrl === "https://app.openmove.com"){
+        // add starting and destination points
+        const isOriginDefined = from.lat && from.lon
+        const isDestinationDefined = to.lat && to.lon
+        const originParameter =  isOriginDefined ? `lat=${from.lat}&lng=${from.lon}&` : undefined
+        const destinationParameter =  isDestinationDefined ? `destinationLat=${to.lat}&destinationLng=${to.lon}&destinationLabel=${encodeURIComponent(to.name)}` : undefined
+
+        const query = `/tickets?${isOriginDefined?originParameter:''}${isDestinationDefined?destinationParameter:''}`
+        agencyFareUrl+=query;
+      }
 
     const expandAlerts =
       alertsExpanded || (leg.alerts && leg.alerts.length < 3);

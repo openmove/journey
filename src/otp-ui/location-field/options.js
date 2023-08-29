@@ -41,6 +41,12 @@ export function GeocodedOptionIcon({feature}) {
       return <Hotel size={13} />;
     case 'ODHActivityPoi':
       return <Shop size={13} />;
+    case "openstreetmap":
+    case "whosonfirst":
+      switch(feature.properties?.layer){
+        case 'locality': return <City size={13}/>
+        default: return <MapPin size={13}/>
+      }
     default:
       return <MapPin size={13} />;
   }
@@ -57,7 +63,7 @@ export function Option({ disabled, icon, isActive, onClick, title }) {
         // See https://github.com/ibi-group/trimet-mod-otp/issues/237
         title
       ) : (
-        <div style={{display:'flex',alignItems:'center'}}>
+        <div style={{display:'flex',alignItems:'center','marginTop':-5}}>
           {icon}{' '}{title}
         </div>
       )}

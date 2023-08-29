@@ -78,11 +78,53 @@ brandByDomain:
     brandNavbar: Journey
     brandNavbarLogo: openmove
 
+  mobility.meran.eu:
+    branding: Merano - Alto Adige/Suedtirol
+    title: Merano - Alto Adige/Suedtirol
+    brandNavbar: ''
+    brandNavbarLogo: merano
+
+  mobility.merano.eu:
+    branding: Merano - Alto Adige/Suedtirol
+    title: Merano - Alto Adige/Suedtirol
+    brandNavbar: ''
+    brandNavbarLogo: merano
+
+  mobility.bz.it:
+    branding: Bolzano - Alto Adige/Suedtirol
+    title: Bolzano - Alto Adige/Suedtirol
+    brandNavbar: ''
+    brandNavbarLogo: bolzano
+
+  journey.opendatahub.bz.it:
+    branding: Mentor
+    title: Mentor
+    brandNavbar: ''
+    brandNavbarLogo: interreg
+
+  journey.opendatahub.com:
+    branding: Mentor
+    title: Mentor
+    brandNavbar: ''
+    brandNavbarLogo: interreg
+
 configByDomain:
-  localhost:
+  # localhost:
+  #   map:
+  #     overlays:
+  #     - type: webcam
+  #       name: webcam
+  #       enabled: true
+  mobility.meran.eu:
     map:
-      initLat: 46.225787
-      initLon: 10.826701
+      initLat: 46.6709
+      initLon: 11.1550
+      initZoom: 15
+  mobility.bz.it:
+    map:
+      initLat: 46.4921
+      initLon: 11.3333
+      initZoom: 15
 
 reportIssue:
   mailto: support@openmove.com
@@ -130,39 +172,17 @@ geocoder:
   maxNearbyStops: 6
   maxResults: 20
   apiKey: "${HERE_APIKEY}"
-  # baseUrl: https://api.geocode.earth # alternative to api, used for pelias geocoder (only one api url)
   api:
     autocomplete: https://autosuggest.search.hereapi.com/v1/autosuggest
   type: HERE
   boundary:
+    #IF boundary is empty get bounds from current map bounds
     rect:
       minLon: 10.470121
       maxLon: 12.255011
       minLat: 46.188280
       maxLat: 47.088780
       #Suedtirol 10.470121,46.188280,12.255011,47.088780
-  # layers: #filter requested layers for pelias geocoder
-  # - venue
-  # - street
-  # - address
-  # - borough
-  # attribution: 'attribution_geocode_earth'
-  #  focusPoint:
-  #   lat: 46.229372
-  #   lon: 10.826636
-  # tenant_pois: #tenant specific array of pois that appear in the search dropdown
-  # - name: "poi 2"
-  #   lat: 46.218776
-  #   lon: 10.82389
-  #   type: "custom"
-  # - name: "poi 3"
-  #   lat: 46.21376
-  #   lon: 10.82189
-  #   type: "custom"
-  # - name: "poi 4"
-  #   lat: 46.2196
-  #   lon: 10.82189
-  #   type: "custom"
 
 language:
   storageDisclaimer: storage_disclaimer
@@ -330,7 +350,7 @@ map:
       # enabled: true
       # visible: false
       # markerCluster: true
-      api: ${PARKING_BASEURL}/parking/all.json
+      api: ${PARKING_BASEURL}/parking/stations.json
       iconWidth: 42
       iconHeight: 50
       iconMarkerColor: "#b0d1ef"

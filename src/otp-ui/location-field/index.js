@@ -11,7 +11,7 @@ import LocationIcon from "../location-icon";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { Ban, Bus, LocationArrow, Search, Times } from "@styled-icons/fa-solid";
+import { Ban, Bus, LocationArrow, Search, Times , SearchLocation } from "@styled-icons/fa-solid";
 import { debounce } from "throttle-debounce";
 import { withNamespaces } from 'react-i18next'
 import { Clearfix, FormGroup, FormControl, DropdownButton, MenuItem, InputGroup, Button} from 'react-bootstrap'
@@ -276,9 +276,14 @@ class LocationField extends Component {
     getGeocoder(geocoderConfig)
       .search({ text })
       .then(result => {
+        // Only replace geocode items if results were found
         if (result.features && result.features.length > 0) {
-          // Only replace geocode items if results were found
-          this.setState({ geocodedFeatures: result.features });
+          // work around since geocode.earth needs to filter layers and isomorphic-mapzen-search don't allow it
+          let resultFeatures = result.features;
+          if(geocoderConfig?.layers?.length >0){
+            resultFeatures = resultFeatures.filter((feature)=>geocoderConfig?.layers.includes(feature.properties.layer))
+          }
+          this.setState({ geocodedFeatures: resultFeatures});
         } else {
           console.warn(
             "No results found for geocode search. Not replacing results."
@@ -312,10 +317,13 @@ class LocationField extends Component {
       stopsIndex,
       suppressNearby,
       userLocationsAndRecentPlaces,
+      customTenantPlaces,
       UserLocationIconComponent,
       nearbyStops,
+      customTenantIcon,
       t
     } = this.props;
+
     const { menuVisible, value } = this.state;
     const { activeIndex } = this.state;
     let { geocodedFeatures } = this.state;
@@ -485,6 +493,42 @@ class LocationField extends Component {
                 const { displayName, detailText } = formatStoredPlaceName(userLocation)
                 return `${t(displayName)} ${detailText ? `(${detailText})` : ''}`;
               })()}
+              onClick={locationSelected}
+              isActive={itemIndex === activeIndex}
+            />
+          );
+          itemIndex++;
+          return option;
+        })
+      );
+    }
+
+    /* 3c) Process custom tenant pois */
+    if (customTenantPlaces.length > 0) {
+      // Add the menu sub-heading (not a selectable item)
+      menuItems.push(
+        <MenuItem header key="custom-pois-header">
+          {t('tenant_places')}
+        </MenuItem>
+      );
+
+      // Iterate through any saved locations
+      menuItems = menuItems.concat(
+        customTenantPlaces.map(tenantPoi => {
+          // Create the location-selected handler
+          const locationSelected = () => {
+            this.setLocation(tenantPoi, "CUSTOM");
+          };
+
+          // Add to the selection handler lookup (for use in onKeyDown)
+          this.locationSelectedLookup[itemIndex] = locationSelected;
+
+          // Create and return the option menu item
+          const option = (
+            <Option
+              icon={customTenantIcon}
+              key={optionKey++}
+              title={tenantPoi.name}
               onClick={locationSelected}
               isActive={itemIndex === activeIndex}
             />
@@ -860,6 +904,7 @@ LocationField.defaultProps = {
   nearbyStops: [],
   onTextInputClick: null,
   sessionOptionIcon: <Search size={13} />,
+  customTenantIcon: <SearchLocation size={13}/>,
   sessionSearches: [],
   showClearButton: true,
   showUserSettings: false,

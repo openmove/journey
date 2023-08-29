@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { withNamespaces } from "react-i18next";
+import { Util } from 'leaflet'
 
 import {
   bikeRentalQuery,
@@ -282,10 +283,10 @@ class DefaultMap extends Component {
 
                   const bb = e.target.getBounds()
                       , bounds = {
-                        minLon: bb._southWest.lng,
-                        maxLon: bb._northEast.lng,
-                        minLat: bb._southWest.lat,
-                        maxLat: bb._northEast.lat
+                        minLon: Util.formatNum(bb._southWest.lng, 5),
+                        maxLon: Util.formatNum(bb._northEast.lng, 5),
+                        minLat: Util.formatNum(bb._southWest.lat, 5),
+                        maxLat: Util.formatNum(bb._northEast.lat, 5),
                       };
                   storeItem('mapBounds', bounds);
                   console.log('center',e.target.getCenter().toString())

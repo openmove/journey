@@ -2,6 +2,7 @@ import utils from "../../core-utils";
 import PropTypes from "prop-types";
 import React from "react";
 import { FeatureGroup, MapLayer, withLeaflet } from "react-leaflet";
+import { Util } from 'leaflet'
 
 /*
   TODO DEPRECATED MapLayer
@@ -73,10 +74,10 @@ class StopsOverlay extends MapLayer {
       setTimeout(() => {
         refreshStops({
           clusters: useClusters,
-          minLat: bounds.getSouth(),
-          maxLat: bounds.getNorth(),
-          minLon: bounds.getWest(),
-          maxLon: bounds.getEast()
+          minLat: Util.formatNum(bounds.getSouth(), 5),
+          maxLat: Util.formatNum(bounds.getNorth(), 5),
+          minLon: Util.formatNum(bounds.getWest(), 5),
+          maxLon: Util.formatNum(bounds.getEast(), 5),
         });
         this.lastBounds = bounds;
       }, 150);

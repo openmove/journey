@@ -68,7 +68,35 @@ class TripViewer extends Component {
       t
     } = this.props
     const route = tripData?.route
-    const fareUrl = route?.agency?.fareUrl
+    let fareUrl = route?.agency?.fareUrl
+
+    // handle starting and destination points for openmove app
+    // :hammer: maybe in the future would be useful to implement a parameter server side
+    if(fareUrl === "https://app.openmove.com" && tripData?.stopTimes && tripData?.stops){
+        // tripData and stops are not valued from the start
+        // add starting and destination points
+        const {fromIndex,toIndex} = viewedTrip;
+        if(fromIndex == null || toIndex == null){
+          console.error('fromIndex or toIndex not defined')
+        }
+        // origin stop
+        const {'stopId':originStopId} = tripData.stopTimes.find(({stopIndex})=> stopIndex===fromIndex);
+        const originStop = tripData.stops.find(stop => stop.id === originStopId)
+
+        // destination stop
+        const {'stopId':destinationStopId} = tripData.stopTimes.find(({stopIndex})=> stopIndex===toIndex);
+        const destinationStop = tripData.stops.find(stop => stop.id === destinationStopId)
+
+        const isOriginDefined = originStop.lat && originStop.lon
+        const areSameOriginDestination = fromIndex === toIndex
+        const isDestinationDefined = destinationStop.lat && destinationStop.lon && !areSameOriginDestination
+
+        const originParameter =  isOriginDefined ? `lat=${originStop.lat}&lng=${originStop.lon}&` : undefined
+        const destinationParameter =  isDestinationDefined ? `destinationLat=${destinationStop.lat}&destinationLng=${destinationStop.lon}&destinationLabel=${encodeURIComponent(destinationStop.name)}` : undefined
+
+        const query = `/tickets?${isOriginDefined?originParameter:''}${isDestinationDefined?destinationParameter:''}`
+        fareUrl+=query;
+      }
 
     // determine highlight color
     const routeColor =  route?.color

@@ -20,19 +20,24 @@ export default class PeliasGeocoder extends Geocoder {
       boundary,
       focusPoint,
       options,
-      sources
+      sources,
+      layers
     } = this.geocoderConfig;
 
-    query.lang = getItem('lang');
+    if(!boundary){
+      throw new Error('missing geocoder boundary');
+    }
 
+    query.lang = getItem('lang');
     return {
       apiKey,
-      boundary: boundary || {rect: getItem('mapBounds') },
+      boundary: boundary /*  || {rect: getItem('mapBounds') } */,
       focusPoint,
       options,
       // explicitly send over null for sources if provided sources is not truthy
       // in order to avoid default isomorphic-mapzen-search sources form being
       // applied
+      layers: layers?.join(','),
       sources: sources || null,
       url: baseUrl ? `${baseUrl}/v1/autocomplete` : undefined,
       ...query
@@ -72,9 +77,13 @@ export default class PeliasGeocoder extends Geocoder {
 
     query.lang = getItem('lang');
 
+    if(!boundary){
+      throw new Error('missing geocoder boundary');
+    }
+
     return {
       apiKey,
-      boundary: boundary || {rect: getItem('') },
+      boundary: boundary /* || {rect: getItem('') } */,
       focusPoint,
       options,
       // explicitly send over null for sources if provided sources is not truthy
