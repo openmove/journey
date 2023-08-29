@@ -23,6 +23,8 @@ GOOGLE_ANALYTICS_ID=UA-XXXXX-Y
 MATOMO_BASE_URL=https://digital.matomo.cloud/
 MATOMO_SITE_ID=20
 
+HERE_APIKEY=xxx
+
 WEBCAM_BASEURL=http://localhost/journey/webcam/
 
 #useful for prod environment
