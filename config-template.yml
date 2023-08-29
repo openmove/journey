@@ -129,11 +129,17 @@ footer:
 geocoder:
   maxNearbyStops: 6
   maxResults: 20
-  apiKey: "${HERE_APIKEY}"
-  # baseUrl: https://api.geocode.earth # alternative to api, used for pelias geocoder (only one api url)
-  api:
-    autocomplete: https://autosuggest.search.hereapi.com/v1/autosuggest
-  type: HERE
+  ## HERE.COM
+  #type: HERE
+  #api:
+  #  autocomplete: https://autosuggest.search.hereapi.com/v1/autosuggest
+  #type: HERE
+  #apiKey: "${HERE_APIKEY}"
+  #######################################
+  ## GEOCODE.EARTH
+  type: PELIAS
+  baseUrl: https://api.geocode.earth
+  apiKey: "${PELIAS_APIKEY}"
   boundary:
     rect:
       minLon: 10.470121

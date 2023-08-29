@@ -24,6 +24,7 @@ MATOMO_BASE_URL=https://digital.matomo.cloud/
 MATOMO_SITE_ID=20
 
 HERE_APIKEY=xxx
+PELIAS_APIKEY=xxx
 
 WEBCAM_BASEURL=http://localhost/journey/webcam/
 
