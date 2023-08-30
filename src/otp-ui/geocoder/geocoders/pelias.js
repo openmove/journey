@@ -1,6 +1,11 @@
 import Geocoder from "./abstract-geocoder";
 import { getItem } from "../../core-utils/storage";
 
+
+const defaultsApi = {
+  baseUrl: 'https://api.geocode.earth'
+}
+
 /**
  * Geocoder implementation for the Pelias geocoder.
  * See https://pelias.io
