@@ -5,14 +5,19 @@
  * application. Any geocoder api that is added is expected to have an API that
  * behaves very closely to https://github.com/conveyal/isomorphic-mapzen-search
  */
+
+const defaults = {
+  autocomplete: 'https://autosuggest.search.hereapi.com/v1/autosuggest'
+}
+
 export default class Geocoder {
   constructor( geocoderConfig) {
     this.api = geocoderConfig.api;
     this.geocoderConfig = geocoderConfig;
   }
 
-  fetch(type, query,rewriteResponse){
-    const url = this.api[type];
+  fetch(type, query, rewriteResponse){
+    const url = this.api[type] || defaults[type];
     return fetch( url + query)
       .then((response) => response.json())
       .then((results)=>rewriteResponse(results))
