@@ -6,18 +6,18 @@
  * behaves very closely to https://github.com/conveyal/isomorphic-mapzen-search
  */
 
-const defaults = {
+const defaultsApi = {
   autocomplete: 'https://autosuggest.search.hereapi.com/v1/autosuggest'
 }
 
 export default class Geocoder {
   constructor( geocoderConfig) {
-    this.api = geocoderConfig.api;
+    this.api = geocoderConfig.api || defaultsApi;
     this.geocoderConfig = geocoderConfig;
   }
 
   fetch(type, query, rewriteResponse){
-    const url = this.api[type] || defaults[type];
+    const url = this.api[type] || defaultsApi[type];
     return fetch( url + query)
       .then((response) => response.json())
       .then((results)=>rewriteResponse(results))
