@@ -106,6 +106,7 @@ export default class Geocoder {
       focusPoint,
       options
     } = this.geocoderConfig;
+
     return {
       apiKey,
       boundary,

@@ -1,6 +1,6 @@
 import Geocoder from "./abstract-geocoder";
 import { getItem } from "../../core-utils/storage";
-
+import {fromCoordinates} from "@conveyal/lonlat";
 
 const defaultsApi = {
   baseUrl: 'https://api.geocode.earth'
@@ -13,6 +13,27 @@ const defaultsApi = {
  * @extends Geocoder
  */
 export default class PeliasGeocoder extends Geocoder {
+
+  getLocationFromGeocodedFeature(feature) {
+
+    const {patchList, type} = this.geocoderConfig;
+
+    const location = fromCoordinates(feature.geometry.coordinates);
+
+    const patch = patchList[ type ][ `${feature.id}` ]
+
+    if (patch) {
+      console.log('PATCH', patch, location);
+      location.lat = patch.lat;
+      location.lon = patch.lon;
+      feature.geometry.coordinates = [patch.lon, patch.lat]
+    }
+
+    location.name = feature.properties.label;
+    location.rawGeocodedFeature = feature;
+    return Promise.resolve(location);
+  }
+
   /**
    * Generate an autocomplete query specifically for the Pelias API. The
    * `sources` parameter is a Pelias-specific option.

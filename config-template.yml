@@ -129,16 +129,26 @@ footer:
 geocoder:
   maxNearbyStops: 6
   maxResults: 20
+  #################
   ## HERE.COM
   type: HERE
   api:
    autocomplete: https://autosuggest.search.hereapi.com/v1/autosuggest
   apiKey: "${HERE_APIKEY}"
-  #######################################
+  #################
   ## GEOCODE.EARTH
   # type: PELIAS
   # baseUrl: https://api.geocode.earth
   # apiKey: "${PELIAS_APIKEY}"
+  patchList:
+    PELIAS:
+      "1125787603": #madonna campiglio
+        lon: 10.8262567
+        lat: 46.2319871
+      "1126005653": #mavignola
+        lon: 10.78496
+        lat: 46.18978
+
   boundary:
     rect:
       minLon: 10.470121
