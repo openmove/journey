@@ -14,7 +14,7 @@ const defaultsApi = {
  */
 export default class PeliasGeocoder extends Geocoder {
 
-  getLocationFromGeocodedFeature(feature) {
+/*  getLocationFromGeocodedFeature(feature) { //not used.... boooh
 
     const {patchList, type} = this.geocoderConfig;
 
@@ -24,6 +24,7 @@ export default class PeliasGeocoder extends Geocoder {
 
     if (patch) {
       console.log('PATCH', patch, location);
+
       location.lat = patch.lat;
       location.lon = patch.lon;
       feature.geometry.coordinates = [patch.lon, patch.lat]
@@ -32,8 +33,35 @@ export default class PeliasGeocoder extends Geocoder {
     location.name = feature.properties.label;
     location.rawGeocodedFeature = feature;
     return Promise.resolve(location);
-  }
+  }*/
 
+  rewriteAutocompleteResponse(response) {
+
+    const {patchList, type} = this.geocoderConfig;
+
+    //console.log('pelias rewriteAutocompleteResponse', response.features)
+
+    if (response && response.features && patchList) {
+      response.features.forEach(feature => {
+        if (feature) {
+          const patch = patchList[ type ][ `${feature.id}` ]
+          if (patch) {
+            console.log('PATCH', patch);
+            feature.geometry.coordinates = [patch.lon, patch.lat]
+          }
+        }
+      })
+    }
+    return response;
+  }
+/*  autocomplete(query) {
+    return this.api
+      .autocomplete(this.getAutocompleteQuery(query))
+      .then(res => {
+        console
+        return this.rewriteAutocompleteResponse(res)
+      });
+  }*/
   /**
    * Generate an autocomplete query specifically for the Pelias API. The
    * `sources` parameter is a Pelias-specific option.

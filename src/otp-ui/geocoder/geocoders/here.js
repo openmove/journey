@@ -75,7 +75,7 @@ export default class Geocoder {
     }
   }
 
-  convertResultsToFeatures(results){
+  convertResultsToFeatures(results) {
     // retro compatibility function
     // note: not all fields are converted only the strictly needed ones
     const features = []
@@ -112,8 +112,8 @@ export default class Geocoder {
    */
   getLocationFromGeocodedFeature(item) {
     const locationToReturn =  {}
-     locationToReturn.lat = item.position.lat// lonlat.fromLatlng(result.position);
-     locationToReturn.lon = item.position.lng
+    locationToReturn.lat = item.position.lat// lonlat.fromLatlng(result.position);
+    locationToReturn.lon = item.position.lng
     locationToReturn.name = item.title //feature.address.label;
     // location.rawGeocodedFeature = feature; // not used
     return Promise.resolve(locationToReturn);
