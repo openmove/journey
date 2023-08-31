@@ -14,32 +14,11 @@ const defaultsApi = {
  */
 export default class PeliasGeocoder extends Geocoder {
 
-/*  getLocationFromGeocodedFeature(feature) { //not used.... boooh
-
-    const {patchList, type} = this.geocoderConfig;
-
-    const location = fromCoordinates(feature.geometry.coordinates);
-
-    const patch = patchList[ type ][ `${feature.id}` ]
-
-    if (patch) {
-      console.log('PATCH', patch, location);
-
-      location.lat = patch.lat;
-      location.lon = patch.lon;
-      feature.geometry.coordinates = [patch.lon, patch.lat]
-    }
-
-    location.name = feature.properties.label;
-    location.rawGeocodedFeature = feature;
-    return Promise.resolve(location);
-  }*/
-
   rewriteAutocompleteResponse(response) {
 
     const {patchList, type} = this.geocoderConfig;
 
-    //console.log('pelias rewriteAutocompleteResponse', response.features)
+    console.log('pelias rewriteAutocompleteResponse', response)
 
     if (response && response.features && patchList) {
       response.features.forEach(feature => {
