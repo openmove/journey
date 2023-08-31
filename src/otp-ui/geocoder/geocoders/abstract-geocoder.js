@@ -16,19 +16,22 @@ export default class Geocoder {
    * Perform an autocomplete query. Eg, using partial text of a possible
    * address or POI, attempt to find possible matches.
    */
-  /*autocomplete(query) {
+  autocomplete(query) {
+    const self = this;
+
     return this.api
       .autocomplete(this.getAutocompleteQuery(query))
-      .then(this.rewriteAutocompleteResponse);
-  }*/
-  autocomplete(query) { //patch with context
+      .then(r => this.rewriteAutocompleteResponse(r));
+  }
+/*  autocomplete(query) { //patch with context
     const self = this;
     return this.api
       .autocomplete(this.getAutocompleteQuery(query))
       .then(function(res) {
-        self.rewriteAutocompleteResponse.call(self, res)
+        console.log('autocomplete', res, this)
+        self.rewriteAutocompleteResponse(res, self.geocoderConfig)
       });
-  }
+  }*/
 
   /**
    * Get an application-specific data structure from a given feature. The

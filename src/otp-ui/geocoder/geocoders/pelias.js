@@ -14,33 +14,6 @@ const defaultsApi = {
  */
 export default class PeliasGeocoder extends Geocoder {
 
-  rewriteAutocompleteResponse(response) {
-
-    const {patchList, type} = this.geocoderConfig;
-
-    console.log('pelias rewriteAutocompleteResponse', response)
-
-    if (response && response.features && patchList) {
-      response.features.forEach(feature => {
-        if (feature) {
-          const patch = patchList[ type ][ `${feature.id}` ]
-          if (patch) {
-            console.log('PATCH', patch);
-            feature.geometry.coordinates = [patch.lon, patch.lat]
-          }
-        }
-      })
-    }
-    return response;
-  }
-/*  autocomplete(query) {
-    return this.api
-      .autocomplete(this.getAutocompleteQuery(query))
-      .then(res => {
-        console
-        return this.rewriteAutocompleteResponse(res)
-      });
-  }*/
   /**
    * Generate an autocomplete query specifically for the Pelias API. The
    * `sources` parameter is a Pelias-specific option.
@@ -129,6 +102,26 @@ export default class PeliasGeocoder extends Geocoder {
     };
   }
 
+  rewriteAutocompleteResponse(response) {
+
+    const {patchList} = this.geocoderConfig;
+
+    console.log('PELIAS rewriteAutocompleteResponse', patchList)
+
+    if (response && response.features && patchList) {
+      return {
+        features: features.map(feature => {
+          const patch = patchList[ feature.id ]
+          if (patch) {
+            console.log('PATCH', feature.name, patch);
+            feature.geometry.coordinates = [patch.lon, patch.lat]
+          }
+        })
+      }
+    }
+
+    return response;
+  }
   /**
    * Rewrite the response into an application-specific data format using the
    * first feature returned from the geocoder.
