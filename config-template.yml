@@ -140,14 +140,14 @@ geocoder:
   # type: PELIAS
   # baseUrl: https://api.geocode.earth
   # apiKey: "${PELIAS_APIKEY}"
+  #GEOCODE EARTH: features id to replace location
   patchList:
-    PELIAS:
-      "1125787603": #madonna campiglio
-        lon: 10.8262567
-        lat: 46.2319871
-      "1126005653": #mavignola
-        lon: 10.78496
-        lat: 46.18978
+    "1125787603": #madonna campiglio
+      lon: 10.8262567
+      lat: 46.2319871
+    "1126005653": #mavignola
+      lon: 10.78496
+      lat: 46.18978
 
   boundary:
     rect:
