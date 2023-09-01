@@ -106,18 +106,13 @@ export default class PeliasGeocoder extends Geocoder {
 
     const {patchList} = this.geocoderConfig;
 
-    console.log('PELIAS rewriteAutocompleteResponse', patchList, response.features[0])
-
     if (response && response.features && patchList) {
-
-
       return {
         features: response.features.map(feature => {
           const {id} = feature.properties
               , patch = patchList[ Number(id) ];
 
           if (patch) {
-            console.log('PATCH', feature.name, patch);
             feature.geometry.coordinates = [patch.lon, patch.lat]
           }
           return feature

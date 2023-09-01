@@ -162,7 +162,7 @@ geocoder:
   # - address
   # - borough
   # attribution: 'attribution_geocode_earth'
-  #  focusPoint:
+  # focusPoint:
   #   lat: 46.229372
   #   lon: 10.826636
   # tenant_pois: #tenant specific array of pois that appear in the search dropdown

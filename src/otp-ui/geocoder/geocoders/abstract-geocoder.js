@@ -17,19 +17,15 @@ export default class Geocoder {
    * address or POI, attempt to find possible matches.
    */
   autocomplete(query) {
-    const self = this;
-
     return this.api
       .autocomplete(this.getAutocompleteQuery(query))
       .then(r => this.rewriteAutocompleteResponse(r));
   }
-/*  autocomplete(query) { //patch with context
+/* OLD BUGGED:  autocomplete(query) { //patch with context
     const self = this;
     return this.api
       .autocomplete(this.getAutocompleteQuery(query))
-      .then(function(res) {
-        console.log('autocomplete', res, this)
-        self.rewriteAutocompleteResponse(res, self.geocoderConfig)
+      .then(this.rewriteAutocompleteResponse)
       });
   }*/
 
