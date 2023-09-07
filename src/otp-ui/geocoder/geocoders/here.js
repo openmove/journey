@@ -32,6 +32,7 @@ export default class Geocoder {
       'autocomplete',
       this.getAutocompleteQuery(query),
       (results)=>this.convertResultsToFeatures(results)
+      //TODO refact using   rewriteAutocompleteResponse(response) {}
     )
   }
 
@@ -74,6 +75,8 @@ export default class Geocoder {
       default: console.error('invalid category',hereCategory)
     }
   }
+
+//TODO refact using   rewriteAutocompleteResponse(response) {}
 
   convertResultsToFeatures(results) {
     // retro compatibility function
