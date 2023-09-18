@@ -259,7 +259,9 @@ class DefaultMap extends Component {
                 }}
                 defaultBaseLayerIndex={getItem('mapStyleIndex') || 0}
                 onBaseLayerChange={e => {
-                  storeItem('mapStyleIndex', e.index)
+                  if(e?.index>=0) {
+                    storeItem('mapStyleIndex', e.index)
+                  }
                 }}
                 onOverlayAdded={e => {
                   const visibleOverlays = getItem('mapOverlayVisible') || []
