@@ -248,7 +248,7 @@ class ChargerOverlay extends MapLayer {
                               </strong>
                               <br />
                               <br />
-                              {plug.maxPower && `${plug.maxPower}W`}
+                              {plug.maxPower && `${plug.maxPower}kW`}
                               {(plug.minCurrent && plug.maxCurrent ) && (
                                 ` | ${plug.minCurrent}-${plug.maxCurrent}A`
                                 )}
