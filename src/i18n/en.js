@@ -88,6 +88,7 @@ export const TRANSLATIONS_EN = {
   "walk": "On foot",
   "micromobility": "Micromobility",
   "by_bike": "By bike",
+  "by_car_hail": "Taxi",
   "bicycle": "By bike",
   "e-scooter": "E-scooter",
   "meter": "meters",
@@ -399,6 +400,7 @@ export const TRANSLATIONS_EN = {
   "30_minutes": "30 Minutes",
   "45_minutes": "45 Minutes",
   "1_hour": "1 Hour",
+  "minutes": "minuti",
   "bikesharing_ride": "Bikesharing & Ride",
   "park_ride": "Park & Ride",
   "carsharing_ride": "Carsharing & Ride",
@@ -507,4 +509,7 @@ export const TRANSLATIONS_EN = {
   "search": "Search",
 
   "zone" : "Zone",
+
+  "for_arrival": "for the arrival",
+  "of_taxi":"of the "
 };

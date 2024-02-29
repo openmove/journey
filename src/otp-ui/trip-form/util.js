@@ -6,7 +6,9 @@ import {
   isBicycleRent,
   isMicromobility,
   isTransit,
-  isWalk
+  isWalk,
+  isCarHail,
+  isCar
 } from "../core-utils/itinerary";
 import { getCompanyIcon } from "../icons/companies";
 
@@ -24,6 +26,11 @@ const supportedExclusiveModes = [
     mode: "BICYCLE",
     label: "by_bike",
     isActive: isBike
+  },
+  {
+    mode: "CAR_HAIL",
+    label: "by_car_hail",
+    isActive: isCarHail
   },
   {
     mode: "MICROMOBILITY",
@@ -220,7 +227,11 @@ function getExclusiveModeOptions(ModeIcon, modes, selectedModes) {
     .filter(({ mode }) => exclusiveModes && exclusiveModes.includes(mode))
     .map(({ isActive, label, mode }) => ({
       id: mode,
-      selected: !selectedModes.some(isTransit) && selectedModes.some(isActive),
+      selected:
+      (!selectedModes.some(isTransit) &&
+        !selectedModes.some(isCar) &&
+        selectedModes.some(isActive)) ||
+      (isCar(mode) && selectedModes.some(isActive)), // ignore walk mode if is used as an hack see journey/src/actions/api.js:325
       showTitle: true,
       icon: (<ModeIcon mode={mode} width={28} height={28} />),
       label,

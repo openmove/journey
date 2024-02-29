@@ -62,6 +62,11 @@ export function isCar(mode) {
   return mode.startsWith("CAR");
 }
 
+export function isCarHail(mode) {
+  if (!mode) return false;
+  return mode.startsWith("CAR_HAIL");
+}
+
 export function isMicromobility(mode) {
   if (!mode) return false;
   return mode.startsWith("MICROMOBILITY");

@@ -13,10 +13,10 @@ import {
   ParkRide,
   Micromobility,
   MicromobilityRide,
-  MicromobilitySharing,  
+  MicromobilitySharing,
   Rail,
   Streetcar,
-  Tram,  
+  Tram,
   Walk
 } from "./openmove";
 
@@ -27,12 +27,12 @@ function OpenMoveModeIcon({ mode, ...props }) {
       return <Bicycle {...props} />
     case "bicycle_ride":
       return <BicycleRide {...props} />
-    case "bicycle_rent":      
+    case "bicycle_rent":
       return <BikeSharing {...props} />;
-    case "bicycle_rent_ride":      
+    case "bicycle_rent_ride":
       return <BikeSharingRide {...props} />;
-    case "car_rent":
-      return <CarSharing {...props} />;
+    case "car_hail":
+      return <Car {...props} />;
     case "car_rent_ride":
       return <CarSharingRide {...props} />;
     case "car_park_ride":
@@ -44,7 +44,7 @@ function OpenMoveModeIcon({ mode, ...props }) {
     case "transit":
       return <Bus {...props} />;
     case "bus":
-      return <Bus {...props} />;      
+      return <Bus {...props} />;
     case "walk":
       return <Walk {...props} />;
     case "gondola":

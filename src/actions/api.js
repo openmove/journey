@@ -285,6 +285,13 @@ export function getRoutingParams (query, config, ignoreRealtimeUpdates) {
       delete params.date
     }
 
+    if(params.mode && params.mode.includes('CAR_HAIL') && params.companies === ""){
+      // :hammer:
+      // hack since if companies is specified does not work
+      // todo generalize code in a way that empty parameters are not saved to params object with empty string
+      params.companies = "NOAPI"
+    }
+
     // temp: set additional parameters for CAR_HAIL or CAR_RENT trips
     if (
       params.mode &&

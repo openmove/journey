@@ -23,7 +23,8 @@ export default function TNCLeg({
   LegIcon,
   onSummaryClick,
   showLegIcon,
-  timeOptions
+  timeOptions,
+  t
 }) {
   const universalLinks = {
     UBER: `https://m.uber.com/${
@@ -44,11 +45,11 @@ export default function TNCLeg({
     <div>
       <div>
         <small><strong>
-        Wait{" "}
+        {t("wait")}{" "}
         {!followsTransit && (
-          <span>{Math.round(tncData.estimatedArrival / 60)} minutes </span>
+          <span>{Math.round(tncData.estimatedArrival / 60)} {t("minutes")} </span>
         )}
-        for {tncData.displayName} pickup
+        {t("for_arrival")} {t("of_taxi")}{tncData.displayName}
         </strong></small>
       </div>
 
@@ -68,7 +69,7 @@ export default function TNCLeg({
             href={universalLinks[tncData.company]}
             target={isMobile() ? "_self" : "_blank"}
           >
-            Book Ride
+          {t("book_ride")}
           </a>
           {followsTransit && <div className="otp-ui-bookLaterPointer"></div>}
           {followsTransit && (
@@ -89,12 +90,11 @@ export default function TNCLeg({
 
         {/* The estimated travel time */}
         <div>
-          Estimated travel time: {formatDuration(leg.duration)} (does not
-          account for traffic)
+          {t("estimated_time")}: {formatDuration(leg.duration)} ( {t("does_not_account_for_traffic")} )
         </div>
 
         {/* The estimated travel cost */}
-        {tncData.minCost && (
+        {(tncData.minCost != null && tncData.minCost > 0)  && (
           <div>
             Estimated cost:{" "}
             {`${currencyFormatter.format(tncData.minCost, {
