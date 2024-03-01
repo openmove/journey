@@ -15,7 +15,6 @@ import AccessLegSummary from "./access-leg-summary";
 import LegDiagramPreview from "./leg-diagram-preview";
 import RentedVehicleSubheader from "./rented-vehicle-subheader";
 import TNCLeg from "./tnc-leg";
-import { withNamespaces } from "react-i18next";
 
 /**
  * Component for access (e.g. walk/bike/etc.) leg in narrative itinerary. This
@@ -48,8 +47,7 @@ import { withNamespaces } from "react-i18next";
       setLegDiagram,
       showElevationProfile,
       showLegIcon,
-      timeOptions,
-      t
+      timeOptions
     } = this.props;
     const { expanded } = this.state;
 
@@ -63,7 +61,6 @@ import { withNamespaces } from "react-i18next";
           onSummaryClick={this.onSummaryClick}
           showLegIcon={showLegIcon}
           timeOptions={timeOptions}
-          t={t}
         />
       );
     }
@@ -136,4 +133,4 @@ AccessLegBody.defaultProps = {
   timeOptions: null
 };
 
-export default withNamespaces()(AccessLegBody)
+export default AccessLegBody;

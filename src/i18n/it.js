@@ -507,5 +507,6 @@ export const TRANSLATIONS_IT = {
  "zone" : "Zona",
 
  "for_arrival": "per l'arrivo",
- "of_taxi":"del "
+ "of_taxi":"del ",
+ "available_taxies": "Taxi in Zona"
 }
