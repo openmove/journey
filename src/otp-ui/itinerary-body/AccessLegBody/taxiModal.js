@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Button, Row, Col } from "react-bootstrap";
-import { Car } from "../../icons/openmove";
+import { Taxi } from "../../icons/openmove";
 import FontAwesome from "react-fontawesome";
 import { isMobile } from "../../core-utils/ui";
 import Icon from "../../../components/narrative/icon";
@@ -52,7 +52,7 @@ const TaxiContainer = ({ taxi, t }) => {
   return (
     <div className="taxi-container">
       <div className="taxi-container-header">
-        <Car width={"25px"} height={"25px"} />
+        <Taxi width={"25px"} height={"25px"} />
         <h5 className="taxi-container-title">{name}</h5>
       </div>
       <div className="taxi-container-buttons">

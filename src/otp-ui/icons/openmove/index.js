@@ -6,6 +6,7 @@ import BikeSharingRide from "./BikeSharingRide";
 import Bus from "./Bus";
 import BusDrt from "./BusDrt";
 import Car from "./Car";
+import Taxi from "./Taxi";
 import CarSharing from "./CarSharing";
 import CarSharingRide from "./CarSharingRide";
 import Funicolar from "./Funicolar";
@@ -34,5 +35,6 @@ export {
   MicromobilityRide,
   MicromobilitySharing,
   Walk,
-  Rail
+  Rail,
+  Taxi
 };

@@ -17,7 +17,8 @@ import {
   Rail,
   Streetcar,
   Tram,
-  Walk
+  Walk,
+  Taxi
 } from "./openmove";
 
 function OpenMoveModeIcon({ mode, ...props }) {
@@ -32,7 +33,7 @@ function OpenMoveModeIcon({ mode, ...props }) {
     case "bicycle_rent_ride":
       return <BikeSharingRide {...props} />;
     case "car_hail":
-      return <Car {...props} />;
+      return <Taxi {...props} />;
     case "car_rent_ride":
       return <CarSharingRide {...props} />;
     case "car_park_ride":
