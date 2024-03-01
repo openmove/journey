@@ -8,6 +8,7 @@ import { withNamespaces } from "react-i18next";
 
 const MobileModal = (props) => {
   const { shown, open, close, t } = props;
+
   return (
     <Modal show={shown} onHide={close} className="taxi-modal-mobile">
       <Modal.Header closeButton onHide={close}>
@@ -23,8 +24,56 @@ const MobileModal = (props) => {
   );
 };
 
+const Loading = () => (
+  <div className="loading">
+    <FontAwesome name="circle-o-notch" spin={true} size="3x" />
+  </div>
+);
+
+const Error = (props) => {
+  const { t } = props;
+
+  return (
+    <div className="error">
+      <p>{t("error_network")}</p>
+      <Button onClick={() => props.setError(false)}>
+        <span>
+          <i className={`fa fa-undo`} />{" "}
+        </span>
+        {t("reload")}
+      </Button>
+    </div>
+  );
+};
+
+const TaxiContainer = ({ taxi, t }) => {
+  const { name, email, phone } = taxi;
+
+  return (
+    <div className="taxi-container">
+      <div className="taxi-container-header">
+        <Car width={"25px"} height={"25px"} />
+        <h5 className="taxi-container-title">{name}</h5>
+      </div>
+      <div className="taxi-container-buttons">
+        {email && (
+          <Button href={"mailto:" + email} bsStyle="primary" target="_blank">
+            {t("email")} <FontAwesome name="envelope" tag="i" />{" "}
+          </Button>
+        )}
+        {phone && (
+          <Button href={"tel:" + phone} bsStyle="primary">
+            {t("phone")} <FontAwesome name="phone" tag="i" />{" "}
+          </Button>
+        )}
+      </div>
+    </div>
+  );
+};
+
 const DesktopModal = (props) => {
   const { shown, open, close, t } = props;
+
   if (!props.shown) {
     return null;
   }
@@ -45,269 +94,57 @@ const DesktopModal = (props) => {
 };
 
 const ModalContent = (props) => {
+  const { taxies, t } = props;
+
   return (
-    <>
-      <Modal.Body className="body">
-        <div className="taxi-list">
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" style={{marginLeft:"10px"}}/>{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" className="icon" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" className="icon"  />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-          <div className="taxi-container">
-            <div className="taxi-container-header">
-              <Car width={"25px"} height={"25px"} />
-              <h5 className="taxi-container-title">taxi velocissimo</h5>
-            </div>
-            <div className="taxi-container-buttons">
-              <Button
-                href="mailto:pino.pall@mail.com"
-                bsStyle="primary"
-                target="_blank"
-              >
-                Email <FontAwesome name="envelope" tag="i" />{" "}
-              </Button>
-              <Button href="tel:+1234567890" bsStyle="primary">
-                Telefono <FontAwesome name="phone" tag="i" />{" "}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </Modal.Body>
-    </>
+    <Modal.Body className="body">
+      <div className="taxi-list">
+        {taxies.map((taxi) => (
+          <TaxiContainer taxi={taxi} t={t} key={taxi?.id} />
+        ))}
+      </div>
+    </Modal.Body>
   );
 };
 class TaxiModal extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { error: null, taxes: [] };
+    this.state = { taxies: [], error: false, loading: false };
+    this.setError = this.setError.bind(this);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      (prevProps.shown === false && this.props.shown === true) ||
+      (prevState.error === true && this.state.error == false)
+    ) {
+      this.fetchTaxies();
+    }
   }
 
   componentDidMount() {}
   render() {
-    const { shown, open, close } = this.props;
+    const { shown, open, close, t } = this.props;
+    const { taxies, loading, error } = this.state;
 
     if (isMobile()) {
       return (
         <MobileModal {...this.props}>
-          <ModalContent {...this.props} />
+          {loading && <Loading />}
+          {error && <Error setError={this.setError} t={t} />}
+          {taxies && taxies?.length > 0 && (
+            <ModalContent {...this.props} taxies={taxies} />
+          )}
         </MobileModal>
       );
     } else {
       return (
         <DesktopModal {...this.props}>
-          <ModalContent {...this.props} />
+          {loading && <Loading />}
+          {error && <Error t={t} setError={this.setError} />}
+          {taxies && taxies?.length > 0 && (
+            <ModalContent {...this.props} taxies={taxies} />
+          )}
         </DesktopModal>
       );
     }
@@ -320,17 +157,41 @@ class TaxiModal extends React.Component {
     setState({ open: false });
   }
 
-  async fetchPage(pageUrl) {
-    return fetch(pageUrl)
+  setLoading(isLoading) {
+    this.setState({ loading: isLoading });
+  }
+
+  setError(isError) {
+    this.setState({ error: isError });
+  }
+
+  async fetchTaxies() {
+    const token = "";
+    const pageUrl = "www.google.com"
+
+    const headers = {
+      headers: {
+        Accept: "application/json",
+      },
+    };
+
+    this.setLoading(true);
+
+    fetch(pageUrl, headers)
       .then((response) => {
         if (response.ok) {
-          return response.text();
+          return response.json();
         }
         throw new Error("Network Error");
       })
+      .then((taxies) => {
+        this.setLoading(false);
+        console.log(taxies);
+        this.setState({ taxies });
+      })
       .catch((error) => {
-        const text = this.props.t("error_network");
-        return `<p class="modal-error">${text}<p>`;
+        this.setLoading(false);
+        this.setError(true);
       });
   }
 }
