@@ -89,6 +89,7 @@ export const TRANSLATIONS_EN = {
   "micromobility": "Micromobility",
   "by_bike": "By bike",
   "by_car_hail": "Taxi",
+  "car_hail": "Taxi",
   "bicycle": "By bike",
   "e-scooter": "E-scooter",
   "meter": "meters",

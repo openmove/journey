@@ -90,6 +90,7 @@ export const TRANSLATIONS_IT = {
   "bicycle": "In bici",
   "by_bike": "In bici",
   "by_car_hail": "Taxi",
+  "car_hail": "Taxi",
   "e-scooter": "E-scooter",
   "meter": "metri",
   "bus": "Bus",
