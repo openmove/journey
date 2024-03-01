@@ -37,7 +37,7 @@ const LegIcon = ({ leg, ModeIcon, ...props }) => {
   if (iconStr === "CAR" && leg.rentedCar) {
     iconStr = leg.from.networks[0];
   } else if (iconStr === "CAR" && leg.tncData) {
-    iconStr = leg.tncData.company;
+    iconStr = leg.tncData.company !== "NOAPI" ? leg.tncData.company : leg.tncData.productId;
   } else if (iconStr === "BICYCLE" && leg.rentedBike && leg.from.networks) {
     iconStr = leg.from.networks[0];
   } else if (

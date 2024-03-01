@@ -18,6 +18,7 @@ import {
 import BikeSharing from "./modern/BikeSharing";
 //import CarSharing from "./modern/CarSharing";
 import MicromobilitySharing from "./modern/MicromobilitySharing";
+import { Taxi } from "./openmove";
 
 /**
  * Icons for all TriMet modes.
@@ -44,6 +45,8 @@ function TriMetModeIcon({ mode, ...props }) {
     case "car":
     case "car_park":
       return <Car {...props} />;
+    case "taxi":
+      return <Taxi {...props}/>
     case "ferry":
       return <Ferry {...props} />;
     case "gondola":
