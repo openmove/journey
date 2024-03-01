@@ -315,6 +315,7 @@ export const TRANSLATIONS_EN = {
   "notification_emails_will_be_sent_out_to": "Notification emails will be sent out to:",
   "enter_your_phone_number_for_sms_notifications": "Enter your phone number for SMS notifications",
   "email": "Email",
+  "phone": "Phone",
   "sms": "SMS",
   "dont_notify_me": "Don't notify me",
   "under_construction": "Under construction!",
