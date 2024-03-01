@@ -17,7 +17,7 @@ import { getSecureFetchOptions } from '../util/middleware'
 
 if (typeof (fetch) === 'undefined') require('isomorphic-fetch')
 
-const { hasCar } = coreUtils.itinerary
+const { hasCar, hasWalk } = coreUtils.itinerary
 const { getTripOptionsFromQuery, getUrlParams, getResponseData } = coreUtils.query
 const { randId } = coreUtils.storage
 const { OTP_API_DATE_FORMAT, OTP_API_TIME_FORMAT } = coreUtils.time
@@ -330,7 +330,8 @@ export function getRoutingParams (query, config, ignoreRealtimeUpdates) {
   // TODO: check that valid from/to locations are provided
 
   // hack to add walking to driving/TNC trips
-  if (hasCar(params.mode)) {
+  if (hasCar(params.mode) && !hasWalk(params.mode)) {
+    console.log( "walk")
     params.mode += ',WALK'
   }
 

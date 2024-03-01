@@ -126,6 +126,13 @@ export function hasHail(modesStr) {
   return modesStr.split(",").some(mode => mode.indexOf("_HAIL") > -1)
     || modesStr.split("+").some(mode => mode.indexOf("_HAIL") > -1);
 }
+/**
+ * @param  {string}  modesStr a comma-separated list of OTP modes
+ * @return {boolean} whether any of the modes is a walking mode
+ */
+export function hasWalk(modesStr) {
+  return modesStr.split(",").some(mode => mode.indexOf("WALK") > -1);
+}
 
 /**
  * @param  {string}  modesStr a comma-separated list of OTP modes
