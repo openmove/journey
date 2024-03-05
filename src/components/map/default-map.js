@@ -34,6 +34,7 @@ import ChargerOverlay from '../../otp-ui/overlays/charger'
 import TrafficOverlay from '../../otp-ui/overlays/traffic'
 import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
+import TrailsOverlay from '../../otp-ui/overlays/trails'
 import LocationFilter from '../../otp-ui/location-filter'
 import ElevationPointMarker from './elevation-point-marker'
 import PointPopup from './point-popup'
@@ -291,7 +292,9 @@ class DefaultMap extends Component {
                         maxLat: Util.formatNum(bb._northEast.lat, 5),
                       };
                   storeItem('mapBounds', bounds);
-                  console.log('center',e.target.getCenter().toString())
+                  const center = e.target.getCenter();
+                  storeItem('mapCenter', {lng:center.lng,lat:center.lat});
+                  console.log('center',center.toString())
                 }}
                 onMoveStart={e => {
                   const cont = e.target.getContainer();
@@ -414,6 +417,15 @@ class DefaultMap extends Component {
                       visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
                       name={t(overlayConfig.name)}
                     />
+                    )
+                    case 'trails': return (
+                      <TrailsOverlay
+                        key={k}
+                        {...overlayConfig}
+                        visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
+                        name={t(overlayConfig.name)}
+                        activeFilters={this.state.overlayFilters}
+                      />
                     )
                     default: return null
                   }
