@@ -338,7 +338,7 @@ class TrailsOverlay extends MapLayer {
                         <img
                           className="image"
                           src={
-                            "https://img.oastatic.com/img/200/200/" +
+                             overlayTrailsConf.outdoorActiveTrailImageUrl +"/200/200/" +
                             image.id +
                             "/.png"
                           }
@@ -371,7 +371,7 @@ class TrailsOverlay extends MapLayer {
 
                     <a
                       style={{ marginTop: "10px" }}
-                      href={"https://www.outdooractive.com/it/r/" + station.id}
+                      href={overlayTrailsConf.outdoorActiveTrailUrl+ `\\${lang}\\r\\` + station.id}
                       target="_blank"
                       className="more-details-link"
                     >
