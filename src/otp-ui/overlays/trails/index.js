@@ -345,7 +345,7 @@ class TrailsOverlay extends MapLayer {
                         <figcaption>
                           <p className="photos-author">
                             {t("photo_author")}:{" "}
-                            {image.meta.author || "unknown"}
+                            {image.meta.author}
                             {image.meta.license && (
                               <>
                                 {", "}
