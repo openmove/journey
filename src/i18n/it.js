@@ -509,7 +509,7 @@ export const TRANSLATIONS_IT = {
   "medium": "intermedia",
   "hard": "impegnativa",
   "responsible_content": "Responsabile del contenuto",
-  "photo_author": "Autore dell'immagine ",
+  "photo_author": "Autore dell'immagine",
   "tour_author": "Autore del percorso",
   "more_details": "Apri dettagli"
 

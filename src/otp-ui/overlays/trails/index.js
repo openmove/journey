@@ -362,7 +362,7 @@ class TrailsOverlay extends MapLayer {
                       </figure>
                     )}
                     <p className="tours-author">
-                      {t("tour_author")} {station.meta.author}
+                      {t("tour_author")}: {station.meta.author}
                     </p>
 
                     {!image && shortDescription && (
