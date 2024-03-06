@@ -309,7 +309,7 @@ class TrailsOverlay extends MapLayer {
                       {station?.category?.name}
                       {/*note: name is localized based on the lang passed to the request  */}
                       {difficulty != null && (
-                        <Badge className={difficulty}>{difficulty}</Badge>
+                        <Badge className={difficulty}>{t(difficulty)}</Badge>
                       )}
                     </div>
 
@@ -318,14 +318,15 @@ class TrailsOverlay extends MapLayer {
                     </div>
                     <div className="source-attribution">
                       <div className="source-attribution-description">
-                        <p> Responsible for this content</p>
+                        <p> {t("responsible_content")}</p>
                         {station.meta.source.name}
                       </div>
                       <a href={station.meta.source.url}>
                         <img
                           className="source-attribution-image"
                           src={
-                            "https://img.oastatic.com/img/" +
+                            overlayTrailsConf.outdoorActiveTrailImageUrl +
+                            "/" +
                             station.meta.source.logo.id +
                             "/.png"
                           }
@@ -338,14 +339,15 @@ class TrailsOverlay extends MapLayer {
                         <img
                           className="image"
                           src={
-                             overlayTrailsConf.outdoorActiveTrailImageUrl +"/200/200/" +
+                            overlayTrailsConf.outdoorActiveTrailImageUrl +
+                            "/200/200/" +
                             image.id +
                             "/.png"
                           }
                         />
                         <figcaption>
                           <p className="photos-author">
-                            Photo's author: {image.meta.author || "unknown"}
+                           {t("photo_author")}: {image.meta.author || "unknown"}
                             {image.meta.licence && (
                               <>
                                 {" ,"}
@@ -360,7 +362,7 @@ class TrailsOverlay extends MapLayer {
                       </figure>
                     )}
                     <p className="tours-author">
-                      Tour's Author {station.meta.author}
+                      {t("tour_author")} {station.meta.author}
                     </p>
 
                     {!image && shortDescription && (
@@ -371,11 +373,15 @@ class TrailsOverlay extends MapLayer {
 
                     <a
                       style={{ marginTop: "10px" }}
-                      href={overlayTrailsConf.outdoorActiveTrailUrl+ `\\${lang}\\r\\` + station.id}
+                      href={
+                        overlayTrailsConf.outdoorActiveTrailUrl +
+                        `\\${lang}\\r\\` +
+                        station.id
+                      }
                       target="_blank"
                       className="more-details-link"
                     >
-                      More Details
+                      {t("more_details")}
                     </a>
 
                     <ul className="trail-summary">

@@ -507,4 +507,13 @@ export const TRANSLATIONS_EN = {
   "search": "Search",
 
   "zone" : "Zone",
+
+  // outdoor active
+  "easy":"easy",
+  "medium": "medium",
+  "hard": "difficult",
+  "responsible_content": "Responsible for this content",
+  "photo_author": "Photo's author ",
+  "tour_author": "Tour's author ",
+  "more_details": "More details"
 };
