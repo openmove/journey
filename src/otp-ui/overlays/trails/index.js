@@ -106,6 +106,19 @@ class TrailsOverlay extends MapLayer {
       this.props.leaflet.map.on("moveend", this._startRefreshing);
       this._startRefreshing();
     }
+
+    this.generateOutdoorActiveTrackingScript(
+      this.props.overlayTrailsConf.trackScriptUrl
+    );
+  }
+
+  generateOutdoorActiveTrackingScript(scriptUrl) {
+    const script = document.createElement("script");
+
+    script.src = scriptUrl;
+    script.async = true;
+
+    document.body.appendChild(script);
   }
 
   onOverlayAdded = () => {
@@ -292,6 +305,7 @@ class TrailsOverlay extends MapLayer {
                 ]}
                 onClick={(e) => {
                   e.target.openPopup();
+                  oacrr.track( "teaser", station.id  );
                 }}
               >
                 <Popup>
@@ -344,8 +358,7 @@ class TrailsOverlay extends MapLayer {
                         />
                         <figcaption>
                           <p className="photos-author">
-                            {t("photo_author")}:{" "}
-                            {image.meta.author}
+                            {t("photo_author")}: {image.meta.author}
                             {image.meta.license && (
                               <>
                                 {", "}
