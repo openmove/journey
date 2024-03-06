@@ -505,12 +505,13 @@ export const TRANSLATIONS_IT = {
  "zone" : "Zona",
 
  // outdoor active
+ "trails": "Sentieri",
   "easy":"facile",
   "medium": "intermedia",
   "hard": "impegnativa",
   "responsible_content": "Responsabile del contenuto",
   "photo_author": "Autore dell'immagine",
   "tour_author": "Autore del percorso",
-  "more_details": "Apri dettagli"
-
+  "more_details": "Apri dettagli",
+  "credits_outdooractive_attribution" : "Questo sito utilizza contenuti e soluzioni tecnologiche della piattaforma Outdooractive.",
 }

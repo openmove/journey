@@ -68,6 +68,7 @@ class Modal extends Component {
           credits_title_developed: t("credits_title_developed"),
           credits_title_designed: t("credits_title_designed"),
           credits_title_data_provided: t("credits_title_data_provided"),
+          credits_outdooractive_attribution: t("credits_outdooractive_attribution"),
         };
 
         const htmlTranslated = t(html, {
