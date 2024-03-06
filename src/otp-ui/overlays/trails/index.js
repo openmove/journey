@@ -157,7 +157,6 @@ class TrailsOverlay extends MapLayer {
 
     const isMarkClusterEnabled = overlayTrailsConf.markerCluster;
     const lang = i18n?.language;
-    console.log(locations.map((station) => station.meta));
 
     if (
       !locations ||
@@ -241,8 +240,6 @@ class TrailsOverlay extends MapLayer {
               station?.shortText != null
                 ? removeHtmlTags(station?.shortText)
                 : null;
-            console.log(station?.images);
-            console.log(image);
 
             let length;
             if (station?.length == null) {
@@ -321,7 +318,7 @@ class TrailsOverlay extends MapLayer {
                         <p> {t("responsible_content")}</p>
                         {station.meta.source.name}
                       </div>
-                      <a href={station.meta.source.url}>
+                      <a href={station.meta.source.url} target="_blank">
                         <img
                           className="source-attribution-image"
                           src={
@@ -347,16 +344,25 @@ class TrailsOverlay extends MapLayer {
                         />
                         <figcaption>
                           <p className="photos-author">
-                           {t("photo_author")}: {image.meta.author || "unknown"}
-                            {image.meta.licence && (
+                            {t("photo_author")}:{" "}
+                            {image.meta.author || "unknown"}
+                            {image.meta.license && (
                               <>
-                                {" ,"}
-                                <a href={image.meta.licence?.url}>
-                                  {image.meta.licence?.name}
+                                {", "}
+                                <a
+                                  href={image.meta.license?.url}
+                                  target="_blank"
+                                >
+                                  {image.meta.license?.short}
                                 </a>
                               </>
                             )}
-                            , {image.meta.source?.name}
+                            {image.meta.source?.name && (
+                              <>
+                                {", "}
+                                {image.meta.source?.name}
+                              </>
+                            )}
                           </p>
                         </figcaption>
                       </figure>
