@@ -12,6 +12,7 @@ import {
 import { divIcon, icon } from "leaflet";
 import { withNamespaces } from "react-i18next";
 import { CircularProgressbar } from "react-circular-progressbar";
+import FontAwesome from "react-fontawesome";
 import "react-circular-progressbar/dist/styles.css";
 
 import { setLocation } from "../../../actions/map";
@@ -29,6 +30,7 @@ import MarkerCluster from "../../icons/modern/MarkerCluster";
 import { getItem } from "../../core-utils/storage";
 import { filterOverlay } from "../../core-utils/overlays";
 import { bbToRadiusInMeters } from "../../../util/bbToRadius";
+import { Badge, Button } from "react-bootstrap";
 
 class TrailsOverlay extends MapLayer {
   constructor(props) {
@@ -62,7 +64,6 @@ class TrailsOverlay extends MapLayer {
       key: this.props.apiKey,
       lang: this.props.i18n.language,
       limit: 48, // :hammer: there's no way to filter this to a reasonable number // since the next  request has an intrinsic number of ids that could be required doe to the maximum lenght of the url :/
-      display: "list", // used only for oois query
     };
 
     if (launchNow === true) {
@@ -71,7 +72,6 @@ class TrailsOverlay extends MapLayer {
         this.props.apiOOIs,
         params
       );
-
     } else {
       if (this._refreshTimer) clearTimeout(this._refreshTimer);
 
@@ -85,7 +85,6 @@ class TrailsOverlay extends MapLayer {
           key: this.props.apiKey,
           lang: this.props.i18n.language,
           limit: 48, // :hammer: there's no way to filter this to a reasonable number // since the next  request has an intrinsic number of ids that could be required doe to the maximum lenght of the url :/
-          display: "list", // used only for oois query
         };
 
         this.props.trailsLocationsQuery(
@@ -146,10 +145,19 @@ class TrailsOverlay extends MapLayer {
   updateLeafletElement() {}
 
   render() {
-    const { locations, t, i18n, overlayTrailsConf, activeFilters, leaflet, minZoom } = this.props;
+    const {
+      locations,
+      t,
+      i18n,
+      overlayTrailsConf,
+      activeFilters,
+      leaflet,
+      minZoom,
+    } = this.props;
 
     const isMarkClusterEnabled = overlayTrailsConf.markerCluster;
     const lang = i18n?.language;
+    console.log(locations.map((station) => station.meta));
 
     if (
       !locations ||
@@ -211,11 +219,71 @@ class TrailsOverlay extends MapLayer {
           iconCreateFunction={markerClusterIcon}
         >
           {locations.map((station) => {
+            if (station?.opened != null && station?.opened !== true) {
+              return null;
+            }
+
             const title =
               lang && station?.meta?.translations?.includes(lang)
                 ? station?.localizedTitle?.[lang]
                 : station?.title;
+
             const location = { ...station.startingPoint, name: title };
+
+            const image = station?.images?.image?.filter(
+              (img) => img?.primary
+            )[0];
+
+            const removeHtmlTags = (str) => {
+              return str.replace(/<[^>]*>/g, "");
+            };
+            const shortDescription =
+              station?.shortText != null
+                ? removeHtmlTags(station?.shortText)
+                : null;
+            console.log(station?.images);
+            console.log(image);
+
+            let length;
+            if (station?.length == null) {
+              length = undefined;
+            } else if (station.length > 1000) {
+              length =
+                (Number.parseFloat(station.length) / 1000).toFixed(2) + "km";
+            } else {
+              length = Number.parseFloat(station.length).toFixed(2) + "m";
+            }
+
+            let duration;
+            if (station?.time?.min == null) {
+              duration = undefined;
+            } else if (station.time?.min > 60 * 24) {
+              duration = Math.floor(station.time?.min / (60 * 24)) + "d";
+            } else if (station.time?.min > 60) {
+              const hours = Math.floor(station.time?.min / 60);
+              let minutes = station.time?.min - 60 * hours;
+              duration = hours + "h";
+
+              if (minutes !== 0) {
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                duration = hours + ":" + minutes + "h";
+              }
+            } else {
+              duration = station.time?.min + "'";
+            }
+
+            let difficulty;
+            switch (station.rating.difficulty) {
+              case 1:
+                difficulty = "easy";
+                break;
+              case 2:
+                difficulty = "medium";
+                break;
+              case 3:
+                difficulty = "hard";
+                break;
+            }
 
             return (
               <Marker
@@ -230,7 +298,7 @@ class TrailsOverlay extends MapLayer {
                 }}
               >
                 <Popup>
-                  <div className="otp-ui-mapOverlayPopup">
+                  <div className="otp-ui-mapOverlayPopup outdoor-active-popup">
                     <div className="otp-ui-mapOverlayPopup__popupHeader">
                       <img
                         width={24}
@@ -238,45 +306,104 @@ class TrailsOverlay extends MapLayer {
                         className="outdoorActive--categoryIcon"
                         src={station?.category?.iconUrl}
                       />
-                      {station?.category?.name}{" "}
+                      {station?.category?.name}
                       {/*note: name is localized based on the lang passed to the request  */}
+                      {difficulty != null && (
+                        <Badge className={difficulty}>{difficulty}</Badge>
+                      )}
                     </div>
 
                     <div className="otp-ui-mapOverlayPopup__popupTitle">
                       {title}
                     </div>
-                    <img
-                    className=""
-                      height="20px"
-                      src={
-                        "https://img.oastatic.com/img/100/100/" +
-                        station?.primaryImage?.id +
-                        "/.png"
-                      }
-                    />
-                    <p>{station.time?.minutes} </p>
-                    <p>{station.length} </p>
-                    <p> ^{station.elevation?.ascent} </p>
-                    <p> ^{station.elevation?.descent} </p>
-                    <p> {station.shortText} </p>
-                    <p> {station.meta.author} </p>
-                    <img
-                      height="20px"
-                      src={
-                        "https://img.oastatic.com/img/" +
-                        station.meta.source.logo.id +
-                        "/.png"
-                      }
-                    />
-                    <p> {station.rating.difficulty} </p>
-                    <p> {station.rating.difficulty} </p>
-                    <p> {station.opened} </p>
+                    <div className="source-attribution">
+                      <div className="source-attribution-description">
+                        <p> Responsible for this content</p>
+                        {station.meta.source.name}
+                      </div>
+                      <a href={station.meta.source.url}>
+                        <img
+                          className="source-attribution-image"
+                          src={
+                            "https://img.oastatic.com/img/" +
+                            station.meta.source.logo.id +
+                            "/.png"
+                          }
+                        />
+                      </a>
+                    </div>
+
+                    {image && (
+                      <figure>
+                        <img
+                          className="image"
+                          src={
+                            "https://img.oastatic.com/img/200/200/" +
+                            image.id +
+                            "/.png"
+                          }
+                        />
+                        <figcaption>
+                          <p className="photos-author">
+                            Photo's author: {image.meta.author || "unknown"}
+                            {image.meta.licence && (
+                              <>
+                                {" ,"}
+                                <a href={image.meta.licence?.url}>
+                                  {image.meta.licence?.name}
+                                </a>
+                              </>
+                            )}
+                            , {image.meta.source?.name}
+                          </p>
+                        </figcaption>
+                      </figure>
+                    )}
+                    <p className="tours-author">
+                      Tour's Author {station.meta.author}
+                    </p>
+
+                    {!image && shortDescription && (
+                      <div className="short-description">
+                        {shortDescription}
+                      </div>
+                    )}
+
                     <a
+                      style={{ marginTop: "10px" }}
                       href={"https://www.outdooractive.com/it/r/" + station.id}
                       target="_blank"
+                      className="more-details-link"
                     >
-                      link
+                      More Details
                     </a>
+
+                    <ul className="trail-summary">
+                      {duration != null && (
+                        <li className="summary-element">
+                          {duration}
+                          <FontAwesome name=" fa-clock-o" tag="i" />
+                        </li>
+                      )}
+                      {station.elevation?.ascent != null && (
+                        <li className="summary-element">
+                          {station.elevation?.ascent}m
+                          <FontAwesome name="chevron-up" tag="i" />
+                        </li>
+                      )}
+                      {station.elevation?.descent != null && (
+                        <li className="summary-element">
+                          {station.elevation?.descent}m
+                          <FontAwesome name="chevron-down" tag="i" />
+                        </li>
+                      )}
+                      {station.length != null && (
+                        <li className="summary-element">
+                          {length}
+                          <FontAwesome name=" fa-arrows-h" tag="i" />
+                        </li>
+                      )}
+                    </ul>
 
                     <div className="otp-ui-mapOverlayPopup__popupRow">
                       <FromToLocationPicker
