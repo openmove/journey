@@ -514,8 +514,8 @@ export const TRANSLATIONS_EN = {
 
   "for_arrival": "for the arrival",
   "of_taxi":"of the ",
-  "available_taxies": "Available Taxies"
-  
+  "available_taxies": "Available Taxies",
+
   // outdoor active
   "trails": "Trails",
   "easy":"easy",

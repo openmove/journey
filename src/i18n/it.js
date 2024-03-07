@@ -510,8 +510,8 @@ export const TRANSLATIONS_IT = {
 
  "for_arrival": "per l'arrivo",
  "of_taxi":"del ",
- "available_taxies": "Taxi in Zona"
- 
+ "available_taxies": "Taxi in Zona",
+
  // outdoor active
  "trails": "Sentieri",
   "easy":"facile",
