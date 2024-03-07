@@ -289,7 +289,10 @@ export function getInitialState (userDefinedConfig, initialQuery) {
       },
       vms: {
         locations: []
-      }
+      },
+      trails: {
+        locations: []
+      },
     },
     tnc: {
       etaEstimates: {},
@@ -1034,6 +1037,18 @@ function createOtpReducer (config, initialQuery) {
         return update(state, {
             overlay: {
               charger: {
+                locations: { $set: stations },
+                pending: { $set: false }
+              }
+            }
+        })
+      }
+      case 'TRAILS_LOCATIONS_RESPONSE': {
+        console.log(action.payload);
+        const {tour: stations} = getResponseData(action.payload);
+        return update(state, {
+            overlay: {
+              trails: {
                 locations: { $set: stations },
                 pending: { $set: false }
               }

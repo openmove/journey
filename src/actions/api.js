@@ -1103,7 +1103,7 @@ window.setInterval(() => {
  *   - fetchOptions: fetch options (e.g., method, body, headers).
  */
 
-function createQueryAction (endpoint, responseAction, errorAction, options = {}) {
+export function createQueryAction (endpoint, responseAction, errorAction, options = {}) {
   return async function (dispatch, getState) {
     const otpState = getState().otp
     let url

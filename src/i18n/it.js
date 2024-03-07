@@ -511,4 +511,15 @@ export const TRANSLATIONS_IT = {
  "for_arrival": "per l'arrivo",
  "of_taxi":"del ",
  "available_taxies": "Taxi in Zona"
+ 
+ // outdoor active
+ "trails": "Sentieri",
+  "easy":"facile",
+  "medium": "intermedia",
+  "hard": "impegnativa",
+  "responsible_content": "Responsabile del contenuto",
+  "photo_author": "Autore dell'immagine",
+  "tour_author": "Autore del percorso",
+  "more_details": "Apri dettagli",
+  "credits_outdooractive_attribution" : "Questo sito utilizza contenuti e soluzioni tecnologiche della piattaforma Outdooractive.",
 }

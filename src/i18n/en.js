@@ -515,4 +515,15 @@ export const TRANSLATIONS_EN = {
   "for_arrival": "for the arrival",
   "of_taxi":"of the ",
   "available_taxies": "Available Taxies"
+  
+  // outdoor active
+  "trails": "Trails",
+  "easy":"easy",
+  "medium": "medium",
+  "hard": "difficult",
+  "responsible_content": "Responsible for this content",
+  "photo_author": "Photo's author",
+  "tour_author": "Tour's author",
+  "more_details": "More details",
+  "credits_outdooractive_attribution" : "This website uses technology and content from the Outdooractive Platform.",
 };
