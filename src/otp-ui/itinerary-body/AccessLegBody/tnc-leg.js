@@ -52,15 +52,18 @@ class TNCLeg extends React.Component {
       LYFT: `https://lyft.com/ride?id=lyft&partner=${LYFT_CLIENT_ID}&pickup[latitude]=${leg.from.lat}&pickup[longitude]=${leg.from.lon}&destination[latitude]=${leg.to.lat}&destination[longitude]=${leg.to.lon}`,
     };
     const { tncData } = leg;
-
+    console.log(config?.trip?.taxiModal);
     if (!tncData || !tncData.estimatedArrival) return null;
     return (
       <div>
-        <TaxiModal
-          shown={this.state.isTaxiModalShown}
-          open={this.showTaxiModal}
-          close={this.hideTaxiModal}
-        />
+        {config?.trip?.taxiModal?.enabled && config?.trip?.taxiModal?.api != null &&(
+          <TaxiModal
+            shown={this.state.isTaxiModalShown}
+            open={this.showTaxiModal}
+            close={this.hideTaxiModal}
+            api={config?.trip?.taxiModal?.api}
+          />
+        )}
         <div>
           <small>
             <strong>

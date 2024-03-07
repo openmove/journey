@@ -16,7 +16,6 @@ function getSegmentStyle(segment) {
     case "BICYCLE_RENT":
       return 'is-bicycle';
     case "CAR":
-    case "CAR_RENT":
       return 'is-car';
     case "MICROMOBILITY":
     case "MICROMOBILITY_RENT":

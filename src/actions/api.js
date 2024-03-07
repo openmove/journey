@@ -331,7 +331,6 @@ export function getRoutingParams (query, config, ignoreRealtimeUpdates) {
 
   // hack to add walking to driving/TNC trips
   if (hasCar(params.mode) && !hasWalk(params.mode)) {
-    console.log( "walk")
     params.mode += ',WALK'
   }
 

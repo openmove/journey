@@ -118,7 +118,7 @@ class TaxiModal extends React.Component {
       (prevProps.shown === false && this.props.shown === true) ||
       (prevState.error === true && this.state.error == false)
     ) {
-      this.fetchTaxies();
+      this.fetchTaxies(this.props.api);
     }
   }
 
@@ -165,9 +165,7 @@ class TaxiModal extends React.Component {
     this.setState({ error: isError });
   }
 
-  async fetchTaxies() {
-    const token = "";
-    const pageUrl = "www.google.com"
+  async fetchTaxies(url) {
 
     const headers = {
       headers: {
@@ -177,7 +175,7 @@ class TaxiModal extends React.Component {
 
     this.setLoading(true);
 
-    fetch(pageUrl, headers)
+    fetch(url, headers)
       .then((response) => {
         if (response.ok) {
           return response.json();
