@@ -47,13 +47,15 @@ const Error = (props) => {
 };
 
 const TaxiContainer = ({ taxi, t }) => {
-  const { name, email, phone } = taxi;
+  const { name, email, phone, url } = taxi;
 
   return (
     <div className="taxi-container">
       <div className="taxi-container-header">
         <Taxi width={"25px"} height={"25px"} />
-        <h5 className="taxi-container-title">{name}</h5>
+        <a href={url} target="_blank">
+          <h5 className="taxi-container-title">{name}</h5>
+        </a>
       </div>
       <div className="taxi-container-buttons">
         {email && (
@@ -165,17 +167,17 @@ class TaxiModal extends React.Component {
     this.setState({ error: isError });
   }
 
-  async fetchTaxies(url) {
-
-    const headers = {
+  async fetchTaxies({url,headers}) {
+    const options = {
       headers: {
+        ...headers,
         Accept: "application/json",
       },
     };
 
     this.setLoading(true);
 
-    fetch(url, headers)
+    fetch(url, options)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -184,7 +186,7 @@ class TaxiModal extends React.Component {
       })
       .then((taxies) => {
         this.setLoading(false);
-        console.log(taxies);
+        shuffleArray(taxies);
         this.setState({ taxies });
       })
       .catch((error) => {
@@ -194,4 +196,10 @@ class TaxiModal extends React.Component {
   }
 }
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 export default withNamespaces()(TaxiModal);
