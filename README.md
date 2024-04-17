@@ -38,6 +38,7 @@ switch to project node version:
 ```bash
 nvm install
 nvm use
+node --version
 ```
 
 ### generation of config.yml
@@ -48,6 +49,11 @@ API_HOST=https://tripplanner.openmove.com
 API_PATH=/otp/routers/default
 API_PORT=443
 GEOCODER_BASEURL=http://localhost:8088
+```
+
+apply the new .env file:
+```
+source .env
 ```
 
 after changed some env var restart using ```yarn genconfig && yarn start``` or rebuild journey docker image
