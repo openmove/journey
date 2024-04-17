@@ -31,6 +31,15 @@ optionally you   can run local instance of OpenTripPlanner and other services
 docker-compose up -d otp
 ```
 
+### Nodejs compatibility
+
+switch to project node version:
+
+```bash
+nvm install
+nvm use
+```
+
 ### generation of config.yml
 
 edit .env file if needed
