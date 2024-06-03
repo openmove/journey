@@ -71,7 +71,7 @@ class ParkingOverlay extends AbstractOverlay {
       let iconWidth, iconHeight;
 
       if( data.type === 'station') {
-        if (!data.free) {
+        if (!data.free || data.free === -1) {
           badgeType = 'default';
           badgeCounter = null;
         }
@@ -97,7 +97,7 @@ class ParkingOverlay extends AbstractOverlay {
       }
       else if (data.type === 'sensor') {
 
-        if (data.free == null ) {
+        if (data.free == null || data.free === -1) {
           badgeType = 'default';
         } else if (data.free === true ) {
           badgeType = 'success';
@@ -218,13 +218,6 @@ class ParkingOverlay extends AbstractOverlay {
           // left here if there will be differences in the future
           // if(station.type!=='station' && station.type!== 'sensorGroup') return null;
 
-          // station.payment = true
-          // station.parkingType = 'covered-with-barrier'
-          // station.payPeriod = 'high-season'
-          // station.timed = true;
-          // station.payment_url ='https://www.google.com'
-          // station.operator = 'ciaone il tuo bus di fiducia'
-
 
           let price = '';
           if( station.payment === true){
@@ -244,7 +237,11 @@ class ParkingOverlay extends AbstractOverlay {
           //WORK around for wrong data from server
           let {capacity, free} = station;
 
-          if (typeof free === 'number' && typeof capacity === 'number') {
+          if (
+            typeof free === 'number' &&
+            free !== -1 &&
+            typeof capacity === 'number'
+          ) {
             free = free > capacity ? capacity : free;
           }
 
@@ -266,28 +263,28 @@ class ParkingOverlay extends AbstractOverlay {
                     // sensors and stations behave the same way
                     (station.type === 'station' ||  station.type === 'sensor') && (
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                      {typeof free === 'number' ? (
+                      {(typeof free === 'number' && free !== -1) ? (
                         <>
                           <p className='otp-ui-mapOverlayPopup__popupAvailableInfoProgress_description'>
                             {t('available_parking_slots')}
                           </p>
                           <CircularProgressbar
-                            value={free === null ? 'N/A' : free }
+                            value={free === null || free === -1 ? 'N/A' : free }
                             minValue={0}
                             maxValue={capacity}
-                            text={free === null ? 'N/A' : `${free}`}
+                            text={free === null || free === -1? 'N/A' : `${free}`}
                             className="otp-ui-mapOverlayPopup__popupAvailableInfoProgress"
                           />
                         </>
                       ) : (
                         <></>
                       )}
-                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: free === null ? '10px' : ''}}>
+                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: (free === null || free === -1) ? '10px' : ''}}>
                         {station?.payment!=null && (
                           <p>{t('parking-price')}: {price}</p>
                         )}
                         {station.operator && <p>{t('managed')}: { station.operator}</p>}
-                        {capacity && <p>{t('capacity')}: {capacity!==null ? capacity : 'N/A'}</p>}
+                        {capacity && <p>{t('capacity')}: {capacity !== null && capacity !== -1 ? capacity : 'N/A'}</p>}
                       </div>
                     </div>
                   )}
