@@ -60,7 +60,7 @@ class LegDiagramPreview extends Component {
   };
 
   /** Round elevation to whole number and add symbol. */
-  formatElevation = elev => `${Math.round(elev)}'`;
+  formatElevation = elev => `${Math.round(elev)}m`;
 
   render() {
     const { leg, showElevationProfile, t } = this.props;
@@ -84,11 +84,11 @@ class LegDiagramPreview extends Component {
           <div className="otp-ui-chartPreview__diagramTitle">
             {t('altimetry')}{" "}
             <span className="otp-ui-chartPreview__diagramElevationGain">
-              ↑{this.formatElevation(profile.gain * METERS_TO_FEET)}
+              ↑{this.formatElevation(profile.gain)}
               {"  "}
             </span>
             <span className="otp-ui-chartPreview__diagramElevationLoss">
-              ↓{this.formatElevation(-profile.loss * METERS_TO_FEET)}
+              ↓{this.formatElevation(-profile.loss)}
             </span>
           </div>
           {profile.points.length > 0
