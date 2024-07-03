@@ -524,6 +524,6 @@ export const TRANSLATIONS_IT = {
   "credits_outdooractive_attribution" : "Questo sito utilizza contenuti e soluzioni tecnologiche della piattaforma Outdooractive.",
 
   // localized drt
-  "localized_drt_msg" : "Alternativamente un servizio DRT è disponibile nella zona selezionata.",
-  "localized_drt_no_path_found_error_msg": "Servizio DRT disponibile nella zona selezionata",
+  "localized_drt_msg": "Servizio DRT disponibile nella zona selezionata",
+  "localized_drt_no_path_found_error_msg" : "Alternativamente un servizio DRT è disponibile nella zona selezionata.",
 }

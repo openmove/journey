@@ -528,6 +528,6 @@ export const TRANSLATIONS_EN = {
   "credits_outdooractive_attribution" : "This website uses technology and content from the Outdooractive Platform.",
 
   // localized drt
-  "localized_drt_msg" : "Alternativamente un servizio DRT è disponibile nella zona selezionata.",
-  "localized_drt_no_path_found_error_msg": "Servizio DRT disponibile nella zona selezionata",
+  "localized_drt_msg": "DRT service available in the selected area",
+  "localized_drt_no_path_found_error_msg" : "Alternatively a DRT service is available in the selected area.",
 };
