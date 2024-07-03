@@ -11,6 +11,7 @@ import Icon from './icon'
 import DefaultItinerary from './default/default-itinerary'
 import Loading from './loading'
 import { getActiveItineraries, getActiveSearch } from '../../util/state'
+import DrtLocalizedService from './line-itin/drt-localized-service'
 
 class ItineraryCarousel extends Component {
   state = {}
@@ -51,7 +52,7 @@ class ItineraryCarousel extends Component {
   }
 
   render () {
-    const { activeItinerary, itineraries, itineraryClass, hideHeader, pending, user, t } = this.props
+    const { activeItinerary,activeSearch, itineraries, itineraryClass, hideHeader, pending, user,localizedDrtConfig, t } = this.props
     if (pending) return <Loading small />
     if (!itineraries) return null
 
@@ -97,7 +98,20 @@ class ItineraryCarousel extends Component {
           axis="x"
           index={activeItinerary}
           onChangeIndex={this._onSwipe}
-        >{views}</SwipeableViews>
+        >
+          {views}
+          {/* show localized drt if present and no itineraries are found */}
+         {(localizedDrtConfig?.enabled && !itineraries?.length ) &&(
+            <div className={ itineraries?.length ? "results": "no-results" }>
+              <DrtLocalizedService
+                t={t}
+                itinerary={itineraries[activeItinerary]}
+                query={activeSearch?.query}
+                localizedDrtConfig={localizedDrtConfig}
+                />
+              </div>
+          )}
+          </SwipeableViews>
       </div>
     )
   }
@@ -111,13 +125,15 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     itineraries,
+    activeSearch,
     pending: activeSearch && activeSearch.pending,
     activeItinerary: activeSearch && activeSearch.activeItinerary,
     activeLeg: activeSearch && activeSearch.activeLeg,
     activeStep: activeSearch && activeSearch.activeStep,
     companies: state.otp.currentQuery.companies,
     timeFormat: coreUtils.time.getTimeFormat(state.otp.config),
-    user: state.user.loggedInUser
+    user: state.user.loggedInUser,
+    localizedDrtConfig: state.otp?.config?.trip?.localizedDrt,
   }
 }
 
