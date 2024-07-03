@@ -121,7 +121,7 @@ class DrtLocalizedService extends Component {
           {" " + t(localizedDrtConfig.noPathFoundMessage) + " "}
           {localizedDrtConfig.links.map(({ url, label }) => (
             <>
-              <a key={url}  href={url} style={{marginLeft:"10px"}}>{label}</a>{" "}
+              <a key={url}  href={url} style={{marginLeft:"10px"}} target="_blank">{label}</a>{" "}
             </>
           ))}
         </>
@@ -135,7 +135,7 @@ class DrtLocalizedService extends Component {
         <p> {" " + t(localizedDrtConfig.message) + " "}</p>
         {localizedDrtConfig.links.map(({ url, label }) => (
           <>
-            <a key={url} href={url}>{label}</a>{" "}
+            <a key={url} href={url} target="_blank">{label}</a>{" "}
           </>
         ))}
       </div>
