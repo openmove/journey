@@ -882,3 +882,44 @@ export const routeComparator = makeMultiCriteriaSort(
   makeStringValueComparator(obj => obj.shortName),
   makeStringValueComparator(obj => obj.longName)
 );
+
+export function areSomePointsContainedInPolylines(points, polylines) {
+  const leafletPolylines = polylines?.map((points) => {
+    return new L.Polyline(points);
+  });
+  let inside = false;
+
+  let i = 0;
+  while (i < points.length && !inside) {
+    for (const poly of leafletPolylines) {
+      if (inside) {
+        continue;
+      }
+
+      inside = isMarkerInsidePolygon(points[i], poly);
+    }
+    i++;
+  }
+  return inside;
+}
+
+export function isMarkerInsidePolygon(point, poly) {
+  // https://stackoverflow.com/a/31813714
+  var polyPoints = poly.getLatLngs();
+  var x = point.lat,
+    y = point.lon;
+
+  var inside = false;
+  for (var i = 0, j = polyPoints.length - 1; i < polyPoints.length; j = i++) {
+    var xi = polyPoints[i].lat,
+      yi = polyPoints[i].lng;
+    var xj = polyPoints[j].lat,
+      yj = polyPoints[j].lng;
+
+    var intersect =
+      yi > y != yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi;
+    if (intersect) inside = !inside;
+  }
+
+  return inside;
+}

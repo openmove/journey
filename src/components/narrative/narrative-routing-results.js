@@ -25,7 +25,7 @@ class NarrativeRoutingResults extends Component {
   }
 
   render () {
-    const { error, itineraryClass, itineraryFooter, LegIcon, pending, itineraries, mainPanelContent } = this.props    
+    const { error, itineraryClass, itineraryFooter, LegIcon, pending, itineraries, mainPanelContent,localizedDrtConfig } = this.props
 
     if (pending) return <Loading />
     if (error) return <ErrorMessage />
@@ -37,6 +37,7 @@ class NarrativeRoutingResults extends Component {
         itineraryFooter={itineraryFooter}
         itineraries={itineraries}
         LegIcon={LegIcon}
+        localizedDrtConfig={localizedDrtConfig}
       />
     )
   }
@@ -44,14 +45,15 @@ class NarrativeRoutingResults extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const activeSearch = getActiveSearch(state.otp)
-  const pending = activeSearch ? Boolean(activeSearch.pending) : false  
+  const pending = activeSearch ? Boolean(activeSearch.pending) : false
 
   return {
     mainPanelContent: state.otp.ui.mainPanelContent,
     error: activeSearch && activeSearch.response && activeSearch.response[0] && activeSearch.response[0].error,
     itineraries: getActiveItineraries(state.otp),
     pending,
-    routingType: activeSearch && activeSearch.query.routingType
+    localizedDrtConfig: state.otp?.config?.trip?.localizedDrt,
+    routingType: activeSearch && activeSearch.query.routingType,
   }
 }
 

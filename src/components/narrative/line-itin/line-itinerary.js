@@ -8,6 +8,7 @@ import NarrativeItinerary from '../narrative-itinerary'
 import SimpleRealtimeAnnotation from '../simple-realtime-annotation'
 import LinkButton from '../../user/link-button'
 import PoweredByOpenmove from '../../app/poweredByOpenmove'
+import DrtLocalizedService from './drt-localized-service'
 
 const { getLegModeLabel, getTimeZoneOffset, isTransit } = coreUtils.itinerary
 
@@ -54,6 +55,7 @@ class LineItinerary extends NarrativeItinerary {
       showRealtimeAnnotation,
       timeFormat,
       user,
+      localizedDrtConfig,
       t
     } = this.props
 
@@ -93,6 +95,13 @@ class LineItinerary extends NarrativeItinerary {
             timeOptions={timeOptions}
           />
           : null}
+       {localizedDrtConfig?.enabled && (
+        <DrtLocalizedService
+            t={t}
+            itinerary={itinerary}
+            localizedDrtConfig={localizedDrtConfig}
+         />
+      )}
         {itineraryFooter}
         <PoweredByOpenmove centered/>
       </div>

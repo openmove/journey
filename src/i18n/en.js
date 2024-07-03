@@ -526,4 +526,8 @@ export const TRANSLATIONS_EN = {
   "tour_author": "Tour's author",
   "more_details": "More details",
   "credits_outdooractive_attribution" : "This website uses technology and content from the Outdooractive Platform.",
+
+  // localized drt
+  "localized_drt_msg" : "Alternativamente un servizio DRT è disponibile nella zona selezionata.",
+  "localized_drt_no_path_found_error_msg": "Servizio DRT disponibile nella zona selezionata",
 };
