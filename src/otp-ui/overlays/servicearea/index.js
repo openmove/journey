@@ -49,9 +49,9 @@ class ParkingOverlay extends AbstractOverlay {
   updateLeafletElement () {}
 
   render () {
-    const { locations,overlayParkingConf, t ,activeFilters} = this.props
+    const { locations, overlayServiceareaConf, t ,activeFilters} = this.props
 
-    const isMarkClusterEnabled = overlayParkingConf.markerCluster
+    const isMarkClusterEnabled = overlayServiceareaConf.markerCluster
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -62,7 +62,7 @@ class ParkingOverlay extends AbstractOverlay {
       }
     })
 
-    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayParkingConf.type ]);
+    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayServiceareaConf.type ]);
 
     const markerIcon = (data) => {
       let badgeType = 'success';
@@ -86,14 +86,14 @@ class ParkingOverlay extends AbstractOverlay {
           badgeCounter = null;
         }
 
-        iconWidth = overlayParkingConf.iconWidth;
-        iconHeight = overlayParkingConf.iconHeight;
+        iconWidth = overlayServiceareaConf.iconWidth;
+        iconHeight = overlayServiceareaConf.iconHeight;
       }
       else if (data.type === 'sensorGroup') {
 
         badgeCounter = data.capacity;
-        iconWidth = parseInt(overlayParkingConf.iconWidth*0.7);
-        iconHeight = parseInt(overlayParkingConf.iconHeight*0.7);
+        iconWidth = parseInt(overlayServiceareaConf.iconWidth*0.7);
+        iconHeight = parseInt(overlayServiceareaConf.iconHeight*0.7);
       }
       else if (data.type === 'sensor') {
 
@@ -105,8 +105,8 @@ class ParkingOverlay extends AbstractOverlay {
           badgeType = 'danger';
         }
         badgeCounter = null;
-        iconWidth = parseInt(overlayParkingConf.iconWidth*0.7);
-        iconHeight = parseInt(overlayParkingConf.iconHeight*0.7);
+        iconWidth = parseInt(overlayServiceareaConf.iconWidth*0.7);
+        iconHeight = parseInt(overlayServiceareaConf.iconHeight*0.7);
       }
 
       return divIcon({
@@ -120,44 +120,28 @@ class ParkingOverlay extends AbstractOverlay {
             <MarkerParking
               width={iconWidth}
               height={iconHeight}
-              iconColor={overlayParkingConf.iconColor}
-              markerColor={overlayParkingConf.iconMarkerColor}
+              iconColor={overlayServiceareaConf.iconColor}
+              markerColor={overlayServiceareaConf.iconMarkerColor}
             />
           }
           { data.type === 'sensor' &&
             <MarkerParkingSensor
               width={iconWidth}
               height={iconHeight}
-              iconColor={overlayParkingConf.iconColor}
-              markerColor={overlayParkingConf.iconMarkerColor}
+              iconColor={overlayServiceareaConf.iconColor}
+              markerColor={overlayServiceareaConf.iconMarkerColor}
             />
           }
           { data.type === 'sensorGroup' &&
             <MarkerParkingSensor
               width={iconWidth}
               height={iconHeight}
-              iconColor={overlayParkingConf.iconColor}
-              markerColor={overlayParkingConf.iconMarkerColor}
+              iconColor={overlayServiceareaConf.iconColor}
+              markerColor={overlayServiceareaConf.iconMarkerColor}
             />
           }
           </BadgeIcon>
         )
-      });
-    }
-
-    const clusterIcon = cluster => {
-      const text = cluster.getChildCount();
-
-      return L.divIcon({
-        className: 'marker-cluster-svg',
-        iconSize: [overlayParkingConf.iconWidth, overlayParkingConf.iconHeight],
-        html: ReactDOMServer.renderToStaticMarkup(
-          <MarkerCluster
-              text={text}
-              textColor={'white'}
-              markerColor={overlayParkingConf.iconMarkerColor}
-            />
-          )
       });
     }
 
@@ -166,36 +150,6 @@ class ParkingOverlay extends AbstractOverlay {
       <FeatureGroup>
         {
           locationsFiltered.map( station => {
-          // commented because now sensors behave like normal stations
-          // left here if there will be differences in the future
-          // if(station.type!=='station' && station.type!== 'sensorGroup') return null;
-
-
-          let price = '';
-          if( station.payment === true){
-            price+=t('paid')
-            if(station.payment_period && station.payment_period!=='always'){
-              price+=` ${t('parking-during')}`
-              price+=` ${t(`parking-${station.payment_period}`)}`
-            }
-          } else {
-            price+=t('free')
-            if(station.payment_timed){
-              price+=` ${t('parking-with')}`
-              price+=` ${t('parking-timed')}`
-            }
-          }
-
-          //WORK around for wrong data from server
-          let {capacity, free} = station;
-
-          if (
-            typeof free === 'number' &&
-            free !== -1 &&
-            typeof capacity === 'number'
-          ) {
-            free = free > capacity ? capacity : free;
-          }
 
           return (
             <Marker
@@ -207,57 +161,13 @@ class ParkingOverlay extends AbstractOverlay {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-                    <Parking width={24} height={20} />&nbsp;{t(station.parking_type ? `parking-${station.parking_type}` : 'parking')}
+                    {/*TODO MAKE NEW SERVICE AREA ICON <Parking width={24} height={20} />*/}
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
                   <small>{station.group_name}</small>
-                  {
-                    // sensors and stations behave the same way
-                    (station.type === 'station' ||  station.type === 'sensor') && (
-                    <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                      {(typeof free === 'number' && free !== -1) ? (
-                        <>
-                          <p className='otp-ui-mapOverlayPopup__popupAvailableInfoProgress_description'>
-                            {t('available_parking_slots')}
-                          </p>
-                          <CircularProgressbar
-                            value={free === null || free === -1 ? 'N/A' : free }
-                            minValue={0}
-                            maxValue={capacity}
-                            text={free === null || free === -1? 'N/A' : `${free}`}
-                            className="otp-ui-mapOverlayPopup__popupAvailableInfoProgress"
-                          />
-                        </>
-                      ) : (
-                        <></>
-                      )}
-                      <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: (free === null || free === -1) ? '10px' : ''}}>
-                        {station?.payment!=null && (
-                          <p>{t('parking-price')}: {price}</p>
-                        )}
-                        {station.operator && <p>{t('managed')}: { station.operator}</p>}
-                        {capacity && <p>{t('capacity')}: {capacity !== null && capacity !== -1 ? capacity : 'N/A'}</p>}
-                      </div>
-                    </div>
-                  )}
-                  {
-                    station.type === 'sensorGroup' &&
-                    <div className="otp-ui-mapOverlayPopup__popupAvailableSlots">
-                        {
-                          station.sensors.map( sensor => {
-                            const free = sensor.free ? 'bg-success': 'bg-danger';
-                            return (
-                               <div className="otp-ui-mapOverlayPopup__popupAvailableSlotItem">
-                                <div>
-                                  <span className={free}></span>
-                                  <strong>{sensor.name}</strong>
-                                </div>
-                              </div>
-                            );
-                          })
-                        }
-                    </div>
-                  }
+
+                  <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
+                  </div>
 
                   <div className='popup-row'>
                     <FromToLocationPicker
