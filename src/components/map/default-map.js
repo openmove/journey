@@ -35,6 +35,7 @@ import TrafficOverlay from '../../otp-ui/overlays/traffic'
 import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
+import ServiceareaOverlay from '../../otp-ui/overlays/servicearea'
 import LocationFilter from '../../otp-ui/location-filter'
 import ElevationPointMarker from './elevation-point-marker'
 import PointPopup from './point-popup'
@@ -420,6 +421,15 @@ class DefaultMap extends Component {
                     )
                     case 'trails': return (
                       <TrailsOverlay
+                        key={k}
+                        {...overlayConfig}
+                        visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
+                        name={t(overlayConfig.name)}
+                        activeFilters={this.state.overlayFilters}
+                      />
+                    )
+                    case 'servicearea': return (
+                      <ServiceareaOverlay
                         key={k}
                         {...overlayConfig}
                         visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}

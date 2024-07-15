@@ -293,6 +293,9 @@ export function getInitialState (userDefinedConfig, initialQuery) {
       trails: {
         locations: []
       },
+      servicearea: {
+        locations: []
+      },
     },
     tnc: {
       etaEstimates: {},
@@ -1049,6 +1052,18 @@ function createOtpReducer (config, initialQuery) {
         return update(state, {
             overlay: {
               trails: {
+                locations: { $set: stations },
+                pending: { $set: false }
+              }
+            }
+        })
+      }
+      case 'SERVICEAREA_LOCATIONS_RESPONSE': {
+        console.log(action.payload);
+        const {tour: stations} = getResponseData(action.payload);
+        return update(state, {
+            overlay: {
+              servicearea: {
                 locations: { $set: stations },
                 pending: { $set: false }
               }

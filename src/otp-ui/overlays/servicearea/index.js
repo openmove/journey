@@ -124,22 +124,6 @@ class ParkingOverlay extends AbstractOverlay {
               markerColor={overlayServiceareaConf.iconMarkerColor}
             />
           }
-          { data.type === 'sensor' &&
-            <MarkerParkingSensor
-              width={iconWidth}
-              height={iconHeight}
-              iconColor={overlayServiceareaConf.iconColor}
-              markerColor={overlayServiceareaConf.iconMarkerColor}
-            />
-          }
-          { data.type === 'sensorGroup' &&
-            <MarkerParkingSensor
-              width={iconWidth}
-              height={iconHeight}
-              iconColor={overlayServiceareaConf.iconColor}
-              markerColor={overlayServiceareaConf.iconMarkerColor}
-            />
-          }
           </BadgeIcon>
         )
       });
