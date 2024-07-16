@@ -1046,14 +1046,31 @@ function createOtpReducer (config, initialQuery) {
       case 'TRAILS_LOCATIONS_RESPONSE': {
         console.log(action.payload);
         const {tour: stations} = getResponseData(action.payload);
-        return update(state, {
+
+        // If locations is undefined, initialize it w/ the full payload
+        if (!state.overlay.trails.locations?.length || state.overlay.trails.locations?.length==0 ) {
+          return update(state, {
             overlay: {
               trails: {
-                locations: { $set: stations },
+                locations: { $set:  stations},
                 pending: { $set: false }
               }
             }
+          })
+        }
+
+        // Otherwise, merge in only the trails not already defined
+        const currentTrailsIds = state.overlay.trails.locations.map(station => station.id)
+
+        const newTrails =  stations.filter(station => !currentTrailsIds.includes(station.id));
+        return update(state, {
+          overlay: {
+            trails: {
+              locations: { $push:  newTrails},
+            }
+          }
         })
+
       }
       case 'UPDATE_OVERLAY_VISIBILITY':
         const mapOverlays = clone(state.config.map.overlays)
