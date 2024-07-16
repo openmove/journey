@@ -178,19 +178,19 @@ class TrailsOverlay extends MapLayer {
     )
       return <LayerGroup />;
 
-    /*
+
     // todo implement filters
     const bb =  getItem('mapBounds')
 
     const locationsFiltered = filterOverlay(
       locations.filter(
         (single)=>{
-        if( bb.minLon <= single.lon && single.lon <= bb.maxLon && bb.minLat <= single.lat && single.lat <= bb.maxLat ) {
+        if( bb.minLon <= single.startingPoint.lon && single.startingPoint.lon <= bb.maxLon && bb.minLat <= single.startingPoint.lat && single.startingPoint.lat <= bb.maxLat ) {
           return true;
         }
       }),
       activeFilters[overlayTrailsConf.type]
-    ); */
+    );
 
     const markerIcon = (station) => {
       const iconUrl = station?.category?.iconUrl;
