@@ -62,6 +62,13 @@ after changed some env var restart using ```yarn genconfig && yarn start``` or r
 yarn install
 ```
 
+in JOURNEY_THEME path:
+```bash
+cd journey-customs/meridian
+npm install
+```
+
+
 only first time generate src/config.yml from environment vars and base /config.yml file
 ```bash
 npm run genconfig
