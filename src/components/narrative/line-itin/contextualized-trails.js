@@ -94,7 +94,7 @@ class ContextualizedTrails extends Component {
         Sono stati individuati i seguenti sentieri nell'area
       <ul>
         {this.props?.trails.map(
-          trail => <li key={trail?.id}> <a>{trail.title}</a></li>
+          trail => <li key={trail?.id}> <a onClick={()=>{this.props.setViewedTrail(trail?.id)}}>{trail.title}</a></li>
         )}
       </ul>
       </div>
