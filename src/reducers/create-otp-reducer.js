@@ -255,7 +255,8 @@ export function getInitialState (userDefinedConfig, initialQuery) {
     searches: {},
     transitIndex: {
       stops: {},
-      trips: {}
+      trips: {},
+      trails: {},
     },
     useRealtime: true,
     activeSearchId: 0,
@@ -1044,7 +1045,6 @@ function createOtpReducer (config, initialQuery) {
         })
       }
       case 'TRAILS_LOCATIONS_RESPONSE': {
-        console.log(action.payload);
         const {tour: stations} = getResponseData(action.payload);
 
         // If locations is undefined, initialize it w/ the full payload
@@ -1072,6 +1072,45 @@ function createOtpReducer (config, initialQuery) {
         })
 
       }
+      case 'CONTEXTUALIZED_TRAILS_RESPONSE': {
+        const {overlayName, data} = action.payload
+        const {tour: stations} = getResponseData(data);
+
+        // If locations is undefined, initialize it w/ the full payload
+        if (  !state.overlay.trails.locations?.length ||
+              state.overlay.trails.locations?.length==0
+          ) {
+          return update(state, {
+            transitIndex: {
+              trails:{ [overlayName]: {$set: stations}}
+            },
+            overlay: {
+              trails: {
+                locations: { $set:  stations},
+                pending: { $set: false }
+              }
+            }
+          })
+        }
+
+        // Otherwise, merge in only the trails not already defined
+        const currentTrailsIds = state.overlay.trails.locations.map(station => station.id)
+
+        const newTrails =  stations.filter(station => !currentTrailsIds.includes(station.id));
+
+        return update(state, {
+          transitIndex: {
+            trails:{ [overlayName]: {$set: stations}}
+          },
+          overlay: {
+            trails: {
+              locations: { $push:  newTrails},
+            }
+          }
+        })
+      }
+      case 'SET_VIEWED_TRAIL':
+        return update(state, { ui: { viewedTrail: { $set: action.payload } } })
       case 'UPDATE_OVERLAY_VISIBILITY':
         const mapOverlays = clone(state.config.map.overlays)
         for (let key in action.payload) {

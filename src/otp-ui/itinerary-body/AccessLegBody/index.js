@@ -17,6 +17,7 @@ import RentedVehicleSubheader from "./rented-vehicle-subheader";
 import TNCLeg from "./tnc-leg";
 import { withNamespaces } from "react-i18next";
 import { ExclamationTriangle } from "@styled-icons/fa-solid";
+import ContextualizedTrails from "../../../components/narrative/line-itin/contextualized-trails";
 
 /**
  * Component for access (e.g. walk/bike/etc.) leg in narrative itinerary. This
@@ -77,6 +78,12 @@ import { ExclamationTriangle } from "@styled-icons/fa-solid";
           <RentedVehicleSubheader config={config} leg={leg} />
         )}
         <div className="otp-ui-legBody">
+        {config?.trip?.contextualizedTrails?.enabled && (
+        <ContextualizedTrails
+            t={t}
+            leg={leg}
+         />
+       )}
         {(safetyTrailMessage?.enabled && leg.distance > 2000 && leg.mode !== "CAR" ) && (
             <div className="trails-safety-message">
                  <ExclamationTriangle size={18} />
