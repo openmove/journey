@@ -372,8 +372,10 @@ function createOtpReducer (config, initialQuery) {
             }
           },
           ui: {
-            diagramLeg: { $set: null }
-          }
+            diagramLeg: { $set: null },
+            viewedTrail:{$set: null}
+          },
+          transitIndex:{trails:{$set: {}}}
         })
       case 'NON_REALTIME_ROUTING_RESPONSE':
         return update(state, {
@@ -381,7 +383,8 @@ function createOtpReducer (config, initialQuery) {
             [searchId]: {
               nonRealtimeResponse: { $set: action.payload.response }
             }
-          }
+          },
+         transitIndex:{trails:{$set: {}}}
         })
       case 'BIKE_RENTAL_REQUEST':
         return update(state, {
@@ -1071,6 +1074,13 @@ function createOtpReducer (config, initialQuery) {
           }
         })
 
+      }
+      case 'CONTEXTUALIZED_TRAILS_CLEAR': {
+        return update(state, {
+          transitIndex: {
+            trails:{$set: {}}
+          }}
+        )
       }
       case 'CONTEXTUALIZED_TRAILS_RESPONSE': {
         const {overlayName, data} = action.payload

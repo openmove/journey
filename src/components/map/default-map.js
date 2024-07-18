@@ -15,6 +15,7 @@ import {
   setMapPopupLocation,
   setMapPopupLocationAndGeocode
 } from '../../actions/map'
+import {setViewedTrail} from "../../actions/trails"
 
 import BoundsUpdatingOverlay from './bounds-updating-overlay'
 import EndpointsOverlay from './connected-endpoints-overlay'
@@ -35,6 +36,7 @@ import TrafficOverlay from '../../otp-ui/overlays/traffic'
 import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
+import ContextualTrailsOverlay from '../../otp-ui/overlays/contextual-trails'
 import LocationFilter from '../../otp-ui/location-filter'
 import ElevationPointMarker from './elevation-point-marker'
 import PointPopup from './point-popup'
@@ -311,6 +313,7 @@ class DefaultMap extends Component {
                 {/*TODO maybe remove <StopViewerOverlay />*/}
                 <EndpointsOverlay />
                 <RouteViewerOverlay />
+                <ContextualTrailsOverlay/>
                 <TransitiveOverlay />
                 <TripViewerOverlay />
                 <ElevationPointMarker />
@@ -484,6 +487,7 @@ const mapDispatchToProps = {
   setMapPopupLocation,
   setMapPopupLocationAndGeocode,
   updateOverlayVisibility,
+  setViewedTrail
 }
 
 export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(DefaultMap))

@@ -16,7 +16,7 @@ import FontAwesome from "react-fontawesome";
 import "react-circular-progressbar/dist/styles.css";
 
 import { setLocation } from "../../../actions/map";
-import { trailsLocationsQuery } from "../../../actions/trails";
+import { trailsLocationsQuery,setViewedTrail } from "../../../actions/trails";
 
 import BadgeIcon from "../../icons/badge-icon";
 import MarkerCharger from "../../icons/modern/MarkerCharger";
@@ -305,6 +305,7 @@ class TrailsOverlay extends MapLayer {
                 ]}
                 onClick={(e) => {
                   e.target.openPopup();
+                  this.props.setViewedTrail(station.id);
                   oacrr.track( "teaser", station.id  );
                 }}
               >
@@ -459,6 +460,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = {
   setLocation,
+  setViewedTrail,
   trailsLocationsQuery,
 };
 
