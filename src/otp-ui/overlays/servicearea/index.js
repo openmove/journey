@@ -51,7 +51,7 @@ class ParkingOverlay extends AbstractOverlay {
   render () {
     const { locations, overlayServiceareaConf, t ,activeFilters} = this.props
 
-    const isMarkClusterEnabled = overlayServiceareaConf.markerCluster
+    const isMarkClusterEnabled = !!overlayServiceareaConf.markerCluster
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -171,12 +171,11 @@ class ParkingOverlay extends AbstractOverlay {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const {originalName: overlayName} = ownProps
   return {
-    locations: state.otp.overlay.parking?.[overlayName]?.locations,
-    overlayParkingConf: state.otp?.config?.map?.overlays?.filter(item => item.name === `${overlayName}`)[0],
-  }
-}
+    overlayServiceareaConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'servicearea')[0],
+    locations: state.otp.overlay.servicearea && state.otp.overlay.servicearea.locations,
+  };
+};
 
 const mapDispatchToProps = {
   setLocation,
