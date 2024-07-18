@@ -36,6 +36,7 @@ import TrafficOverlay from '../../otp-ui/overlays/traffic'
 import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
+import TrailsViewerOverlay from '../../otp-ui/overlay-trail-viewer'
 import ContextualTrailsOverlay from '../../otp-ui/overlays/contextual-trails'
 import LocationFilter from '../../otp-ui/location-filter'
 import ElevationPointMarker from './elevation-point-marker'
@@ -313,6 +314,7 @@ class DefaultMap extends Component {
                 {/*TODO maybe remove <StopViewerOverlay />*/}
                 <EndpointsOverlay />
                 <RouteViewerOverlay />
+                <TrailsViewerOverlay />
                 <ContextualTrailsOverlay/>
                 <TransitiveOverlay />
                 <TripViewerOverlay />

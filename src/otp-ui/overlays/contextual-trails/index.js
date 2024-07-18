@@ -144,31 +144,8 @@ class ContextualTrailsOverlay extends MapLayer {
       });
     };
 
-    const polyline = [];
-    this.props?.viewedLocation?.geometry.split(" ").forEach((coordinateStr) => {
-      const coordinateArr = coordinateStr.split(",").map(Number).slice(0, 2);
-
-      // swap values since coordinates are inverted
-      const swappedArr = [coordinateArr[1], coordinateArr[0]];
-
-      polyline.push(swappedArr);
-    });
 
     return (
-      <>
-        {locations.map((station) => {
-          if (station.id != this.props.viewedTrail) {
-            return null;
-          }
-
-          return (
-            <Polyline
-              color={this.props?.viewedLocation?.lineOptions?.strokeColor}
-              positions={polyline}
-            />
-          );
-        })}
-
         <LayerGroup>
           <AdvancedMarkerCluster
             enabled={isMarkClusterEnabled}
@@ -391,7 +368,6 @@ class ContextualTrailsOverlay extends MapLayer {
             })}
           </AdvancedMarkerCluster>
         </LayerGroup>
-      </>
     );
   }
 }
@@ -412,9 +388,6 @@ const mapStateToProps = (state, ownProps) => {
     (location) => location.id === viewedTrail
   );
 
-
-  const viewedTrial =
-    state.otp.overlay.trails && state.otp.overlay.trails.locations;
   return {
     locations,
     viewedTrail,
