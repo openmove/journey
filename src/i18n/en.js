@@ -528,6 +528,7 @@ export const TRANSLATIONS_EN = {
   "credits_outdooractive_attribution" : "This website uses technology and content from the Outdooractive Platform.",
   "trails_safety_message": "Before embarking on excursions, be sure to check and plan your route thoroughly",
   "trails_safety_url_label": "more information",
+  "trails_context_message": "The following routes have been identified in the area:",
 
   // localized drt
   "localized_drt_msg": "DRT service available in the selected area",

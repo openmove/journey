@@ -92,7 +92,7 @@ class ContextualizedTrails extends Component {
 
     return (
       <div>
-        Sono stati individuati i seguenti sentieri nell'area
+        {this.props.t("trails_context_message")}
       <ul>
         {this.props?.trails.map(
           trail => <li key={trail?.id}> <a onClick={()=>{this.props.setViewedTrail(trail?.id)}}>{trail.title}</a></li>
