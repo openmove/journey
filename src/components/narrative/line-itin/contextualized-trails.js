@@ -19,12 +19,14 @@ const truncateCoordinate = ({ lat, lon }) => ({
   lon: truncate(lon),
 });
 
-function getLegStartingPoint(leg, contextualizedTrailsConfig) {
+function getLegNearbySearchPoint(leg, isLastLeg, contextualizedTrailsConfig) {
   if (contextualizedTrailsConfig?.enabled) {
-    const from = leg?.from;
-    if (from?.lat && from?.lon) {
-      return truncateCoordinate(from);
+    const place = !isLastLeg ? leg?.from : leg?.to;
+
+    if (place?.lat && place?.lon) {
+      return truncateCoordinate(place);
     }
+
   }
   return {};
 }
@@ -85,7 +87,8 @@ class ContextualizedTrails extends Component {
     if (
       !contextualizedTrailsConfig ||
       !this.props?.contextualizedTrailsConfig?.enabled ||
-      !this.props?.trails
+      !this.props?.trails ||
+      !(this.props?.trails?.length > 0)
     ) {
       return <></>;
     }
@@ -108,8 +111,9 @@ const mapStateToProps = (state, ownProps) => {
   const contextualizedTrailsConfig =
     state.otp.config?.trip?.contextualizedTrails;
 
-  const legStartingPoint = getLegStartingPoint(
+  const legStartingPoint = getLegNearbySearchPoint(
     ownProps.leg,
+    ownProps.isLastLeg,
     contextualizedTrailsConfig
   );
   const legName = JSON.stringify(legStartingPoint);

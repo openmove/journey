@@ -51,6 +51,7 @@ import ContextualizedTrails from "../../../components/narrative/line-itin/contex
       showElevationProfile,
       showLegIcon,
       timeOptions,
+      isLastLeg,
       t
     } = this.props;
     const { expanded } = this.state;
@@ -81,6 +82,7 @@ import ContextualizedTrails from "../../../components/narrative/line-itin/contex
         {(config?.trip?.contextualizedTrails?.enabled  && leg.distance > 2000 && leg.mode !== "CAR" )&& (
         <ContextualizedTrails
             t={t}
+            isLastLeg={isLastLeg}
             leg={leg}
          />
        )}

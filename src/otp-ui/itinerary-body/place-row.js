@@ -30,6 +30,7 @@ const PlaceRow = ({
   followsTransit,
   frameLeg,
   isDestination,
+  isLastLeg,
   lastLeg,
   leg,
   LegIcon,
@@ -128,6 +129,7 @@ const PlaceRow = ({
               leg={leg}
               LegIcon={LegIcon}
               legIndex={legIndex}
+              isLastLeg={isLastLeg}
               setActiveLeg={setActiveLeg}
               setLegDiagram={setLegDiagram}
               showElevationProfile={showElevationProfile}
