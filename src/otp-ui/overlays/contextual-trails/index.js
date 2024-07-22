@@ -276,7 +276,7 @@ class ContextualTrailsOverlay extends MapLayer {
                             className="image"
                             src={
                               overlayTrailsConf.outdoorActiveTrailImageUrl +
-                              "/200/200/" +
+                              "/200/50/" +
                               image.id +
                               "/.png"
                             }

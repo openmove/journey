@@ -16,7 +16,7 @@ import FontAwesome from "react-fontawesome";
 import "react-circular-progressbar/dist/styles.css";
 
 import { setLocation } from "../../../actions/map";
-import { trailsLocationsQuery,setViewedTrail } from "../../../actions/trails";
+import { trailsLocationsQuery, setViewedTrail } from "../../../actions/trails";
 
 import BadgeIcon from "../../icons/badge-icon";
 import MarkerCharger from "../../icons/modern/MarkerCharger";
@@ -178,14 +178,17 @@ class TrailsOverlay extends MapLayer {
     )
       return <LayerGroup />;
 
-
     // todo implement filters
-    const bb =  getItem('mapBounds')
+    const bb = getItem("mapBounds");
 
     const locationsFiltered = filterOverlay(
-      locations.filter(
-        (single)=>{
-        if( bb.minLon <= single.startingPoint.lon && single.startingPoint.lon <= bb.maxLon && bb.minLat <= single.startingPoint.lat && single.startingPoint.lat <= bb.maxLat ) {
+      locations.filter((single) => {
+        if (
+          bb.minLon <= single.startingPoint.lon &&
+          single.startingPoint.lon <= bb.maxLon &&
+          bb.minLat <= single.startingPoint.lat &&
+          single.startingPoint.lat <= bb.maxLat
+        ) {
           return true;
         }
       }),
@@ -306,7 +309,7 @@ class TrailsOverlay extends MapLayer {
                 onClick={(e) => {
                   e.target.openPopup();
                   this.props.setViewedTrail(station.id);
-                  oacrr.track( "teaser", station.id  );
+                  oacrr.track("teaser", station.id);
                 }}
               >
                 <Popup>
@@ -352,7 +355,7 @@ class TrailsOverlay extends MapLayer {
                           className="image"
                           src={
                             overlayTrailsConf.outdoorActiveTrailImageUrl +
-                            "/200/200/" +
+                            "/200/50/" +
                             image.id +
                             "/.png"
                           }
@@ -450,8 +453,19 @@ class TrailsOverlay extends MapLayer {
 
 // connect to the redux store
 const mapStateToProps = (state, ownProps) => {
+  const contextualTrailsIds = [];
+
+  const viewedTrail = state.otp.ui.viewedTrail;
+
+  Object.values(state.otp.transitIndex?.trails)?.forEach((trails) => {
+    const newTrailsIds = trails
+      .map((trail) => trail.id)
+      .filter((trailId) => !contextualTrailsIds.includes(trailId));
+    contextualTrailsIds.push(...newTrailsIds);
+  });
+
   return {
-    locations: state.otp.overlay.trails && state.otp.overlay.trails.locations,
+    locations: state.otp.overlay.trails && state.otp.overlay.trails.locations?.filter((location)=>!(location.id in contextualTrailsIds)),
     overlayTrailsConf: state.otp?.config?.map?.overlays?.filter(
       (item) => item.type === "trails"
     )[0],

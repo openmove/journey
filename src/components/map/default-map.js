@@ -126,6 +126,8 @@ class DefaultMap extends Component {
   }
 
   onMapClick = (e) => {
+    this.props.setViewedTrail(null);
+
     if(DefaultMap.isPopupOpen){
       const map = e.sourceTarget
       map.closePopup()
