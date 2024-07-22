@@ -78,7 +78,7 @@ import ContextualizedTrails from "../../../components/narrative/line-itin/contex
           <RentedVehicleSubheader config={config} leg={leg} />
         )}
         <div className="otp-ui-legBody">
-        {config?.trip?.contextualizedTrails?.enabled && (
+        {(config?.trip?.contextualizedTrails?.enabled  && leg.distance > 2000 && leg.mode !== "CAR" )&& (
         <ContextualizedTrails
             t={t}
             leg={leg}
