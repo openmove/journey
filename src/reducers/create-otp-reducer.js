@@ -255,7 +255,8 @@ export function getInitialState (userDefinedConfig, initialQuery) {
     searches: {},
     transitIndex: {
       stops: {},
-      trips: {}
+      trips: {},
+      trails: {},
     },
     useRealtime: true,
     activeSearchId: 0,
@@ -374,8 +375,10 @@ function createOtpReducer (config, initialQuery) {
             }
           },
           ui: {
-            diagramLeg: { $set: null }
-          }
+            diagramLeg: { $set: null },
+            viewedTrail:{$set: null}
+          },
+          transitIndex:{trails:{$set: {}}}
         })
       case 'NON_REALTIME_ROUTING_RESPONSE':
         return update(state, {
@@ -383,7 +386,8 @@ function createOtpReducer (config, initialQuery) {
             [searchId]: {
               nonRealtimeResponse: { $set: action.payload.response }
             }
-          }
+          },
+         transitIndex:{trails:{$set: {}}}
         })
       case 'BIKE_RENTAL_REQUEST':
         return update(state, {
@@ -1047,15 +1051,75 @@ function createOtpReducer (config, initialQuery) {
         })
       }
       case 'TRAILS_LOCATIONS_RESPONSE': {
-        console.log(action.payload);
         const {tour: stations} = getResponseData(action.payload);
-        return update(state, {
+
+        // If locations is undefined, initialize it w/ the full payload
+        if (!state.overlay.trails.locations?.length || state.overlay.trails.locations?.length==0 ) {
+          return update(state, {
             overlay: {
               trails: {
-                locations: { $set: stations },
+                locations: { $set:  stations},
                 pending: { $set: false }
               }
             }
+          })
+        }
+
+        // Otherwise, merge in only the trails not already defined
+        const currentTrailsIds = state.overlay.trails.locations.map(station => station.id)
+
+        const newTrails =  stations.filter(station => !currentTrailsIds.includes(station.id));
+        return update(state, {
+          overlay: {
+            trails: {
+              locations: { $push:  newTrails},
+            }
+          }
+        })
+
+      }
+      case 'CONTEXTUALIZED_TRAILS_CLEAR': {
+        return update(state, {
+          transitIndex: {
+            trails:{$set: {}}
+          }}
+        )
+      }
+      case 'CONTEXTUALIZED_TRAILS_RESPONSE': {
+        const {overlayName, data} = action.payload
+        const {tour: stations} = getResponseData(data);
+
+        // If locations is undefined, initialize it w/ the full payload
+        if (  !state.overlay.trails.locations?.length ||
+              state.overlay.trails.locations?.length==0
+          ) {
+          return update(state, {
+            transitIndex: {
+              trails:{ [overlayName]: {$set: stations}}
+            },
+            overlay: {
+              trails: {
+                locations: { $set:  stations},
+                pending: { $set: false }
+              }
+            }
+          })
+        }
+
+        // Otherwise, merge in only the trails not already defined
+        const currentTrailsIds = state.overlay.trails.locations.map(station => station.id)
+
+        const newTrails =  stations.filter(station => !currentTrailsIds.includes(station.id));
+
+        return update(state, {
+          transitIndex: {
+            trails:{ [overlayName]: {$set: stations}}
+          },
+          overlay: {
+            trails: {
+              locations: { $push:  newTrails},
+            }
+          }
         })
       }
       case 'SERVICEAREA_LOCATIONS_RESPONSE': {
@@ -1070,6 +1134,8 @@ function createOtpReducer (config, initialQuery) {
             }
         })
       }
+      case 'SET_VIEWED_TRAIL':
+        return update(state, { ui: { viewedTrail: { $set: action.payload } } })
       case 'UPDATE_OVERLAY_VISIBILITY':
         const mapOverlays = clone(state.config.map.overlays)
         for (let key in action.payload) {

@@ -15,6 +15,7 @@ import {
   setMapPopupLocation,
   setMapPopupLocationAndGeocode
 } from '../../actions/map'
+import {setViewedTrail} from "../../actions/trails"
 
 import BoundsUpdatingOverlay from './bounds-updating-overlay'
 import EndpointsOverlay from './connected-endpoints-overlay'
@@ -36,6 +37,8 @@ import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
 import ServiceareaOverlay from '../../otp-ui/overlays/servicearea'
+import TrailsViewerOverlay from '../../otp-ui/overlay-trail-viewer'
+import ContextualTrailsOverlay from '../../otp-ui/overlays/contextual-trails'
 import LocationFilter from '../../otp-ui/location-filter'
 import ElevationPointMarker from './elevation-point-marker'
 import PointPopup from './point-popup'
@@ -124,6 +127,8 @@ class DefaultMap extends Component {
   }
 
   onMapClick = (e) => {
+    this.props.setViewedTrail(null);
+
     if(DefaultMap.isPopupOpen){
       const map = e.sourceTarget
       map.closePopup()
@@ -312,6 +317,8 @@ class DefaultMap extends Component {
                 {/*TODO maybe remove <StopViewerOverlay />*/}
                 <EndpointsOverlay />
                 <RouteViewerOverlay />
+                <TrailsViewerOverlay />
+                <ContextualTrailsOverlay/>
                 <TransitiveOverlay />
                 <TripViewerOverlay />
                 <ElevationPointMarker />
@@ -494,6 +501,7 @@ const mapDispatchToProps = {
   setMapPopupLocation,
   setMapPopupLocationAndGeocode,
   updateOverlayVisibility,
+  setViewedTrail
 }
 
 export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(DefaultMap))

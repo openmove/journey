@@ -15,6 +15,9 @@ import AccessLegSummary from "./access-leg-summary";
 import LegDiagramPreview from "./leg-diagram-preview";
 import RentedVehicleSubheader from "./rented-vehicle-subheader";
 import TNCLeg from "./tnc-leg";
+import { withNamespaces } from "react-i18next";
+import { ExclamationTriangle } from "@styled-icons/fa-solid";
+import ContextualizedTrails from "../../../components/narrative/line-itin/contextualized-trails";
 
 /**
  * Component for access (e.g. walk/bike/etc.) leg in narrative itinerary. This
@@ -47,9 +50,12 @@ import TNCLeg from "./tnc-leg";
       setLegDiagram,
       showElevationProfile,
       showLegIcon,
-      timeOptions
+      timeOptions,
+      isLastLeg,
+      t
     } = this.props;
     const { expanded } = this.state;
+    const safetyTrailMessage = config?.trip?.safetyTrailMessage;
 
     if (leg.mode === "CAR" && leg.hailedCar) {
       return (
@@ -73,6 +79,26 @@ import TNCLeg from "./tnc-leg";
           <RentedVehicleSubheader config={config} leg={leg} />
         )}
         <div className="otp-ui-legBody">
+        {(config?.trip?.contextualizedTrails?.enabled  && leg.distance > 2000 && leg.mode !== "CAR" )&& (
+        <ContextualizedTrails
+            t={t}
+            isLastLeg={isLastLeg}
+            leg={leg}
+         />
+       )}
+        {(safetyTrailMessage?.enabled && leg.distance > 2000 && leg.mode !== "CAR" ) && (
+            <div className="trails-safety-message">
+                 <ExclamationTriangle size={18} />
+              <div className="content">
+                {t("trails_safety_message")}
+                {safetyTrailMessage?.url &&(
+                  <a href={safetyTrailMessage?.url} className="more-info-url" target="_blank">
+                    {t("trails_safety_url_label")}
+                  </a>
+                )}
+              </div>
+          </div>
+        )}
           <AccessLegSummary
             config={config}
             leg={leg}
@@ -133,4 +159,4 @@ AccessLegBody.defaultProps = {
   timeOptions: null
 };
 
-export default AccessLegBody;
+export default withNamespaces()(AccessLegBody);

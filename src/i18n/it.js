@@ -522,6 +522,9 @@ export const TRANSLATIONS_IT = {
   "tour_author": "Autore del percorso",
   "more_details": "Apri dettagli",
   "credits_outdooractive_attribution" : "Questo sito utilizza contenuti e soluzioni tecnologiche della piattaforma Outdooractive.",
+  "trails_safety_message": "Prima di intraprendere escursioni, assicurati di verificare e pianificare accuratamente il percorso",
+  "trails_safety_url_label": "maggiori informazioni",
+  "trails_context_message": "Sono stati individuati i seguenti percorsi nell'area:",
 
   // localized drt
   "localized_drt_msg": "Servizio DRT disponibile nella zona selezionata",

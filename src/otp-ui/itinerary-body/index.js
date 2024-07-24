@@ -60,6 +60,7 @@ const ItineraryBody = ({
           followsTransit={followsTransit}
           frameLeg={frameLeg}
           isDestination={isDestination}
+          isLastLeg={i === itinerary.legs.length - 1}
           lastLeg={lastLeg}
           leg={leg}
           LegIcon={LegIcon}
