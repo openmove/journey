@@ -297,6 +297,9 @@ export function getInitialState (userDefinedConfig, initialQuery) {
       servicearea: {
         locations: []
       },
+      caselli: {
+        locations: []
+      },
     },
     tnc: {
       etaEstimates: {},
@@ -1128,6 +1131,18 @@ function createOtpReducer (config, initialQuery) {
         return update(state, {
             overlay: {
               servicearea: {
+                locations: { $set: stations },
+                pending: { $set: false }
+              }
+            }
+        })
+      }
+      case 'CASELLI_LOCATIONS_RESPONSE': {
+        console.log(action.payload);
+        const {tour: stations} = getResponseData(action.payload);
+        return update(state, {
+            overlay: {
+              caselli: {
                 locations: { $set: stations },
                 pending: { $set: false }
               }

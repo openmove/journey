@@ -37,6 +37,7 @@ import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
 import ServiceareaOverlay from '../../otp-ui/overlays/servicearea'
+import CaselliOverlay from '../../otp-ui/overlays/caselli'
 import TrailsViewerOverlay from '../../otp-ui/overlay-trail-viewer'
 import ContextualTrailsOverlay from '../../otp-ui/overlays/contextual-trails'
 import LocationFilter from '../../otp-ui/location-filter'
@@ -437,6 +438,15 @@ class DefaultMap extends Component {
                     )
                     case 'servicearea': return (
                       <ServiceareaOverlay
+                        key={k}
+                        {...overlayConfig}
+                        visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
+                        name={t(overlayConfig.name)}
+                        activeFilters={this.state.overlayFilters}
+                      />
+                    )
+                    case 'caselli': return (
+                      <CaselliOverlay
                         key={k}
                         {...overlayConfig}
                         visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}

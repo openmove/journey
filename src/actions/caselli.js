@@ -12,14 +12,14 @@ function preparePayload(payload) {
   })
 }
 
-export const receivedServiceareaLocationsError =  createAction('SERVICEAREA_LOCATIONS_ERROR',preparePayload)
-export const receivedServiceareaLocationsResponse  = createAction('SERVICEAREA_LOCATIONS_RESPONSE',preparePayload)
-export const requestServiceareaLocationsResponse =  createAction('SERVICEAREA_LOCATIONS_REQUEST',preparePayload)
+export const receivedCaselliLocationsError =  createAction('CASELLI_LOCATIONS_ERROR',preparePayload)
+export const receivedCaselliLocationsResponse  = createAction('CASELLI_LOCATIONS_RESPONSE',preparePayload)
+export const requestCaselliLocationsResponse =  createAction('CASELLI_LOCATIONS_REQUEST',preparePayload)
 
 export function serviceareaLocationsQuery (url, params, overlayName) {
   return async function (dispatch, getState) {
 
-    dispatch(requestServiceareaLocationsResponse()) // todo: is this doing something?
+    dispatch(requestCaselliLocationsResponse()) // todo: is this doing something?
     let json
     try {
       const newUrl = addQueryParams(url,params)
@@ -31,9 +31,9 @@ export function serviceareaLocationsQuery (url, params, overlayName) {
       }
       json = await response.json();
     } catch (err) {
-      return dispatch(receivedServiceareaLocationsError({overlayName, data:err}))
+      return dispatch(receivedCaselliLocationsError({overlayName, data:err}))
     }
 
-    dispatch(receivedServiceareaLocationsResponse({overlayName, data:json}))
+    dispatch(receivedCaselliLocationsResponse({overlayName, data:json}))
   }
 }

@@ -10,7 +10,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 import { setLocation } from '../../../actions/map'
-import { serviceareaLocationsQuery } from '../../../actions/servicearea'
+import { caselliLocationsQuery } from '../../../actions/caselli'
 
 import BadgeIcon from "../../icons/badge-icon";
 
@@ -24,14 +24,14 @@ import { filterOverlay } from "../../core-utils/overlays";
 import AdvancedMarkerCluster from "../../advanced-marker-cluster";
 import MarkerCluster from "../../icons/modern/MarkerCluster";
 
-class ServiceareaOverlay extends AbstractOverlay {
+class CaselliOverlay extends AbstractOverlay {
 
   constructor(props){
     super({
       props,
-      query:props.serviceareaLocationsQuery,
+      query:props.caselliLocationsQuery,
       api:props.api,
-      config:props.overlayServiceareaConf
+      config:props.overlayCaselliConf
     });
 
     this.popup = React.createRef();
@@ -40,7 +40,7 @@ class ServiceareaOverlay extends AbstractOverlay {
   static propTypes = {
     api: PropTypes.string,
     locations: PropTypes.array,
-    serviceareaLocationsQuery: PropTypes.func,
+    caselliLocationsQuery: PropTypes.func,
     setLocation: PropTypes.func
   }
 
@@ -49,9 +49,9 @@ class ServiceareaOverlay extends AbstractOverlay {
   updateLeafletElement () {}
 
   render () {
-    const { locations, overlayServiceareaConf, t ,activeFilters} = this.props
+    const { locations, overlayCaselliConf, t ,activeFilters} = this.props
 
-    const isMarkClusterEnabled = !!overlayServiceareaConf.markerCluster
+    const isMarkClusterEnabled = !!overlayCaselliConf.markerCluster
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -62,7 +62,7 @@ class ServiceareaOverlay extends AbstractOverlay {
       }
     })
 
-    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayServiceareaConf.type ]);
+    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayCaselliConf.type ]);
 
     const markerIcon = (data) => {
       let badgeType = 'success';
@@ -86,14 +86,14 @@ class ServiceareaOverlay extends AbstractOverlay {
           badgeCounter = null;
         }
 
-        iconWidth = overlayServiceareaConf.iconWidth;
-        iconHeight = overlayServiceareaConf.iconHeight;
+        iconWidth = overlayCaselliConf.iconWidth;
+        iconHeight = overlayCaselliConf.iconHeight;
       }
       else if (data.type === 'sensorGroup') {
 
         badgeCounter = data.capacity;
-        iconWidth = parseInt(overlayServiceareaConf.iconWidth*0.7);
-        iconHeight = parseInt(overlayServiceareaConf.iconHeight*0.7);
+        iconWidth = parseInt(overlayCaselliConf.iconWidth*0.7);
+        iconHeight = parseInt(overlayCaselliConf.iconHeight*0.7);
       }
       else if (data.type === 'sensor') {
 
@@ -105,8 +105,8 @@ class ServiceareaOverlay extends AbstractOverlay {
           badgeType = 'danger';
         }
         badgeCounter = null;
-        iconWidth = parseInt(overlayServiceareaConf.iconWidth*0.7);
-        iconHeight = parseInt(overlayServiceareaConf.iconHeight*0.7);
+        iconWidth = parseInt(overlayCaselliConf.iconWidth*0.7);
+        iconHeight = parseInt(overlayCaselliConf.iconHeight*0.7);
       }
 
       return divIcon({
@@ -120,8 +120,8 @@ class ServiceareaOverlay extends AbstractOverlay {
             <MarkerParking
               width={iconWidth}
               height={iconHeight}
-              iconColor={overlayServiceareaConf.iconColor}
-              markerColor={overlayServiceareaConf.iconMarkerColor}
+              iconColor={overlayCaselliConf.iconColor}
+              markerColor={overlayCaselliConf.iconMarkerColor}
             />
           }
           </BadgeIcon>
@@ -172,14 +172,14 @@ class ServiceareaOverlay extends AbstractOverlay {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    overlayServiceareaConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'servicearea')[0],
-    locations: state.otp.overlay.servicearea && state.otp.overlay.servicearea.locations,
+    overlayCaselliConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'caselli')[0],
+    locations: state.otp.overlay.caselli && state.otp.overlay.caselli.locations,
   };
 };
 
 const mapDispatchToProps = {
   setLocation,
-  serviceareaLocationsQuery
+  caselliLocationsQuery
 }
 
-export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(withLeaflet(ServiceareaOverlay)))
+export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(withLeaflet(CaselliOverlay)))
