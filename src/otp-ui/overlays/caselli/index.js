@@ -12,19 +12,17 @@ import 'react-circular-progressbar/dist/styles.css';
 import { setLocation } from '../../../actions/map'
 import { caselliLocationsQuery } from '../../../actions/caselli'
 
-import BadgeIcon from "../../icons/badge-icon";
-
-import MarkerCharger from "../../icons/modern/MarkerCharger";
+import MarkerCasello from "../../icons/modern/MarkerCasello";
 
 import ReactDOMServer from "react-dom/server";
-import Parking from "../../icons/modern/Parking";
+
 import FromToLocationPicker from '../../from-to-location-picker'
 import { getItem } from "../../core-utils/storage";
 import { filterOverlay } from "../../core-utils/overlays";
 
 class CaselliOverlay extends AbstractOverlay {
 
-  constructor(props){
+  constructor(props) {
     super({
       props,
       query: props.caselliLocationsQuery,
@@ -63,47 +61,7 @@ class CaselliOverlay extends AbstractOverlay {
     const markerIcon = (data) => {
       let badgeType = 'success';
       let badgeCounter = 0;
-      const paid = data?.payment;
-      let iconWidth, iconHeight;
-
-      if( data.type === 'station') {
-        if (!data.free || data.free === -1) {
-          badgeType = 'default';
-          badgeCounter = null;
-        }
-
-        if (data.free === 1) {
-          badgeType = 'warning';
-          badgeCounter = data.free
-        }
-
-        if (data.free === 0 ) {
-          badgeType = 'danger';
-          badgeCounter = null;
-        }
-
-        iconWidth = overlayCaselliConf.iconWidth;
-        iconHeight = overlayCaselliConf.iconHeight;
-      }
-      else if (data.type === 'sensorGroup') {
-
-        badgeCounter = data.capacity;
-        iconWidth = parseInt(overlayCaselliConf.iconWidth*0.7);
-        iconHeight = parseInt(overlayCaselliConf.iconHeight*0.7);
-      }
-      else if (data.type === 'sensor') {
-
-        if (data.free == null || data.free === -1) {
-          badgeType = 'default';
-        } else if (data.free === true ) {
-          badgeType = 'success';
-        } else if (data.free === false) {
-          badgeType = 'danger';
-        }
-        badgeCounter = null;
-        iconWidth = parseInt(overlayCaselliConf.iconWidth*0.7);
-        iconHeight = parseInt(overlayCaselliConf.iconHeight*0.7);
-      }
+      let {iconWidth, iconHeight} = overlayCaselliConf;
 
       return divIcon({
         className: "",
@@ -111,16 +69,12 @@ class CaselliOverlay extends AbstractOverlay {
         iconAnchor: [iconWidth/2, iconHeight],
         popupAnchor: [0, -iconHeight],
         html: ReactDOMServer.renderToStaticMarkup(
-          <BadgeIcon type={badgeType} width={iconWidth} paid={paid}>
-          { data.type === 'station' &&
-            <MarkerCharger
-              width={iconWidth}
-              height={iconHeight}
-              iconColor={overlayCaselliConf.iconColor}
-              markerColor={overlayCaselliConf.iconMarkerColor}
-            />
-          }
-          </BadgeIcon>
+          <MarkerCasello
+            width={iconWidth}
+            height={iconHeight}
+            iconColor={overlayCaselliConf.iconColor}
+            markerColor={overlayCaselliConf.iconMarkerColor}
+          />
         )
       });
     }
@@ -141,7 +95,7 @@ class CaselliOverlay extends AbstractOverlay {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-                    {/*TODO MAKE NEW SERVICE AREA ICON <Parking width={24} height={20} />*/}
+                    {/*TODO MAKE NEW SERVICE AREA ICON <Casello width={24} height={20} />*/}
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
                   <small>{station.group_name}</small>
