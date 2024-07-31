@@ -3,7 +3,14 @@ import AbstractOverlay from '../AbstractOverlay'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
-import { LayerGroup, FeatureGroup, MapLayer, Marker, Popup, withLeaflet } from 'react-leaflet'
+import {
+  LayerGroup,
+  FeatureGroup,
+  MapLayer,
+  Marker,
+  Popup,
+  withLeaflet,
+} from "react-leaflet";
 import { divIcon } from 'leaflet'
 import { withNamespaces } from "react-i18next";
 import { CircularProgressbar } from 'react-circular-progressbar';
@@ -19,33 +26,125 @@ import ReactDOMServer from "react-dom/server";
 import FromToLocationPicker from '../../from-to-location-picker'
 import { getItem } from "../../core-utils/storage";
 import { filterOverlay } from "../../core-utils/overlays";
+import { bbToRadiusInMeters } from "../../../util/bbToRadius";
 
-class CaselliOverlay extends AbstractOverlay {
+class CaselliOverlay extends MapLayer {
 
   constructor(props) {
-    super({
-      props,
-      query: props.caselliLocationsQuery,
-      api: props.api,
-      config: props.overlayCaselliConf
-    });
-
+    super(props);
     this.popup = React.createRef();
+    this._startRefreshing = this._startRefreshing.bind(this);
+    this._stopRefreshing = this._stopRefreshing.bind(this);
   }
 
   static propTypes = {
     api: PropTypes.string,
     locations: PropTypes.array,
     caselliLocationsQuery: PropTypes.func,
-    setLocation: PropTypes.func
+    setLocation: PropTypes.func,
+  };
+
+  _startRefreshing(launchNow) {
+    const getRadiusFromBBInMeters = () => {
+      const bb = getItem("mapBounds");
+
+      const radiusInM = bbToRadiusInMeters(bb);
+      return radiusInM;
+    };
+
+    const center = getItem("mapCenter");
+    const radius = getRadiusFromBBInMeters();
+
+    const params = {
+      location: center.lng + "," + center.lat,
+      radius,
+      key: this.props.apiKey,
+      lang: this.props.i18n.language,
+      limit: 48, // :hammer: there's no way to filter this to a reasonable number // since the next  request has an intrinsic number of ids that could be required doe to the maximum lenght of the url :/
+    };
+
+    if (launchNow === true) {
+      this.props.caselliLocationsQuery(
+        this.props.apiNearby,
+        this.props.apiOOIs,
+        params
+      );
+    } else {
+      if (this._refreshTimer) clearTimeout(this._refreshTimer);
+
+      this._refreshTimer = setTimeout(() => {
+        const center = getItem("mapCenter");
+        const radius = getRadiusFromBBInMeters();
+
+        const params = {
+          location: center.lng + "," + center.lat,
+          radius,
+          key: this.props.apiKey,
+          lang: this.props.i18n.language,
+          limit: 48, // :hammer: there's no way to filter this to a reasonable number // since the next  request has an intrinsic number of ids that could be required doe to the maximum lenght of the url :/
+        };
+
+        this.props.caselliLocationsQuery(
+          this.props.apiNearby,
+          this.props.apiOOIs,
+          params
+        );
+      }, 500);
+    }
   }
 
-  createLeafletElement () {}
+  _stopRefreshing() {
+    if (this._refreshTimer) clearTimeout(this._refreshTimer);
+  }
 
-  updateLeafletElement () {}
+  componentDidMount() {
+    this.props.registerOverlay(this);
+    if (this.props.visible) {
+      this.props.leaflet.map.on("moveend", this._startRefreshing);
+      this._startRefreshing();
+    }
+  }
 
-  render () {
+  onOverlayAdded = () => {
+    this.props.leaflet.map.on("moveend", this._startRefreshing);
+    this._startRefreshing(true);
+    const { locations, overlayCaselliConf } = this.props;
+    const { map } = this.props.leaflet;
+    const newLoc = [];
+
+    if (overlayCaselliConf.startCenter) {
+      map.flyTo(overlayCaselliConf.startCenter);
+    }
+  };
+
+  onOverlayRemoved = () => {
+    this.props.leaflet.map.off("moveend", this._startRefreshing);
+    this._stopRefreshing();
+  };
+
+  componentWillUnmount() {
+    this.props.leaflet.map.off("moveend", this._startRefreshing);
+    this._stopRefreshing();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.visible && this.props.visible) {
+      this._startRefreshing();
+      this.props.leaflet.map.on("moveend", this._startRefreshing);
+    } else if (prevProps.visible && !this.props.visible) {
+      this._stopRefreshing();
+      this.props.leaflet.map.off("moveend", this._startRefreshing);
+    }
+  }
+
+  createLeafletElement() {}
+
+  updateLeafletElement() {}
+
+  render() {
     const { locations, overlayCaselliConf, t ,activeFilters} = this.props
+
+console.log({locations})
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -119,11 +218,11 @@ class CaselliOverlay extends AbstractOverlay {
     )
   }
 }
-
+/*
 const mapStateToProps = (state, ownProps) => {
   return {
     overlayCaselliConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'caselli')[0],
-    locations: state.otp.overlay.caselli && state.otp.overlay.caselli.locations,
+    locations: state.otp.overlay.caselli?.locations,
   };
 };
 
@@ -133,3 +232,21 @@ const mapDispatchToProps = {
 }
 
 export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(withLeaflet(CaselliOverlay)))
+*/
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    overlayCaselliConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'caselli')[0],
+    locations: state.otp.overlay.caselli?.locations,
+  };
+};
+
+const mapDispatchToProps = {
+  setLocation,
+  caselliLocationsQuery,
+};
+
+export default withNamespaces()(
+  connect(mapStateToProps, mapDispatchToProps)(withLeaflet(CaselliOverlay))
+);
+

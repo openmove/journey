@@ -29,9 +29,9 @@ class ParkingOverlay extends AbstractOverlay {
   constructor(props){
     super({
       props,
-      query:props.parkingLocationsQuery,
-      api:props.api,
-      config:props.overlayParkingConf
+      query: props.parkingLocationsQuery,
+      api: props.api,
+      config: props.overlayParkingConf
     });
 
     this.popup = React.createRef();
