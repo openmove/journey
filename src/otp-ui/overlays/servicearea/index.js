@@ -21,17 +21,15 @@ import Parking from "../../icons/modern/Parking";
 import FromToLocationPicker from '../../from-to-location-picker'
 import { getItem } from "../../core-utils/storage";
 import { filterOverlay } from "../../core-utils/overlays";
-import AdvancedMarkerCluster from "../../advanced-marker-cluster";
-import MarkerCluster from "../../icons/modern/MarkerCluster";
 
 class ServiceareaOverlay extends AbstractOverlay {
 
   constructor(props){
     super({
       props,
-      query:props.serviceareaLocationsQuery,
-      api:props.api,
-      config:props.overlayServiceareaConf
+      query: props.serviceareaLocationsQuery,
+      api: props.api,
+      config: props.overlayServiceareaConf
     });
 
     this.popup = React.createRef();
@@ -50,8 +48,6 @@ class ServiceareaOverlay extends AbstractOverlay {
 
   render () {
     const { locations, overlayServiceareaConf, t ,activeFilters} = this.props
-
-    const isMarkClusterEnabled = !!overlayServiceareaConf.markerCluster
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')

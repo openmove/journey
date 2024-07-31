@@ -16,7 +16,7 @@ export const receivedCaselliLocationsError =  createAction('CASELLI_LOCATIONS_ER
 export const receivedCaselliLocationsResponse  = createAction('CASELLI_LOCATIONS_RESPONSE',preparePayload)
 export const requestCaselliLocationsResponse =  createAction('CASELLI_LOCATIONS_REQUEST',preparePayload)
 
-export function serviceareaLocationsQuery (url, params, overlayName) {
+export function caselliLocationsQuery (url, params, overlayName) {
   return async function (dispatch, getState) {
 
     dispatch(requestCaselliLocationsResponse()) // todo: is this doing something?
