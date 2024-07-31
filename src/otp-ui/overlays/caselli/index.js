@@ -14,8 +14,8 @@ import { caselliLocationsQuery } from '../../../actions/caselli'
 
 import BadgeIcon from "../../icons/badge-icon";
 
-import MarkerParking from "../../icons/modern/MarkerParking";
-import MarkerParkingSensor from "../../icons/modern/MarkerParkingSensor";
+import MarkerCharger from "../../icons/modern/MarkerCharger";
+
 import ReactDOMServer from "react-dom/server";
 import Parking from "../../icons/modern/Parking";
 import FromToLocationPicker from '../../from-to-location-picker'
@@ -72,7 +72,7 @@ class CaselliOverlay extends AbstractOverlay {
           badgeCounter = null;
         }
 
-         if (data.free === 1) {
+        if (data.free === 1) {
           badgeType = 'warning';
           badgeCounter = data.free
         }
@@ -113,7 +113,7 @@ class CaselliOverlay extends AbstractOverlay {
         html: ReactDOMServer.renderToStaticMarkup(
           <BadgeIcon type={badgeType} width={iconWidth} paid={paid}>
           { data.type === 'station' &&
-            <MarkerParking
+            <MarkerCharger
               width={iconWidth}
               height={iconHeight}
               iconColor={overlayCaselliConf.iconColor}
