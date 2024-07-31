@@ -48,7 +48,7 @@ class ContextualTrailsOverlay extends MapLayer {
 
   componentDidMount() {
     this.generateOutdoorActiveTrackingScript(
-      this.props.overlayTrailsConf.trackScriptUrl
+      this.props.overlayTrailsConf?.trackScriptUrl
     );
   }
 
@@ -66,8 +66,8 @@ class ContextualTrailsOverlay extends MapLayer {
     const { map } = this.props.leaflet;
     const newLoc = [];
 
-    if (overlayTrailsConf.startCenter) {
-      map.flyTo(overlayTrailsConf.startCenter);
+    if (overlayTrailsConf?.startCenter) {
+      map.flyTo(overlayTrailsConf?.startCenter);
     }
   };
 
@@ -92,7 +92,7 @@ class ContextualTrailsOverlay extends MapLayer {
       minZoom,
     } = this.props;
 
-    const isMarkClusterEnabled = overlayTrailsConf.markerCluster;
+    const isMarkClusterEnabled = overlayTrailsConf?.markerCluster;
     const lang = i18n?.language;
 
     if (
