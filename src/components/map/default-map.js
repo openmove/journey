@@ -206,6 +206,7 @@ class DefaultMap extends Component {
       carRentalQuery,
       carRentalStations,
       mapConfig,
+      contextualTrailsConfig,
       mapPopupLocation,
       version,
       hideAllControls,
@@ -318,7 +319,7 @@ class DefaultMap extends Component {
                 {/*TODO maybe remove <StopViewerOverlay />*/}
                 <EndpointsOverlay />
                 <RouteViewerOverlay />
-                <TrailsViewerOverlay />
+               {contextualTrailsConfig?.enabled && <TrailsViewerOverlay />}
                 <ContextualTrailsOverlay/>
                 <TransitiveOverlay />
                 <TripViewerOverlay />
@@ -496,6 +497,7 @@ const mapStateToProps = (state, ownProps) => {
     bikeRentalStations: state.otp.overlay.bikeRental.stations,
     carRentalStations: state.otp.overlay.carRental.stations,
     mapConfig: state.otp.config.map,
+    contextualTrailsConfig: state.otp.trip?.contextualizedTrails,
     mapPopupLocation: state.otp.ui.mapPopupLocation,
     overlays,
     query: state.otp.currentQuery,
