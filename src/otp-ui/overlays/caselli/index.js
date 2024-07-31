@@ -45,51 +45,27 @@ class CaselliOverlay extends MapLayer {
   };
 
   _startRefreshing(launchNow) {
-    const getRadiusFromBBInMeters = () => {
-      const bb = getItem("mapBounds");
+    // ititial station retrieval
+    // this.props.caselliLocationsQuery(this.props.api);
 
-      const radiusInM = bbToRadiusInMeters(bb);
-      return radiusInM;
-    };
+    // set up timer to refresh stations periodically
+    // this._refreshTimer = setInterval(() => {
+    //   this.props.caselliLocationsQuery(this.props.api);
+    // }, 30000); // defaults to every 30 sec. TODO: make this configurable?*/
+    const bb =  getItem('mapBounds')
+    const params = bb
+    if(launchNow === true){
+      this.props.caselliLocationsQuery(this.props.api , params);
 
-    const center = getItem("mapCenter");
-    const radius = getRadiusFromBBInMeters();
-
-    const params = {
-      location: center.lng + "," + center.lat,
-      radius,
-      key: this.props.apiKey,
-      lang: this.props.i18n.language,
-      limit: 48, // :hammer: there's no way to filter this to a reasonable number // since the next  request has an intrinsic number of ids that could be required doe to the maximum lenght of the url :/
-    };
-
-    if (launchNow === true) {
-      this.props.caselliLocationsQuery(
-        this.props.apiNearby,
-        this.props.apiOOIs,
-        params
-      );
-    } else {
+    }else{
       if (this._refreshTimer) clearTimeout(this._refreshTimer);
 
-      this._refreshTimer = setTimeout(() => {
-        const center = getItem("mapCenter");
-        const radius = getRadiusFromBBInMeters();
+      this._refreshTimer =  setTimeout(()=>{
+        const bb =  getItem('mapBounds')
+        const params = bb
+        this.props.caselliLocationsQuery(this.props.api, params);
+      },500)
 
-        const params = {
-          location: center.lng + "," + center.lat,
-          radius,
-          key: this.props.apiKey,
-          lang: this.props.i18n.language,
-          limit: 48, // :hammer: there's no way to filter this to a reasonable number // since the next  request has an intrinsic number of ids that could be required doe to the maximum lenght of the url :/
-        };
-
-        this.props.caselliLocationsQuery(
-          this.props.apiNearby,
-          this.props.apiOOIs,
-          params
-        );
-      }, 500);
     }
   }
 

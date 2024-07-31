@@ -2,24 +2,13 @@ import { createAction } from 'redux-actions'
 import {addQueryParams} from '../util/query-params'
 if (typeof (fetch) === 'undefined') require('isomorphic-fetch')
 
-function preparePayload(payload) {
-  if(!payload){return}
+export const receivedCaselliLocationsError = createAction('CASELLI_LOCATIONS_ERROR')
+export const receivedCaselliLocationsResponse = createAction('CASELLI_LOCATIONS_RESPONSE')
+export const requestCaselliLocationsResponse = createAction('CASELLI_LOCATIONS_REQUEST')
 
-  const {overlayName,data} = payload
-  return ({
-    overlayName,
-    data
-  })
-}
-
-export const receivedCaselliLocationsError =  createAction('CASELLI_LOCATIONS_ERROR',preparePayload)
-export const receivedCaselliLocationsResponse  = createAction('CASELLI_LOCATIONS_RESPONSE',preparePayload)
-export const requestCaselliLocationsResponse =  createAction('CASELLI_LOCATIONS_REQUEST',preparePayload)
-
-export function caselliLocationsQuery (url, params, overlayName) {
+export function caselliLocationsQuery (url,params) {
   return async function (dispatch, getState) {
-
-    dispatch(requestCaselliLocationsResponse()) // todo: is this doing something?
+    dispatch(requestCaselliLocationsResponse())
     let json
     try {
       const newUrl = addQueryParams(url,params)
@@ -29,11 +18,11 @@ export function caselliLocationsQuery (url, params, overlayName) {
         error.response = response
         throw error
       }
-      json = await response.json();
+      json = await response.json()
     } catch (err) {
-      return dispatch(receivedCaselliLocationsError({overlayName, data:err}))
+      return dispatch(receivedCaselliLocationsError(err))
     }
 
-    dispatch(receivedCaselliLocationsResponse({overlayName, data:json}))
+    dispatch(receivedCaselliLocationsResponse(json))
   }
 }
