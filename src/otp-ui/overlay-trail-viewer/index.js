@@ -1,5 +1,5 @@
 import { encodedPolylineType, leafletPathType } from "../core-utils/types";
-import {setLocation, setViewedTrail,} from "../../actions/trails"
+import { setViewedTrail } from "../../actions/trails"
 import { connect } from 'react-redux'
 import PropTypes from "prop-types";
 import React from "react";
