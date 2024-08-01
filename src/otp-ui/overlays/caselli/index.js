@@ -20,6 +20,7 @@ import { setLocation } from '../../../actions/map'
 import { caselliLocationsQuery } from '../../../actions/caselli'
 
 import MarkerCasello from "../../icons/modern/MarkerCasello";
+import Casello from "../../icons/modern/Casello";
 
 import ReactDOMServer from "react-dom/server";
 
@@ -152,12 +153,20 @@ class CaselliOverlay extends MapLayer {
       });
     }
 
+    const Direction = data => {
+      let d = 'Entrambe'
+      if(data.direction=='S')
+        d = 'Sud'
+      else if(data.direction=='N')
+        d = 'Nord'
+      return `Direction: ${d}`
+    }
+
     return (
       <LayerGroup>
       <FeatureGroup>
         {
           locationsFiltered.map( station => {
-
           return (
             <Marker
               icon={markerIcon(station)}
@@ -168,12 +177,12 @@ class CaselliOverlay extends MapLayer {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-                    {/*TODO MAKE NEW SERVICE AREA ICON <Casello width={24} height={20} />*/}
+                    <Casello width={24} height={20} />
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
-                  <small>{station.group_name}</small>
 
                   <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
+                    {Direction(station)}
                   </div>
 
                   <div className='popup-row'>
