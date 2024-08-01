@@ -120,8 +120,6 @@ class CaselliOverlay extends MapLayer {
   render() {
     const { locations, overlayCaselliConf, t ,activeFilters} = this.props
 
-console.log({locations})
-
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
 
