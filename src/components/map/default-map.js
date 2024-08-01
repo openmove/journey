@@ -320,7 +320,7 @@ class DefaultMap extends Component {
                 <EndpointsOverlay />
                 <RouteViewerOverlay />
                {contextualTrailsConfig?.enabled && <TrailsViewerOverlay />}
-                <ContextualTrailsOverlay/>
+               {contextualTrailsConfig?.enabled && <ContextualTrailsOverlay/>}
                 <TransitiveOverlay />
                 <TripViewerOverlay />
                 <ElevationPointMarker />
@@ -497,7 +497,7 @@ const mapStateToProps = (state, ownProps) => {
     bikeRentalStations: state.otp.overlay.bikeRental.stations,
     carRentalStations: state.otp.overlay.carRental.stations,
     mapConfig: state.otp.config.map,
-    contextualTrailsConfig: state.otp.trip?.contextualizedTrails,
+    contextualTrailsConfig: state.otp.config.trip?.contextualizedTrails,
     mapPopupLocation: state.otp.ui.mapPopupLocation,
     overlays,
     query: state.otp.currentQuery,
