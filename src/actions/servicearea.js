@@ -2,24 +2,13 @@ import { createAction } from 'redux-actions'
 import {addQueryParams} from '../util/query-params'
 if (typeof (fetch) === 'undefined') require('isomorphic-fetch')
 
-function preparePayload(payload) {
-  if(!payload){return}
+export const receivedServiceareaLocationsError = createAction('SERVICEAREA_LOCATIONS_ERROR')
+export const receivedServiceareaLocationsResponse = createAction('SERVICEAREA_LOCATIONS_RESPONSE')
+export const requestServiceareaLocationsResponse = createAction('SERVICEAREA_LOCATIONS_REQUEST')
 
-  const {overlayName,data} = payload
-  return ({
-    overlayName,
-    data
-  })
-}
-
-export const receivedServiceareaLocationsError =  createAction('SERVICEAREA_LOCATIONS_ERROR',preparePayload)
-export const receivedServiceareaLocationsResponse  = createAction('SERVICEAREA_LOCATIONS_RESPONSE',preparePayload)
-export const requestServiceareaLocationsResponse =  createAction('SERVICEAREA_LOCATIONS_REQUEST',preparePayload)
-
-export function serviceareaLocationsQuery (url, params, overlayName) {
+export function caselliLocationsQuery (url,params) {
   return async function (dispatch, getState) {
-
-    dispatch(requestServiceareaLocationsResponse()) // todo: is this doing something?
+    dispatch(requestServiceareaLocationsResponse())
     let json
     try {
       const newUrl = addQueryParams(url,params)
@@ -29,11 +18,11 @@ export function serviceareaLocationsQuery (url, params, overlayName) {
         error.response = response
         throw error
       }
-      json = await response.json();
+      json = await response.json()
     } catch (err) {
-      return dispatch(receivedServiceareaLocationsError({overlayName, data:err}))
+      return dispatch(receivedServiceareaLocationsError(err))
     }
 
-    dispatch(receivedServiceareaLocationsResponse({overlayName, data:json}))
+    dispatch(receivedServiceareaLocationsResponse(json))
   }
 }
