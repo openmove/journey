@@ -29,7 +29,7 @@ import { getItem } from "../../core-utils/storage";
 import { filterOverlay } from "../../core-utils/overlays";
 import { bbToRadiusInMeters } from "../../../util/bbToRadius";
 
-class CaselliOverlay extends MapLayer {
+class ServiceareaOverlay extends MapLayer {
 
   constructor(props) {
     super(props);
@@ -85,12 +85,12 @@ class CaselliOverlay extends MapLayer {
   onOverlayAdded = () => {
     this.props.leaflet.map.on("moveend", this._startRefreshing);
     this._startRefreshing(true);
-    const { locations, overlayCaselliConf } = this.props;
+    const { locations, overlayServiceareaConf } = this.props;
     const { map } = this.props.leaflet;
     const newLoc = [];
 
-    if (overlayCaselliConf.startCenter) {
-      map.flyTo(overlayCaselliConf.startCenter);
+    if (overlayServiceareaConf.startCenter) {
+      map.flyTo(overlayServiceareaConf.startCenter);
     }
   };
 
@@ -119,7 +119,7 @@ class CaselliOverlay extends MapLayer {
   updateLeafletElement() {}
 
   render() {
-    const { locations, overlayCaselliConf, t ,activeFilters} = this.props
+    const { locations, overlayServiceareaConf, t ,activeFilters} = this.props
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -130,12 +130,12 @@ class CaselliOverlay extends MapLayer {
       }
     })
 
-    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayCaselliConf.type ]);
+    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayServiceareaConf.type ]);
 
     const markerIcon = (data) => {
       let badgeType = 'success';
       let badgeCounter = 0;
-      let {iconWidth, iconHeight} = overlayCaselliConf;
+      let {iconWidth, iconHeight} = overlayServiceareaConf;
 
       return divIcon({
         className: "",
@@ -146,8 +146,8 @@ class CaselliOverlay extends MapLayer {
           <MarkerCasello
             width={iconWidth}
             height={iconHeight}
-            iconColor={overlayCaselliConf.iconColor}
-            markerColor={overlayCaselliConf.iconMarkerColor}
+            iconColor={overlayServiceareaConf.iconColor}
+            markerColor={overlayServiceareaConf.iconMarkerColor}
           />
         )
       });
@@ -204,7 +204,7 @@ class CaselliOverlay extends MapLayer {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    overlayCaselliConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'servicearea')[0],
+    overlayServiceareaConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'servicearea')[0],
     locations: state.otp.overlay.servicearea?.locations,
   };
 };
@@ -215,6 +215,6 @@ const mapDispatchToProps = {
 };
 
 export default withNamespaces()(
-  connect(mapStateToProps, mapDispatchToProps)(withLeaflet(CaselliOverlay))
+  connect(mapStateToProps, mapDispatchToProps)(withLeaflet(ServiceareaOverlay))
 );
 
