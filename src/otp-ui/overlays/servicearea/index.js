@@ -3,7 +3,14 @@ import AbstractOverlay from '../AbstractOverlay'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
-import { LayerGroup, FeatureGroup, MapLayer, Marker, Popup, withLeaflet } from 'react-leaflet'
+import {
+  LayerGroup,
+  FeatureGroup,
+  MapLayer,
+  Marker,
+  Popup,
+  withLeaflet,
+} from "react-leaflet";
 import { divIcon } from 'leaflet'
 import { withNamespaces } from "react-i18next";
 import { CircularProgressbar } from 'react-circular-progressbar';
@@ -12,42 +19,107 @@ import 'react-circular-progressbar/dist/styles.css';
 import { setLocation } from '../../../actions/map'
 import { serviceareaLocationsQuery } from '../../../actions/servicearea'
 
-import BadgeIcon from "../../icons/badge-icon";
+import MarkerCasello from "../../icons/modern/MarkerCasello";
+import Casello from "../../icons/modern/Casello";
 
-import MarkerParking from "../../icons/modern/MarkerParking";
-import MarkerParkingSensor from "../../icons/modern/MarkerParkingSensor";
 import ReactDOMServer from "react-dom/server";
-import Parking from "../../icons/modern/Parking";
+
 import FromToLocationPicker from '../../from-to-location-picker'
 import { getItem } from "../../core-utils/storage";
 import { filterOverlay } from "../../core-utils/overlays";
+import { bbToRadiusInMeters } from "../../../util/bbToRadius";
 
-class ServiceareaOverlay extends AbstractOverlay {
+class CaselliOverlay extends MapLayer {
 
-  constructor(props){
-    super({
-      props,
-      query: props.serviceareaLocationsQuery,
-      api: props.api,
-      config: props.overlayServiceareaConf
-    });
-
+  constructor(props) {
+    super(props);
     this.popup = React.createRef();
+    this._startRefreshing = this._startRefreshing.bind(this);
+    this._stopRefreshing = this._stopRefreshing.bind(this);
   }
 
   static propTypes = {
     api: PropTypes.string,
     locations: PropTypes.array,
     serviceareaLocationsQuery: PropTypes.func,
-    setLocation: PropTypes.func
+    setLocation: PropTypes.func,
+  };
+
+  _startRefreshing(launchNow) {
+    // ititial station retrieval
+    // this.props.serviceareaLocationsQuery(this.props.api);
+
+    // set up timer to refresh stations periodically
+    // this._refreshTimer = setInterval(() => {
+    //   this.props.serviceareaLocationsQuery(this.props.api);
+    // }, 30000); // defaults to every 30 sec. TODO: make this configurable?*/
+    const bb =  getItem('mapBounds')
+    const params = bb
+    if(launchNow === true){
+      this.props.serviceareaLocationsQuery(this.props.api , params);
+
+    }else{
+      if (this._refreshTimer) clearTimeout(this._refreshTimer);
+
+      this._refreshTimer =  setTimeout(()=>{
+        const bb =  getItem('mapBounds')
+        const params = bb
+        this.props.serviceareaLocationsQuery(this.props.api, params);
+      },500)
+
+    }
   }
 
-  createLeafletElement () {}
+  _stopRefreshing() {
+    if (this._refreshTimer) clearTimeout(this._refreshTimer);
+  }
 
-  updateLeafletElement () {}
+  componentDidMount() {
+    this.props.registerOverlay(this);
+    if (this.props.visible) {
+      this.props.leaflet.map.on("moveend", this._startRefreshing);
+      this._startRefreshing();
+    }
+  }
 
-  render () {
-    const { locations, overlayServiceareaConf, t ,activeFilters} = this.props
+  onOverlayAdded = () => {
+    this.props.leaflet.map.on("moveend", this._startRefreshing);
+    this._startRefreshing(true);
+    const { locations, overlayCaselliConf } = this.props;
+    const { map } = this.props.leaflet;
+    const newLoc = [];
+
+    if (overlayCaselliConf.startCenter) {
+      map.flyTo(overlayCaselliConf.startCenter);
+    }
+  };
+
+  onOverlayRemoved = () => {
+    this.props.leaflet.map.off("moveend", this._startRefreshing);
+    this._stopRefreshing();
+  };
+
+  componentWillUnmount() {
+    this.props.leaflet.map.off("moveend", this._startRefreshing);
+    this._stopRefreshing();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!prevProps.visible && this.props.visible) {
+      this._startRefreshing();
+      this.props.leaflet.map.on("moveend", this._startRefreshing);
+    } else if (prevProps.visible && !this.props.visible) {
+      this._stopRefreshing();
+      this.props.leaflet.map.off("moveend", this._startRefreshing);
+    }
+  }
+
+  createLeafletElement() {}
+
+  updateLeafletElement() {}
+
+  render() {
+    const { locations, overlayCaselliConf, t ,activeFilters} = this.props
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -58,52 +130,12 @@ class ServiceareaOverlay extends AbstractOverlay {
       }
     })
 
-    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayServiceareaConf.type ]);
+    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayCaselliConf.type ]);
 
     const markerIcon = (data) => {
       let badgeType = 'success';
       let badgeCounter = 0;
-      const paid = data?.payment;
-      let iconWidth, iconHeight;
-
-      if( data.type === 'station') {
-        if (!data.free || data.free === -1) {
-          badgeType = 'default';
-          badgeCounter = null;
-        }
-
-         if (data.free === 1) {
-          badgeType = 'warning';
-          badgeCounter = data.free
-        }
-
-        if (data.free === 0 ) {
-          badgeType = 'danger';
-          badgeCounter = null;
-        }
-
-        iconWidth = overlayServiceareaConf.iconWidth;
-        iconHeight = overlayServiceareaConf.iconHeight;
-      }
-      else if (data.type === 'sensorGroup') {
-
-        badgeCounter = data.capacity;
-        iconWidth = parseInt(overlayServiceareaConf.iconWidth*0.7);
-        iconHeight = parseInt(overlayServiceareaConf.iconHeight*0.7);
-      }
-      else if (data.type === 'sensor') {
-
-        if (data.free == null || data.free === -1) {
-          badgeType = 'default';
-        } else if (data.free === true ) {
-          badgeType = 'success';
-        } else if (data.free === false) {
-          badgeType = 'danger';
-        }
-        badgeCounter = null;
-        iconWidth = parseInt(overlayServiceareaConf.iconWidth*0.7);
-        iconHeight = parseInt(overlayServiceareaConf.iconHeight*0.7);
-      }
+      let {iconWidth, iconHeight} = overlayCaselliConf;
 
       return divIcon({
         className: "",
@@ -111,18 +143,23 @@ class ServiceareaOverlay extends AbstractOverlay {
         iconAnchor: [iconWidth/2, iconHeight],
         popupAnchor: [0, -iconHeight],
         html: ReactDOMServer.renderToStaticMarkup(
-          <BadgeIcon type={badgeType} width={iconWidth} paid={paid}>
-          { data.type === 'station' &&
-            <MarkerParking
-              width={iconWidth}
-              height={iconHeight}
-              iconColor={overlayServiceareaConf.iconColor}
-              markerColor={overlayServiceareaConf.iconMarkerColor}
-            />
-          }
-          </BadgeIcon>
+          <MarkerCasello
+            width={iconWidth}
+            height={iconHeight}
+            iconColor={overlayCaselliConf.iconColor}
+            markerColor={overlayCaselliConf.iconMarkerColor}
+          />
         )
       });
+    }
+
+    const Direction = data => {
+      let d = 'Entrambe'
+      if(data.direction=='S')
+        d = 'Sud'
+      else if(data.direction=='N')
+        d = 'Nord'
+      return `Direction: ${d}`
     }
 
     return (
@@ -130,7 +167,6 @@ class ServiceareaOverlay extends AbstractOverlay {
       <FeatureGroup>
         {
           locationsFiltered.map( station => {
-
           return (
             <Marker
               icon={markerIcon(station)}
@@ -141,12 +177,12 @@ class ServiceareaOverlay extends AbstractOverlay {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-                    {/*TODO MAKE NEW SERVICE AREA ICON <Parking width={24} height={20} />*/}
+                    <Casello width={24} height={20} />
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
-                  <small>{station.group_name}</small>
 
                   <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
+                    {Direction(station)}
                   </div>
 
                   <div className='popup-row'>
@@ -168,14 +204,17 @@ class ServiceareaOverlay extends AbstractOverlay {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    overlayServiceareaConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'servicearea')[0],
-    locations: state.otp.overlay.servicearea && state.otp.overlay.servicearea.locations,
+    overlayCaselliConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'servicearea')[0],
+    locations: state.otp.overlay.servicearea?.locations,
   };
 };
 
 const mapDispatchToProps = {
   setLocation,
-  serviceareaLocationsQuery
-}
+  serviceareaLocationsQuery,
+};
 
-export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(withLeaflet(ServiceareaOverlay)))
+export default withNamespaces()(
+  connect(mapStateToProps, mapDispatchToProps)(withLeaflet(CaselliOverlay))
+);
+
