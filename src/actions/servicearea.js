@@ -6,7 +6,7 @@ export const receivedServiceareaLocationsError = createAction('SERVICEAREA_LOCAT
 export const receivedServiceareaLocationsResponse = createAction('SERVICEAREA_LOCATIONS_RESPONSE')
 export const requestServiceareaLocationsResponse = createAction('SERVICEAREA_LOCATIONS_REQUEST')
 
-export function caselliLocationsQuery (url,params) {
+export function serviceareaLocationsQuery (url,params) {
   return async function (dispatch, getState) {
     dispatch(requestServiceareaLocationsResponse())
     let json
