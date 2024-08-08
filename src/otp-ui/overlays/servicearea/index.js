@@ -176,7 +176,7 @@ class ServiceareaOverlay extends MapLayer {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-                    <Casello width={24} height={20} />
+
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
 
