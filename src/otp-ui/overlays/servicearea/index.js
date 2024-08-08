@@ -19,8 +19,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { setLocation } from '../../../actions/map'
 import { serviceareaLocationsQuery } from '../../../actions/servicearea'
 
-import MarkerCasello from "../../icons/modern/MarkerCasello";
-import Casello from "../../icons/modern/Casello";
+import MarkerServiceArea from "../../icons/modern/MarkerServiceArea";
 
 import ReactDOMServer from "react-dom/server";
 
@@ -143,7 +142,7 @@ class ServiceareaOverlay extends MapLayer {
         iconAnchor: [iconWidth/2, iconHeight],
         popupAnchor: [0, -iconHeight],
         html: ReactDOMServer.renderToStaticMarkup(
-          <MarkerCasello
+          <MarkerServiceArea
             width={iconWidth}
             height={iconHeight}
             iconColor={overlayServiceareaConf.iconColor}

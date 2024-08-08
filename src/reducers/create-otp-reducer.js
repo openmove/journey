@@ -1126,7 +1126,6 @@ function createOtpReducer (config, initialQuery) {
         })
       }
       case 'SERVICEAREA_LOCATIONS_RESPONSE': {
-        console.log(action.payload);
         const {stations} = getResponseData(action.payload);
         return update(state, {
             overlay: {
@@ -1138,7 +1137,6 @@ function createOtpReducer (config, initialQuery) {
         })
       }
       case 'CASELLI_LOCATIONS_RESPONSE': {
-        console.log(action.payload);
         const {stations} = getResponseData(action.payload);
         return update(state, {
             overlay: {
