@@ -162,12 +162,12 @@ class ServiceareaOverlay extends MapLayer {
       else if(dir=='n' || dir=='nord'){
         d = 'Nord'
       }
-      return `Direction: ${d} - KM: ${data.km}`
+      return `${d}`
     }
 
     const Infos = info => {
       return (
-        <em>{info.name}</em>
+        <em>[{info.name}]</em>
       );
     }
 
@@ -192,10 +192,11 @@ class ServiceareaOverlay extends MapLayer {
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
 
                   <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                    {Direction(station)}
-                  </div>
-                  <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                    Services: {station.info.map(Infos)}
+                    <b>Direzione:</b>{Direction(station)}
+                    <br />
+                    <b>Km:</b> {station.km}
+                    <br />
+                    <b>Servizi:</b> {station.info.map(Infos)}
                   </div>
 
                   <div className='popup-row'>
