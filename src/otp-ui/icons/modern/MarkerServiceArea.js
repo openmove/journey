@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon({ title, width = 54, height = 62, markerColor = '#000', iconColor = '#fff', ...props }) {
+function Icon({ title, width = 54, height = 62, markerColor = '#DDD', iconColor = '#fff', ...props }) {
 /*  return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} {...props} viewBox="0 0 54 61.96">
       <g data-name="Group 165" transform="translate(-1323.585 -290.965)">

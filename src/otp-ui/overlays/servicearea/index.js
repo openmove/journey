@@ -87,7 +87,7 @@ class ServiceareaOverlay extends MapLayer {
     const { locations, overlayServiceareaConf } = this.props;
     const { map } = this.props.leaflet;
     const newLoc = [];
-
+console.log(overlayServiceareaConf,'CONF')
     if (overlayServiceareaConf.startCenter) {
       map.flyTo(overlayServiceareaConf.startCenter);
     }
@@ -153,12 +153,27 @@ class ServiceareaOverlay extends MapLayer {
     }
 
     const Direction = data => {
+
+      const dir = data.direction.toLowerCase()
+
       let d = 'Entrambe'
-      if(data.direction=='S')
+      if(dir=='s' || dir=='sud'){
         d = 'Sud'
-      else if(data.direction=='N')
+      }
+      else if(dir=='n' || dir=='nord'){
         d = 'Nord'
-      return `Direction: ${d}`
+      }
+      return `Direction: ${d} - KM: ${data.km}`
+    }
+
+    const Infos = info => {
+      return (
+        <div style="float:left;display:inline-block" className="otp-ui-mapOverlayPopup__popupAvailableSlotItem">
+          <strong>
+            {info.name}
+          </strong>
+        </div>
+      );
     }
 
     return (
@@ -182,6 +197,9 @@ class ServiceareaOverlay extends MapLayer {
 
                   <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
                     {Direction(station)}
+                  </div>
+                  <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
+                    {station.info.map(Infos)}
                   </div>
 
                   <div className='popup-row'>
