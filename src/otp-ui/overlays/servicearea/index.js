@@ -87,7 +87,6 @@ class ServiceareaOverlay extends MapLayer {
     const { locations, overlayServiceareaConf } = this.props;
     const { map } = this.props.leaflet;
     const newLoc = [];
-console.log(overlayServiceareaConf,'CONF')
     if (overlayServiceareaConf.startCenter) {
       map.flyTo(overlayServiceareaConf.startCenter);
     }
@@ -118,7 +117,7 @@ console.log(overlayServiceareaConf,'CONF')
   updateLeafletElement() {}
 
   render() {
-    const { locations, overlayServiceareaConf, t ,activeFilters} = this.props
+    const { locations, overlayServiceareaConf, t, activeFilters} = this.props
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -154,7 +153,7 @@ console.log(overlayServiceareaConf,'CONF')
 
     const Direction = data => {
 
-      const dir = data.direction.toLowerCase()
+      const dir = `${data?.direction}`.toLowerCase()
 
       let d = 'Entrambe'
       if(dir=='s' || dir=='sud'){
@@ -168,11 +167,7 @@ console.log(overlayServiceareaConf,'CONF')
 
     const Infos = info => {
       return (
-        <div style="float:left;display:inline-block" className="otp-ui-mapOverlayPopup__popupAvailableSlotItem">
-          <strong>
-            {info.name}
-          </strong>
-        </div>
+        <em>{info.name}</em>
       );
     }
 
@@ -181,10 +176,11 @@ console.log(overlayServiceareaConf,'CONF')
       <FeatureGroup>
         {
           locationsFiltered.map( station => {
+            console.log(station.station_id)
           return (
             <Marker
               icon={markerIcon(station)}
-              key={station.station_id}
+              key={Number(station.station_id)}
               position={[station.lat, station.lon]}
               onClick={(e)=>{ e.target.openPopup()}}
             >
@@ -199,7 +195,7 @@ console.log(overlayServiceareaConf,'CONF')
                     {Direction(station)}
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                    {station.info.map(Infos)}
+                    Services: {station.info.map(Infos)}
                   </div>
 
                   <div className='popup-row'>
