@@ -11,6 +11,7 @@ import { Button } from "react-bootstrap";
 import DefaultTimeColumnContent from "./defaults/time-column-content";
 import AccessLegBody from "./AccessLegBody";
 import TransitLegBody from "./TransitLegBody";
+import ContextualizedTrails from "../../components/narrative/line-itin/contextualized-trails";
 
 import BaseMapIcon from "../icons/trimet/Map";
 
@@ -95,7 +96,17 @@ const PlaceRow = ({
             <PlaceName config={config} interline={interline} place={place} />
           </div>
         </div>
-
+        {(
+          isDestination &&
+          config?.trip?.contextualizedTrails?.enabled  &&
+          leg.distance > 100
+          && leg.mode !== "CAR"
+        )&& (
+          <ContextualizedTrails
+              isLastLeg={isDestination}
+              leg={leg}
+          />
+       )}
         {/* Show the leg, if not rendering the destination */}
         {!isDestination &&
           (leg.transitLeg ? (
