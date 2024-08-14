@@ -1,6 +1,6 @@
 import { encodedPolylineType, leafletPathType } from "../core-utils/types";
-import { setLocation, setViewedTrail } from "../../actions/trails"
-import { connect } from 'react-redux'
+import { setLocation, setViewedTrail } from "../../actions/trails";
+import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import React from "react";
 import {
@@ -16,23 +16,13 @@ import { withNamespaces } from "react-i18next";
  * An overlay that will display all polylines of the patterns of a route.
  */
 class TrailViewerOverlay extends MapLayer {
-  componentDidMount() {}
+  polyline = [];
 
-  // TODO: determine why the default MapLayer componentWillUnmount() method throws an error
-  componentWillUnmount() {}
-
-  componentDidUpdate(prevProps) {
-    // this.props.leaflet.map.fitBounds(allPoints);
-  }
-
-  createLeafletElement() {}
-
-  updateLeafletElement() {}
-
-  render() {
-    const { viewedTrail, viewedLocation } = this.props;
-
-    if (!viewedTrail) return <FeatureGroup />;
+  computePolyline() {
+    const { viewedLocation } = this.props;
+    if (!viewedLocation) {
+      return;
+    }
 
     const polyline = [];
 
@@ -45,10 +35,40 @@ class TrailViewerOverlay extends MapLayer {
       polyline.push(swappedArr);
     });
 
+    this.polyline = polyline;
+  }
+
+  componentDidMount() {}
+
+  // TODO: determine why the default MapLayer componentWillUnmount() method throws an error
+  componentWillUnmount() {}
+
+  componentDidUpdate(prevProps) {
+    const { viewedTrail, viewedLocation } = this.props;
+
+    if (!viewedTrail || this.props?.viewedTrail === prevProps?.viewedTrail) {
+      return;
+    }
+
+    if (this.polyline?.length > 0) {
+      this.props.leaflet.map.panTo(this.polyline?.[0]);
+    }
+  }
+
+  createLeafletElement() {}
+
+  updateLeafletElement() {}
+
+  render() {
+    const { viewedTrail, viewedLocation } = this.props;
+
+    if (!viewedTrail) return <FeatureGroup />;
+    this.computePolyline();
+
     return (
       <Polyline
         color={this.props?.viewedLocation?.lineOptions?.strokeColor}
-        positions={polyline}
+        positions={this.polyline}
       />
     );
   }
