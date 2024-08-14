@@ -9,19 +9,12 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { getItem } from "../../core-utils/storage";
 import { setLocation } from '../../../actions/map';
-import { trafficLocationsQuery } from '../../../actions/traffic';
+import { geojsonLocationsQuery } from '../../../actions/geojson';
 
-//import BadgeIcon from "../icons/badge-icon";
-
-import ReactDOMServer from "react-dom/server";
-import FromToLocationPicker from '../../from-to-location-picker'
-
-import { ClassicCar } from "../../icons/classic";
-
-//import polyline from "@mapbox/polyline";
+//import ReactDOMServer from "react-dom/server";
 
 
-class TrafficOverlay extends MapLayer {
+class GeojsonOverlay extends MapLayer {
 
   constructor(props){
     super(props);
@@ -31,9 +24,7 @@ class TrafficOverlay extends MapLayer {
 
   static propTypes = {
     api: PropTypes.string,
-    //locations: PropTypes.array,
-    // locations: PropTypes.object.isRequired,
-    trafficLocationsQuery: PropTypes.func,
+    geojsonLocationsQuery: PropTypes.func,
     setLocation: PropTypes.func
   }
 
@@ -41,16 +32,16 @@ class TrafficOverlay extends MapLayer {
     const bb =  getItem('mapBounds')
     const params = bb
     // ititial station retrieval
-    this.props.trafficLocationsQuery(this.props.api, params)
-    const {overlayTrafficConf} = this.props;
+    this.props.geojsonLocationsQuery(this.props.api, params)
+    const {overlayGeojsonConf} = this.props;
 
     // set up timer to refresh stations periodically
     if (this._refreshTimer)  clearInterval(this._refreshTimer) // needed to not create multiple intervals
     this._refreshTimer = setInterval(() => {
       const bb =  getItem('mapBounds')
       const params = bb
-      this.props.trafficLocationsQuery(this.props.api, params)
-    }, Number(overlayTrafficConf.pollingInterval || 30000)) // defaults to every 30 sec. TODO: make this configurable?*/
+      this.props.geojsonLocationsQuery(this.props.api, params)
+    }, Number(overlayGeojsonConf.pollingInterval || 30000)) // defaults to every 30 sec. TODO: make this configurable?*/
   }
 
   _stopRefreshing() {
@@ -82,10 +73,10 @@ class TrafficOverlay extends MapLayer {
   onOverlayAdded = (e) => {
     this._startRefreshing();
     const { map } = this.props.leaflet;
-    const {overlayTrafficConf} = this.props;
+    const {overlayGeojsonConf} = this.props;
 
-    if(overlayTrafficConf.startCenter){
-      map.flyTo(overlayTrafficConf.startCenter);
+    if(overlayGeojsonConf.startCenter){
+      map.flyTo(overlayGeojsonConf.startCenter);
     }
   }
 
@@ -106,38 +97,18 @@ class TrafficOverlay extends MapLayer {
   updateLeafletElement() { }
 
   render() {
-    const { locations, overlayTrafficConf } = this.props
+    const { locations, overlayGeojsonConf } = this.props
 
     const getStyle = feature => ({
       weight: 4,
-      opacity: !feature.properties.level ? 0.4 : 1,
-      color: overlayTrafficConf.levelColors[feature.properties.level]
+      //opacity: !feature.properties.level ? 0.4 : 1,
+      color: overlayGeojsonConf.color || '#dd0000'
     });
-
-    const onEachFeature = (feature, layer) => {
-      if (feature.properties?.value) {
-        let time = Math.round(feature.properties.value / 60);
-
-        if (feature.properties.level > 1) {
-          layer.bindTooltip(ReactDOMServer.renderToString(
-            <span><ClassicCar height={14} width={14} />&nbsp;{time} min</span>
-          ), {
-            permanent: true,
-            sticky: true
-          });
-        }
-      }
-    };
-
-    if (!locations ||
-      !locations.linkstations ||
-      locations.linkstations.length === 0) return <LayerGroup />
 
     return (
       <LayerGroup>
         <GeoJSON
-          data={locations.linkstations}
-          onEachFeature={onEachFeature}
+          data={locations}
           style={getStyle}
         />
       </LayerGroup>
@@ -147,7 +118,7 @@ class TrafficOverlay extends MapLayer {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    overlayTrafficConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'traffic')[0],
+    overlayGeojsonConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'traffic')[0],
     locations: state.otp.overlay.traffic && state.otp.overlay.traffic.locations
   }
 }
