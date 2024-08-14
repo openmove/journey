@@ -79,14 +79,14 @@ import ContextualizedTrails from "../../../components/narrative/line-itin/contex
           <RentedVehicleSubheader config={config} leg={leg} />
         )}
         <div className="otp-ui-legBody">
-        {(config?.trip?.contextualizedTrails?.enabled  && leg.distance > 2000 && leg.mode !== "CAR" )&& (
+        {(config?.trip?.contextualizedTrails?.enabled  && leg.distance > 1000 && leg.mode !== "CAR" )&& (
         <ContextualizedTrails
             t={t}
             isLastLeg={isLastLeg}
             leg={leg}
          />
        )}
-        {(safetyTrailMessage?.enabled && leg.distance > 2000 && leg.mode !== "CAR" ) && (
+        {(safetyTrailMessage?.enabled && leg.distance > 1000 && leg.mode !== "CAR" ) && (
             <div className="trails-safety-message">
                  <ExclamationTriangle size={18} />
               <div className="content">
