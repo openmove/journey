@@ -424,6 +424,12 @@ map:
       iconMarkerColor: "#B62923"
       iconColor: "#B73833"
 
+    # - type: geojson
+    #   name: geojson
+    #   api: ${DATA_BASEURL}/caselli/corridoio.geojson
+    #   pollingInterval: 5000
+    #   colors: '#33dd00'
+
 # Mode selector configuration
 # http://otp-docs.ibi-transit.com/Configuration/
 modes:
