@@ -46,6 +46,29 @@ class ContextualTrailsOverlay extends MapLayer {
     setLocation: PropTypes.func,
   };
 
+  computeLocations(){
+    const {contextualTrails} = this.props
+    const locations = [];
+
+    Object.values(contextualTrails)?.forEach((trails) => {
+      const prevIds = locations.map((location) => location.id);
+      const newTrails = trails.filter((trail) => !prevIds.includes(trail.id));
+      locations.push(...newTrails);
+    });
+
+    return locations;
+  }
+
+  computeViewedLocation(locations){
+
+    const {viewedTrail} = this.props
+
+    const viewedLocation = locations.find(
+      (location) => location.id === viewedTrail
+    );
+    return viewedLocation
+  }
+
   componentDidMount() {
     this.generateOutdoorActiveTrackingScript(
       this.props.overlayTrailsConf?.trackScriptUrl
@@ -83,7 +106,6 @@ class ContextualTrailsOverlay extends MapLayer {
 
   render() {
     const {
-      locations,
       t,
       i18n,
       overlayTrailsConf,
@@ -94,6 +116,9 @@ class ContextualTrailsOverlay extends MapLayer {
 
     const isMarkClusterEnabled = overlayTrailsConf?.markerCluster;
     const lang = i18n?.language;
+
+    const locations = this.computeLocations()
+    const viewedLocation = this.computeViewedLocation(locations)
 
     if (
       !locations ||
@@ -374,24 +399,10 @@ class ContextualTrailsOverlay extends MapLayer {
 
 // connect to the redux store
 const mapStateToProps = (state, ownProps) => {
-  const locations = [];
-
-  const viewedTrail = state.otp.ui.viewedTrail;
-
-  Object.values(state.otp.transitIndex?.trails)?.forEach((trails) => {
-    const prevIds = locations.map((location) => location.id);
-    const newTrails = trails.filter((trail) => !prevIds.includes(trail.id));
-    locations.push(...newTrails);
-  });
-
-  const viewedLocation = locations.find(
-    (location) => location.id === viewedTrail
-  );
 
   return {
-    locations,
-    viewedTrail,
-    viewedLocation,
+    viewedTrail:state.otp.ui.viewedTrail,
+    contextualTrails:state.otp.transitIndex?.trails,
     overlayTrailsConf: state.otp?.config?.map?.overlays?.filter(
       (item) => item.type === "trails"
     )[0],

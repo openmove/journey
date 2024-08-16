@@ -47,6 +47,21 @@ class TrailsOverlay extends MapLayer {
     setLocation: PropTypes.func,
   };
 
+  filterContextualTrails(){
+    const { contextualTrails,  unfilteredLocations} = this.props;
+
+    const contextualTrailsIds = [];
+    Object.values(contextualTrails)?.forEach((trails) => {
+      const newTrailsIds = trails
+        .map((trail) => trail.id)
+        .filter((trailId) => !contextualTrailsIds.includes(trailId));
+      contextualTrailsIds.push(...newTrailsIds);
+    });
+
+    const filteredTrails = unfilteredLocations?.filter((location)=>!(location.id in contextualTrailsIds))
+    return filteredTrails;
+  }
+
   _startRefreshing(launchNow) {
     const getRadiusFromBBInMeters = () => {
       const bb = getItem("mapBounds");
@@ -159,7 +174,6 @@ class TrailsOverlay extends MapLayer {
 
   render() {
     const {
-      locations,
       t,
       i18n,
       overlayTrailsConf,
@@ -170,6 +184,8 @@ class TrailsOverlay extends MapLayer {
 
     const isMarkClusterEnabled = overlayTrailsConf.markerCluster;
     const lang = i18n?.language;
+
+    const locations = this.filterContextualTrails()
 
     if (
       !locations ||
@@ -453,19 +469,10 @@ class TrailsOverlay extends MapLayer {
 
 // connect to the redux store
 const mapStateToProps = (state, ownProps) => {
-  const contextualTrailsIds = [];
-
   const viewedTrail = state.otp.ui.viewedTrail;
-
-  Object.values(state.otp.transitIndex?.trails)?.forEach((trails) => {
-    const newTrailsIds = trails
-      .map((trail) => trail.id)
-      .filter((trailId) => !contextualTrailsIds.includes(trailId));
-    contextualTrailsIds.push(...newTrailsIds);
-  });
-
   return {
-    locations: state.otp.overlay.trails && state.otp.overlay.trails.locations?.filter((location)=>!(location.id in contextualTrailsIds)),
+    contextualTrails:state.otp.transitIndex?.trails,
+    unfilteredLocations: state.otp.overlay.trails && state.otp.overlay.trails.locations,
     overlayTrailsConf: state.otp?.config?.map?.overlays?.filter(
       (item) => item.type === "trails"
     )[0],
