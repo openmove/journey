@@ -82,7 +82,7 @@ class ContextualizedTrails extends Component {
   }
 
   render() {
-    const { t, contextualizedTrailsConfig } = this.props;
+    const { t, isLastLeg, contextualizedTrailsConfig } = this.props;
 
     if (
       !contextualizedTrailsConfig ||
@@ -94,7 +94,7 @@ class ContextualizedTrails extends Component {
     }
 
     return (
-      <div>
+      <div className={isLastLeg ? "otp-ui-contextualized-trails-destination" : ""}>
         {this.props.t("trails_context_message")}
       <ul>
         {this.props?.trails.map(
