@@ -99,7 +99,7 @@ const PlaceRow = ({
         {(
           isDestination &&
           config?.trip?.contextualizedTrails?.enabled  &&
-          leg.distance > 100
+          leg.distance > config?.trip?.contextualizedTrails?.minDistance
           && leg.mode !== "CAR"
         )&& (
           <ContextualizedTrails
