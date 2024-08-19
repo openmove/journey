@@ -426,9 +426,10 @@ map:
 
     # - type: geojson
     #   name: geojson
-    #   api: ${DATA_BASEURL}/caselli/corridoio.geojson
-    #   pollingInterval: 5000
-    #   colors: '#33dd00'
+    #   enabled: true
+    #   visible: true
+    #   api: https://alpha-meridian.nucleus.openmove.com/caselli/corridor.json
+    #   color: '#33dd00'
 
 # Mode selector configuration
 # http://otp-docs.ibi-transit.com/Configuration/
