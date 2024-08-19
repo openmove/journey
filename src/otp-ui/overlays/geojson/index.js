@@ -29,18 +29,14 @@ class GeojsonOverlay extends MapLayer {
   }
 
   _startRefreshing() {
-    const bb =  getItem('mapBounds')
-    const params = bb
     // ititial station retrieval
-    this.props.geojsonLocationsQuery(this.props.api, params)
+    this.props.geojsonLocationsQuery(this.props.api)
     const {overlayGeojsonConf} = this.props;
 
     // set up timer to refresh stations periodically
     if (this._refreshTimer)  clearInterval(this._refreshTimer) // needed to not create multiple intervals
     this._refreshTimer = setInterval(() => {
-      const bb =  getItem('mapBounds')
-      const params = bb
-      this.props.geojsonLocationsQuery(this.props.api, params)
+      this.props.geojsonLocationsQuery(this.props.api)
     }, Number(overlayGeojsonConf.pollingInterval || 30000)) // defaults to every 30 sec. TODO: make this configurable?*/
   }
 
@@ -61,14 +57,6 @@ class GeojsonOverlay extends MapLayer {
     this._stopRefreshing()
     //this.props.leaflet.map.off('zoomend', this.updatePolylineWeigth);
   }
-
-  /*  updatePolylineWeigth = () => {
-      const z = this.props.leaflet.map.getZoom();
-      console.log('ZOOM',z);
-
-      //TODO change geojson layer weight
-
-    }*/
 
   onOverlayAdded = (e) => {
     this._startRefreshing();
@@ -105,10 +93,15 @@ class GeojsonOverlay extends MapLayer {
       color: overlayGeojsonConf.color || '#dd0000'
     });
 
+    if (!geojson ||
+      !geojson?.features ||
+      geojson?.features.length === 0) return <LayerGroup />
+
+
     return (
       <LayerGroup>
         <GeoJSON
-          data={geojson}
+          data={geojson?.features}
           style={getStyle}
         />
       </LayerGroup>
