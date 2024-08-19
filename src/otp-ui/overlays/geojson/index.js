@@ -97,7 +97,7 @@ class GeojsonOverlay extends MapLayer {
   updateLeafletElement() { }
 
   render() {
-    const { locations, overlayGeojsonConf } = this.props
+    const { geojson, overlayGeojsonConf } = this.props
 
     const getStyle = feature => ({
       weight: 4,
@@ -108,7 +108,7 @@ class GeojsonOverlay extends MapLayer {
     return (
       <LayerGroup>
         <GeoJSON
-          data={locations}
+          data={geojson}
           style={getStyle}
         />
       </LayerGroup>
@@ -118,14 +118,16 @@ class GeojsonOverlay extends MapLayer {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    overlayGeojsonConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'traffic')[0],
-    locations: state.otp.overlay.traffic && state.otp.overlay.traffic.locations
+    overlayGeojsonConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'geojson')[0],
+    geojson: state.otp.overlay.geojson && state.otp.overlay.geojson.geojson
   }
 }
 
 const mapDispatchToProps = {
   setLocation,
-  trafficLocationsQuery
+  geojsonLocationsQuery
 }
 
-export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(withLeaflet(TrafficOverlay)))
+export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(withLeaflet(GeojsonOverlay)))
+
+

@@ -300,6 +300,9 @@ export function getInitialState (userDefinedConfig, initialQuery) {
       caselli: {
         locations: []
       },
+      geojson: {
+        geojson: []
+      },
     },
     tnc: {
       etaEstimates: {},
@@ -1142,6 +1145,17 @@ function createOtpReducer (config, initialQuery) {
             overlay: {
               caselli: {
                 locations: { $set: stations },
+                pending: { $set: false }
+              }
+            }
+        })
+      }
+      case 'GEOJSON_LOCATIONS_RESPONSE': {
+        const geojson = getResponseData(action.payload);
+        return update(state, {
+            overlay: {
+              geojson: {
+                geojson: { $set: geojson },
                 pending: { $set: false }
               }
             }

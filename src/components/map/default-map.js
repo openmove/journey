@@ -38,6 +38,7 @@ import VmsOverlay from "../../otp-ui/overlays/vms"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
 import ServiceareaOverlay from '../../otp-ui/overlays/servicearea'
 import CaselliOverlay from '../../otp-ui/overlays/caselli'
+import GeojsonOverlay from '../../otp-ui/overlays/geojson'
 import TrailsViewerOverlay from '../../otp-ui/overlay-trail-viewer'
 import ContextualTrailsOverlay from '../../otp-ui/overlays/contextual-trails'
 import LocationFilter from '../../otp-ui/location-filter'
@@ -455,9 +456,20 @@ class DefaultMap extends Component {
                         activeFilters={this.state.overlayFilters}
                       />
                     )
+                  case 'geojson': return (
+                      <GeojsonOverlay
+                        key={k}
+                        {...overlayConfig}
+                        visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
+                        name={t(overlayConfig.name)}
+                        activeFilters={this.state.overlayFilters}
+                      />
+                    )
                     default: return null
                   }
                 })}
+
+
 
               </BaseMap>
             </MapContainer>
