@@ -1,7 +1,7 @@
 #TODO FROM node:18.15.0-alpine3.16
 FROM node:16.14.0-alpine3.14
 
-ARG VERSION=v3.3.0
+ARG VERSION=v3.4.5
 
 ARG API_HOST=http://localhost \
 		API_PATH=/otp/routers/default \
