@@ -529,4 +529,10 @@ export const TRANSLATIONS_IT = {
   // localized drt
   "localized_drt_msg": "Servizio DRT disponibile nella zona selezionata",
   "localized_drt_no_path_found_error_msg" : "Alternativamente un servizio DRT è disponibile nella zona selezionata.",
+
+  // toll gates
+  "toll_gates": "Caselli",
+
+  // service area
+  "service_areas":"Aree di servizio"
 }

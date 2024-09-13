@@ -533,4 +533,10 @@ export const TRANSLATIONS_EN = {
   // localized drt
   "localized_drt_msg": "DRT service available in the selected area",
   "localized_drt_no_path_found_error_msg" : "Alternatively a DRT service is available in the selected area.",
+
+  // toll gates
+  "toll_gates": "Toll gates",
+
+    // service area
+  "service_areas":"Service areas"
 };
