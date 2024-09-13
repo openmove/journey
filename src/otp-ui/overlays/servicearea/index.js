@@ -165,11 +165,6 @@ class ServiceareaOverlay extends MapLayer {
       return `${d}`
     }
 
-    const Infos = info => {
-      return (
-        <em>[{info.name}]</em>
-      );
-    }
 
     return (
       <LayerGroup>
@@ -187,7 +182,7 @@ class ServiceareaOverlay extends MapLayer {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-
+                       <MarkerServiceArea width={24} height={20} style={{verticalAlign:"bottom"}}/>&nbsp; {t("service_areas")}
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
 
@@ -196,7 +191,7 @@ class ServiceareaOverlay extends MapLayer {
                     <br />
                     <b>Km:</b> {station.km}
                     <br />
-                    <b>Servizi:</b> {station.info.map(Infos)}
+                    <b>Servizi:</b> {station.info.map(info=>info.name).join(', ')}
                   </div>
 
                   <div className='popup-row'>
