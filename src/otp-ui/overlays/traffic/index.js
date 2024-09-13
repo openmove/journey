@@ -38,19 +38,20 @@ class TrafficOverlay extends MapLayer {
   }
 
   _startRefreshing() {
+    const {overlayTrafficConf} = this.props;
     const bb =  getItem('mapBounds')
-    const params = bb
+    const params = overlayTrafficConf?.includeBB === false ? {}: bb
     // ititial station retrieval
     this.props.trafficLocationsQuery(this.props.api, params)
-    const {overlayTrafficConf} = this.props;
+
 
     // set up timer to refresh stations periodically
     if (this._refreshTimer)  clearInterval(this._refreshTimer) // needed to not create multiple intervals
     this._refreshTimer = setInterval(() => {
       const bb =  getItem('mapBounds')
-      const params = bb
+      const params = overlayTrafficConf?.includeBB === false ? {}: bb
       this.props.trafficLocationsQuery(this.props.api, params)
-    }, Number(overlayTrafficConf.pollingInterval || 30000)) // defaults to every 30 sec. TODO: make this configurable?*/
+    }, Number(overlayTrafficConf.pollingInterval || 30000)) // defaults to every 30 sec*/
   }
 
   _stopRefreshing() {
@@ -130,13 +131,13 @@ class TrafficOverlay extends MapLayer {
     };
 
     if (!locations ||
-      !locations.linkstations ||
-      locations.linkstations.length === 0) return <LayerGroup />
+      !locations.stations ||
+      locations.stations.length === 0) return <LayerGroup />
 
     return (
       <LayerGroup>
         <GeoJSON
-          data={locations.linkstations}
+          data={locations.stations}
           onEachFeature={onEachFeature}
           style={getStyle}
         />
