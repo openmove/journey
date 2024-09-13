@@ -120,6 +120,7 @@ class TollGatesOverlay extends MapLayer {
 
   render() {
     const { locations, overlayTollGatesConf, t ,activeFilters} = this.props
+      console.log(this.props);
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -195,7 +196,7 @@ class TollGatesOverlay extends MapLayer {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    overlayTollGatesConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'tollGates')[0],
+    overlayTollGatesConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'toll_gates')[0],
     locations: state.otp.overlay.tollGates?.locations,
   };
 };

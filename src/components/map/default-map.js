@@ -37,7 +37,7 @@ import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
 import ServiceareaOverlay from '../../otp-ui/overlays/servicearea'
-import TollGatesOverlay from '../../otp-ui/overlays/tollGates'
+import TollGatesOverlay from '../../otp-ui/overlays/toll-gates'
 import GeojsonOverlay from '../../otp-ui/overlays/geojson'
 import TrailsViewerOverlay from '../../otp-ui/overlay-trail-viewer'
 import ContextualTrailsOverlay from '../../otp-ui/overlays/contextual-trails'
@@ -448,7 +448,7 @@ class DefaultMap extends Component {
                         activeFilters={this.state.overlayFilters}
                       />
                     )
-                    case 'tollGates': return (
+                    case 'toll_gates': return (
                       <TollGatesOverlay
                         key={k}
                         {...overlayConfig}
