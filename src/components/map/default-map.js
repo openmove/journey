@@ -37,7 +37,7 @@ import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
 import ServiceareaOverlay from '../../otp-ui/overlays/servicearea'
-import CaselliOverlay from '../../otp-ui/overlays/caselli'
+import TollGatesOverlay from '../../otp-ui/overlays/tollGates'
 import GeojsonOverlay from '../../otp-ui/overlays/geojson'
 import TrailsViewerOverlay from '../../otp-ui/overlay-trail-viewer'
 import ContextualTrailsOverlay from '../../otp-ui/overlays/contextual-trails'
@@ -208,6 +208,7 @@ class DefaultMap extends Component {
       carRentalStations,
       mapConfig,
       contextualTrailsConfig,
+      geojsonConfig,
       mapPopupLocation,
       version,
       hideAllControls,
@@ -447,17 +448,8 @@ class DefaultMap extends Component {
                         activeFilters={this.state.overlayFilters}
                       />
                     )
-                    case 'caselli': return (
-                      <CaselliOverlay
-                        key={k}
-                        {...overlayConfig}
-                        visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
-                        name={t(overlayConfig.name)}
-                        activeFilters={this.state.overlayFilters}
-                      />
-                    )
-                  case 'geojson': return (
-                      <GeojsonOverlay
+                    case 'tollGates': return (
+                      <TollGatesOverlay
                         key={k}
                         {...overlayConfig}
                         visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
@@ -468,8 +460,12 @@ class DefaultMap extends Component {
                     default: return null
                   }
                 })}
-
-
+                {/* todo fix */}
+                { geojsonConfig.enabled &&(
+                  <GeojsonOverlay
+                  geojsonConfig={geojsonConfig}
+                  />
+                )}
 
               </BaseMap>
             </MapContainer>
@@ -505,11 +501,13 @@ const mapStateToProps = (state, ownProps) => {
   const overlays = state.otp.config.map && state.otp.config.map.overlays
     ? state.otp.config.map.overlays
     : []
+
   return {
     bikeRentalStations: state.otp.overlay.bikeRental.stations,
     carRentalStations: state.otp.overlay.carRental.stations,
     mapConfig: state.otp.config.map,
     contextualTrailsConfig: state.otp.config.trip?.contextualizedTrails,
+    geojsonConfig: state.otp.config.map.geojson,
     mapPopupLocation: state.otp.ui.mapPopupLocation,
     overlays,
     query: state.otp.currentQuery,

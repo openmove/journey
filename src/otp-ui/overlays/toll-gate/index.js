@@ -17,10 +17,10 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 import { setLocation } from '../../../actions/map'
-import { caselliLocationsQuery } from '../../../actions/caselli'
+import { tollGatesLocationsQuery } from '../../../actions/tollgates'
 
-import MarkerCasello from "../../icons/modern/MarkerCasello";
-import Casello from "../../icons/modern/Casello";
+import MarkerTollGate from "../../icons/modern/MarkerTollGate";
+import TollGate from "../../icons/modern/TollGate";
 
 import ReactDOMServer from "react-dom/server";
 
@@ -29,7 +29,7 @@ import { getItem } from "../../core-utils/storage";
 import { filterOverlay } from "../../core-utils/overlays";
 import { bbToRadiusInMeters } from "../../../util/bbToRadius";
 
-class CaselliOverlay extends MapLayer {
+class TollGatesOverlay extends MapLayer {
 
   constructor(props) {
     super(props);
@@ -41,22 +41,22 @@ class CaselliOverlay extends MapLayer {
   static propTypes = {
     api: PropTypes.string,
     locations: PropTypes.array,
-    caselliLocationsQuery: PropTypes.func,
+    tollGatesLocationsQuery: PropTypes.func,
     setLocation: PropTypes.func,
   };
 
   _startRefreshing(launchNow) {
     // ititial station retrieval
-    // this.props.caselliLocationsQuery(this.props.api);
+    // this.props.tollGatesLocationsQuery(this.props.api);
 
     // set up timer to refresh stations periodically
     // this._refreshTimer = setInterval(() => {
-    //   this.props.caselliLocationsQuery(this.props.api);
+    //   this.props.tollGatesLocationsQuery(this.props.api);
     // }, 30000); // defaults to every 30 sec. TODO: make this configurable?*/
     const bb =  getItem('mapBounds')
     const params = bb
     if(launchNow === true){
-      this.props.caselliLocationsQuery(this.props.api , params);
+      this.props.tollGatesLocationsQuery(this.props.api , params);
 
     }else{
       if (this._refreshTimer) clearTimeout(this._refreshTimer);
@@ -64,7 +64,7 @@ class CaselliOverlay extends MapLayer {
       this._refreshTimer =  setTimeout(()=>{
         const bb =  getItem('mapBounds')
         const params = bb
-        this.props.caselliLocationsQuery(this.props.api, params);
+        this.props.tollGatesLocationsQuery(this.props.api, params);
       },500)
 
     }
@@ -85,12 +85,12 @@ class CaselliOverlay extends MapLayer {
   onOverlayAdded = () => {
     this.props.leaflet.map.on("moveend", this._startRefreshing);
     this._startRefreshing(true);
-    const { locations, overlayCaselliConf } = this.props;
+    const { locations, overlayTollGatesConf } = this.props;
     const { map } = this.props.leaflet;
     const newLoc = [];
 
-    if (overlayCaselliConf.startCenter) {
-      map.flyTo(overlayCaselliConf.startCenter);
+    if (overlayTollGatesConf.startCenter) {
+      map.flyTo(overlayTollGatesConf.startCenter);
     }
   };
 
@@ -119,7 +119,7 @@ class CaselliOverlay extends MapLayer {
   updateLeafletElement() {}
 
   render() {
-    const { locations, overlayCaselliConf, t ,activeFilters} = this.props
+    const { locations, overlayTollGatesConf, t ,activeFilters} = this.props
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -130,12 +130,12 @@ class CaselliOverlay extends MapLayer {
       }
     })
 
-    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayCaselliConf.type ]);
+    locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayTollGatesConf.type ]);
 
     const markerIcon = (data) => {
       let badgeType = 'success';
       let badgeCounter = 0;
-      let {iconWidth, iconHeight} = overlayCaselliConf;
+      let {iconWidth, iconHeight} = overlayTollGatesConf;
 
       return divIcon({
         className: "",
@@ -143,23 +143,14 @@ class CaselliOverlay extends MapLayer {
         iconAnchor: [iconWidth/2, iconHeight],
         popupAnchor: [0, -iconHeight],
         html: ReactDOMServer.renderToStaticMarkup(
-          <MarkerCasello
+          <MarkerTollGate
             width={iconWidth}
             height={iconHeight}
-            iconColor={overlayCaselliConf.iconColor}
-            markerColor={overlayCaselliConf.iconMarkerColor}
+            iconColor={overlayTollGatesConf.iconColor}
+            markerColor={overlayTollGatesConf.iconMarkerColor}
           />
         )
       });
-    }
-
-    const Direction = data => {
-      let d = 'Entrambe'
-      if(data.direction=='S')
-        d = 'Sud'
-      else if(data.direction=='N')
-        d = 'Nord'
-      return `Direction: ${d}`
     }
 
     return (
@@ -177,12 +168,12 @@ class CaselliOverlay extends MapLayer {
               <Popup>
                 <div className="otp-ui-mapOverlayPopup">
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
-                    <Casello width={24} height={20} />
+                 <TollGate width={24} height={20} style={{verticalAlign:"bottom"}}/>&nbsp; {t("toll_gates")}
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
 
                   <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                    {Direction(station)}
+                    {/* {Direction(station)} */}
                   </div>
 
                   <div className='popup-row'>
@@ -201,35 +192,20 @@ class CaselliOverlay extends MapLayer {
     )
   }
 }
-/*
+
 const mapStateToProps = (state, ownProps) => {
   return {
-    overlayCaselliConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'caselli')[0],
-    locations: state.otp.overlay.caselli?.locations,
+    overlayTollGatesConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'tollGates')[0],
+    locations: state.otp.overlay.tollGates?.locations,
   };
 };
 
 const mapDispatchToProps = {
   setLocation,
-  caselliLocationsQuery
-}
-
-export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(withLeaflet(CaselliOverlay)))
-*/
-
-const mapStateToProps = (state, ownProps) => {
-  return {
-    overlayCaselliConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'caselli')[0],
-    locations: state.otp.overlay.caselli?.locations,
-  };
-};
-
-const mapDispatchToProps = {
-  setLocation,
-  caselliLocationsQuery,
+  tollGatesLocationsQuery,
 };
 
 export default withNamespaces()(
-  connect(mapStateToProps, mapDispatchToProps)(withLeaflet(CaselliOverlay))
+  connect(mapStateToProps, mapDispatchToProps)(withLeaflet(TollGatesOverlay))
 );
 

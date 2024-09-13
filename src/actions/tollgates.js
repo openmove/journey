@@ -2,13 +2,13 @@ import { createAction } from 'redux-actions'
 import {addQueryParams} from '../util/query-params'
 if (typeof (fetch) === 'undefined') require('isomorphic-fetch')
 
-export const receivedCaselliLocationsError = createAction('CASELLI_LOCATIONS_ERROR')
-export const receivedCaselliLocationsResponse = createAction('CASELLI_LOCATIONS_RESPONSE')
-export const requestCaselliLocationsResponse = createAction('CASELLI_LOCATIONS_REQUEST')
+export const receivedTollGatesLocationsError = createAction('TOLL_GATES_LOCATIONS_ERROR')
+export const receivedTollGatesLocationsResponse = createAction('TOLL_GATES_LOCATIONS_RESPONSE')
+export const requestTollGatesLocationsResponse = createAction('TOLL_GATES_LOCATIONS_REQUEST')
 
-export function caselliLocationsQuery (url,params) {
+export function tollGatesLocationsQuery (url,params) {
   return async function (dispatch, getState) {
-    dispatch(requestCaselliLocationsResponse())
+    dispatch(requestTollGatesLocationsResponse())
     let json
     try {
       const newUrl = addQueryParams(url,params)
@@ -20,9 +20,9 @@ export function caselliLocationsQuery (url,params) {
       }
       json = await response.json()
     } catch (err) {
-      return dispatch(receivedCaselliLocationsError(err))
+      return dispatch(receivedTollGatesLocationsError(err))
     }
 
-    dispatch(receivedCaselliLocationsResponse(json))
+    dispatch(receivedTollGatesLocationsResponse(json))
   }
 }

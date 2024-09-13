@@ -297,7 +297,7 @@ export function getInitialState (userDefinedConfig, initialQuery) {
       servicearea: {
         locations: []
       },
-      caselli: {
+      tollGates: {
         locations: []
       },
       geojson: {
@@ -1139,11 +1139,11 @@ function createOtpReducer (config, initialQuery) {
             }
         })
       }
-      case 'CASELLI_LOCATIONS_RESPONSE': {
+      case 'TOLL_GATES_LOCATIONS_RESPONSE': {
         const {stations} = getResponseData(action.payload);
         return update(state, {
             overlay: {
-              caselli: {
+              tollGates: {
                 locations: { $set: stations },
                 pending: { $set: false }
               }
