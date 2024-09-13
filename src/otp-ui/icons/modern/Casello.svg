@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 54 61.96"
+   viewBox="0 0 55 52"
    version="1.1"
    id="svg1"
    sodipodi:docname="Casello.svg"
-   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
+   inkscape:version="1.2.2 (b0a8486, 2022-12-01)"
+   width="55"
+   height="52"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -20,19 +22,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="17.947063"
-     inkscape:cx="26.996061"
-     inkscape:cy="30.98"
-     inkscape:window-width="2500"
-     inkscape:window-height="1363"
+     inkscape:zoom="3.9861851"
+     inkscape:cx="18.062383"
+     inkscape:cy="40.389494"
+     inkscape:window-width="1152"
+     inkscape:window-height="720"
      inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="Group_165" />
+     inkscape:window-y="498"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1"
+     showgrid="false" />
   <g
      id="Group_165"
      data-name="Group 165"
-     transform="translate(-1323.585 -290.965)">
+     transform="translate(-1323.085,-290.465)">
     <rect
        stroke="#ffffff"
        id="Rectangle_38"

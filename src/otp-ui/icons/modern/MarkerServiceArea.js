@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon({ title, width = 54, height = 62, markerColor = '#DDD', iconColor = '#fff', ...props }) {
+function Icon({ title, width = 54, height = 62, markerColor = 'transparent', iconColor = '#000', ...props }) {
 /*  return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} {...props} viewBox="0 0 54 61.96">
       <g data-name="Group 165" transform="translate(-1323.585 -290.965)">
@@ -19,14 +19,14 @@ function Icon({ title, width = 54, height = 62, markerColor = '#DDD', iconColor 
   );*/
 
   return (
-<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} {...props} viewBox="0 0 54 61.96">
-      <g data-name="Group 165" transform="translate(-1323.585 -290.965)">
+<svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} {...props} viewBox="0 0 55 52">
+      <g data-name="Group 165" transform="translate(-1323.085,-290.465)">
         <rect fill={markerColor}
           width="54"
           height="51"
           x="1323.585"
           y="290.965"
-          stroke="#fff"
+          stroke={markerColor}
           data-name="Rectangle 38"
           rx="10"
         ></rect>
