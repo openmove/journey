@@ -2,7 +2,7 @@ import React from 'react'
 import AbstractOverlay from '../AbstractOverlay'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { Button } from 'react-bootstrap'
+import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import {
   LayerGroup,
   FeatureGroup,
@@ -27,6 +27,19 @@ import FromToLocationPicker from '../../from-to-location-picker'
 import { getItem } from "../../core-utils/storage";
 import { filterOverlay } from "../../core-utils/overlays";
 import { bbToRadiusInMeters } from "../../../util/bbToRadius";
+
+import DirectionBadge from '../../icons/direction-badge'
+import BadgeIcon from '../../icons/badge-icon'
+
+import AdvancedMarkerCluster from "../../advanced-marker-cluster";
+import MarkerCluster from "../../icons/modern/MarkerCluster";
+
+const tooltip = ({text}) =>(
+  <Tooltip id="tooltip" positionTop="-3px">
+    {text}
+  </Tooltip>
+);
+
 
 class ServiceareaOverlay extends MapLayer {
 
@@ -117,7 +130,7 @@ class ServiceareaOverlay extends MapLayer {
   updateLeafletElement() {}
 
   render() {
-    const { locations, overlayServiceareaConf, t, activeFilters} = this.props
+    const { locations, overlayServiceareaConf,markerCluster, t, activeFilters} = this.props
 
     if (!locations || locations.length === 0) return <LayerGroup />
     const bb =  getItem('mapBounds')
@@ -139,14 +152,16 @@ class ServiceareaOverlay extends MapLayer {
         className: "",
         iconSize: [iconWidth, iconHeight],
         iconAnchor: [iconWidth/2, iconHeight],
-        popupAnchor: [0, -iconHeight],
+        popupAnchor: [0, -iconHeight -20],
         html: ReactDOMServer.renderToStaticMarkup(
-          <MarkerServiceArea
-            width={iconWidth}
-            height={iconHeight}
-            iconColor={overlayServiceareaConf.iconColor}
-            markerColor={overlayServiceareaConf.iconMarkerColor}
-          />
+          <DirectionBadge direction={data?.direction}>
+            <MarkerServiceArea
+              width={iconWidth}
+              height={iconHeight}
+              iconColor={overlayServiceareaConf.iconColor}
+              markerColor={overlayServiceareaConf.iconMarkerColor}
+            />
+          </DirectionBadge>
         )
       });
     }
@@ -155,23 +170,44 @@ class ServiceareaOverlay extends MapLayer {
 
       const dir = `${data?.direction}`.toLowerCase()
 
-      let d = 'Entrambe'
-      if(dir=='s' || dir=='sud'){
-        d = 'Sud'
+      let d = t("both")
+      if(dir==='s' || dir==='sud'){
+        d = t("south")
       }
-      else if(dir=='n' || dir=='nord'){
-        d = 'Nord'
+      else if(dir==='n' || dir==='nord'){
+        d = t('north')
       }
-      return `${d}`
+      return d
     }
 
+    const clusterIcon = cluster => {
+      const text = cluster.getChildCount();
+
+      return L.divIcon({
+        className: 'marker-cluster-svg',
+        iconSize: [overlayServiceareaConf.iconWidth, overlayServiceareaConf.iconHeight],
+        html: ReactDOMServer.renderToStaticMarkup(
+          <MarkerCluster
+              text={text}
+              textColor={'white'}
+              markerColor={overlayServiceareaConf.iconMarkerColor}
+            />
+          )
+      });
+    }
 
     return (
       <LayerGroup>
       <FeatureGroup>
+      <AdvancedMarkerCluster
+            enabled={markerCluster}
+            showCoverageOnHover={false}
+            maxClusterRadius={40}
+            disableClusteringAtZoom={16}
+            iconCreateFunction={clusterIcon}
+          >
         {
           locationsFiltered.map( station => {
-            console.log(station.station_id)
           return (
             <Marker
               icon={markerIcon(station)}
@@ -187,11 +223,22 @@ class ServiceareaOverlay extends MapLayer {
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
 
                   <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                    <b>Direzione:</b>{Direction(station)}
-                    <br />
-                    <b>Km:</b> {station.km}
-                    <br />
-                    <b>Servizi:</b> {station.info.map(info=>info.name).join(', ')}
+                    <div className="otp-ui-mapOverlayPopup__popupAvailableInfoServiceArea">
+                    {/* <b>{t("service_direction")}: </b>{Direction(station)} */}
+                    {/*<br />
+                     <b>Km: </b> {station.km}
+                    <br /> */}
+                    <p  className="services-title">{t("services")}</p>
+                    <div className="services">
+                    {station.info.map(info=>{
+                      return (
+                         <OverlayTrigger placement="top" overlay={tooltip({text:info.name})}>
+                          < img src={info.img} tile={info.name} alt={info.name}style={{"padding":"0 3px", "maxHeight":"30px", "maxWidth":"30px" }}/>
+                          </OverlayTrigger>
+                        )}
+                      )}
+                       </div>
+                      </div>
                   </div>
 
                   <div className='popup-row'>
@@ -205,6 +252,7 @@ class ServiceareaOverlay extends MapLayer {
             </Marker>
           )
         })}
+        </AdvancedMarkerCluster>
       </FeatureGroup>
       </LayerGroup>
     )
