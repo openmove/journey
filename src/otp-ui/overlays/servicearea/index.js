@@ -249,7 +249,9 @@ class ServiceareaOverlay extends MapLayer {
                     <br /> */}
                           <p className="services-title">{t("services")}</p>
                           <div className="services">
-                            {station.info.map((info) => {
+                            {station.info
+                            .filter(info => info?.active)
+                            .map((info) => {
                               return (
                                 <OverlayTrigger
                                   placement="top"
