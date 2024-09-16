@@ -534,5 +534,6 @@ export const TRANSLATIONS_IT = {
   "toll_gates": "Caselli",
 
   // service area
-  "service_areas":"Aree di servizio"
+  "service_areas":"Aree di servizio",
+  "services": "Servizi",
 }

@@ -538,5 +538,6 @@ export const TRANSLATIONS_EN = {
   "toll_gates": "Toll gates",
 
     // service area
-  "service_areas":"Service areas"
+  "service_areas":"Service areas",
+  "services": "Services",
 };
