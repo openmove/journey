@@ -536,4 +536,8 @@ export const TRANSLATIONS_IT = {
   // service area
   "service_areas":"Aree di servizio",
   "services": "Servizi",
+
+  // alerts
+  "alerts": "Avvisi",
+  "until": "fino a ",
 }

@@ -540,4 +540,8 @@ export const TRANSLATIONS_EN = {
     // service area
   "service_areas":"Service areas",
   "services": "Services",
+
+    // alerts
+  "alerts": "Avvisi",
+  "until": "until ",
 };
