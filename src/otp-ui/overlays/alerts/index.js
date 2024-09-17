@@ -145,13 +145,13 @@ class AlertsOverlay extends MapLayer {
         popupAnchor: [0, -overlayAlertsConf.iconHeight],
         html: ReactDOMServer.renderToStaticMarkup(
           <DirectionBadge direction={station?.direction} bottom>
-          <AlertStation
-            width={overlayAlertsConf.iconWidth}
-            height={overlayAlertsConf.iconHeight}
-            img={station.icon}
-            iconColor={overlayAlertsConf.iconColor}
-            markerColor={overlayAlertsConf.iconMarkerColor}
-          />
+            <AlertStation
+              width={overlayAlertsConf.iconWidth}
+              height={overlayAlertsConf.iconHeight}
+              img={station.icon}
+              iconColor={overlayAlertsConf.iconColor}
+              markerColor={overlayAlertsConf.iconMarkerColor}
+            />
           </DirectionBadge>
         ),
       });
@@ -197,11 +197,11 @@ class AlertsOverlay extends MapLayer {
           {locationsFiltered.map((station) => {
             const startDate =
               station.date_start != null
-                ? moment(station.date_start).format("LLLL")
+                ? moment(station.date_start).format("L LT")
                 : null;
             const endDate =
               station.date_end != null
-                ? moment(station.date_end).format("LLLL")
+                ? moment(station.date_end).format("L LT")
                 : null;
             return (
               <Marker
@@ -215,19 +215,25 @@ class AlertsOverlay extends MapLayer {
                 <Popup ref={this.popup}>
                   <div className="otp-ui-mapOverlayPopup">
                     <div className="otp-ui-mapOverlayPopup__popupHeader">
-                      {/* <VmsIcon img={station.img}/> &nbsp;{t('vms')} */}
-                    </div>
-                    <div className="otp-ui-mapOverlayPopup__popupTitle">
+                      <AlertStation
+                        width={"20px"}
+                        height={"20px"}
+                        img={station.icon}
+                        iconColor={overlayAlertsConf.iconColor}
+                        markerColor={overlayAlertsConf.iconMarkerColor}
+                      />
+                      &nbsp;
                       {station.name?.[lng]
                         ? station.name?.[lng]
                         : station.name?.en}
                     </div>
-                    <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">
-                      <p>
+                    <div className="otp-ui-mapOverlayPopup__popupTitle">
                         {station.desc?.[lng]
                           ? station.desc?.[lng]
                           : station.desc?.en}
-                      </p>
+                    </div>
+                    <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">
+
                     </div>
                     {startDate && endDate && (
                       <small>
