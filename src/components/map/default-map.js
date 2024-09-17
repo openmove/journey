@@ -35,6 +35,7 @@ import ChargerOverlay from '../../otp-ui/overlays/charger'
 import TrafficOverlay from '../../otp-ui/overlays/traffic'
 import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
+import AlertsOverlay from "../../otp-ui/overlays/alerts"
 import TrailsOverlay from '../../otp-ui/overlays/trails'
 import ServiceareaOverlay from '../../otp-ui/overlays/servicearea'
 import TollGatesOverlay from '../../otp-ui/overlays/toll-gates'
@@ -424,6 +425,14 @@ class DefaultMap extends Component {
                     )
                     case 'vms': return (
                       <VmsOverlay
+                      key={k}
+                      {...overlayConfig}
+                      visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
+                      name={t(overlayConfig.name)}
+                    />
+                    )
+                    case 'alerts': return (
+                      <AlertsOverlay
                       key={k}
                       {...overlayConfig}
                       visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}

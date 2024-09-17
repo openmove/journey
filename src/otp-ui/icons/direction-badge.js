@@ -2,13 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../../components/narrative/icon";
 
-const DirectionBadge = ({ direction, children, width, absolute = true }) => {
+const DirectionBadge = ({ direction, children, width, bottom=false, absolute = true }) => {
   let directionStr = "";
   let directionIcon = "";
-  if (direction === "nord" || direction === "n") {
+  if (direction === "nord" || direction === "north" || direction === "n") {
     directionStr = "N";
     directionIcon = "up";
-  } else if (direction === "sud" || direction === "s") {
+  } else if (
+    direction === "sud" ||
+    direction === "south" ||
+    direction === "s"
+  ) {
     directionStr = "S";
     directionIcon = "down";
   } else {
@@ -21,6 +25,8 @@ const DirectionBadge = ({ direction, children, width, absolute = true }) => {
       <span
         className={`otp-ui-direction-badge-icon__badge ${
           absolute ? "absolute" : ""
+        } ${
+         bottom ? "bottom" : ""
         }`}
       >
         <Icon type={`caret-${directionIcon}`} />

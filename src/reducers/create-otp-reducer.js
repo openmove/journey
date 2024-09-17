@@ -291,6 +291,9 @@ export function getInitialState (userDefinedConfig, initialQuery) {
       vms: {
         locations: []
       },
+      alerts: {
+        locations: []
+      },
       trails: {
         locations: []
       },
@@ -1027,6 +1030,17 @@ function createOtpReducer (config, initialQuery) {
         return update(state, {
           overlay: {
             vms: {
+              locations: { $set: stations},
+              pending: { $set: false }
+            }
+          }
+        })
+      }
+      case 'ALERTS_LOCATIONS_RESPONSE': {
+        const {stations} = getResponseData(action.payload)
+        return update(state, {
+          overlay: {
+            alerts: {
               locations: { $set: stations},
               pending: { $set: false }
             }
