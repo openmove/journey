@@ -180,8 +180,9 @@ class WebcamOverlay extends MapLayer {
           iconCreateFunction={markerClusterIcon}
         >
           {locationsFiltered.map((station) => {
-            const timeStamp =  moment(station.timestamp).format('Do MMMM YYYY, h:mm:ss a')
-            const lastUpdate = moment(station.lastUpdate).format('Do MMMM YYYY, h:mm:ss a')
+
+            const timeStamp =  moment(station.timestamp).utcOffset(0).format("L LT")
+            const lastUpdate = moment(station.lastUpdate).utcOffset(0).format("L LT")
             return (
                <Marker
                 icon={markerIcon(station)}
