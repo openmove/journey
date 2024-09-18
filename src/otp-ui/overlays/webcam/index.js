@@ -197,7 +197,7 @@ class WebcamOverlay extends MapLayer {
                   </div>
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
                     <small>{t('provider')}: {station.operator}</small>
-                    { !station.active &&  <p className="alert-text-popup">Immagine proveniente dal ultimo stato attivo della webcam</p> }
+                    { !station.active &&  <p className="alert-text-popup">{t("webcam_last_updated_status")}</p> }
                     <p>{ station.active ? timeStamp : lastUpdate }</p>
                   { station.thumbnail ? <a href={station.thumbnail} target="_blank" ><img src={station.thumbnail} className="img-cam"/></a> : <img src={camDefault} className="img-cam"/> }
                   </div>
