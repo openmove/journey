@@ -244,6 +244,7 @@ export const TRANSLATIONS_EN = {
   "simulated_position_disclaimer":"The vehicles' position could be estimated based on the time",
   "ondemand": "OnDemand",
   "webcam": "Webcams",
+  "webcam_last_updated_status":"Image from the last active state of the webcam",
   "vms": "Variable Message Signs",
   "traffic": "Traffic",
   "traffic_travel_time": "Travel Time",
