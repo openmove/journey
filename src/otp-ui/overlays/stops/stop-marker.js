@@ -136,15 +136,17 @@ class StopMarker extends Component {
 
 
     // hide empty stops / clusters
-    if(Array.isArray(currentStop?.stops) &&
-    currentStop?.stops.every((stop) => stop.routes.length ==0) &&
-    currentStop?.stops.every((stop) => stop.vehicleType == -999) // not needed but for better safety
-    ){
-      console.warn("hidden", currentStop);
-      return null;
-    } else if (!currentStop?.stops && routes.length ==0 && currentStop.vehicleType == -999) {
-      console.warn("hidden", currentStop);
-      return null;
+    if(overlayStopConf.hideEmptyStops === false){
+      if(Array.isArray(currentStop?.stops) &&
+      currentStop?.stops.every((stop) => stop.routes.length ==0) &&
+      currentStop?.stops.every((stop) => stop.vehicleType == -999) // not needed but for better safety
+      ){
+        console.warn("hidden", currentStop);
+        return null;
+      } else if (!currentStop?.stops && routes.length ==0 && currentStop.vehicleType == -999) {
+        console.warn("hidden", currentStop);
+        return null;
+      }
     }
 
     if (Array.isArray(stops) && stops.length===1) {
