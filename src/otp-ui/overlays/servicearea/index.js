@@ -200,7 +200,7 @@ class ServiceareaOverlay extends MapLayer {
         html: ReactDOMServer.renderToStaticMarkup(
           <MarkerCluster
             text={text}
-            textColor={"white"}
+            textColor={"#636359"}
             markerColor={overlayServiceareaConf.iconMarkerColor}
           />
         ),
