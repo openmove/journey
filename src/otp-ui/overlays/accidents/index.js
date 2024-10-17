@@ -20,57 +20,22 @@ import "react-circular-progressbar/dist/styles.css";
 import { getItem } from "../../core-utils/storage";
 import { setLocation } from "../../../actions/map";
 import { accidentsLocationsQuery } from "../../../actions/accidents";
-
-//import BadgeIcon from "../icons/badge-icon";
+import { colorGradient } from "../../core-utils/color";
 
 import ReactDOMServer from "react-dom/server";
 import FromToLocationPicker from "../../from-to-location-picker";
 
 import { ClassicCar } from "../../icons/classic";
 
-//import polyline from "@mapbox/polyline";
 
 class AccidentsOverlay extends MapLayer {
   constructor(props) {
     super(props);
   }
 
-  static propTypes = {
-    api: PropTypes.string,
-    accidentsLocationsQuery: PropTypes.func,
-    setLocation: PropTypes.func,
-  };
-
   _startRefreshing() {}
 
   _stopRefreshing() {}
-
-  _computeSelectedYears() {
-    const filters = this._getFilters(this.props.activeFilters);
-    const yearsFilter = filters?.years;
-
-    if (!yearsFilter?.enabled) {
-      return [];
-    }
-
-    const years = yearsFilter?.values
-      ?.filter((v) => v.enabled)
-      ?.map((v) => v.value);
-
-    return years;
-  }
-
-  _update() {
-    const years = this._computeSelectedYears();
-
-    const params = { years };
-    this.props.accidentsLocationsQuery(this.props.api, params);
-  }
-
-  _getFilters(filters) {
-    const { overlayAccidentsConf } = this.props;
-    return filters[overlayAccidentsConf.type];
-  }
 
   componentDidMount() {
     this.props.registerOverlay(this);
@@ -112,95 +77,25 @@ class AccidentsOverlay extends MapLayer {
     }
   }
 
+  _update() {
+    const years = this._computeSelectedYears();
+
+    const params = { years };
+    this.props.accidentsLocationsQuery(this.props.api, params);
+  }
+
   createLeafletElement() {}
 
   updateLeafletElement() {}
-  colorGradient(fadeFraction, hexColor1, hexColor2, hexColor3) {
-    // https://stackoverflow.com/q/30143082
-    let color1 = this.hexToRGB(hexColor1);
-    let color2 = this.hexToRGB(hexColor2);
-    const color3 = this.hexToRGB(hexColor3);
-    let fade = Math.floor(fadeFraction * 100) / 100;
 
-    // Do we have 3 colors for the gradient? Need to adjust the params.
-    if (color3) {
-      fade = fade * 2;
 
-      // Find which interval to use and adjust the fade percentage
-      if (fade >= 1) {
-        fade -= 1;
-        color1 = this.hexToRGB(hexColor2);
-        color2 = color3;
-      }
-    }
-
-    var diffRed = color2.red - color1.red;
-    var diffGreen = color2.green - color1.green;
-    var diffBlue = color2.blue - color1.blue;
-
-    var gradient = {
-      red: parseInt(Math.floor(color1.red + diffRed * fade), 10),
-      green: parseInt(Math.floor(color1.green + diffGreen * fade), 10),
-      blue: parseInt(Math.floor(color1.blue + diffBlue * fade), 10),
-    };
-
-    return (
-      "rgb(" + gradient.red + "," + gradient.green + "," + gradient.blue + ")"
-    );
-  }
-
-  hexToRGB(hex) {
-    // https://stackoverflow.com/a/28056903
-    var red = parseInt(hex.slice(1, 3), 16),
-      green = parseInt(hex.slice(3, 5), 16),
-      blue = parseInt(hex.slice(5, 7), 16);
-
-    return {
-      red,
-      green,
-      blue,
-    };
-  }
   render() {
     const { locations, overlayAccidentsConf } = this.props;
 
-    let minNumberOfAccidents = 0;
-    let maxNumberOfAccidents = 0;
-    this.props.locations.stations?.forEach((station) => {
-      if (station?.incidenti > maxNumberOfAccidents) {
-        maxNumberOfAccidents = station?.incidenti;
-      }
-      if (station?.incidenti < minNumberOfAccidents) {
-        minNumberOfAccidents = station?.incidenti;
-      }
-    });
-
-    this.minNumberOfAccidents = minNumberOfAccidents;
-    this.maxNumberOfAccidents = maxNumberOfAccidents;
-
-
-
-    const getStyle = (station) => {
-      const fade = !this.maxNumberOfAccidents
-        ? 0
-        : (station.incidenti - this.minNumberOfAccidents) /
-          (this.maxNumberOfAccidents - this.minNumberOfAccidents);
-
-      return {
-        weight: 7,
-        // overlayAccidentsConf.levelColors[feature.properties.level]
-        color: this.colorGradient(
-          // normalize
-          fade,
-          overlayAccidentsConf.levelColors[0],
-          overlayAccidentsConf.levelColors[1],
-          overlayAccidentsConf.levelColors[2]
-        ),
-      };
-    };
-
     if (!locations || !locations.stations || locations.stations.length === 0)
       return <LayerGroup />;
+
+    this._computeRangeOfAccidentsValues();
 
     return (
       <LayerGroup>
@@ -215,7 +110,15 @@ class AccidentsOverlay extends MapLayer {
                 positions={station?.geometry.geometry.coordinates?.map(
                   ([lon, lat]) => [lat, lon]
                 )}
-                {...getStyle(station)}
+                weight={7}
+                color={
+                  colorGradient(
+                    this._normalizeAccidentsValue(station.incidenti),
+                    overlayAccidentsConf.levelColors[0],
+                    overlayAccidentsConf.levelColors[1],
+                    overlayAccidentsConf.levelColors[2]
+                  )
+                }
               >
                 <Tooltip sticky={true}>
                   <div className="leaflet-tooltip-content">
@@ -231,6 +134,52 @@ class AccidentsOverlay extends MapLayer {
           })}
       </LayerGroup>
     );
+  }
+
+  _computeSelectedYears() {
+    const filters = this._getFilters(this.props.activeFilters);
+    const yearsFilter = filters?.years;
+
+    if (!yearsFilter?.enabled) {
+      return [];
+    }
+
+    const years = yearsFilter?.values
+      ?.filter((v) => v.enabled)
+      ?.map((v) => v.value);
+
+    return years;
+  }
+
+
+  _getFilters(filters) {
+    const { overlayAccidentsConf } = this.props;
+    return filters[overlayAccidentsConf.type];
+  }
+
+  _normalizeAccidentsValue (accidents) {
+    // normalize value between 0 and 1
+    return !this.maxNumberOfAccidents
+      ? 0
+      : (accidents - this.minNumberOfAccidents) /
+      (this.maxNumberOfAccidents - this.minNumberOfAccidents);
+  }
+
+  _computeRangeOfAccidentsValues() {
+    let minNumberOfAccidents = 0;
+    let maxNumberOfAccidents = 0;
+
+    this.props.locations.stations?.forEach((station) => {
+      if (station?.incidenti > maxNumberOfAccidents) {
+        maxNumberOfAccidents = station?.incidenti;
+      }
+      if (station?.incidenti < minNumberOfAccidents) {
+        minNumberOfAccidents = station?.incidenti;
+      }
+    });
+
+    this.minNumberOfAccidents = minNumberOfAccidents;
+    this.maxNumberOfAccidents = maxNumberOfAccidents;
   }
 }
 
