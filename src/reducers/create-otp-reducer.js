@@ -288,6 +288,9 @@ export function getInitialState (userDefinedConfig, initialQuery) {
       traffic: {
         locations: []
       },
+      accidents: {
+        locations: []
+      },
       vms: {
         locations: []
       },
@@ -1024,7 +1027,15 @@ function createOtpReducer (config, initialQuery) {
             }
           }
         })
-
+      case 'ACCIDENTS_LOCATIONS_RESPONSE':
+        return update(state, {
+          overlay: {
+            accidents: {
+              locations: { $set: getResponseData(action.payload)},
+              pending: { $set: false }
+            }
+          }
+        })
       case 'VMS_LOCATIONS_RESPONSE': {
         const {stations} = getResponseData(action.payload)
         return update(state, {

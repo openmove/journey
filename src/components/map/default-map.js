@@ -33,6 +33,7 @@ import ParkingOverlay from '../../otp-ui/overlays/parking'
 import DrtOverlay from '../../otp-ui/overlays/drt'
 import ChargerOverlay from '../../otp-ui/overlays/charger'
 import TrafficOverlay from '../../otp-ui/overlays/traffic'
+import AccidentsOverlay from '../../otp-ui/overlays/accidents';
 import OverlayWebcam from '../../otp-ui/overlays/webcam'
 import VmsOverlay from "../../otp-ui/overlays/vms"
 import AlertsOverlay from "../../otp-ui/overlays/alerts"
@@ -73,6 +74,9 @@ class DefaultMap extends Component {
       /*  state to keep track of open popups
       isPopupOpen:false, */
     }
+
+    this.onLocationFilterChange = this.onLocationFilterChange.bind(this)
+    this.onLocationFilterReset = this.onLocationFilterReset.bind(this);
   }
 
   // variable to keep track of open popups
@@ -178,27 +182,59 @@ class DefaultMap extends Component {
     this.setState({ overlayFilters })
   }
 
+  _updateFiltersItems(overlay, group,updateItemFunction) {
+    const overlayFilters = structuredClone(this.state.overlayFilters);
+
+    const overlayObj = overlayFilters[overlay]
+
+    function updateFilterGroup(groupToUpdate) {
+      const currentFilter = overlayFilters[overlay][groupToUpdate];
+
+      const updatedValues = currentFilter.values.map((item) => {
+        const cpItem = { ...item };
+        updateItemFunction(cpItem);
+        return cpItem;
+      });
+
+      overlayObj[groupToUpdate].values = updatedValues;
+    }
+
+    if(group){
+      updateFilterGroup(group);
+    } else {
+      // if not group provided update every group
+      Object.keys(overlayFilters[overlay])
+      .forEach( group => updateFilterGroup(group))
+    }
+
+    const updatedOverlayFilters = Object.assign({}, this.state.overlayFilters,
+      {
+      [overlay]: {
+        ...overlayObj
+      },
+    });
+    console.log(updatedOverlayFilters);
+
+    this.setState({ overlayFilters: updatedOverlayFilters });
+  }
+
+
   onLocationFilterChange = (overlay, group, name) => {
-    const overlayFilters = { ...this.state.overlayFilters };
 
-    overlayFilters[overlay][group].values.map(item => {
+    const updateItemFunction = (item) => {
       if (item.value === name) {
-        item.enabled = !item.enabled
-        return
+        item.enabled = !item.enabled;
       }
-    })
+    }
 
-    this.setState({ overlayFilters })
+    this._updateFiltersItems(overlay, group, updateItemFunction);
   }
 
   onLocationFilterReset = overlay => {
-    const overlayFilters = { ...this.state.overlayFilters }
 
-    Object.keys(overlayFilters[overlay]).map(key => {
-      overlayFilters[overlay][key].values.map(item => item.enabled = true)
-    })
+    const updateItemFunction = (item) => {item.enabled = true}
 
-    this.setState({ overlayFilters })
+    this._updateFiltersItems(overlay,null,updateItemFunction)
   }
 
   render () {
@@ -404,6 +440,15 @@ class DefaultMap extends Component {
                         name={t(overlayConfig.name)}
                       />
 
+                    )
+                     case 'accidents': return (
+                      <AccidentsOverlay
+                        key={k}
+                        {...overlayConfig}
+                        visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
+                        name={t(overlayConfig.name)}
+                        activeFilters={this.state.overlayFilters}
+                      />
                     )
                     case 'charger': return (
                       <ChargerOverlay

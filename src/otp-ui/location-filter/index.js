@@ -23,6 +23,9 @@ class LocationFilter extends Component {
           filters: null,
           containerElement: null,
         }
+
+        this.onReset = this.onReset.bind(this)
+        this.updateItem = this.updateItem.bind(this)
     }
 
     async componentDidUpdate(prevProps, prevState) {
@@ -65,14 +68,59 @@ class LocationFilter extends Component {
       }
     }
 
+    onReset() {
+      // we need to sync internal state with the one on default-map :/
+      const updatedFilters = {}
+
+      Object.entries(this.state.filters).forEach(([group, filterGroup]) => {
+        updatedFilters[group] = {
+          ...filterGroup,
+          values: filterGroup.values.map((v) => ({
+            ...v,
+            enabled: true,
+          })),
+        };
+      });
+
+      this.setState({
+        filters: updatedFilters,
+      });
+
+      this.props.onReset()
+    }
+
+    updateItem(key, item, checked) {
+      const {values,...rest} = this.state.filters[key];
+      const updatedValues = [...values];
+
+      const index = values?.findIndex((it) => it === item);
+      if (index < 0) {
+        this.props.onChange(key, item.value)
+        return;
+      }
+
+      const newItem = {
+        ...item,
+        enabled :!checked
+      }
+      updatedValues[index] = newItem;
+
+      this.setState({
+        filters: {
+          ... this.state.filters,
+           [key]: {...rest, values: updatedValues }
+        },
+      });
+
+      this.props.onChange(key, item.value)
+    }
+
     render() {
         const {
             t,
             title,
             show,
             onClose,
-            onChange,
-            onReset
         } = this.props
 
         const filters = (
@@ -83,7 +131,7 @@ class LocationFilter extends Component {
                 </div>
                 {
                   (!this.state.error && !this.state.loading) &&
-                    <button className="otp-ui-locationFilter__activeAll" onClick={onReset}>{t('reset_filters')}</button>
+                    <button className="otp-ui-locationFilter__activeAll" onClick={this.onReset}>{t('reset_filters')}</button>
                 }
                 <div className="otp-ui-locationFilter__container">
                     {
@@ -107,7 +155,7 @@ class LocationFilter extends Component {
                                                         label={translatedLabel}
                                                         value={item.value?.toString()}
                                                         checked={item.enabled}
-                                                        onChange={() => onChange(key, item.value)}
+                                                        onChange={() => {this.updateItem(key,item,item.enabled);}}
                                                     />
                                                 );
                                             })
