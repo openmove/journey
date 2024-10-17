@@ -96,6 +96,7 @@ class AccidentsOverlay extends MapLayer {
       return <LayerGroup />;
 
     this._computeRangeOfAccidentsValues();
+    const years = this._computeSelectedYears();
 
     return (
       <LayerGroup>
@@ -111,19 +112,21 @@ class AccidentsOverlay extends MapLayer {
                   ([lon, lat]) => [lat, lon]
                 )}
                 weight={7}
-                color={
-                  colorGradient(
-                    this._normalizeAccidentsValue(station.incidenti),
-                    overlayAccidentsConf.levelColors[0],
-                    overlayAccidentsConf.levelColors[1],
-                    overlayAccidentsConf.levelColors[2]
-                  )
-                }
+                color={colorGradient(
+                  this._normalizeAccidentsValue(station.incidenti),
+                  overlayAccidentsConf.levelColors[0],
+                  overlayAccidentsConf.levelColors[1],
+                  overlayAccidentsConf.levelColors[2]
+                )}
               >
                 <Tooltip sticky={true}>
                   <div className="leaflet-tooltip-content">
                     <p>{`km${station._id.da} - km${station._id.a}`}</p>
-                    <p>{this._computeSelectedYears()?.join(",")}</p>
+                    <p>
+                      {years?.length > 0
+                        ? years?.join(",")
+                        : this._computeYearsRange()?.join(" - ")}
+                    </p>
                     <p>
                       <b>{`${station.incidenti} incidenti`}</b>
                     </p>
@@ -151,18 +154,53 @@ class AccidentsOverlay extends MapLayer {
     return years;
   }
 
+  _computeYearsRange() {
+    const { locations } = this.props;
+
+    if (!locations || !locations.stations || locations.stations.length === 0) {
+      return [];
+    }
+
+    const filters = this._getFilters(this.props.activeFilters);
+
+    if (!filters) {
+      let minYear = -1;
+      let maxYear = -1;
+      this.props.locations.stations?.forEach((station) => {
+        if (station?.year > maxYear) {
+          maxYear = station?.year;
+        }
+        if (station?.year < minYear) {
+          minYear = station?.year;
+        }
+      });
+
+      return minYear > 0 && maxYear > 0 ? [minYear, maxYear] : [];
+    }
+
+    const years = filters?.years?.values.map((v) => v.value);
+
+    if (!filters?.years?.enabled) {
+      return [];
+    }
+
+    const min = Math.min(...years);
+    const max = Math.max(...years);
+
+    return [min, max];
+  }
 
   _getFilters(filters) {
     const { overlayAccidentsConf } = this.props;
     return filters[overlayAccidentsConf.type];
   }
 
-  _normalizeAccidentsValue (accidents) {
+  _normalizeAccidentsValue(accidents) {
     // normalize value between 0 and 1
     return !this.maxNumberOfAccidents
       ? 0
       : (accidents - this.minNumberOfAccidents) /
-      (this.maxNumberOfAccidents - this.minNumberOfAccidents);
+          (this.maxNumberOfAccidents - this.minNumberOfAccidents);
   }
 
   _computeRangeOfAccidentsValues() {
