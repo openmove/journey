@@ -1057,7 +1057,7 @@ function createOtpReducer (config, initialQuery) {
         })
       }
       case 'TRAILS_LOCATIONS_RESPONSE': {
-        const {tour: stations} = getResponseData(action.payload);
+        const stations= getResponseData(action.payload);
 
         // If locations is undefined, initialize it w/ the full payload
         if (!state.overlay.trails.locations?.length || state.overlay.trails.locations?.length==0 ) {
@@ -1093,7 +1093,7 @@ function createOtpReducer (config, initialQuery) {
       }
       case 'CONTEXTUALIZED_TRAILS_RESPONSE': {
         const {overlayName, data} = action.payload
-        const {tour: stations} = getResponseData(data);
+        const stations = getResponseData(data);
 
         // If locations is undefined, initialize it w/ the full payload
         if (  !state.overlay.trails.locations?.length ||

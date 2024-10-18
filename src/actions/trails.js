@@ -41,17 +41,11 @@ export function trailsLocationsQuery(nearbyUrl, ooisUrl, params, overlayName) {
   return async function (dispatch, getState) {
     dispatch(requestTrailsLocationsResponse()); // todo: is this doing something?
 
-    let ids = [];
-    try {
-      ids = await fetchNearbyToursIds(nearbyUrl, params);
-      if (ids?.length <= 0) {
-        return;
-      }
-    } catch (err) {
-      return dispatch(receivedTrailsLocationsError({ overlayName, data: err }));
-    }
+    const detailsUrl = addQueryParams(
+      ooisUrl,
+      params
+    );
 
-    const detailsUrl = addQueryParams(ooisUrl + "/" + ids.join(","), params);
     dispatch(
       createQueryAction(
         detailsUrl,
@@ -60,7 +54,11 @@ export function trailsLocationsQuery(nearbyUrl, ooisUrl, params, overlayName) {
         {
           customUrl: true,
           fetchOptions: {
-            headers: { Accept: "application/json", "X-Robots-Tag": "noindex" },
+            headers: {
+              Accept: "application/json",
+              // "X-Robots-Tag": "noindex",
+              "X-User-Id": "xxxxx", // todo configure
+            },
           },
         }
       )
@@ -88,23 +86,21 @@ export const contextualizedTrailsQuery = (
   return async function (dispatch, getState) {
     dispatch(requestContextualizedTrailsResponse()); // todo: is this doing something?
 
-    let ids = [];
-    try {
-      ids = await fetchNearbyToursIds(nearbyUrl, params);
-      if (ids?.length <= 0) {
-        return;
-      }
-    } catch (err) {
-      return dispatch(
-        receivedContextualizedTrailsError({ overlayName, data: err })
-      );
-    }
-
     let json;
     try {
-      const detailsUrl = addQueryParams(ooisUrl + "/" + ids.join(","), params);
+      const {'tag[]':categoriesParameter, ...restParams} = params;
+
+      const detailsUrl = addQueryParams(
+        ooisUrl,
+        restParams
+      ) + `tag[]=${categoriesParameter}`; // prevent url encoding of brackets
+
       const response = await fetch(detailsUrl, {
-        headers: { Accept: "application/json", "X-Robots-Tag": "noindex" },
+        headers: {
+          Accept: "application/json",
+        // "X-Robots-Tag": "noindex",
+          "X-User-Id": "xxxxx",
+        },
       });
 
       if (response.status >= 400) {

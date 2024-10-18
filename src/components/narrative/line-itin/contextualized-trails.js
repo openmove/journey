@@ -64,13 +64,17 @@ class ContextualizedTrails extends Component {
   }
 
   query(point, name, contextualizedTrailsConfig) {
+    const categories = [] // todo
+
     const params = {
-      location: point.lon + "," + point.lat,
+      lon: point.lon,
+      lat: point.lat,
       radius: contextualizedTrailsConfig?.radius || 1000,
       key: contextualizedTrailsConfig.apiKey,
       lang: this.props.i18n.language,
       sortby: "distance",
       limit: 3, // :hammer: keep only 3 results
+      'tag[]': categories.join("&tag[]=")
     };
 
     this.props.contextualizedTrailsQuery(

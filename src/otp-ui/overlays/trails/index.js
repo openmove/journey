@@ -53,8 +53,8 @@ class TrailsOverlay extends MapLayer {
     const contextualTrailsIds = [];
     Object.values(contextualTrails)?.forEach((trails) => {
       const newTrailsIds = trails
-        .map((trail) => trail.id)
-        .filter((trailId) => !contextualTrailsIds.includes(trailId));
+      .map((trail) => trail.id)
+      .filter((trailId) => !contextualTrailsIds.includes(trailId));
       contextualTrailsIds.push(...newTrailsIds);
     });
 
@@ -70,15 +70,11 @@ class TrailsOverlay extends MapLayer {
       return radiusInM;
     };
 
-    const center = getItem("mapCenter");
-    const radius = getRadiusFromBBInMeters();
+    const bb =  getItem('mapBounds')
 
     const params = {
-      location: center.lng + "," + center.lat,
-      radius,
-      key: this.props.apiKey,
+      ...bb,
       lang: this.props.i18n.language,
-      limit: 48, // :hammer: there's no way to filter this to a reasonable number // since the next  request has an intrinsic number of ids that could be required doe to the maximum lenght of the url :/
     };
 
     if (launchNow === true) {
@@ -91,15 +87,10 @@ class TrailsOverlay extends MapLayer {
       if (this._refreshTimer) clearTimeout(this._refreshTimer);
 
       this._refreshTimer = setTimeout(() => {
-        const center = getItem("mapCenter");
-        const radius = getRadiusFromBBInMeters();
-
+        const bb =  getItem('mapBounds')
         const params = {
-          location: center.lng + "," + center.lat,
-          radius,
-          key: this.props.apiKey,
+          ...bb,
           lang: this.props.i18n.language,
-          limit: 48, // :hammer: there's no way to filter this to a reasonable number // since the next  request has an intrinsic number of ids that could be required doe to the maximum lenght of the url :/
         };
 
         this.props.trailsLocationsQuery(
@@ -213,6 +204,7 @@ class TrailsOverlay extends MapLayer {
 
     const markerIcon = (station) => {
       const iconUrl = station?.category?.iconUrl;
+
       return icon({
         className: "outdoorActive--categoryIcon",
         iconUrl,
@@ -367,15 +359,7 @@ class TrailsOverlay extends MapLayer {
 
                     {image && (
                       <figure>
-                        <img
-                          className="image"
-                          src={
-                            overlayTrailsConf.outdoorActiveTrailImageUrl +
-                            "/200/50/" +
-                            image.id +
-                            "/.png"
-                          }
-                        />
+                        <img className="image" src={  image.id } />
                         <figcaption>
                           <p className="photos-author">
                             {t("photo_author")}: {image.meta.author}

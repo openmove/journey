@@ -297,15 +297,7 @@ class ContextualTrailsOverlay extends MapLayer {
 
                       {image && (
                         <figure>
-                          <img
-                            className="image"
-                            src={
-                              overlayTrailsConf.outdoorActiveTrailImageUrl +
-                              "/200/50/" +
-                              image.id +
-                              "/.png"
-                            }
-                          />
+                          <img className="image" src={image.id } />
                           <figcaption>
                             <p className="photos-author">
                               {t("photo_author")}: {image.meta.author}

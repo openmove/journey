@@ -26,14 +26,10 @@ class TrailViewerOverlay extends MapLayer {
 
     const polyline = [];
 
-    viewedLocation?.geometry.split(" ").forEach((coordinateStr) => {
-      const coordinateArr = coordinateStr.split(",").map(Number).slice(0, 2);
-
-      // swap values since coordinates are inverted
-      const swappedArr = [coordinateArr[1], coordinateArr[0]];
-
+    viewedLocation?.geometry.coordinates?.forEach( coordinate => {
+      const swappedArr = [coordinate[1], coordinate[0]];
       polyline.push(swappedArr);
-    });
+    })
 
     this.polyline = polyline;
   }
@@ -67,7 +63,7 @@ class TrailViewerOverlay extends MapLayer {
 
     return (
       <Polyline
-        color={this.props?.viewedLocation?.lineOptions?.strokeColor}
+        // color={this.props?.viewedLocation?.lineOptions?.strokeColor}
         positions={this.polyline}
       />
     );
