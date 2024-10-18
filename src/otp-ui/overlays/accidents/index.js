@@ -90,7 +90,7 @@ class AccidentsOverlay extends MapLayer {
 
 
   render() {
-    const { locations, overlayAccidentsConf } = this.props;
+    const { locations, overlayAccidentsConf,t } = this.props;
 
     if (!locations || !locations.stations || locations.stations.length === 0)
       return <LayerGroup />;
@@ -121,14 +121,14 @@ class AccidentsOverlay extends MapLayer {
               >
                 <Tooltip sticky={true}>
                   <div className="leaflet-tooltip-content">
-                    <p>{`km${station._id.da} - km${station._id.a}`}</p>
+                    <p>{`km ${station._id.da} - km ${station._id.a}`}</p>
                     <p>
                       {years?.length > 0
-                        ? years?.join(",")
+                        ? years?.join(", ")
                         : this._computeYearsRange()?.join(" - ")}
                     </p>
                     <p>
-                      <b>{`${station.incidenti} incidenti`}</b>
+                      <b>{`${station.incidenti} ` + t('accidents_label')}</b>
                     </p>
                   </div>
                 </Tooltip>
