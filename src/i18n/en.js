@@ -545,4 +545,9 @@ export const TRANSLATIONS_EN = {
     // alerts
   "alerts": "Avvisi",
   "until": "until ",
+
+    // accidents
+  "accidents" : "Accidents",
+  "years_label": "Years",
+   "accidents_label" : "accidents"
 };

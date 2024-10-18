@@ -243,7 +243,7 @@ export const TRANSLATIONS_IT = {
   "vehicles": "Veicoli",
   "simulated_position_disclaimer":"La posizione dei mezzi è indicativa e potrebbe essere stimata in base all'orario",
   "ondemand": "onDemand",
-  "webcam": "Webcams",
+  "webcam": "Webcam",
   "webcam_last_updated_status":"Immagine proveniente dal ultimo stato attivo della webcam",
   "vms": "Cartelli messaggi variabili",
   "traffic": "Traffico",
@@ -541,4 +541,9 @@ export const TRANSLATIONS_IT = {
   // alerts
   "alerts": "Avvisi",
   "until": "fino a ",
+
+  // accidents
+  "accidents" : "Incidenti",
+  "years_label": "Anni",
+  "accidents_label" : "incidenti"
 }
