@@ -121,7 +121,7 @@ class AccidentsOverlay extends MapLayer {
               >
                 <Tooltip sticky={true}>
                   <div className="leaflet-tooltip-content">
-                    <p>{`km ${station._id.da} - km ${station._id.a}`}</p>
+                    <p>{`km ${station.da_km} - km ${station.a_km}`}</p>
                     <p>
                       {years?.length > 0
                         ? years?.join(", ")
