@@ -235,7 +235,7 @@ class ParkingOverlay extends AbstractOverlay {
           }
 
           //WORK around for wrong data from server
-          let {capacity, free} = station;
+          let {capacity, free, direction} = station;
 
           if (
             typeof free === 'number' &&
@@ -244,6 +244,21 @@ class ParkingOverlay extends AbstractOverlay {
           ) {
             free = free > capacity ? capacity : free;
           }
+          let directionStr = null;
+
+            if (direction === "nord" || direction === "north" || direction === "n") {
+              directionStr = "north";
+            } else if (
+              direction === "sud" ||
+              direction === "south" ||
+              direction === "s"
+            ) {
+              directionStr = "south";
+            } else if ( direction === "both"){
+              directionStr = "both";
+            } else if (direction != null){
+              console.warn("no direction matching");
+            }
 
           return (
             <Marker
@@ -285,6 +300,7 @@ class ParkingOverlay extends AbstractOverlay {
                         )}
                         {station.operator && <p>{t('managed')}: { station.operator}</p>}
                         {capacity && <p>{t('capacity')}: {capacity !== null && capacity !== -1 ? capacity : 'N/A'}</p>}
+                        {directionStr && <p>{t('parking_direction')}: {t(directionStr)}</p>}
                       </div>
                     </div>
                   )}

@@ -8,6 +8,7 @@ export const TRANSLATIONS_IT = {
   "north": "nord",
   "west": "ovest",
   "east": "est",
+  "both": "entrambe",
   "north_west": "nord-ovest",
   "north_east": "nord-est",
   "south_west": "sud-ovest",
@@ -140,6 +141,7 @@ export const TRANSLATIONS_IT = {
   "next_arrivals": "prossimi arrivi",
   "show": "Mostra",
   "direction": "Dir.",
+  "parking_direction": "Direzione",
   "departure_cap": "PARTENZA",
   "mean_cap": "MEZZO",
   "status_cap": "STATUS",
@@ -553,5 +555,8 @@ export const TRANSLATIONS_IT = {
   // accidents
   "accidents" : "Incidenti",
   "years_label": "Anni",
-  "accidents_label" : "incidenti"
+  "accidents_label" : "incidenti",
+
+    // motorway truck parking
+   "motorway_truck_parking": "Parcheggi per camion in autostrada"
 }
