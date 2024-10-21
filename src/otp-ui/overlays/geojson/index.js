@@ -24,8 +24,6 @@ import { geojsonLocationsQuery } from "../../../actions/geojson";
 class GeojsonOverlay extends MapLayer {
   constructor(props) {
     super(props);
-    this._startRefreshing = this.update.bind(this);
-    this._stopRefreshing = this._stopRefreshing.bind(this);
   }
 
   static propTypes = {
