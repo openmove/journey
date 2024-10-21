@@ -533,6 +533,14 @@ export const TRANSLATIONS_IT = {
 
   // toll gates
   "toll_gates": "Caselli",
+  "toll-gates-entrances-title": "ENTRATE",
+  "toll-gates-entrances-total": "Totali: ",
+  "toll-gates-entrances-telepass": "Telepass: ",
+  "toll-gates-entrances-telepass-dedicated": "Piste Dedicate: ",
+  "toll-gates-exits-title": "USCITE",
+  "toll-gates-exits-total": "Totali: ",
+  "toll-gates-exits-telepass": "Telepass: ",
+  "toll-gates-exits-telepass-dedicated": "Piste Dedicate: ",
 
   // service area
   "service_areas":"Aree di servizio",

@@ -174,7 +174,23 @@ class TollGatesOverlay extends MapLayer {
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
 
                   <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                    {/* {Direction(station)} */}
+                    <p className="note">{station.note}</p>
+                    <div className="otp-ui-mapOverlayPopup__popupAvailableInfo-list-block--left-aligned ">
+                    <h5>{t("toll-gates-entrances-title")}</h5>
+                    <ul >
+                      <li>{t("toll-gates-entrances-total")}{station.n_entrate}</li>
+                      <li>{t("toll-gates-entrances-telepass")}{station.n_entrate_telepass}</li>
+                      <li>{t("toll-gates-entrances-telepass-dedicated")}{station.n_entrate_telepass_dedicate}</li>
+                    </ul>
+                    </div>
+                    <div className="otp-ui-mapOverlayPopup__popupAvailableInfo-list-block--left-aligned ">
+                    <h5>{t("toll-gates-exits-title")}</h5>
+                    <ul>
+                    <li>{t("toll-gates-exits-total")}{station.n_uscite}</li>
+                    <li>{t("toll-gates-exits-telepass")}{station.n_uscite_telepass}</li>
+                    <li>{t("toll-gates-exits-telepass-dedicated")}{station.n_uscite_telepass_dedicate}</li>
+                    </ul>
+                    </div>
                   </div>
 
                   <div className='popup-row'>

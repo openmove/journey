@@ -13,6 +13,7 @@ export function tollGatesLocationsQuery (url,params) {
     try {
       const newUrl = addQueryParams(url,params)
       const response = await fetch(newUrl)
+
       if (response.status >= 400) {
         const error = new Error('Received error from server')
         error.response = response

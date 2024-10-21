@@ -537,6 +537,15 @@ export const TRANSLATIONS_EN = {
 
   // toll gates
   "toll_gates": "Toll gates",
+  "toll-gates-entrances-title": "ENTRIES",
+  "toll-gates-entrances-total": "Totals: ",
+  "toll-gates-entrances-telepass": "Telepass: ",
+  "toll-gates-entrances-telepass-dedicated": "Telepass reserved: ",
+  "toll-gates-exits-title": "EXITS",
+  "toll-gates-exits-total": "Totals: ",
+  "toll-gates-exits-telepass": "Telepass: ",
+  "toll-gates-exits-telepass-dedicated": "Telepass reserved: ",
+
 
     // service area
   "service_areas":"Service areas",
