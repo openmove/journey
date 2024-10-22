@@ -7,6 +7,7 @@ import { Util } from 'leaflet'
 
 import {
   bikeRentalQuery,
+  bikeRentalCustomUrlQuery,
   carRentalQuery,
 } from '../../actions/api'
 import { updateOverlayVisibility } from '../../actions/config'
@@ -240,6 +241,7 @@ class DefaultMap extends Component {
   render () {
     const {
       bikeRentalQuery,
+      bikeRentalCustomUrlQuery,
       bikeRentalStations,
       carRentalQuery,
       carRentalStations,
@@ -373,6 +375,7 @@ class DefaultMap extends Component {
                         visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
                         name={t(overlayConfig.name)}
                         refreshVehicles={bikeRentalQuery}
+                        refreshVehiclesCustomUrl={bikeRentalCustomUrlQuery}
                         stations={bikeRentalStations}
                         activeFilters={this.state.overlayFilters}
                       />
@@ -571,6 +574,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = {
   bikeRentalQuery,
+  bikeRentalCustomUrlQuery,
   carRentalQuery,
   setLocation,
   setMapPopupLocation,

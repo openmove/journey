@@ -65,26 +65,34 @@ class BikeSharingOverlay extends MapLayer {
   updateLeafletElement() {}
 
   startRefreshing() {
-    const { refreshVehicles , overlayBikeSharingConf} = this.props;
+    const { refreshVehicles ,refreshVehiclesCustomUrl, overlayBikeSharingConf} = this.props;
     const bb =  getItem('mapBounds')
     const { map } = this.props.leaflet;
 
     const params = bb
 
-    // Create the timer only if refreshVehicles is a valid function.
-    if (typeof refreshVehicles === "function") {
-      // initial station retrieval
-      refreshVehicles(params);
-      if(overlayBikeSharingConf.startCenter){
-        map.flyTo(overlayBikeSharingConf.startCenter);
-      }
-      // set up timer to refresh stations periodically
-      this.refreshTimer = setInterval(() => {
-        const bb =  getItem('mapBounds')
-        const params = bb
-        refreshVehicles(params);
-      }, 30000); // defaults to every 30 sec. TODO: make this configurable?
+    const refresh =
+      overlayBikeSharingConf?.useCustomApi === true
+        ? (params) =>
+            refreshVehiclesCustomUrl(overlayBikeSharingConf?.api, params)
+        : refreshVehicles;
+
+    if (!(typeof refresh === "function")) {
+      // Create the timer only if refresh is a valid function.
+      return;
     }
+    // initial station retrieval
+    refresh(params);
+    if(overlayBikeSharingConf.startCenter){
+      map.flyTo(overlayBikeSharingConf.startCenter);
+    }
+    // set up timer to refresh stations periodically
+    this.refreshTimer = setInterval(() => {
+      const bb =  getItem('mapBounds')
+      const params = bb
+      refresh(params);
+    }, 30000); // defaults to every 30 sec. TODO: make this configurable?
+
   }
 
   stopRefreshing() {
