@@ -73,7 +73,6 @@ class ContextualizedTrails extends Component {
       key: contextualizedTrailsConfig.apiKey,
       lang: this.props.i18n.language,
       sortby: "distance",
-      limit: 3, // :hammer: keep only 3 results
       'tag[]': categories.join("&tag[]=")
     };
 
