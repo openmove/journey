@@ -11,6 +11,7 @@
     "prestart": "yarn",
     "build": "webpack --env.THEME=${JOURNEY_THEME:=default} --env.THEMES_PATH=${THEMES_PATH:=default} --mode=production",
     "start": "webpack-dev-server --env.THEME=${JOURNEY_THEME:=default} --env.THEMES_PATH=${THEMES_PATH:=default} --hot --mode=development --port 8081 --host 0.0.0.0 --disableHostCheck=true",
+    "dev": "webpack-dev-server --env.THEME=${JOURNEY_THEME:=default} --env.THEMES_PATH=${THEMES_PATH:=default} --hot --mode=development --port 8081 --disableHostCheck=true",
     "genconfig": "node scripts/genconfig.js config-template.yml > src/config.yml",
     "genenv": "./genenv.sh"
   },
