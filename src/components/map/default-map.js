@@ -321,8 +321,8 @@ class DefaultMap extends Component {
                 {/*TODO maybe remove <StopViewerOverlay />*/}
                 <EndpointsOverlay />
                 <RouteViewerOverlay />
-               {contextualTrailsConfig?.enabled && <TrailsViewerOverlay />}
-               {contextualTrailsConfig?.enabled && <ContextualTrailsOverlay/>}
+               {contextualTrailsConfig?.enabled && <TrailsViewerOverlay {...contextualTrailsConfig} />}
+               {contextualTrailsConfig?.enabled && <ContextualTrailsOverlay {...contextualTrailsConfig}/>}
                 <TransitiveOverlay />
                 <TripViewerOverlay />
                 <ElevationPointMarker />

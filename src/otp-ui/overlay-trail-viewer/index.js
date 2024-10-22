@@ -60,10 +60,10 @@ class TrailViewerOverlay extends MapLayer {
 
     if (!viewedTrail) return <FeatureGroup />;
     this.computePolyline();
-
+    const style =this.props?.style || {}
     return (
       <Polyline
-        // color={this.props?.viewedLocation?.lineOptions?.strokeColor}
+        {...style}
         positions={this.polyline}
       />
     );
