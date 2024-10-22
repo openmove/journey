@@ -71,7 +71,7 @@ class ParkingOverlay extends AbstractOverlay {
       let iconWidth, iconHeight;
 
       if( data.type === 'station') {
-        if (!data.free || data.free === -1) {
+        if (data.free == null || data.free === -1) {
           badgeType = 'default';
           badgeCounter = null;
         }
