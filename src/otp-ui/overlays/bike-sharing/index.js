@@ -120,6 +120,8 @@ class BikeSharingOverlay extends AbstractOverlay {
       t,
     } = this.props;
     const stationName = getStationName(configCompanies, station);
+    const capacity = station?.capacity;
+
     const location = {
       lat: station.y || station.lat,
       lon: station.x || station.lon,
@@ -135,16 +137,21 @@ class BikeSharingOverlay extends AbstractOverlay {
           <div className="otp-ui-mapOverlayPopup__popupTitle">
             {stationName}
           </div>
-          {station.bikesAvailable !== null && (
-            <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-              <div className="otp-ui-mapOverlayPopup__popupAvailableInfoValue">
-                {station.bikesAvailable}
-              </div>
-              <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">
-                {t("available_bikes")}
+          <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
+              {station.bikesAvailable !== null && (
+                <>
+                  <div className="otp-ui-mapOverlayPopup__popupAvailableInfoValue">
+                    {station.bikesAvailable}
+                  </div>
+                  <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">
+                    {t("available_bikes")}
+                  </div>
+                </>
+              )}
+              <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: (station.bikesAvailable === null || bikesAvailable === -1) ? '10px' : ''}}>
+                {capacity != null && <p>{t('capacity')}: {capacity !== null && capacity !== -1 ? capacity : 'N/A'}</p>}
               </div>
             </div>
-          )}
           <div className="otp-ui-mapOverlayPopup__popupRow">
             <FromToLocationPicker
               location={location}
