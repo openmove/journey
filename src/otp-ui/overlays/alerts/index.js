@@ -112,6 +112,8 @@ class AlertsOverlay extends MapLayer {
     const { locations, overlayAlertsConf, t, lng } = this.props;
     const isMarkClusterEnabled = overlayAlertsConf.markerCluster;
 
+    const roundedMToKM = (m) => Math.round((Number(m) / 1000 * 100) / 100);
+
     const getStyle = (feature) => {
       return {
         // weight: feature.properties.name == "area"  ? 0: 2,
@@ -191,7 +193,7 @@ class AlertsOverlay extends MapLayer {
           enabled={overlayAlertsConf}
           showCoverageOnHover={false}
           maxClusterRadius={40}
-          disableClusteringAtZoom={18}
+          disableClusteringAtZoom={null}
           iconCreateFunction={markerClusterIcon}
         >
           {locationsFiltered.map((station) => {
@@ -235,6 +237,8 @@ class AlertsOverlay extends MapLayer {
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">
 
                     </div>
+                    <small>{`km ${roundedMToKM(station.start_meter)} - km ${roundedMToKM(station.end_meter)}`}</small>
+                      <br/>
                     {startDate && endDate && (
                       <small>
                         {" "}
