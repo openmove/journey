@@ -37,7 +37,15 @@ import { distance } from "../../core-utils/distance";
 
 
 const getMarkerBikeSharing = memoize((badgeCounter, overlayBikeSharingConf) => {
-  let badgeType = badgeCounter === 0 ? "danger" : "warning";
+  let badgeType = 'default'
+
+   if (badgeCounter === 1) {
+    badgeType = 'warning';
+  }
+
+  if (badgeCounter === 0 ) {
+    badgeType = 'danger';
+  }
 
   if (badgeCounter > 1) badgeType = "success";
 
@@ -148,7 +156,7 @@ class BikeSharingOverlay extends AbstractOverlay {
                   </div>
                 </>
               )}
-              <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: (station.bikesAvailable === null || bikesAvailable === -1) ? '10px' : ''}}>
+              <div className="otp-ui-mapOverlayPopup__popupAvailableInfo--left-aligned" style={{paddingTop: (station.bikesAvailable === null || station.bikesAvailable === -1) ? '10px' : ''}}>
                 {capacity != null && <p>{t('capacity')}: {capacity !== null && capacity !== -1 ? capacity : 'N/A'}</p>}
               </div>
             </div>
