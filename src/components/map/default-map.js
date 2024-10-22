@@ -6,8 +6,6 @@ import { withNamespaces } from "react-i18next";
 import { Util } from 'leaflet'
 
 import {
-  bikeRentalQuery,
-  bikeRentalCustomUrlQuery,
   carRentalQuery,
 } from '../../actions/api'
 import { updateOverlayVisibility } from '../../actions/config'
@@ -27,7 +25,7 @@ import StopsOverlay from './connected-stops-overlay'
 import TransitiveOverlay from './connected-transitive-overlay'
 import TripViewerOverlay from './connected-trip-viewer-overlay'
 import CarSharingOverlay from './connected-car-sharing-overlay'
-import BikeSharingOverlay from './connected-bike-sharing-overlay'
+import BikeSharingOverlay from '../../otp-ui/overlays/bike-sharing'
 //data layers
 import TileOverlay from './overlay-tile'
 import ParkingOverlay from '../../otp-ui/overlays/parking'
@@ -240,8 +238,6 @@ class DefaultMap extends Component {
 
   render () {
     const {
-      bikeRentalQuery,
-      bikeRentalCustomUrlQuery,
       bikeRentalStations,
       carRentalQuery,
       carRentalStations,
@@ -374,8 +370,6 @@ class DefaultMap extends Component {
                         {...overlayConfig}
                         visible={storedOverlays.indexOf(t(overlayConfig.name)) !== -1}
                         name={t(overlayConfig.name)}
-                        refreshVehicles={bikeRentalQuery}
-                        refreshVehiclesCustomUrl={bikeRentalCustomUrlQuery}
                         stations={bikeRentalStations}
                         activeFilters={this.state.overlayFilters}
                       />
@@ -573,8 +567,6 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = {
-  bikeRentalQuery,
-  bikeRentalCustomUrlQuery,
   carRentalQuery,
   setLocation,
   setMapPopupLocation,

@@ -1,13 +1,30 @@
 import { divIcon } from "leaflet";
 import memoize from "lodash.memoize";
+import AbstractOverlay from '../AbstractOverlay'
 import { getCompaniesLabelFromNetworks } from "../../core-utils/itinerary";
-import { companyType, vehicleRentalMapOverlaySymbolsType, stationType} from "../../core-utils/types";
+import { connect } from 'react-redux'
+import {
+  companyType,
+  vehicleRentalMapOverlaySymbolsType,
+  stationType,
+} from "../../core-utils/types";
 import FromToLocationPicker from "../../from-to-location-picker";
 import PropTypes from "prop-types";
 import React from "react";
-import { withNamespaces } from "react-i18next"
+import { withNamespaces } from "react-i18next";
+import { setLocation } from '../../../actions/map'
+import {
+  bikeRentalQuery,
+  bikeRentalCustomUrlQuery,
+} from "../../../actions/api";
 import ReactDOMServer from "react-dom/server";
-import { LayerGroup, Marker, MapLayer, Popup, withLeaflet} from "react-leaflet";
+import {
+  LayerGroup,
+  Marker,
+  MapLayer,
+  Popup,
+  withLeaflet,
+} from "react-leaflet";
 import { MapMarkerAlt } from "@styled-icons/fa-solid";
 import MarkerBikeSharing from "../../icons/modern/MarkerBikeSharing";
 import BikeSharing from "../../icons/modern/BikeSharing";
@@ -18,16 +35,22 @@ import { filterOverlay } from "../../core-utils/overlays";
 import { getItem } from "../../core-utils/storage";
 import { distance } from "../../core-utils/distance";
 
-const getMarkerBikeSharing = memoize(( badgeCounter , overlayBikeSharingConf ) => {
-  let badgeType = (badgeCounter === 0) ? 'danger' : 'warning';
 
-  if (badgeCounter > 1)
-    badgeType = 'success';
+const getMarkerBikeSharing = memoize((badgeCounter, overlayBikeSharingConf) => {
+  let badgeType = badgeCounter === 0 ? "danger" : "warning";
+
+  if (badgeCounter > 1) badgeType = "success";
 
   return divIcon({
     className: "",
-    iconSize: [overlayBikeSharingConf.iconWidth, overlayBikeSharingConf.iconHeight],
-    iconAnchor: [overlayBikeSharingConf.iconWidth / 2, overlayBikeSharingConf.iconHeight],
+    iconSize: [
+      overlayBikeSharingConf.iconWidth,
+      overlayBikeSharingConf.iconHeight,
+    ],
+    iconAnchor: [
+      overlayBikeSharingConf.iconWidth / 2,
+      overlayBikeSharingConf.iconHeight,
+    ],
     popupAnchor: [0, -overlayBikeSharingConf.iconHeight],
     html: ReactDOMServer.renderToStaticMarkup(
       <BadgeIcon width={overlayBikeSharingConf.iconWidth} type={badgeType}>
@@ -38,8 +61,8 @@ const getMarkerBikeSharing = memoize(( badgeCounter , overlayBikeSharingConf ) =
           markerColor={overlayBikeSharingConf.iconMarkerColor}
         />
       </BadgeIcon>
-    )
-  })
+    ),
+  });
 });
 
 const getStationMarkerByColor = memoize(() =>
@@ -50,7 +73,7 @@ const getStationMarkerByColor = memoize(() =>
     popupAnchor: [0, -20],
     html: ReactDOMServer.renderToStaticMarkup(
       <MapMarkerAlt width={20} height={20} />
-    )
+    ),
   })
 );
 
@@ -59,64 +82,29 @@ const getStationMarkerByColor = memoize(() =>
  * types. This layer can be configured to show different styles of markers at
  * different zoom levels.
  */
-class BikeSharingOverlay extends MapLayer {
+class BikeSharingOverlay extends AbstractOverlay {
+
+  constructor(props){
+    //setup query to be called like query(api,params)
+    const query =
+      props.overlayBikeSharingConf?.useCustomApi === true
+        ? (api, params) =>
+            props.bikeRentalCustomUrlQuery(api, params)
+        : (api,params) => props.bikeRentalQuery(params);
+
+    super({
+      props,
+      query,
+      api: props?.api,
+      config: props.overlayBikeSharingConf
+    });
+
+    this.popup = React.createRef();
+  }
+
   createLeafletElement() {}
 
   updateLeafletElement() {}
-
-  startRefreshing() {
-    const { refreshVehicles ,refreshVehiclesCustomUrl, overlayBikeSharingConf} = this.props;
-    const bb =  getItem('mapBounds')
-    const { map } = this.props.leaflet;
-
-    const params = bb
-
-    const refresh =
-      overlayBikeSharingConf?.useCustomApi === true
-        ? (params) =>
-            refreshVehiclesCustomUrl(overlayBikeSharingConf?.api, params)
-        : refreshVehicles;
-
-    if (!(typeof refresh === "function")) {
-      // Create the timer only if refresh is a valid function.
-      return;
-    }
-    // initial station retrieval
-    refresh(params);
-    if(overlayBikeSharingConf.startCenter){
-      map.flyTo(overlayBikeSharingConf.startCenter);
-    }
-    // set up timer to refresh stations periodically
-    this.refreshTimer = setInterval(() => {
-      const bb =  getItem('mapBounds')
-      const params = bb
-      refresh(params);
-    }, 30000); // defaults to every 30 sec. TODO: make this configurable?
-
-  }
-
-  stopRefreshing() {
-    if (this.refreshTimer) clearInterval(this.refreshTimer);
-  }
-
-  componentDidMount() {
-    const { companies, mapSymbols, name, visible } = this.props;
-    if (visible) this.startRefreshing();
-    if (!mapSymbols)
-      console.warn(`No map symbols provided for layer ${name}`, companies);
-  }
-
-  componentWillUnmount() {
-    this.stopRefreshing();
-  }
-
-  componentDidUpdate(prevProps) {
-    if (!prevProps.visible && this.props.visible) {
-      this.startRefreshing();
-    } else if (prevProps.visible && !this.props.visible) {
-      this.stopRefreshing();
-    }
-  }
 
   /**
    * Render some popup html for a station. This contains custom logic for
@@ -124,27 +112,39 @@ class BikeSharingOverlay extends MapLayer {
    * applicable to other regions.
    */
   renderPopupForStation = (station, stationIsHub = false) => {
-    const { configCompanies, getStationName, setLocation, overlayBikeSharingConf, t } = this.props;
+    const {
+      configCompanies,
+      getStationName,
+      setLocation,
+      overlayBikeSharingConf,
+      t,
+    } = this.props;
     const stationName = getStationName(configCompanies, station);
     const location = {
       lat: station.y || station.lat,
       lon: station.x || station.lon,
-      name: stationName
+      name: stationName,
     };
     return (
       <Popup>
         <div className="otp-ui-mapOverlayPopup">
-            <div className="otp-ui-mapOverlayPopup__popupHeader">
-              <BikeSharing width={26} height={22} />&nbsp;&nbsp;{t('bikesharing')}
+          <div className="otp-ui-mapOverlayPopup__popupHeader">
+            <BikeSharing width={26} height={22} />
+            &nbsp;&nbsp;{t("bikesharing")}
+          </div>
+          <div className="otp-ui-mapOverlayPopup__popupTitle">
+            {stationName}
+          </div>
+          {station.bikesAvailable !== null && (
+            <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
+              <div className="otp-ui-mapOverlayPopup__popupAvailableInfoValue">
+                {station.bikesAvailable}
+              </div>
+              <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">
+                {t("available_bikes")}
+              </div>
             </div>
-            <div className="otp-ui-mapOverlayPopup__popupTitle">{stationName}</div>
-            {
-              station.bikesAvailable !== null &&
-                <div className="otp-ui-mapOverlayPopup__popupAvailableInfo">
-                  <div className="otp-ui-mapOverlayPopup__popupAvailableInfoValue">{station.bikesAvailable}</div>
-                  <div className="otp-ui-mapOverlayPopup__popupAvailableInfoTitle">{t('available_bikes')}</div>
-                </div>
-            }
+          )}
           <div className="otp-ui-mapOverlayPopup__popupRow">
             <FromToLocationPicker
               location={location}
@@ -157,82 +157,96 @@ class BikeSharingOverlay extends MapLayer {
   };
 
   renderStation = (station, index) => {
-    if (station.isFloatingBike)
-      return null
-    const {overlayBikeSharingConf} =this.props
-    const icon = getMarkerBikeSharing(station.bikesAvailable, overlayBikeSharingConf)
+    if (station.isFloatingBike) return null;
+    const { overlayBikeSharingConf } = this.props;
+    const icon = getMarkerBikeSharing(
+      station.bikesAvailable,
+      overlayBikeSharingConf
+    );
 
     return (
       <Marker
         icon={icon}
         key={station.station_id || station.id || index}
         position={[station.y || station.lat, station.x || station.lon]}
-        onClick={(e)=>{ e.target.openPopup()}}>
+        onClick={(e) => {
+          e.target.openPopup();
+        }}
+      >
         {this.renderPopupForStation(station)}
       </Marker>
     );
   };
 
-
-
   render() {
-    const { stations, companies,overlayBikeSharingConf, activeFilters } = this.props;
-    const isMarkClusterEnabled = overlayBikeSharingConf.markerCluster
+    const { stations, companies, overlayBikeSharingConf, activeFilters } =
+      this.props;
+    const isMarkClusterEnabled = overlayBikeSharingConf.markerCluster;
 
     if (!stations || stations.length === 0) return <LayerGroup />;
 
     let filteredStations = [];
     if (Array.isArray(companies)) {
-      filteredStations = stations.filter(station =>
-          station.networks.filter(value => companies.includes(value)).length > 0
+      filteredStations = stations.filter(
+        (station) =>
+          station.networks.filter((value) => companies.includes(value)).length >
+          0
       );
-    }
-    else {
+    } else {
       filteredStations = stations;
     }
 
-    filteredStations = filterOverlay(filteredStations, activeFilters[ overlayBikeSharingConf.type ]);
+    filteredStations = filterOverlay(
+      filteredStations,
+      activeFilters[overlayBikeSharingConf.type]
+    );
 
     //TODO move in core-utils/overlays.js
-    for(let station of filteredStations) {
-      if(station.isFloatingBike){
+    for (let station of filteredStations) {
+      if (station.isFloatingBike) {
         let nearest = null;
         let lastDistance = null;
-        for(let i = 0; i <  filteredStations.length; i++){
+        for (let i = 0; i < filteredStations.length; i++) {
           const mstation = filteredStations[i];
-          if(mstation.isFloatingBike === false
-            && mstation.networks[0] == station.networks[0]
-            ){
-              const dist = distance(station.y, station.x, mstation.y, mstation.x);
+          if (
+            mstation.isFloatingBike === false &&
+            mstation.networks[0] == station.networks[0]
+          ) {
+            const dist = distance(station.y, station.x, mstation.y, mstation.x);
 
-              if (lastDistance == null || dist < lastDistance){
-                nearest = i;
-                lastDistance = dist;
-              }
+            if (lastDistance == null || dist < lastDistance) {
+              nearest = i;
+              lastDistance = dist;
+            }
           }
         }
-        if(nearest){
+        if (nearest) {
           filteredStations[nearest].bikesAvailable += 1;
         }
-
       }
     }
 
-    const markerClusterIcon = cluster => {
+    const markerClusterIcon = (cluster) => {
       const text = cluster.getChildCount();
       return L.divIcon({
-        className: 'marker-cluster-svg',
-        iconSize: [overlayBikeSharingConf.iconWidth, overlayBikeSharingConf.iconHeight],
-        iconAnchor: [overlayBikeSharingConf.iconWidth/2, overlayBikeSharingConf.iconHeight],
+        className: "marker-cluster-svg",
+        iconSize: [
+          overlayBikeSharingConf.iconWidth,
+          overlayBikeSharingConf.iconHeight,
+        ],
+        iconAnchor: [
+          overlayBikeSharingConf.iconWidth / 2,
+          overlayBikeSharingConf.iconHeight,
+        ],
         html: ReactDOMServer.renderToStaticMarkup(
           <MarkerCluster
-              text={text}
-              textColor={'white'}
-              markerColor={overlayBikeSharingConf.iconMarkerColor}
-            />
-          )
+            text={text}
+            textColor={"white"}
+            markerColor={overlayBikeSharingConf.iconMarkerColor}
+          />
+        ),
       });
-    }
+    };
 
     return (
       <LayerGroup>
@@ -243,15 +257,36 @@ class BikeSharingOverlay extends MapLayer {
           disableClusteringAtZoom={16}
           iconCreateFunction={markerClusterIcon}
         >
-          {
-            filteredStations.map((station,index)=>this.renderStation(station,index))
-          }
+          {filteredStations.map((station, index) =>
+            this.renderStation(station, index)
+          )}
         </AdvancedMarkerCluster>
       </LayerGroup>
     );
   }
 }
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    configCompanies: state.otp.config.companies,
+    overlayBikeSharingConf: state.otp?.config?.map?.overlays?.filter(
+      (item) => item.type === "bike-rental"
+    )[0],
+    zoom: state.otp.config.map.initZoom
+  };
+};
+
+const mapDispatchToProps = {
+  setLocation,
+  bikeRentalQuery,
+  bikeRentalCustomUrlQuery,
+};
+
+export default withNamespaces()(
+  connect(mapStateToProps, mapDispatchToProps)(withLeaflet(BikeSharingOverlay))
+);
+
+ // todo update
 BikeSharingOverlay.props = {
   /**
    * The entire companies config array.
@@ -307,7 +342,7 @@ BikeSharingOverlay.props = {
   /**
    * The current map zoom level.
    */
-  zoom: PropTypes.number.isRequired
+  zoom: PropTypes.number.isRequired,
 };
 
 BikeSharingOverlay.defaultProps = {
@@ -328,7 +363,5 @@ BikeSharingOverlay.defaultProps = {
   mapSymbols: null,
   refreshVehicles: null,
   stations: [],
-  visible: false
+  visible: false,
 };
-
-export default withNamespaces()(withLeaflet(BikeSharingOverlay));
