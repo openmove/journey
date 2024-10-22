@@ -460,8 +460,7 @@ class DefaultMap extends Component {
                     default: return null
                   }
                 })}
-                {/* todo fix */}
-                { geojsonConfig.enabled &&(
+                { geojsonConfig?.enabled &&(
                   <GeojsonOverlay
                   geojsonConfig={geojsonConfig}
                   />
