@@ -367,7 +367,6 @@ export function bikeRentalQuery (params) {
 export function bikeRentalCustomUrlQuery (url, params) {
   // use this function when you want to query directly for bike rental instead of using otp
   let endpoint = url
-  // let endpoint = "http://127.0.0.1:9098/bikesharing/stations"
   // add query parameters
   if (params && Object.keys(params).length > 0) {
     endpoint += '?' + Object.keys(params).map(key => key + '=' + params[key]).join('&')
