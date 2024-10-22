@@ -41,10 +41,7 @@ export function trailsLocationsQuery(nearbyUrl, ooisUrl, params, overlayName) {
   return async function (dispatch, getState) {
     dispatch(requestTrailsLocationsResponse()); // todo: is this doing something?
 
-    const detailsUrl = addQueryParams(
-      ooisUrl,
-      params
-    );
+    const detailsUrl = addQueryParams(ooisUrl, params);
 
     dispatch(
       createQueryAction(
@@ -88,17 +85,18 @@ export const contextualizedTrailsQuery = (
 
     let json;
     try {
-      const {'tag[]':categoriesParameter, ...restParams} = params;
+      const { "tag[]": categoriesParameter, ...restParams } = params;
+      // prevent url encoding of brackets
+      const categoriesParameterStr =
+        categoriesParameter?.length > 0 ? `&tag[]=${categoriesParameter}` : "";
 
-      const detailsUrl = addQueryParams(
-        ooisUrl,
-        restParams
-      ) + `tag[]=${categoriesParameter}`; // prevent url encoding of brackets
+      const detailsUrl =
+        addQueryParams(ooisUrl, restParams) + categoriesParameterStr;
 
       const response = await fetch(detailsUrl, {
         headers: {
           Accept: "application/json",
-        // "X-Robots-Tag": "noindex",
+          // "X-Robots-Tag": "noindex",
           "X-User-Id": "xxxxx",
         },
       });
@@ -110,10 +108,9 @@ export const contextualizedTrailsQuery = (
       }
 
       json = await response.json();
-      if(json && Array.isArray(json)){
-        json =  json.slice(0, 3); // :hammer keep maxt three results
+      if (json && Array.isArray(json)) {
+        json = json.slice(0, 3); // :hammer keep maxt three results
       }
-
     } catch (err) {
       return dispatch(
         receivedContextualizedTrailsError({ overlayName, data: err })

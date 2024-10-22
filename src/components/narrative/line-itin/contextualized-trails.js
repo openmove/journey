@@ -5,6 +5,7 @@ import {
   contextualizedTrailsQuery,
   setViewedTrail,
 } from "../../../../src/actions/trails";
+import { getActiveSearch } from "../../../util/state";
 import {
   areSomePointsContainedInPolylines,
   isMarkerInsidePolygon,
@@ -26,7 +27,6 @@ function getLegNearbySearchPoint(leg, isLastLeg, contextualizedTrailsConfig) {
     if (place?.lat && place?.lon) {
       return truncateCoordinate(place);
     }
-
   }
   return {};
 }
@@ -64,7 +64,22 @@ class ContextualizedTrails extends Component {
   }
 
   query(point, name, contextualizedTrailsConfig) {
-    const categories = [] // todo
+    let categories = [];
+    if (
+      this.props?.currentSearchModes &&
+      this.props?.currentSearchModes?.length === 1
+    ) {
+      debugger;
+      const category = this.props?.currentSearchModes[0];
+      const walkCategories = contextualizedTrailsConfig?.walkCategories;
+      const bikeCategories = contextualizedTrailsConfig?.bikeCategories;
+
+      if (category === "WALK") {
+        categories = walkCategories ? walkCategories : [];
+      } else if (category === "BICYCLE") {
+        categories = bikeCategories ? bikeCategories : [];
+      }
+    }
 
     const params = {
       lon: point.lon,
@@ -73,7 +88,7 @@ class ContextualizedTrails extends Component {
       key: contextualizedTrailsConfig.apiKey,
       lang: this.props.i18n.language,
       sortby: "distance",
-      'tag[]': categories.join("&tag[]=")
+      "tag[]": categories.join("&tag[]="),
     };
 
     this.props.contextualizedTrailsQuery(
@@ -97,13 +112,24 @@ class ContextualizedTrails extends Component {
     }
 
     return (
-      <div className={isLastLeg ? "otp-ui-contextualized-trails-destination" : ""}>
+      <div
+        className={isLastLeg ? "otp-ui-contextualized-trails-destination" : ""}
+      >
         {this.props.t("trails_context_message")}
-      <ul>
-        {this.props?.trails.map(
-          trail => <li key={trail?.id}> <a onClick={()=>{this.props.setViewedTrail(trail?.id)}}>{trail.title}</a></li>
-        )}
-      </ul>
+        <ul>
+          {this.props?.trails.map((trail) => (
+            <li key={trail?.id}>
+              {" "}
+              <a
+                onClick={() => {
+                  this.props.setViewedTrail(trail?.id);
+                }}
+              >
+                {trail.title}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }
@@ -113,6 +139,8 @@ class ContextualizedTrails extends Component {
 const mapStateToProps = (state, ownProps) => {
   const contextualizedTrailsConfig =
     state.otp.config?.trip?.contextualizedTrails;
+  const activeSearch = getActiveSearch(state.otp);
+  const currentSearchModes = activeSearch?.query?.mode?.split(",");
 
   const legStartingPoint = getLegNearbySearchPoint(
     ownProps.leg,
@@ -121,12 +149,12 @@ const mapStateToProps = (state, ownProps) => {
   );
   const legName = JSON.stringify(legStartingPoint);
 
-
   return {
     legStartingPoint,
     legName,
     trails: state.otp.transitIndex?.trails?.[legName],
     contextualizedTrailsConfig,
+    currentSearchModes,
   };
 };
 
