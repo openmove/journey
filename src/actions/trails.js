@@ -110,6 +110,10 @@ export const contextualizedTrailsQuery = (
       }
 
       json = await response.json();
+      if(json && Array.isArray(json)){
+        json =  json.slice(0, 3); // :hammer keep maxt three results
+      }
+
     } catch (err) {
       return dispatch(
         receivedContextualizedTrailsError({ overlayName, data: err })
