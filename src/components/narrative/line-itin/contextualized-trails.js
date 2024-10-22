@@ -69,7 +69,6 @@ class ContextualizedTrails extends Component {
       this.props?.currentSearchModes &&
       this.props?.currentSearchModes?.length === 1
     ) {
-      debugger;
       const category = this.props?.currentSearchModes[0];
       const walkCategories = contextualizedTrailsConfig?.walkCategories;
       const bikeCategories = contextualizedTrailsConfig?.bikeCategories;
