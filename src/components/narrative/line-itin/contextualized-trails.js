@@ -64,7 +64,10 @@ class ContextualizedTrails extends Component {
   }
 
   query(point, name, contextualizedTrailsConfig) {
-    let categories = [];
+    let categories = contextualizedTrailsConfig?.categories
+      ? contextualizedTrailsConfig?.categories
+      : [];
+
     if (
       this.props?.currentSearchModes &&
       this.props?.currentSearchModes?.length === 1
