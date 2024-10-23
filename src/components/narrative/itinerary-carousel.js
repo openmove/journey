@@ -99,19 +99,18 @@ class ItineraryCarousel extends Component {
           index={activeItinerary}
           onChangeIndex={this._onSwipe}
         >
-          {views}
-          {/* show localized drt if present and no itineraries are found */}
-         {(localizedDrtConfig?.enabled && !itineraries?.length ) &&(
-            <div className={ itineraries?.length ? "results": "no-results" }>
+          {views.length ? views : (
+            <div className={itineraries?.length ? "results" : "no-results"}>
+               {/* show localized drt if present and no itineraries are found */}
               <DrtLocalizedService
                 t={t}
                 itinerary={itineraries[activeItinerary]}
                 query={activeSearch?.query}
                 localizedDrtConfig={localizedDrtConfig}
-                />
-              </div>
+              />
+            </div>
           )}
-          </SwipeableViews>
+        </SwipeableViews>
       </div>
     )
   }
