@@ -178,17 +178,17 @@ class TollGatesOverlay extends MapLayer {
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfo-list-block--left-aligned ">
                     <h5>{t("toll-gates-entrances-title")}</h5>
                     <ul >
-                      <li>{t("toll-gates-entrances-total")}{station.n_entrate}</li>
-                      <li>{t("toll-gates-entrances-telepass")}{station.n_entrate_telepass}</li>
-                      <li>{t("toll-gates-entrances-telepass-dedicated")}{station.n_entrate_telepass_dedicate}</li>
+                      <li>{t("toll-gates-entrances-total")}{station.n_entrances}</li>
+                      <li>{t("toll-gates-entrances-telepass")}{station.n_entrances_telepass}</li>
+                      <li>{t("toll-gates-entrances-telepass-dedicated")}{station.n_entrances_telepass_dedicated}</li>
                     </ul>
                     </div>
                     <div className="otp-ui-mapOverlayPopup__popupAvailableInfo-list-block--left-aligned ">
                     <h5>{t("toll-gates-exits-title")}</h5>
                     <ul>
-                    <li>{t("toll-gates-exits-total")}{station.n_uscite}</li>
-                    <li>{t("toll-gates-exits-telepass")}{station.n_uscite_telepass}</li>
-                    <li>{t("toll-gates-exits-telepass-dedicated")}{station.n_uscite_telepass_dedicate}</li>
+                    <li>{t("toll-gates-exits-total")}{station.n_exits}</li>
+                    <li>{t("toll-gates-exits-telepass")}{station.n_exits_telepass}</li>
+                    <li>{t("toll-gates-exits-telepass-dedicated")}{station.n_exits_telepass_dedicated}</li>
                     </ul>
                     </div>
                   </div>
