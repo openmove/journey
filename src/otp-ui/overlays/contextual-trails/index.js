@@ -176,7 +176,7 @@ class ContextualTrailsOverlay extends MapLayer {
             enabled={isMarkClusterEnabled}
             showCoverageOnHover={false}
             maxClusterRadius={40}
-            disableClusteringAtZoom={16}
+            disableClusteringAtZoom={null}
             iconCreateFunction={markerClusterIcon}
           >
             {locations.map((station) => {
