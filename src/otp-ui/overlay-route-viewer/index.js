@@ -98,13 +98,15 @@ class RouteViewerOverlay extends MapLayer {
             sticky={true}
           >
             <div className="leaflet-tooltip-content">
-
-            <h4>
-              <OpenMoveModeIcon mode={mode} width={20} height={20} /> &nbsp;
-              {routeData.shortName} <small>{routeData.id}</small>
-            </h4>
+            <div style={{ display: "flex", alignItems: "center"}}>
+                <OpenMoveModeIcon mode={mode} width={20} height={20} /> &nbsp;
+                <h4>
+                  {routeData.shortName} <small>{routeData.id}</small>
+                </h4>
+            </div>
             <p>{text}</p>
-            <p>{humanLength}</p>
+            {/* disabled because unreliable */}
+            {/* <p>{humanLength}</p> */}
             {desc && <p>{desc}</p>}
             {bikesAllowed && bikesAllowed!=='NO_INFORMATION' && <p>bikesAllowed: {bikesAllowed}</p>}
             </div>
