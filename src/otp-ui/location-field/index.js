@@ -578,6 +578,29 @@ class LocationField extends Component {
       itemIndex++;
     }
 
+    // HERE geocoder attribution
+    const HEREattribution = () => (
+      <div style={{ display: "flex", paddingLeft: 20 }}>
+      <a
+        href="https://www.here.com"
+        target="_blank"
+        style={{ color: "currentColor", flex:1 }}
+      >
+        <img
+          src='static/images/here-logo.svg'
+          style={{ maxHeight: "15px", marginRight: "2px" }}
+        />{" "}
+        Powered by HERE
+      </a>
+    </div>
+    )
+
+    if(geocoderConfig.type === "HERE"){
+      menuItems.push(
+        <HEREattribution />
+      );
+    }
+
     // Store the number of location-associated items for reference in the onKeyDown method
     this.menuItemCount = itemIndex;
 
