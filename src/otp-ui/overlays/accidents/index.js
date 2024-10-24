@@ -113,7 +113,7 @@ class AccidentsOverlay extends MapLayer {
                 )}
                 weight={7}
                 color={colorGradient(
-                  this._normalizeAccidentsValue(station.incidenti),
+                  this._normalizeAccidentsValue(station.accidents),
                   overlayAccidentsConf.levelColors[0],
                   overlayAccidentsConf.levelColors[1],
                   overlayAccidentsConf.levelColors[2]
@@ -121,14 +121,14 @@ class AccidentsOverlay extends MapLayer {
               >
                 <Tooltip sticky={true}>
                   <div className="leaflet-tooltip-content">
-                    <p>{`km ${station.da_km} - km ${station.a_km}`}</p>
+                    <p>{`km ${station.from_km} - km ${station.to_km}`}</p>
                     <p>
                       {years?.length > 0
                         ? years?.join(", ")
                         : this._computeYearsRange()?.join(" - ")}
                     </p>
                     <p>
-                      <b>{`${station.incidenti} ` + t('accidents_label')}</b>
+                      <b>{`${station.accidents} ` + t('accidents_label')}</b>
                     </p>
                   </div>
                 </Tooltip>
@@ -208,11 +208,11 @@ class AccidentsOverlay extends MapLayer {
     let maxNumberOfAccidents = 0;
 
     this.props.locations.stations?.forEach((station) => {
-      if (station?.incidenti > maxNumberOfAccidents) {
-        maxNumberOfAccidents = station?.incidenti;
+      if (station?.accidents > maxNumberOfAccidents) {
+        maxNumberOfAccidents = station?.accidents;
       }
-      if (station?.incidenti < minNumberOfAccidents) {
-        minNumberOfAccidents = station?.incidenti;
+      if (station?.accidents < minNumberOfAccidents) {
+        minNumberOfAccidents = station?.accidents;
       }
     });
 
