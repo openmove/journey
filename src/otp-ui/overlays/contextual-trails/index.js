@@ -94,7 +94,8 @@ class ContextualTrailsOverlay extends MapLayer {
     fetch(apiTrack, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        "X-User-Id": "xxxxx",
       },
       body: JSON.stringify({
         id,
