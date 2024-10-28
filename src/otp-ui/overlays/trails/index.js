@@ -113,18 +113,39 @@ class TrailsOverlay extends MapLayer {
       this._startRefreshing();
     }
 
-    this.generateOutdoorActiveTrackingScript(
+   /*  this.generateOutdoorActiveTrackingScript(
       this.props.overlayTrailsConf.trackScriptUrl
-    );
+    ); */
   }
 
   generateOutdoorActiveTrackingScript(scriptUrl) {
+    // called by back-end so it's unused rn
     const script = document.createElement("script");
 
     script.src = scriptUrl;
     script.async = true;
 
     document.body.appendChild(script);
+  }
+
+  track(station, event = "teaser"){
+
+    const {apiTrack} = this.props.overlayTrailsConf;
+    const id = station.tgpId;
+    const location = station.location.coordinates;
+
+    fetch(apiTrack, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id,
+        event,
+        location
+        } )
+      })
+
   }
 
   onOverlayAdded = () => {
@@ -317,7 +338,7 @@ class TrailsOverlay extends MapLayer {
                 onClick={(e) => {
                   e.target.openPopup();
                   this.props.setViewedTrail(station.id);
-                  oacrr.track("teaser", station.id);
+                  this.track(station)
                 }}
               >
                 <Popup>

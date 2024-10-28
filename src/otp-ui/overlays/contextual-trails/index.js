@@ -70,9 +70,9 @@ class ContextualTrailsOverlay extends MapLayer {
   }
 
   componentDidMount() {
-    this.generateOutdoorActiveTrackingScript(
+  /*   this.generateOutdoorActiveTrackingScript(
       this.props.overlayTrailsConf?.trackScriptUrl
-    );
+    ); */
   }
 
   generateOutdoorActiveTrackingScript(scriptUrl) {
@@ -84,6 +84,26 @@ class ContextualTrailsOverlay extends MapLayer {
     document.body.appendChild(script);
   }
 
+
+  track(station, event = "teaser"){
+
+    const {apiTrack} = this.props.overlayTrailsConf;
+    const id = station.tgpId;
+    const location = station.location.coordinates;
+
+    fetch(apiTrack, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id,
+        event,
+        location
+        } )
+      })
+
+  }
   onOverlayAdded = () => {
     const { locations, overlayTrailsConf } = this.props;
     const { map } = this.props.leaflet;
@@ -255,7 +275,7 @@ class ContextualTrailsOverlay extends MapLayer {
                   onClick={(e) => {
                     e.target.openPopup();
                     this.props.setViewedTrail(station.id);
-                    oacrr.track("teaser", station.id);
+                    this.track(station)
                   }}
                 >
                   <Popup>
