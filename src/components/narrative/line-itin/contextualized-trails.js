@@ -90,6 +90,7 @@ class ContextualizedTrails extends Component {
       key: contextualizedTrailsConfig.apiKey,
       lang: this.props.i18n.language,
       sortby: "distance",
+      userId: contextualizedTrailsConfig.userId,
       "tag[]": categories.join("&tag[]="),
     };
 

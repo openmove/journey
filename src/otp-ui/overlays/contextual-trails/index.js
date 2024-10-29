@@ -86,8 +86,7 @@ class ContextualTrailsOverlay extends MapLayer {
 
 
   track(station, event = "teaser"){
-
-    const {apiTrack} = this.props.overlayTrailsConf;
+    const {apiTrack,userId} = this.props.overlayTrailsConf;
     const id = station.tgpId;
     const location = station.location.coordinates;
 
@@ -95,7 +94,7 @@ class ContextualTrailsOverlay extends MapLayer {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        "X-User-Id": "xxxxx",
+        "X-User-Id": userId,
       },
       body: JSON.stringify({
         id,

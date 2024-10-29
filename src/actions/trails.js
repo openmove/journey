@@ -39,9 +39,11 @@ export const requestTrailsLocationsResponse = createAction(
 
 export function trailsLocationsQuery(nearbyUrl, ooisUrl, params, overlayName) {
   return async function (dispatch, getState) {
+    const { userId ,...restParams } = params;
+
     dispatch(requestTrailsLocationsResponse()); // todo: is this doing something?
 
-    const detailsUrl = addQueryParams(ooisUrl, params);
+    const detailsUrl = addQueryParams(ooisUrl, restParams);
 
     dispatch(
       createQueryAction(
@@ -54,7 +56,7 @@ export function trailsLocationsQuery(nearbyUrl, ooisUrl, params, overlayName) {
             headers: {
               Accept: "application/json",
               // "X-Robots-Tag": "noindex",
-              "X-User-Id": "xxxxx", // todo configure
+              "X-User-Id": userId,
             },
           },
         }
@@ -85,7 +87,7 @@ export const contextualizedTrailsQuery = (
 
     let json;
     try {
-      const { "tag[]": categoriesParameter, ...restParams } = params;
+      const { "tag[]": categoriesParameter,userId ,...restParams } = params;
       // prevent url encoding of brackets
       const categoriesParameterStr =
         categoriesParameter?.length > 0 ? `&tag[]=${categoriesParameter}` : "";
@@ -97,7 +99,7 @@ export const contextualizedTrailsQuery = (
         headers: {
           Accept: "application/json",
           // "X-Robots-Tag": "noindex",
-          "X-User-Id": "xxxxx",
+          "X-User-Id": userId,
         },
       });
 

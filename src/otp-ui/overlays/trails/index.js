@@ -75,6 +75,7 @@ class TrailsOverlay extends MapLayer {
     const params = {
       ...bb,
       lang: this.props.i18n.language,
+      userId: this.props.overlayTrailsConf.userId
     };
 
     if (launchNow === true) {
@@ -91,6 +92,7 @@ class TrailsOverlay extends MapLayer {
         const params = {
           ...bb,
           lang: this.props.i18n.language,
+          userId: this.props.overlayTrailsConf.userId
         };
 
         this.props.trailsLocationsQuery(
