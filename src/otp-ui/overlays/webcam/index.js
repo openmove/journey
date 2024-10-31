@@ -181,8 +181,8 @@ class WebcamOverlay extends MapLayer {
         >
           {locationsFiltered.map((station) => {
 
-            const timeStamp =  moment(station.timestamp).utcOffset(0).format("L LT")
-            const lastUpdate = moment(station.lastUpdate).utcOffset(0).format("L LT")
+            const timeStamp =  moment(Number(station.timestamp)).utcOffset(0).format("L LT")
+            const lastUpdate = moment(Number(station.lastUpdate) ).utcOffset(0).format("L LT")
             return (
                <Marker
                 icon={markerIcon(station)}
