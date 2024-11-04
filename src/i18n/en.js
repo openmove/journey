@@ -554,7 +554,7 @@ export const TRANSLATIONS_EN = {
   "services": "Services",
 
     // alerts
-  "alerts": "Avvisi",
+  "alerts": "Alerts",
   "until": "until ",
 
     // accidents
