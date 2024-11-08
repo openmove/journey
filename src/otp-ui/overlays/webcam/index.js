@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState }  from "react";
+import AbstractOverlay from '../AbstractOverlay'
+import FontAwesome from 'react-fontawesome'
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import {
@@ -25,13 +27,17 @@ import { getItem } from "../../core-utils/storage";
 import { setTimeout } from "core-js";
 import { filterOverlay } from "../../core-utils/overlays";
 
-class WebcamOverlay extends MapLayer {
+class WebcamOverlay  extends AbstractOverlay {
 
   constructor(props){
-    super(props);
+    super({
+      props,
+      query : props.webcamLocationsQuery,
+      api: props?.api,
+      config: props.overlayWebCamConf
+    });
+
     this.popup = React.createRef();
-    this._startRefreshing = this._startRefreshing.bind(this)
-    this._stopRefreshing = this._stopRefreshing.bind(this)
   }
 
   static propTypes = {
@@ -39,79 +45,13 @@ class WebcamOverlay extends MapLayer {
     locations: PropTypes.array,
     webcamLocationsQuery: PropTypes.func,
     setLocation: PropTypes.func,
-  };
-
-  _startRefreshing(launchNow) {
-    const bb =  getItem('mapBounds')
-    const params = bb
-    // ititial station retrieval
-    if(launchNow === true){
-      this.props.webcamLocationsQuery(this.props.api, params);
-
-    }else{
-      if (this._refreshTimer) clearTimeout(this._refreshTimer);
-      this._refreshTimer =  setTimeout(()=>{
-        const bb =  getItem('mapBounds')
-        const params = bb
-        this.props.webcamLocationsQuery(this.props.api, params);
-      },500)
-    }
-    // set up timer to refresh stations periodically
-    // this._refreshTimer = setInterval(() => {
-    //   this.props.webcamLocationsQuery(this.props.api);
-    // }, 30000); // defaults to every 30 sec. TODO: make this configurable?*/
-  }
-
-  _stopRefreshing() {
-    if (this._refreshTimer) clearTimeout(this._refreshTimer);
-  }
-
-  componentDidMount() {
-    this.props.registerOverlay(this);
-    if (this.props.visible) {
-      this.props.leaflet.map.on("moveend", this._startRefreshing);
-      this._startRefreshing();
-    }
-  }
-
-  onOverlayAdded = () => {
-    this.props.leaflet.map.on("moveend", this._startRefreshing);
-    const { locations, overlayWebCamConf , t } = this.props;
-    this._startRefreshing(true);
-    const newLoc = []
-    const { map } = this.props.leaflet;
-
-    if(overlayWebCamConf.startCenter){
-      map.flyTo(overlayWebCamConf.startCenter);
-    }
-
-  };
-
-  onOverlayRemoved = () => {
-    this.props.leaflet.map.off("moveend", this._startRefreshing)
-    this._stopRefreshing();
-  };
-
-  componentWillUnmount() {
-    this.props.leaflet.map.off("moveend", this._startRefreshing)
-    this._stopRefreshing();
-  }
-
-  componentDidUpdate(prevProps) {
-    if (!prevProps.visible && this.props.visible) {
-      this._startRefreshing();
-      this.props.leaflet.map.on("moveend", this._startRefreshing);
-    } else if (prevProps.visible && !this.props.visible) {
-      this._stopRefreshing();
-      this.props.leaflet.map.off("moveend", this._startRefreshing);
-    }
   }
 
   createLeafletElement() {}
 
   updateLeafletElement() {}
 
-  render() {
+  render () {
     const { locations, overlayWebCamConf, t, activeFilters } = this.props;
     const isMarkClusterEnabled = overlayWebCamConf.markerCluster
     if (!locations || locations.length === 0) return <LayerGroup />;
@@ -123,6 +63,35 @@ class WebcamOverlay extends MapLayer {
       }
 
     })
+
+    const Image = ({ station }) => {
+      const [loaded, setLoaded] = useState(false);
+      const [error, setError] = useState(false)
+      if (station.thumbnail && !error) {
+        return (
+          <a href={station.thumbnail} target="_blank" >
+             <div style={{display: !loaded ? "flex" : "none",}}  className="img-cam otp-ui-locationFilter__loader">
+                <FontAwesome
+                  name='circle-o-notch'
+                  spin={true}
+                  size='5x'
+                />
+            </div>
+            <img
+             style={{display: loaded ? "block" : "none"}}
+              src={
+                `${station.thumbnail}?${this.props.timestampToForceImageReload}`
+              }
+              className="img-cam"
+              onLoad={() => setLoaded(true)}
+              onError={() => setError(true)}
+            />
+          </a>
+        );
+      } else {
+        return <img src={camDefault} className="img-cam" />;
+      }
+    };
 
     locationsFiltered = filterOverlay(locationsFiltered, activeFilters[ overlayWebCamConf.type ]);
 
@@ -199,7 +168,7 @@ class WebcamOverlay extends MapLayer {
                     <small>{t('provider')}: {station.operator}</small>
                     { !station.active &&  <p className="alert-text-popup">{t("webcam_last_updated_status")}</p> }
                     <p>{ station.active ? timeStamp : lastUpdate }</p>
-                  { station.thumbnail ? <a href={station.thumbnail} target="_blank" ><img src={station.thumbnail} className="img-cam"/></a> : <img src={camDefault} className="img-cam"/> }
+                  <Image station={station}/>
                   </div>
                 </Popup>
               </Marker>
@@ -215,6 +184,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     overlayWebCamConf: state.otp?.config?.map?.overlays?.filter(item => item.type === 'webcam')[0],
     locations: state.otp.overlay.webcam && state.otp.overlay.webcam.locations,
+    timestampToForceImageReload: new Date().getTime()
   };
 };
 
