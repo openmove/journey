@@ -151,7 +151,8 @@ class WebcamOverlay  extends AbstractOverlay {
           {locationsFiltered.map((station) => {
 
             const timeStamp =  moment(Number(station.timestamp)).utcOffset(0).format("L LT")
-            const lastUpdate = moment(Number(station.lastUpdate) ).utcOffset(0).format("L LT")
+            const lastUpdate = station.lastUpdate != null ? moment(Number(station.lastUpdate) ).format("L LT") : null;
+
             return (
                <Marker
                 icon={markerIcon(station)}
@@ -167,7 +168,7 @@ class WebcamOverlay  extends AbstractOverlay {
                   <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
                     <small>{t('provider')}: {station.operator}</small>
                     { !station.active &&  <p className="alert-text-popup">{t("webcam_last_updated_status")}</p> }
-                    <p>{ station.active ? timeStamp : lastUpdate }</p>
+                    <p>{lastUpdate }</p>
                   <Image station={station}/>
                   </div>
                 </Popup>
