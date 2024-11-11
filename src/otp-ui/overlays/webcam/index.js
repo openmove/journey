@@ -151,7 +151,7 @@ class WebcamOverlay  extends AbstractOverlay {
           {locationsFiltered.map((station) => {
 
             const timeStamp =  moment(Number(station.timestamp)).utcOffset(0).format("L LT")
-            const lastUpdate = station.lastUpdate != null ? moment(Number(station.lastUpdate) ).format("L LT") : null;
+            const lastUpdate = station.lastUpdate != null ? moment(Number(station.lastUpdate) ).utcOffset(0).format("L LT") : null;
 
             return (
                <Marker
