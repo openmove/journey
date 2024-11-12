@@ -234,7 +234,7 @@ export const TRANSLATIONS_IT = {
   "charger_plugstypes": "Tipi di presa",
   "reservable": "Prenotabile",
   "state": "Stato",
-  "unknown":"Ignoto",
+  "unknown":"Non specificato",
   "active":"Attivo",
   "temporaryunavailable":"Temporaneamente non disponibile",
   "carsharing_company": "Azienda",
@@ -527,8 +527,8 @@ export const TRANSLATIONS_IT = {
   "trails_context_message": "Sono stati individuati i seguenti percorsi nell'area:",
 
   // localized drt
-  "localized_drt_msg": "Servizio DRT disponibile nella zona selezionata",
-  "localized_drt_no_path_found_error_msg" : "Alternativamente un servizio DRT è disponibile nella zona selezionata.",
+  "localized_drt_msg": "Servizio a chiamata disponibile nella zona selezionata",
+  "localized_drt_no_path_found_error_msg" : "Alternativamente un servizio a chiamata è disponibile nella zona selezionata.",
 
   // toll gates
   "toll_gates": "Caselli",

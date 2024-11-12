@@ -234,7 +234,7 @@ export const TRANSLATIONS_EN = {
   "charger_plugstypes": "Plug Types",
   "reservable": "Reservable",
   "state": "State",
-  "unknown":"Unknown",
+  "unknown":"Unspecified",
   "active":"Active",
   "temporaryunavailable":"Temporary Unavailable",
   "carsharing_company": "Company",
@@ -531,8 +531,8 @@ export const TRANSLATIONS_EN = {
   "trails_context_message": "The following routes have been identified in the area:",
 
   // localized drt
-  "localized_drt_msg": "DRT service available in the selected area",
-  "localized_drt_no_path_found_error_msg" : "Alternatively a DRT service is available in the selected area.",
+  "localized_drt_msg": "On-demand service available in the selected area",
+  "localized_drt_no_path_found_error_msg" : "Alternatively an on-demand service is available in the selected area.",
 
   // toll gates
   "toll_gates": "Toll gates",
