@@ -283,7 +283,7 @@ class ParkingOverlay extends AbstractOverlay {
                         {station?.payment!=null && (
                           <p>{t('parking-price')}: {price}</p>
                         )}
-                        {station.operator && <p>{t('managed')}: { station.operator}</p>}
+                        {/* {station.operator && <p>{t('managed')}: { station.operator}</p>} */}
                         {capacity && <p>{t('capacity')}: {capacity !== null && capacity !== -1 ? capacity : 'N/A'}</p>}
                       </div>
                     </div>
