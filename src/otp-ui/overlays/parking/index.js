@@ -257,7 +257,7 @@ class ParkingOverlay extends AbstractOverlay {
                   <div className="otp-ui-mapOverlayPopup__popupHeader">
                     <Parking width={24} height={20} />&nbsp;{t(station.parking_type ? `parking-${station.parking_type}` : 'parking')}
                   </div>
-                  <div className="otp-ui-mapOverlayPopup__popupTitle">{station.name}</div>
+                  <div className="otp-ui-mapOverlayPopup__popupTitle">{capitalizeFirst(station.name)}</div>
                   <small>{station.group_name}</small>
                   {
                     // sensors and stations behave the same way
@@ -341,6 +341,14 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = {
   setLocation,
   parkingLocationsQuery
+}
+
+function capitalizeFirst (str) {
+  if(!str){
+    return str
+  }
+
+  return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
 export default withNamespaces()(connect(mapStateToProps, mapDispatchToProps)(withLeaflet(ParkingOverlay)))
