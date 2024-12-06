@@ -7,6 +7,7 @@ import {
   MapLayer,
   Marker,
   Popup,
+  Polyline,
   withLeaflet,
 } from "react-leaflet";
 import { divIcon, icon } from "leaflet";
@@ -14,6 +15,7 @@ import { withNamespaces } from "react-i18next";
 import { CircularProgressbar } from "react-circular-progressbar";
 import FontAwesome from "react-fontawesome";
 import "react-circular-progressbar/dist/styles.css";
+import coreUtils from "../../core-utils"
 
 import { setLocation } from "../../../actions/map";
 import { trailsLocationsQuery, setViewedTrail } from "../../../actions/trails";
@@ -132,7 +134,8 @@ class TrailsOverlay extends MapLayer {
 
   track(station, event = "teaser"){
 
-    const {apiTrack} = this.props.overlayTrailsConf;
+    const {apiTrack, userId} = this.props.overlayTrailsConf;
+
     const id = station.tgpId;
     const location = station.location.coordinates;
 
@@ -140,7 +143,7 @@ class TrailsOverlay extends MapLayer {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        "X-User-Id": "xxxxx",
+        "X-User-Id": userId,
       },
       body: JSON.stringify({
         id,
@@ -196,7 +199,7 @@ class TrailsOverlay extends MapLayer {
       leaflet,
       minZoom,
     } = this.props;
-
+    const isMobile = coreUtils.ui.isMobile();
     const isMarkClusterEnabled = overlayTrailsConf.markerCluster;
     const lang = i18n?.language;
 
@@ -381,7 +384,7 @@ class TrailsOverlay extends MapLayer {
                       </a>
                     </div>
 
-                    {image && (
+                    {(image && !isMobile ) && (
                       <figure>
                         <img className="image" src={  image.id } />
                         <figcaption>
@@ -412,7 +415,7 @@ class TrailsOverlay extends MapLayer {
                       {t("tour_author")}: {station.meta.author}
                     </p>
 
-                    {!image && shortDescription && (
+                    {(!image && !isMobile) && shortDescription && (
                       <div className="short-description">
                         {shortDescription}
                       </div>

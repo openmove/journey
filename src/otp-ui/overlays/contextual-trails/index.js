@@ -15,6 +15,7 @@ import { withNamespaces } from "react-i18next";
 import { CircularProgressbar } from "react-circular-progressbar";
 import FontAwesome from "react-fontawesome";
 import "react-circular-progressbar/dist/styles.css";
+import coreUtils from "../../core-utils"
 
 import { setLocation } from "../../../actions/map";
 import { trailsLocationsQuery, setViewedTrail } from "../../../actions/trails";
@@ -133,7 +134,7 @@ class ContextualTrailsOverlay extends MapLayer {
       leaflet,
       minZoom,
     } = this.props;
-
+    const isMobile = coreUtils.ui.isMobile();
     const isMarkClusterEnabled = overlayTrailsConf?.markerCluster;
     const lang = i18n?.language;
 
@@ -315,7 +316,7 @@ class ContextualTrailsOverlay extends MapLayer {
                         </a>
                       </div>
 
-                      {image && (
+                      {(image && !isMobile ) && (
                         <figure>
                           <img className="image" src={image.id } />
                           <figcaption>
@@ -346,11 +347,11 @@ class ContextualTrailsOverlay extends MapLayer {
                         {t("tour_author")}: {station.meta.author}
                       </p>
 
-                      {!image && shortDescription && (
-                        <div className="short-description">
-                          {shortDescription}
-                        </div>
-                      )}
+                    {(!image && !isMobile) && shortDescription && (
+                    <div className="short-description">
+                        {shortDescription}
+                      </div>
+                    )}
 
                       <a
                         style={{ marginTop: "10px" }}
